@@ -9,3 +9,4 @@ coverage/
 .cache/
 *.tsbuildinfo
 .vercel/
+.vercel
