@@ -27,6 +27,7 @@ button { font: inherit; cursor: pointer; }
 .chip { border: 1px solid var(--border); background: transparent; color: var(--muted); border-radius: 999px; padding: 6px 12px; font-size: 14px; transition: border-color 120ms, color 120ms, background 120ms; }
 .chip:hover, .chip:focus-visible { border-color: var(--accent); color: var(--text); outline: none; }
 .chip.on { background: var(--accent); color: #05131c; border-color: var(--accent); font-weight: 600; }
+.chip.on:hover { filter: brightness(1.12); color: #05131c; }
 
 .progress { height: 3px; background: var(--border); border-radius: 2px; overflow: hidden; max-width: 640px; margin: 0 auto 8px; }
 .progress > i { display: block; height: 100%; background: var(--accent); transition: width 300ms ease; }
