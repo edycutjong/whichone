@@ -1,0 +1,26 @@
+{
+  "name": "whichone",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Type a ticker. Fourteen tokens share the name \u2014 Nansen labels decide which one is real.",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "spike": "tsx scripts/spike.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "type": "module"
+}
