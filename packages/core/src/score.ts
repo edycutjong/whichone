@@ -46,7 +46,7 @@ export function score(f: CandidateFacts, w = WEIGHTS): Scored {
   const reasons: string[] = [];
 
   // No flow facts → no verdict on this candidate. Zeroed defaults are not evidence of anything.
-  if (f.errors.some((e) => e.startsWith("flow-intelligence"))) {
+  if (f.errors.some((e) => e.startsWith("flow-intelligence failed"))) {
     return { ...f, score: Number.NEGATIVE_INFINITY, terms: {}, reasons: ["could not be checked (flow lookup failed) — retry"], impostor: false, scorable: true, unchecked: true };
   }
 
@@ -79,7 +79,8 @@ export function score(f: CandidateFacts, w = WEIGHTS): Scored {
   const impostor = f.labelledWallets === 0 && exchMag < 10_000 && ((f.ageDays != null && f.ageDays < 14) || (f.totalHolders != null && f.totalHolders < 500));
   if (impostor) reasons.push("IMPOSTOR: nothing labelled has ever touched it");
 
-  if (f.errors.length) reasons.push("partial: " + f.errors.map((e) => e.split(":")[0]).join(", ") + " lookup failed");
+  const failed = f.errors.filter((e) => e.includes(" failed")).map((e) => e.split(" failed")[0]);
+  if (failed.length) reasons.push("partial: " + failed.join(", ") + " lookup failed");
   return { ...f, score: round(total), terms: mapValues(terms, round), reasons, impostor, scorable: true, unchecked: false };
 }
 

@@ -61,7 +61,8 @@ export async function whichOnesReal(client: NansenClient, query: string, opts: V
 
   const unchecked = ranked.filter((s) => s.unchecked);
   const warnings: string[] = [];
-  if (unchecked.length) warnings.push(`${unchecked.length} candidate${unchecked.length === 1 ? "" : "s"} could not be checked (Nansen lookup failed) — the verdict is among the ${ranked.length - unchecked.length} that were`);
+  const checkedCount = ranked.filter((s) => s.scorable && !s.unchecked).length;
+  if (unchecked.length) warnings.push(`${unchecked.length} candidate${unchecked.length === 1 ? "" : "s"} could not be checked (Nansen lookup failed) — the verdict is among the ${checkedCount} that were`);
   if (same.length > cap) warnings.push(`${same.length} same-name tokens found; the ${cap} highest-ranked by Nansen search were checked`);
 
   const best = ranked[0];
@@ -70,6 +71,7 @@ export async function whichOnesReal(client: NansenClient, query: string, opts: V
   if (same.length === 0) abstainReason = `no token named ${q} on Nansen`;
   else if (!best || !best.scorable) abstainReason = "no candidate on a chain Nansen can score";
   else if (best.unchecked) abstainReason = "Nansen lookups failed for every candidate — retry";
+  else if (best.labelledWallets === 0 && best.recognisedHolders == null && best.errors.some((e) => e.startsWith("holders failed"))) abstainReason = "the deciding holders lookup failed for the top candidate — retry";
   else if (best.score < ABSTAIN_THRESHOLD || (best.labelledWallets === 0 && !(best.recognisedHolders && best.recognisedHolders > 0))) abstainReason = "none of these looks real — nothing labelled has touched any of them";
   else winner = best;
 

@@ -126,7 +126,8 @@ export async function fetchFacts(client: NansenClient, c: Candidate, now = Date.
   if (flow.status === "fulfilled") {
     const parsed = FlowResponse.safeParse(flow.value);
     const r = parsed.success ? parsed.data.data[0] : undefined;
-    if (!r) base.errors.push(parsed.success ? "flow-intelligence: empty" : "flow-intelligence: schema");
+    // An empty row is EVIDENCE (Nansen saw no flow at all — a dead token), not a failure: keep the zeros, note it.
+    if (!r) base.errors.push(parsed.success ? "note: flow-intelligence returned no row (no activity in 7d)" : "flow-intelligence failed: schema");
     else {
       base.smartTraderWallets = n(r.smart_trader_wallet_count);
       base.whaleWallets = n(r.whale_wallet_count);
@@ -141,12 +142,12 @@ export async function fetchFacts(client: NansenClient, c: Candidate, now = Date.
       const total = flows.reduce((a, b) => a + Math.abs(b), 0);
       base.freshShare = total > 0 ? Math.abs(base.freshNetFlowUsd) / total : NaN;
     }
-  } else base.errors.push(`flow-intelligence: ${String(flow.reason?.message ?? flow.reason).slice(0, 80)}`);
+  } else base.errors.push(`flow-intelligence failed: ${String(flow.reason?.message ?? flow.reason).slice(0, 80)}`);
 
   if (info.status === "fulfilled") {
     const parsed = TokenInfoResponse.safeParse(info.value);
     const d = parsed.success ? parsed.data.data : undefined;
-    if (!d) base.errors.push(parsed.success ? "token-information: empty" : "token-information: schema");
+    if (!d) base.errors.push(parsed.success ? "token-information failed: empty" : "token-information failed: schema");
     else {
       const dep = d.token_details?.token_deployment_date ?? undefined;
       if (dep) {
@@ -160,7 +161,7 @@ export async function fetchFacts(client: NansenClient, c: Candidate, now = Date.
       base.logo = d.logo ?? undefined;
       base.website = d.token_details?.website ?? undefined;
     }
-  } else base.errors.push(`token-information: ${String(info.reason?.message ?? info.reason).slice(0, 80)}`);
+  } else base.errors.push(`token-information failed: ${String(info.reason?.message ?? info.reason).slice(0, 80)}`);
 
   return base;
 }
@@ -170,7 +171,7 @@ export async function fetchHolderFacts(client: NansenClient, f: CandidateFacts, 
   try {
     const raw = await client.post("tgm/holders", { chain: f.chain, token_address: f.address, pagination: { page: 1, per_page: perPage } }, HOLDER_FIELDS, { timeoutMs: 5000, retries: 0 });
     const parsed = HoldersResponse.safeParse(raw);
-    if (!parsed.success) { f.errors.push("holders: schema"); return f; }
+    if (!parsed.success) { f.errors.push("holders failed: schema"); return f; }
     const rows = parsed.data.data;
     const tagged = rows.filter((r) => r.address_label && r.address_label.trim().length > 0 && r.address_label !== "Token Contract");
     f.recognisedHolders = tagged.length;
@@ -180,7 +181,7 @@ export async function fetchHolderFacts(client: NansenClient, f: CandidateFacts, 
     f.topLabels = [...freq.entries()].sort((a, b) => b[1] - a[1]).slice(0, 3).map(([l, n]) => (n > 1 ? `${l} ×${n}` : l));
     f.topHolderPct = rows.reduce((m, r) => Math.max(m, n(r.ownership_percentage)), 0);
   } catch (e) {
-    f.errors.push(`holders: ${String((e as Error).message).slice(0, 80)}`);
+    f.errors.push(`holders failed: ${String((e as Error).message).slice(0, 80)}`);
   }
   return f;
 }

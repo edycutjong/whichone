@@ -90,9 +90,9 @@ export class CachedNansenClient extends NansenClient {
     return JSON.parse(text) as T;
   }
 
-  /** Credits actually spent on the network (cached hits count 0). */
+  /** Credits actually spent on the network: cached hits and failed calls are recorded at 0. */
   override get creditsSpent(): number {
-    return this.calls.reduce((n, c) => n + (c.cached ? 0 : (CREDITS[c.endpoint] ?? 1)), 0);
+    return this.calls.reduce((n, c) => n + c.credits, 0);
   }
 }
 

@@ -171,3 +171,43 @@ describe("review fixes F3/F4 (2026-09-16)", () => {
     expect(noImp.hash).not.toBe(base.hash);
   });
 });
+
+describe("review round 2 (2026-09-16)", () => {
+  it("R2-1: an EMPTY flow row is evidence (dead token), not a failure — still scored, can be an impostor", async () => {
+    const c = fakeClient((ep, body) => {
+      if (ep === "tgm/flow-intelligence" && String(body.token_address) === IMP) return { data: [], warnings: [] };
+      return pepeRoutes(ep, body);
+    });
+    const v = await whichOnesReal(c, "PEPE", { now: NOW });
+    const imp = v.ranked.find((s) => s.address === IMP)!;
+    expect(imp.unchecked).toBe(false);
+    expect(imp.impostor).toBe(true);
+    expect(v.warnings.some((w) => w.includes("could not be checked"))).toBe(false);
+  });
+  it("R2-1: all-empty flow rows abstain with 'none of these looks real', not 'retry'", async () => {
+    const c = fakeClient((ep) => {
+      if (ep === "search/general") return searchTokens([{ chain: "base", address: IMP }]);
+      if (ep === "tgm/flow-intelligence") return { data: [], warnings: [] };
+      if (ep === "tgm/token-information") return infoRow({ deployed: "2026-09-14 00:00:00", holders: 50 });
+      return holdersRows([null]);
+    });
+    const v = await whichOnesReal(c, "PEPE", { now: NOW });
+    expect(v.abstainReason).toMatch(/none of these looks real/);
+  });
+  it("R2-3: the unchecked warning counts only checked candidates (perp rows excluded)", async () => {
+    const c = fakeClient((ep, body) => (ep === "tgm/flow-intelligence" && String(body.token_address) === OLD) ? new Response("x", { status: 503 }) : pepeRoutes(ep, body));
+    const v = await whichOnesReal(c, "PEPE", { now: NOW });
+    expect(v.warnings[0]).toMatch(/among the 2 that were/);   // REAL + IMP checked; OLD unchecked; hyperliquid unscorable
+  });
+  it("R2-4: a failed holders tiebreak on a 0-labelled top candidate abstains with a retry message, not 'nothing labelled'", async () => {
+    const c = fakeClient((ep, body) => {
+      if (ep === "search/general") return searchTokens([{ chain: "base", address: OLD }]);
+      if (ep === "tgm/flow-intelligence") return flowRow({ exchange_net_flow_usd: 4_310 });
+      if (ep === "tgm/token-information") return infoRow({ deployed: "2024-08-10 00:00:00", holders: 11_225 });
+      return new Response("slow", { status: 503 });
+    });
+    const v = await whichOnesReal(c, "PEPE", { now: NOW });
+    expect(v.abstained).toBe(true);
+    expect(v.abstainReason).toMatch(/holders lookup failed .* retry/);
+  });
+});

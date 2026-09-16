@@ -70,3 +70,13 @@ describe("review fixes (2026-09-16)", () => {
     expect(again.calls[0].cached).toBe(true);
   });
 });
+
+describe("review round 2: creditsSpent on the cached client", () => {
+  it("R2-2: failed calls are not charged", async () => {
+    const store = new MemoryCache();
+    const c = new CachedNansenClient(KEY, { fetchImpl: async () => new Response("x", { status: 503 }), rps: 1000, store });
+    await expect(c.post("tgm/holders", { a: 1 }, [], { retries: 0 })).rejects.toThrow();
+    expect(c.calls[0]).toMatchObject({ ok: false, credits: 0 });
+    expect(c.creditsSpent).toBe(0);
+  });
+});
