@@ -204,3 +204,27 @@ describe("holders tiebreak (fixture edge 8 — no live ticker produced a flow ti
     expect(v.provenance.filter((p) => p.endpoint === "tgm/holders")).toHaveLength(2);
   });
 });
+
+describe("crown rule: 0 labelled wallets needs ≥ MIN_RECOGNISED_TO_CROWN tagged holders (live finding 2026-09-16)", () => {
+  const A = "0x" + "3".repeat(40);
+  const routes = (holders: (string | null)[]) => (ep: string) => {
+    if (ep === "search/general") return searchTokens([{ chain: "ethereum", address: A, symbol: "SHIB2" }]);
+    if (ep === "tgm/flow-intelligence") return flowRow({ exchange_net_flow_usd: 108 });
+    if (ep === "tgm/token-information") return infoRow({ deployed: "2023-09-01 00:00:00", holders: 568, liquidity: 11_000 });
+    if (ep === "tgm/holders") return holdersRows(holders);
+    throw new Error("unexpected " + ep);
+  };
+  it("a dead single-candidate token whose only tagged holders are its pool and deployer → abstain, not green", async () => {
+    const v = await whichOnesReal(fakeClient(routes(["UniswapV2", "SHIB2 Token Deployer", "usedsaga.sol", null, null])), "SHIB2", { now: NOW });
+    expect(v.abstained).toBe(true);
+    expect(v.abstainReason).toMatch(/none of these looks real/);
+    expect(v.ranked[0].recognisedHolders).toBe(0);
+  });
+  it("two wealth-tagged holders is still below the bar; three crowns it", async () => {
+    const two = await whichOnesReal(fakeClient(routes(["Token Millionaire", "High Activity", null])), "SHIB2", { now: NOW });
+    expect(two.abstained).toBe(true);
+    const three = await whichOnesReal(fakeClient(routes(["Token Millionaire", "High Activity", "High Balance"])), "SHIB2", { now: NOW });
+    expect(three.abstained).toBe(false);
+    expect(three.winner?.address).toBe(A);
+  });
+});

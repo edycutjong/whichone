@@ -2,16 +2,16 @@
   "edge": "6 · zero search results → abstain",
   "query": "XQZPLM",
   "options": {},
-  "now": 1789562414279,
-  "recordedAt": "2026-09-16T12:40:14.279Z",
+  "now": 1789566689246,
+  "recordedAt": "2026-09-16T13:51:29.246Z",
   "live": {
     "calls": 1,
     "credits": 0,
-    "ms": 482
+    "ms": 1825
   },
   "responses": {
     "f57014206b145de09f4ed59e07ae5598": {
-      "storedAt": "2026-09-16T12:40:14.761Z",
+      "storedAt": "2026-09-16T13:51:31.071Z",
       "ttlMs": 1800000,
       "endpoint": "search/general",
       "body": {
@@ -41,7 +41,7 @@
           "limit": 50
         },
         "credits": 0,
-        "ms": 482,
+        "ms": 1825,
         "cached": false,
         "status": 200,
         "fieldsUsed": [
@@ -55,11 +55,11 @@
         ],
         "responseHash": "7b618709926104ef1e68ea865edbf638e1e0ab6511ad44e6943ad98f4a73c1ec",
         "attempts": 1,
-        "totalMs": 482,
+        "totalMs": 1825,
         "ok": true
       }
     ],
-    "ms": 482,
+    "ms": 1825,
     "weights": {
       "labelled": 3,
       "exchange": 0.6,

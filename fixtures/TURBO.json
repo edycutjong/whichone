@@ -2,16 +2,16 @@
   "edge": "9 · a candidate with no deployment date — 'age unknown', skipped gracefully",
   "query": "TURBO",
   "options": {},
-  "now": 1789562421755,
-  "recordedAt": "2026-09-16T12:40:21.755Z",
+  "now": 1789566702598,
+  "recordedAt": "2026-09-16T13:51:42.598Z",
   "live": {
     "calls": 17,
     "credits": 24,
-    "ms": 3115
+    "ms": 3236
   },
   "responses": {
     "deb083143c02a76bd39fbdf72b8fe2af": {
-      "storedAt": "2026-09-16T12:40:22.138Z",
+      "storedAt": "2026-09-16T13:51:43.058Z",
       "ttlMs": 1800000,
       "endpoint": "search/general",
       "body": {
@@ -19,21 +19,21 @@
         "result_type": "token",
         "limit": 50
       },
-      "text": "{\"tokens\":[{\"name\":\"TURBO\",\"symbol\":\"TURBO\",\"chain\":\"hyperliquid\",\"address\":\"TURBO\",\"price\":0.000868,\"volume_24h\":93317.285412,\"market_cap\":59952953.3028,\"rank\":282},{\"name\":\"Turbo (Wormhole)\",\"symbol\":\"TURBO\",\"chain\":\"solana\",\"address\":\"2Dyzu65QA9zdX1UeE7Gx71k7fiwyUK6sZdrvJ7auq5wm\",\"price\":0.0008784340521194238,\"volume_24h\":947.4852320861547,\"market_cap\":60611949.5949,\"rank\":576},{\"name\":\"Turbo\",\"symbol\":\"TURBO\",\"chain\":\"ethereum\",\"address\":\"0xa35923162c49cf95e6bf26623385eb431ad920d3\",\"price\":0.000868883381209301,\"volume_24h\":12761.89285723685,\"market_cap\":59952953.3028,\"rank\":577},{\"name\":\"Turbo on Robinhood\",\"symbol\":\"TURBO\",\"chain\":\"robinhood\",\"address\":\"0x808a9d5071e7d5f58490cb7385027536bbe43ef0\",\"price\":0.0000293354603776886,\"volume_24h\":5294.013956637256,\"market_cap\":28822.14045,\"rank\":4752},{\"name\":\"TurboLoop Token\",\"symbol\":\"TURBO\",\"chain\":\"bnb\",\"address\":\"0x64920e7f4f270f302e8b728f69b5a9fc24fda2d3\",\"price\":0.545401728212319,\"volume_24h\":4389.340177073625,\"market_cap\":568802.056330579,\"rank\":4848},{\"name\":\"Turbos Finance\",\"symbol\":\"TURBOS\",\"chain\":\"sui\",\"address\":\"0x5d1f47ea69bb0de31c313d7acf89b890dbb8991ea8e03c6c355171f84bb1ba4a::turbos::TURBOS\",\"price\":0.00010518080379460698,\"volume_24h\":3638.158640073255,\"market_cap\":695567.0,\"rank\":4948},{\"name\":\"TurboUSD Unstablecoin\",\"symbol\":\"₸USD\",\"chain\":\"base\",\"address\":\"0x3d5e487b21e0569048c4d1a60e98c36e1b09db07\",\"price\":4.94872034940982e-6,\"volume_24h\":26.974796512561664,\"market_cap\":478703.580087792,\"rank\":8761},{\"name\":\"Based Turbo\",\"symbol\":\"TURBO\",\"chain\":\"base\",\"address\":\"0xba5e66fb16944da22a62ea4fd70ad02008744460\",\"price\":1.14746840480248e-6,\"volume_24h\":1.7568173376474894,\"market_cap\":79125.134451,\"rank\":10222},{\"name\":\"TurboDex Token\",\"symbol\":\"TURBO\",\"chain\":\"bnb\",\"address\":\"0x9d0211c1b1a217a574cb55b0e9c367e56debeae0\",\"price\":0.00831117757786981,\"volume_24h\":0.0,\"market_cap\":196808.103009371,\"rank\":12578},{\"name\":\"TURBO.WIN\",\"symbol\":\"TURBO\",\"chain\":\"ethereum\",\"address\":\"0x109ba5f0230b7b39e4a8ab56e7361db89fa0e108\",\"price\":0.0000147720309172414,\"volume_24h\":0.0,\"market_cap\":7042.79074626479,\"rank\":14463}],\"entities\":[],\"total_results\":10}"
+      "text": "{\"tokens\":[{\"name\":\"TURBO\",\"symbol\":\"TURBO\",\"chain\":\"hyperliquid\",\"address\":\"TURBO\",\"price\":0.000865,\"volume_24h\":92911.983231,\"market_cap\":59924434.0434,\"rank\":280},{\"name\":\"Turbo (Wormhole)\",\"symbol\":\"TURBO\",\"chain\":\"solana\",\"address\":\"2Dyzu65QA9zdX1UeE7Gx71k7fiwyUK6sZdrvJ7auq5wm\",\"price\":0.0008661044487754265,\"volume_24h\":985.2541319786466,\"market_cap\":59664452.5935,\"rank\":572},{\"name\":\"Turbo\",\"symbol\":\"TURBO\",\"chain\":\"ethereum\",\"address\":\"0xa35923162c49cf95e6bf26623385eb431ad920d3\",\"price\":0.000868470058600022,\"volume_24h\":12178.88032571461,\"market_cap\":59924434.0434,\"rank\":573},{\"name\":\"Turbo on Robinhood\",\"symbol\":\"TURBO\",\"chain\":\"robinhood\",\"address\":\"0x808a9d5071e7d5f58490cb7385027536bbe43ef0\",\"price\":0.0000268211362322094,\"volume_24h\":5600.842446358262,\"market_cap\":27001.31258,\"rank\":4609},{\"name\":\"TurboLoop Token\",\"symbol\":\"TURBO\",\"chain\":\"bnb\",\"address\":\"0x64920e7f4f270f302e8b728f69b5a9fc24fda2d3\",\"price\":0.545307972550386,\"volume_24h\":4420.633343549551,\"market_cap\":568704.278169427,\"rank\":4857},{\"name\":\"Turbos Finance\",\"symbol\":\"TURBOS\",\"chain\":\"sui\",\"address\":\"0x5d1f47ea69bb0de31c313d7acf89b890dbb8991ea8e03c6c355171f84bb1ba4a::turbos::TURBOS\",\"price\":0.00010561362653486352,\"volume_24h\":3684.934677637365,\"market_cap\":699039.0,\"rank\":4941},{\"name\":\"TurboX\",\"symbol\":\"TBX\",\"chain\":\"bnb\",\"address\":\"0xd25db5c22a62041376f6f79372c8e204c7be7bdb\",\"price\":0.00604359670818846,\"volume_24h\":7.9520478608841785,\"market_cap\":3021145.26732865,\"rank\":8556},{\"name\":\"TurboUSD Unstablecoin\",\"symbol\":\"₸USD\",\"chain\":\"base\",\"address\":\"0x3d5e487b21e0569048c4d1a60e98c36e1b09db07\",\"price\":4.94872034940982e-6,\"volume_24h\":16.86680637673083,\"market_cap\":478703.580087792,\"rank\":9091},{\"name\":\"Based Turbo\",\"symbol\":\"TURBO\",\"chain\":\"base\",\"address\":\"0xba5e66fb16944da22a62ea4fd70ad02008744460\",\"price\":1.14746840480248e-6,\"volume_24h\":1.7568173376474894,\"market_cap\":79125.134451,\"rank\":10238},{\"name\":\"TurboDex Token\",\"symbol\":\"TURBO\",\"chain\":\"bnb\",\"address\":\"0x9d0211c1b1a217a574cb55b0e9c367e56debeae0\",\"price\":0.00831117757786981,\"volume_24h\":0.0,\"market_cap\":196808.103009371,\"rank\":12606},{\"name\":\"TURBO.WIN\",\"symbol\":\"TURBO\",\"chain\":\"ethereum\",\"address\":\"0x109ba5f0230b7b39e4a8ab56e7361db89fa0e108\",\"price\":0.0000147720309172414,\"volume_24h\":0.0,\"market_cap\":7042.79074626479,\"rank\":14501}],\"entities\":[],\"total_results\":11}"
     },
-    "d39af4c8e68bdaebda10d25acff7a0e5": {
-      "storedAt": "2026-09-16T12:40:22.457Z",
+    "490f2eca01148cb805743afcc39b7da3": {
+      "storedAt": "2026-09-16T13:51:43.792Z",
       "ttlMs": 1800000,
-      "endpoint": "tgm/flow-intelligence",
+      "endpoint": "tgm/token-information",
       "body": {
         "chain": "robinhood",
         "token_address": "0x808a9d5071e7d5f58490cb7385027536bbe43ef0",
         "timeframe": "7d"
       },
-      "text": "{\"data\":[{\"public_figure_net_flow_usd\":0.0,\"public_figure_avg_flow_usd\":null,\"public_figure_wallet_count\":0,\"top_pnl_net_flow_usd\":0.0,\"top_pnl_avg_flow_usd\":null,\"top_pnl_wallet_count\":0,\"whale_net_flow_usd\":0.0,\"whale_avg_flow_usd\":null,\"whale_wallet_count\":0,\"smart_trader_net_flow_usd\":0.0,\"smart_trader_avg_flow_usd\":null,\"smart_trader_wallet_count\":0,\"exchange_net_flow_usd\":1362.5205469040013,\"exchange_avg_flow_usd\":1362.5205456519454,\"exchange_wallet_count\":0,\"fresh_wallets_net_flow_usd\":0.0,\"fresh_wallets_avg_flow_usd\":0.0,\"fresh_wallets_wallet_count\":0}],\"warnings\":[\"exchange_wallet_count is always 0 (not tracked), even when exchange net flow is non-zero.\"]}"
+      "text": "{\"data\":{\"name\":\"Turbo on Robinhood\",\"symbol\":\"TURBO\",\"contract_address\":\"0x808a9d5071e7d5f58490cb7385027536bbe43ef0\",\"logo\":\"https://coin-images.coingecko.com/coins/images/102175487/small/IMG_6447.jpeg?1786441056\",\"token_details\":{\"token_deployment_date\":\"2026-07-28 20:19:37\",\"website\":\"https://turborh.fun/\",\"x\":\"rhturbo_crew\",\"telegram\":\"Turborhportal1\",\"market_cap_usd\":26814.603558459297,\"fdv_usd\":24332.3380536844,\"circulating_supply\":1000000000.0,\"total_supply\":1000000000.0},\"spot_metrics\":{\"volume_total_usd\":18859.99520373092,\"buy_volume_usd\":8602.371054718213,\"sell_volume_usd\":10257.624149012707,\"total_buys\":1985,\"total_sells\":2610,\"unique_buyers\":1221,\"unique_sellers\":1160,\"liquidity_usd\":9600.91394638958,\"total_holders\":656}}}"
     },
     "23ad56e3ccd85851c1be3945ca41d52b": {
-      "storedAt": "2026-09-16T12:40:22.457Z",
+      "storedAt": "2026-09-16T13:51:43.876Z",
       "ttlMs": 1800000,
       "endpoint": "tgm/token-information",
       "body": {
@@ -41,10 +41,32 @@
         "token_address": "0x64920e7f4f270f302e8b728f69b5a9fc24fda2d3",
         "timeframe": "7d"
       },
-      "text": "{\"data\":{\"name\":\"\",\"symbol\":\"\",\"contract_address\":\"0x64920e7f4f270f302e8b728f69b5a9fc24fda2d3\",\"logo\":\"\",\"token_details\":{\"token_deployment_date\":\"\",\"website\":\"https://turboloop.io/\",\"x\":\"turboloop_io\",\"telegram\":\"TurboLoop_Chat\",\"market_cap_usd\":0.0,\"fdv_usd\":0.0,\"circulating_supply\":0.0,\"total_supply\":0.0},\"spot_metrics\":{\"volume_total_usd\":37644.28096199015,\"buy_volume_usd\":10954.753553218448,\"sell_volume_usd\":26689.527408771708,\"total_buys\":239,\"total_sells\":329,\"unique_buyers\":106,\"unique_sellers\":202,\"liquidity_usd\":0.0,\"total_holders\":2923}}}"
+      "text": "{\"data\":{\"name\":\"\",\"symbol\":\"\",\"contract_address\":\"0x64920e7f4f270f302e8b728f69b5a9fc24fda2d3\",\"logo\":\"\",\"token_details\":{\"token_deployment_date\":\"\",\"website\":\"https://turboloop.io/\",\"x\":\"turboloop_io\",\"telegram\":\"TurboLoop_Chat\",\"market_cap_usd\":0.0,\"fdv_usd\":0.0,\"circulating_supply\":0.0,\"total_supply\":0.0},\"spot_metrics\":{\"volume_total_usd\":37667.118491936366,\"buy_volume_usd\":10977.484963995876,\"sell_volume_usd\":26689.63352794049,\"total_buys\":242,\"total_sells\":330,\"unique_buyers\":107,\"unique_sellers\":203,\"liquidity_usd\":0.0,\"total_holders\":2926}}}"
+    },
+    "20754227105ac09806d7203b4076ddee": {
+      "storedAt": "2026-09-16T13:51:43.884Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/token-information",
+      "body": {
+        "chain": "ethereum",
+        "token_address": "0xa35923162c49cf95e6bf26623385eb431ad920d3",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":{\"name\":\"Turbo\",\"symbol\":\"TURBO\",\"contract_address\":\"0xa35923162c49cf95e6bf26623385eb431ad920d3\",\"logo\":\"https://coin-images.coingecko.com/coins/images/30117/small/TurboMark-QL_200.png?1708079597\",\"token_details\":{\"token_deployment_date\":\"2023-04-29 03:58:11\",\"website\":\"https://turbotoken.io\",\"x\":\"TurboToadToken\",\"telegram\":\"TurboToadToken\",\"market_cap_usd\":59909163.85626159,\"fdv_usd\":58749261.7769692,\"circulating_supply\":69000000000.0,\"total_supply\":69000000000.0},\"spot_metrics\":{\"volume_total_usd\":169716.50099579454,\"buy_volume_usd\":81178.1506012157,\"sell_volume_usd\":88538.35039457883,\"total_buys\":141,\"total_sells\":155,\"unique_buyers\":54,\"unique_sellers\":83,\"liquidity_usd\":65322.66983125921,\"total_holders\":40159}}}"
+    },
+    "ac22f67c14187c2140c0b8e8522d7fbe": {
+      "storedAt": "2026-09-16T13:51:43.904Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/flow-intelligence",
+      "body": {
+        "chain": "ethereum",
+        "token_address": "0xa35923162c49cf95e6bf26623385eb431ad920d3",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":[{\"public_figure_net_flow_usd\":2.588634867035413,\"public_figure_avg_flow_usd\":null,\"public_figure_wallet_count\":9,\"top_pnl_net_flow_usd\":-240.23299286551182,\"top_pnl_avg_flow_usd\":1663.312158933582,\"top_pnl_wallet_count\":16,\"whale_net_flow_usd\":0.0,\"whale_avg_flow_usd\":null,\"whale_wallet_count\":0,\"smart_trader_net_flow_usd\":5.900180764877421,\"smart_trader_avg_flow_usd\":null,\"smart_trader_wallet_count\":25,\"exchange_net_flow_usd\":95726.96930057353,\"exchange_avg_flow_usd\":35183.5483261489,\"exchange_wallet_count\":0,\"fresh_wallets_net_flow_usd\":0.0,\"fresh_wallets_avg_flow_usd\":0.0,\"fresh_wallets_wallet_count\":0}],\"warnings\":[\"exchange_wallet_count is always 0 (not tracked), even when exchange net flow is non-zero.\"]}"
     },
     "f0c1abb06535065ff6da900997e639e2": {
-      "storedAt": "2026-09-16T12:40:22.501Z",
+      "storedAt": "2026-09-16T13:51:44.015Z",
       "ttlMs": 1800000,
       "endpoint": "tgm/flow-intelligence",
       "body": {
@@ -54,52 +76,8 @@
       },
       "text": "{\"data\":[{\"public_figure_net_flow_usd\":0.0,\"public_figure_avg_flow_usd\":null,\"public_figure_wallet_count\":0,\"top_pnl_net_flow_usd\":0.0,\"top_pnl_avg_flow_usd\":null,\"top_pnl_wallet_count\":0,\"whale_net_flow_usd\":0.0,\"whale_avg_flow_usd\":null,\"whale_wallet_count\":0,\"smart_trader_net_flow_usd\":0.0,\"smart_trader_avg_flow_usd\":null,\"smart_trader_wallet_count\":0,\"exchange_net_flow_usd\":15.908139562093766,\"exchange_avg_flow_usd\":244.98514387444578,\"exchange_wallet_count\":0,\"fresh_wallets_net_flow_usd\":0.0,\"fresh_wallets_avg_flow_usd\":0.0,\"fresh_wallets_wallet_count\":0}],\"warnings\":[\"exchange_wallet_count is always 0 (not tracked), even when exchange net flow is non-zero.\"]}"
     },
-    "490f2eca01148cb805743afcc39b7da3": {
-      "storedAt": "2026-09-16T12:40:22.693Z",
-      "ttlMs": 1800000,
-      "endpoint": "tgm/token-information",
-      "body": {
-        "chain": "robinhood",
-        "token_address": "0x808a9d5071e7d5f58490cb7385027536bbe43ef0",
-        "timeframe": "7d"
-      },
-      "text": "{\"data\":{\"name\":\"Turbo on Robinhood\",\"symbol\":\"TURBO\",\"contract_address\":\"0x808a9d5071e7d5f58490cb7385027536bbe43ef0\",\"logo\":\"https://coin-images.coingecko.com/coins/images/102175487/small/IMG_6447.jpeg?1786441056\",\"token_details\":{\"token_deployment_date\":\"2026-07-28 20:19:37\",\"website\":\"https://turborh.fun/\",\"x\":\"rhturbo_crew\",\"telegram\":\"Turborhportal1\",\"market_cap_usd\":28789.0807099097,\"fdv_usd\":26124.035082642,\"circulating_supply\":1000000000.0,\"total_supply\":1000000000.0},\"spot_metrics\":{\"volume_total_usd\":18550.66750652121,\"buy_volume_usd\":8601.854806854208,\"sell_volume_usd\":9948.812699667003,\"total_buys\":1984,\"total_sells\":2600,\"unique_buyers\":1220,\"unique_sellers\":1157,\"liquidity_usd\":9981.411379282656,\"total_holders\":693}}}"
-    },
-    "20754227105ac09806d7203b4076ddee": {
-      "storedAt": "2026-09-16T12:40:22.880Z",
-      "ttlMs": 1800000,
-      "endpoint": "tgm/token-information",
-      "body": {
-        "chain": "ethereum",
-        "token_address": "0xa35923162c49cf95e6bf26623385eb431ad920d3",
-        "timeframe": "7d"
-      },
-      "text": "{\"data\":{\"name\":\"Turbo\",\"symbol\":\"TURBO\",\"contract_address\":\"0xa35923162c49cf95e6bf26623385eb431ad920d3\",\"logo\":\"https://coin-images.coingecko.com/coins/images/30117/small/TurboMark-QL_200.png?1708079597\",\"token_details\":{\"token_deployment_date\":\"2023-04-29 03:58:11\",\"website\":\"https://turbotoken.io\",\"x\":\"TurboToadToken\",\"telegram\":\"TurboToadToken\",\"market_cap_usd\":59952953.30344177,\"fdv_usd\":59952122.4758192,\"circulating_supply\":69000000000.0,\"total_supply\":69000000000.0},\"spot_metrics\":{\"volume_total_usd\":169709.53908854176,\"buy_volume_usd\":81171.18869396293,\"sell_volume_usd\":88538.35039457883,\"total_buys\":140,\"total_sells\":155,\"unique_buyers\":53,\"unique_sellers\":83,\"liquidity_usd\":64192.92063224224,\"total_holders\":40106}}}"
-    },
-    "5e8399ebe8eb7702b11bab8580a747db": {
-      "storedAt": "2026-09-16T12:40:22.944Z",
-      "ttlMs": 1800000,
-      "endpoint": "tgm/token-information",
-      "body": {
-        "chain": "solana",
-        "token_address": "2Dyzu65QA9zdX1UeE7Gx71k7fiwyUK6sZdrvJ7auq5wm",
-        "timeframe": "7d"
-      },
-      "text": "{\"data\":{\"name\":\"Turbo (Wormhole)\",\"symbol\":\"TURBO\",\"contract_address\":\"2Dyzu65QA9zdX1UeE7Gx71k7fiwyUK6sZdrvJ7auq5wm\",\"logo\":\"https://coin-images.coingecko.com/coins/images/30117/small/TurboMark-QL_200.png?1708079597\",\"token_details\":{\"token_deployment_date\":\"2024-02-18 03:06:30\",\"website\":\"\",\"x\":\"\",\"telegram\":\"\",\"market_cap_usd\":59885180.228248596,\"fdv_usd\":134146.00181926,\"circulating_supply\":69000000000.0,\"total_supply\":69000000000.0},\"spot_metrics\":{\"volume_total_usd\":8623.436621617504,\"buy_volume_usd\":4045.9787814595156,\"sell_volume_usd\":4577.457840157987,\"total_buys\":889,\"total_sells\":1015,\"unique_buyers\":84,\"unique_sellers\":85,\"liquidity_usd\":23113.034889387487,\"total_holders\":3093}}}"
-    },
-    "ac22f67c14187c2140c0b8e8522d7fbe": {
-      "storedAt": "2026-09-16T12:40:23.093Z",
-      "ttlMs": 1800000,
-      "endpoint": "tgm/flow-intelligence",
-      "body": {
-        "chain": "ethereum",
-        "token_address": "0xa35923162c49cf95e6bf26623385eb431ad920d3",
-        "timeframe": "7d"
-      },
-      "text": "{\"data\":[{\"public_figure_net_flow_usd\":2.588634867035413,\"public_figure_avg_flow_usd\":null,\"public_figure_wallet_count\":9,\"top_pnl_net_flow_usd\":-240.57857405948963,\"top_pnl_avg_flow_usd\":1664.5080871496612,\"top_pnl_wallet_count\":15,\"whale_net_flow_usd\":0.0,\"whale_avg_flow_usd\":null,\"whale_wallet_count\":0,\"smart_trader_net_flow_usd\":5.900180764877421,\"smart_trader_avg_flow_usd\":null,\"smart_trader_wallet_count\":25,\"exchange_net_flow_usd\":93167.4661438288,\"exchange_avg_flow_usd\":34710.00083717843,\"exchange_wallet_count\":0,\"fresh_wallets_net_flow_usd\":0.0,\"fresh_wallets_avg_flow_usd\":0.0,\"fresh_wallets_wallet_count\":0}],\"warnings\":[\"exchange_wallet_count is always 0 (not tracked), even when exchange net flow is non-zero.\"]}"
-    },
     "a587a2b862a4f665e25db1c53930a01f": {
-      "storedAt": "2026-09-16T12:40:23.303Z",
+      "storedAt": "2026-09-16T13:51:44.058Z",
       "ttlMs": 1800000,
       "endpoint": "tgm/flow-intelligence",
       "body": {
@@ -107,32 +85,32 @@
         "token_address": "0x64920e7f4f270f302e8b728f69b5a9fc24fda2d3",
         "timeframe": "7d"
       },
-      "text": "{\"data\":[{\"public_figure_net_flow_usd\":0.0,\"public_figure_avg_flow_usd\":null,\"public_figure_wallet_count\":0,\"top_pnl_net_flow_usd\":0.0,\"top_pnl_avg_flow_usd\":null,\"top_pnl_wallet_count\":0,\"whale_net_flow_usd\":0.0,\"whale_avg_flow_usd\":null,\"whale_wallet_count\":0,\"smart_trader_net_flow_usd\":0.0,\"smart_trader_avg_flow_usd\":null,\"smart_trader_wallet_count\":0,\"exchange_net_flow_usd\":15708.929890215786,\"exchange_avg_flow_usd\":13550.526044779606,\"exchange_wallet_count\":0,\"fresh_wallets_net_flow_usd\":0.0,\"fresh_wallets_avg_flow_usd\":0.0,\"fresh_wallets_wallet_count\":0}],\"warnings\":[\"exchange_wallet_count is always 0 (not tracked), even when exchange net flow is non-zero.\"]}"
+      "text": "{\"data\":[{\"public_figure_net_flow_usd\":0.0,\"public_figure_avg_flow_usd\":null,\"public_figure_wallet_count\":0,\"top_pnl_net_flow_usd\":0.0,\"top_pnl_avg_flow_usd\":null,\"top_pnl_wallet_count\":0,\"whale_net_flow_usd\":0.0,\"whale_avg_flow_usd\":null,\"whale_wallet_count\":0,\"smart_trader_net_flow_usd\":0.0,\"smart_trader_avg_flow_usd\":null,\"smart_trader_wallet_count\":0,\"exchange_net_flow_usd\":15686.790677364635,\"exchange_avg_flow_usd\":13540.97403344501,\"exchange_wallet_count\":0,\"fresh_wallets_net_flow_usd\":0.0,\"fresh_wallets_avg_flow_usd\":0.0,\"fresh_wallets_wallet_count\":0}],\"warnings\":[\"exchange_wallet_count is always 0 (not tracked), even when exchange net flow is non-zero.\"]}"
     },
-    "05a6acd3f583616277e0a02af821e7eb": {
-      "storedAt": "2026-09-16T12:40:23.468Z",
+    "5e8399ebe8eb7702b11bab8580a747db": {
+      "storedAt": "2026-09-16T13:51:44.058Z",
       "ttlMs": 1800000,
       "endpoint": "tgm/token-information",
       "body": {
-        "chain": "bnb",
-        "token_address": "0x9d0211c1b1a217a574cb55b0e9c367e56debeae0",
+        "chain": "solana",
+        "token_address": "2Dyzu65QA9zdX1UeE7Gx71k7fiwyUK6sZdrvJ7auq5wm",
         "timeframe": "7d"
       },
-      "text": "{\"data\":{\"name\":\"\",\"symbol\":\"\",\"contract_address\":\"0x9d0211c1b1a217a574cb55b0e9c367e56debeae0\",\"logo\":\"\",\"token_details\":{\"token_deployment_date\":\"\",\"website\":\"https://turbodex.net/\",\"x\":\"turbo_dex\",\"telegram\":\"turbodex\",\"market_cap_usd\":0.0,\"fdv_usd\":0.0,\"circulating_supply\":0.0,\"total_supply\":0.0},\"spot_metrics\":{\"volume_total_usd\":95.21586616279059,\"buy_volume_usd\":63.98165828997902,\"sell_volume_usd\":31.23420787281157,\"total_buys\":8,\"total_sells\":3,\"unique_buyers\":1,\"unique_sellers\":3,\"liquidity_usd\":0.0,\"total_holders\":9960}}}"
+      "text": "{\"data\":{\"name\":\"Turbo (Wormhole)\",\"symbol\":\"TURBO\",\"contract_address\":\"2Dyzu65QA9zdX1UeE7Gx71k7fiwyUK6sZdrvJ7auq5wm\",\"logo\":\"https://coin-images.coingecko.com/coins/images/30117/small/TurboMark-QL_200.png?1708079597\",\"token_details\":{\"token_deployment_date\":\"2024-02-18 03:06:30\",\"website\":\"\",\"x\":\"\",\"telegram\":\"\",\"market_cap_usd\":60339098.99963266,\"fdv_usd\":134975.7716375,\"circulating_supply\":69000000000.0,\"total_supply\":69000000000.0},\"spot_metrics\":{\"volume_total_usd\":8716.746184328855,\"buy_volume_usd\":4123.075309461489,\"sell_volume_usd\":4593.670874867365,\"total_buys\":966,\"total_sells\":1039,\"unique_buyers\":86,\"unique_sellers\":85,\"liquidity_usd\":23085.185791343156,\"total_holders\":3101}}}"
     },
-    "d1438f1d81a2ccc37db5a8e19a81e498": {
-      "storedAt": "2026-09-16T12:40:23.517Z",
+    "b6f7c8ddb3421208e6c2c55f6629b6c5": {
+      "storedAt": "2026-09-16T13:51:44.189Z",
       "ttlMs": 1800000,
       "endpoint": "tgm/flow-intelligence",
       "body": {
-        "chain": "ethereum",
-        "token_address": "0x109ba5f0230b7b39e4a8ab56e7361db89fa0e108",
+        "chain": "solana",
+        "token_address": "2Dyzu65QA9zdX1UeE7Gx71k7fiwyUK6sZdrvJ7auq5wm",
         "timeframe": "7d"
       },
-      "text": "{\"data\":[{\"public_figure_net_flow_usd\":0.0,\"public_figure_avg_flow_usd\":null,\"public_figure_wallet_count\":0,\"top_pnl_net_flow_usd\":0.0,\"top_pnl_avg_flow_usd\":null,\"top_pnl_wallet_count\":0,\"whale_net_flow_usd\":0.0,\"whale_avg_flow_usd\":null,\"whale_wallet_count\":0,\"smart_trader_net_flow_usd\":0.0,\"smart_trader_avg_flow_usd\":null,\"smart_trader_wallet_count\":0,\"exchange_net_flow_usd\":0.0,\"exchange_avg_flow_usd\":null,\"exchange_wallet_count\":0,\"fresh_wallets_net_flow_usd\":0.0,\"fresh_wallets_avg_flow_usd\":0.0,\"fresh_wallets_wallet_count\":0}],\"warnings\":null}"
+      "text": "{\"data\":[{\"public_figure_net_flow_usd\":0.0,\"public_figure_avg_flow_usd\":null,\"public_figure_wallet_count\":0,\"top_pnl_net_flow_usd\":0.0,\"top_pnl_avg_flow_usd\":null,\"top_pnl_wallet_count\":0,\"whale_net_flow_usd\":0.0,\"whale_avg_flow_usd\":null,\"whale_wallet_count\":0,\"smart_trader_net_flow_usd\":0.0,\"smart_trader_avg_flow_usd\":null,\"smart_trader_wallet_count\":0,\"exchange_net_flow_usd\":34.595278443334884,\"exchange_avg_flow_usd\":4158.693774430583,\"exchange_wallet_count\":0,\"fresh_wallets_net_flow_usd\":0.0,\"fresh_wallets_avg_flow_usd\":0.0,\"fresh_wallets_wallet_count\":0}],\"warnings\":[\"exchange_wallet_count is always 0 (not tracked), even when exchange net flow is non-zero.\"]}"
     },
     "1612b9b6bd01575eef57faaa11835fa0": {
-      "storedAt": "2026-09-16T12:40:23.523Z",
+      "storedAt": "2026-09-16T13:51:44.339Z",
       "ttlMs": 1800000,
       "endpoint": "tgm/token-information",
       "body": {
@@ -142,8 +120,19 @@
       },
       "text": "{\"data\":{\"name\":\"Based Turbo\",\"symbol\":\"TURBO\",\"contract_address\":\"0xba5e66fb16944da22a62ea4fd70ad02008744460\",\"logo\":\"https://coin-images.coingecko.com/coins/images/52830/small/IMG_0966.png?1734454793\",\"token_details\":{\"token_deployment_date\":\"2024-12-16 04:26:23\",\"website\":\"https://basedturbo.io/\",\"x\":\"BasedTurboio\",\"telegram\":\"baseturbo\",\"market_cap_usd\":79175.31993137112,\"fdv_usd\":79173.4164753454,\"circulating_supply\":69000000000.0,\"total_supply\":69000000000.0},\"spot_metrics\":{\"volume_total_usd\":368.52254072825144,\"buy_volume_usd\":178.42271991791785,\"sell_volume_usd\":190.09982081033357,\"total_buys\":7,\"total_sells\":22,\"unique_buyers\":6,\"unique_sellers\":22,\"liquidity_usd\":19214.97071183628,\"total_holders\":2004}}}"
     },
+    "d39af4c8e68bdaebda10d25acff7a0e5": {
+      "storedAt": "2026-09-16T13:51:44.410Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/flow-intelligence",
+      "body": {
+        "chain": "robinhood",
+        "token_address": "0x808a9d5071e7d5f58490cb7385027536bbe43ef0",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":[{\"public_figure_net_flow_usd\":0.0,\"public_figure_avg_flow_usd\":null,\"public_figure_wallet_count\":0,\"top_pnl_net_flow_usd\":0.0,\"top_pnl_avg_flow_usd\":null,\"top_pnl_wallet_count\":0,\"whale_net_flow_usd\":0.0,\"whale_avg_flow_usd\":null,\"whale_wallet_count\":0,\"smart_trader_net_flow_usd\":0.0,\"smart_trader_avg_flow_usd\":null,\"smart_trader_wallet_count\":0,\"exchange_net_flow_usd\":1635.2905250923288,\"exchange_avg_flow_usd\":1635.290525528909,\"exchange_wallet_count\":0,\"fresh_wallets_net_flow_usd\":0.0,\"fresh_wallets_avg_flow_usd\":0.0,\"fresh_wallets_wallet_count\":0}],\"warnings\":[\"exchange_wallet_count is always 0 (not tracked), even when exchange net flow is non-zero.\"]}"
+    },
     "aa6419888b9c490b4e518c5c19be7607": {
-      "storedAt": "2026-09-16T12:40:23.571Z",
+      "storedAt": "2026-09-16T13:51:44.614Z",
       "ttlMs": 1800000,
       "endpoint": "tgm/token-information",
       "body": {
@@ -153,19 +142,19 @@
       },
       "text": "{\"data\":{\"name\":\"TURBO.WIN\",\"symbol\":\"TURBO\",\"contract_address\":\"0x109ba5f0230b7b39e4a8ab56e7361db89fa0e108\",\"logo\":\"https://coin-images.coingecko.com/coins/images/52310/small/Turbo200x200.png?1733067695\",\"token_details\":{\"token_deployment_date\":\"2024-12-01 09:50:59\",\"website\":\"https://app.turbo.win/auction\",\"x\":\"defivolt\",\"telegram\":\"voltdefi\",\"market_cap_usd\":7127.319735728716,\"fdv_usd\":6741.2236524833,\"circulating_supply\":482487464.0229704,\"total_supply\":482487464.0229704},\"spot_metrics\":{\"volume_total_usd\":0.0,\"buy_volume_usd\":0.0,\"sell_volume_usd\":0.0,\"total_buys\":0,\"total_sells\":0,\"unique_buyers\":0,\"unique_sellers\":0,\"liquidity_usd\":3010.610623913621,\"total_holders\":138}}}"
     },
-    "b6f7c8ddb3421208e6c2c55f6629b6c5": {
-      "storedAt": "2026-09-16T12:40:23.708Z",
+    "05a6acd3f583616277e0a02af821e7eb": {
+      "storedAt": "2026-09-16T13:51:44.700Z",
       "ttlMs": 1800000,
-      "endpoint": "tgm/flow-intelligence",
+      "endpoint": "tgm/token-information",
       "body": {
-        "chain": "solana",
-        "token_address": "2Dyzu65QA9zdX1UeE7Gx71k7fiwyUK6sZdrvJ7auq5wm",
+        "chain": "bnb",
+        "token_address": "0x9d0211c1b1a217a574cb55b0e9c367e56debeae0",
         "timeframe": "7d"
       },
-      "text": "{\"data\":[{\"public_figure_net_flow_usd\":0.0,\"public_figure_avg_flow_usd\":null,\"public_figure_wallet_count\":0,\"top_pnl_net_flow_usd\":0.0,\"top_pnl_avg_flow_usd\":null,\"top_pnl_wallet_count\":0,\"whale_net_flow_usd\":0.0,\"whale_avg_flow_usd\":null,\"whale_wallet_count\":0,\"smart_trader_net_flow_usd\":0.0,\"smart_trader_avg_flow_usd\":null,\"smart_trader_wallet_count\":0,\"exchange_net_flow_usd\":34.58806948798688,\"exchange_avg_flow_usd\":4158.693774430583,\"exchange_wallet_count\":0,\"fresh_wallets_net_flow_usd\":0.0,\"fresh_wallets_avg_flow_usd\":0.0,\"fresh_wallets_wallet_count\":0}],\"warnings\":[\"exchange_wallet_count is always 0 (not tracked), even when exchange net flow is non-zero.\"]}"
+      "text": "{\"data\":{\"name\":\"\",\"symbol\":\"\",\"contract_address\":\"0x9d0211c1b1a217a574cb55b0e9c367e56debeae0\",\"logo\":\"\",\"token_details\":{\"token_deployment_date\":\"\",\"website\":\"https://turbodex.net/\",\"x\":\"turbo_dex\",\"telegram\":\"turbodex\",\"market_cap_usd\":0.0,\"fdv_usd\":0.0,\"circulating_supply\":0.0,\"total_supply\":0.0},\"spot_metrics\":{\"volume_total_usd\":95.21586616279059,\"buy_volume_usd\":63.98165828997902,\"sell_volume_usd\":31.23420787281157,\"total_buys\":8,\"total_sells\":3,\"unique_buyers\":1,\"unique_sellers\":3,\"liquidity_usd\":0.0,\"total_holders\":9960}}}"
     },
     "b181b69512a9ecbcf058481255976be0": {
-      "storedAt": "2026-09-16T12:40:23.919Z",
+      "storedAt": "2026-09-16T13:51:44.780Z",
       "ttlMs": 1800000,
       "endpoint": "tgm/flow-intelligence",
       "body": {
@@ -175,8 +164,19 @@
       },
       "text": "{\"data\":[{\"public_figure_net_flow_usd\":0.0,\"public_figure_avg_flow_usd\":null,\"public_figure_wallet_count\":0,\"top_pnl_net_flow_usd\":0.0,\"top_pnl_avg_flow_usd\":null,\"top_pnl_wallet_count\":0,\"whale_net_flow_usd\":0.0,\"whale_avg_flow_usd\":null,\"whale_wallet_count\":0,\"smart_trader_net_flow_usd\":0.0,\"smart_trader_avg_flow_usd\":null,\"smart_trader_wallet_count\":0,\"exchange_net_flow_usd\":-30.370519759144067,\"exchange_avg_flow_usd\":null,\"exchange_wallet_count\":0,\"fresh_wallets_net_flow_usd\":0.0,\"fresh_wallets_avg_flow_usd\":0.0,\"fresh_wallets_wallet_count\":0}],\"warnings\":[\"exchange_wallet_count is always 0 (not tracked), even when exchange net flow is non-zero.\"]}"
     },
+    "d1438f1d81a2ccc37db5a8e19a81e498": {
+      "storedAt": "2026-09-16T13:51:44.788Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/flow-intelligence",
+      "body": {
+        "chain": "ethereum",
+        "token_address": "0x109ba5f0230b7b39e4a8ab56e7361db89fa0e108",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":[{\"public_figure_net_flow_usd\":0.0,\"public_figure_avg_flow_usd\":null,\"public_figure_wallet_count\":0,\"top_pnl_net_flow_usd\":0.0,\"top_pnl_avg_flow_usd\":null,\"top_pnl_wallet_count\":0,\"whale_net_flow_usd\":0.0,\"whale_avg_flow_usd\":null,\"whale_wallet_count\":0,\"smart_trader_net_flow_usd\":0.0,\"smart_trader_avg_flow_usd\":null,\"smart_trader_wallet_count\":0,\"exchange_net_flow_usd\":0.0,\"exchange_avg_flow_usd\":null,\"exchange_wallet_count\":0,\"fresh_wallets_net_flow_usd\":0.0,\"fresh_wallets_avg_flow_usd\":0.0,\"fresh_wallets_wallet_count\":0}],\"warnings\":null}"
+    },
     "7f213d3572226443035010b169e0eada": {
-      "storedAt": "2026-09-16T12:40:24.853Z",
+      "storedAt": "2026-09-16T13:51:45.454Z",
       "ttlMs": 1800000,
       "endpoint": "tgm/holders",
       "body": {
@@ -187,10 +187,10 @@
           "per_page": 20
         }
       },
-      "text": "{\"data\":[{\"address\":\"0x377b8ce04761754e8ac153b47805a9cf6b190873\",\"address_label\":\"Token Millionaire\",\"token_amount\":5430811106.593699,\"total_outflow\":2418744317.9791775,\"total_inflow\":7849555424.572877,\"balance_change_24h\":-27000.000000000004,\"balance_change_7d\":201300.0,\"balance_change_30d\":-3076900.0,\"ownership_percentage\":0.07870740735334456,\"value_usd\":4718741.517006159},{\"address\":\"0xf977814e90da44bfa03b6295a0616a897441acec\",\"address_label\":\"Token Millionaire\",\"token_amount\":5231553736.000001,\"total_outflow\":19074522844.0,\"total_inflow\":24306076580.0,\"balance_change_24h\":0.0,\"balance_change_7d\":470864626.0,\"balance_change_30d\":-911344599.0,\"ownership_percentage\":0.07581961937330722,\"value_usd\":4545610.099113831},{\"address\":\"0x221f8e99408f730981bfc311eb9372dc353f3ac0\",\"address_label\":\"Token Millionaire\",\"token_amount\":5104091162.239526,\"total_outflow\":4858253195.626074,\"total_inflow\":9962344357.8656,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.07397233569535146,\"value_usd\":4434859.98704719},{\"address\":\"0x211daf53d67c9bef19336864c10675b99a699da4\",\"address_label\":\"Token Millionaire\",\"token_amount\":3700000000.0,\"total_outflow\":74626738299.66872,\"total_inflow\":78326738299.66872,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.05362318841356859,\"value_usd\":3214868.5104744136},{\"address\":\"0x5a52e96bacdabb82fd05763e25335261b270efcb\",\"address_label\":\"Token Billionaire\",\"token_amount\":2292898335.0,\"total_outflow\":2850000000.0,\"total_inflow\":5142898335.0,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":1142898335.0,\"ownership_percentage\":0.03323041065698992,\"value_usd\":1992261.2580839766},{\"address\":\"0x647361050f6fef5c9265854319567d6a46dff91c\",\"address_label\":\"Token Millionaire\",\"token_amount\":2059146931.0257123,\"total_outflow\":11205675941.4,\"total_inflow\":13264822872.425713,\"balance_change_24h\":163729.000074,\"balance_change_7d\":4944688.214167,\"balance_change_30d\":83456415.78672822,\"ownership_percentage\":0.029842709149625214,\"value_usd\":1789158.5478363761},{\"address\":\"0x611f7bf868a6212f871e89f7e44684045ddfb09d\",\"address_label\":\"Token Millionaire\",\"token_amount\":1679049319.143998,\"total_outflow\":11777405240.976004,\"total_inflow\":13456454560.12,\"balance_change_24h\":-7991290.333113301,\"balance_change_7d\":-129302271.9165597,\"balance_change_30d\":297267300.2339977,\"ownership_percentage\":0.02433404810706288,\"value_usd\":1458898.0496350117},{\"address\":\"0xa023f08c70a23abc7edfc5b6b5e171d78dfc947e\",\"address_label\":\"High Activity\",\"token_amount\":1457984242.7708795,\"total_outflow\":748208325.58,\"total_inflow\":2206192568.3508797,\"balance_change_24h\":0.0,\"balance_change_7d\":1534634.1321792966,\"balance_change_30d\":6924544.716081987,\"ownership_percentage\":0.021130206420031623,\"value_usd\":1266818.2786086441},{\"address\":\"0x9642b23ed1e01df1092b92641051881a322f5d4e\",\"address_label\":\"High Activity\",\"token_amount\":1383143514.3757493,\"total_outflow\":13244320217.172344,\"total_inflow\":14627463731.548094,\"balance_change_24h\":5457641.92426251,\"balance_change_7d\":172527210.49219826,\"balance_change_30d\":155015896.54367483,\"ownership_percentage\":0.020045558182263844,\"value_usd\":1201790.4134685164},{\"address\":\"0x91d40e4818f4d4c57b4578d9eca6afc92ac8debe\",\"address_label\":\"Token Millionaire\",\"token_amount\":1184773322.420945,\"total_outflow\":39451852933.78397,\"total_inflow\":40636626256.20492,\"balance_change_24h\":67554897.1146513,\"balance_change_7d\":202229407.13952798,\"balance_change_30d\":-101039744.74460691,\"ownership_percentage\":0.017170627863661615,\"value_usd\":1029429.850351688},{\"address\":\"0x76f2662eddb7b45121d5f4070a91839bd838fcde\",\"address_label\":\"High Balance\",\"token_amount\":1019930477.2018713,\"total_outflow\":6136344.936216506,\"total_inflow\":1026066822.1380876,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.014781601121009964,\"value_usd\":886200.6416295777},{\"address\":\"0x45b190b2260d08954791165cc57c7cdf6f5546ee\",\"address_label\":\"TURBO Whale\",\"token_amount\":990264952.8151128,\"total_outflow\":0.0,\"total_inflow\":990264952.8151128,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.014351665984907678,\"value_usd\":860424.7604950641},{\"address\":\"0x1c677c01fc5912fb5835c7ac69a46c50b8d71e2d\",\"address_label\":\"TURBO Whale\",\"token_amount\":990064945.7852812,\"total_outflow\":0.0,\"total_inflow\":990064945.7852812,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.014348767332301001,\"value_usd\":860250.9777107184},{\"address\":\"0x583c7e0cc422f066daf5bd356685608e81c5bed0\",\"address_label\":\"TURBO Whale\",\"token_amount\":988525932.3714811,\"total_outflow\":0.0,\"total_inflow\":988525932.3714811,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.014326462790068781,\"value_usd\":858913.7545320092},{\"address\":\"0x16b75561308c528d48bdce9ea18ec64b42e6c283\",\"address_label\":\"TURBO Whale\",\"token_amount\":988464080.5250286,\"total_outflow\":0.0,\"total_inflow\":988464080.5250286,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.014325566386496876,\"value_usd\":858860.0124905296},{\"address\":\"0x8fce6784a300d2b2373cabc7b3b835816d9e22da\",\"address_label\":\"TURBO Whale\",\"token_amount\":987554248.8237735,\"total_outflow\":0.0,\"total_inflow\":987554248.8237735,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.01431238041981011,\"value_usd\":858069.4748456117},{\"address\":\"0x0d443749eaa7bc594512682c7afd19a2144c2631\",\"address_label\":\"TURBO Whale\",\"token_amount\":986394609.8269267,\"total_outflow\":0.0,\"total_inflow\":986394609.8269267,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.014295574057534531,\"value_usd\":857061.8837930493},{\"address\":\"0xc284e8939ae3ce48354d8723a9f57c82a99f17ed\",\"address_label\":\"High Balance\",\"token_amount\":972360356.8095864,\"total_outflow\":2423679630.7686954,\"total_inflow\":3396039987.578282,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":105085277.55955541,\"ownership_percentage\":0.014092179086239252,\"value_usd\":844867.7545785957},{\"address\":\"0x0529ea5885702715e83923c59746ae8734c553b7\",\"address_label\":\"Token Millionaire\",\"token_amount\":969366583.7529397,\"total_outflow\":15956322138.488314,\"total_inflow\":16925688722.241255,\"balance_change_24h\":0.0,\"balance_change_7d\":3777801.321884,\"balance_change_30d\":99320828.92953049,\"ownership_percentage\":0.014048791070919244,\"value_usd\":842266.5149225633},{\"address\":\"0xc882b111a75c0c657fc507c04fbfcd2cc984f071\",\"address_label\":\"Token Millionaire\",\"token_amount\":944702720.69036,\"total_outflow\":30246809533.886314,\"total_inflow\":31191512254.57668,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":944702720.69036,\"ownership_percentage\":0.013691343780105414,\"value_usd\":820836.4941910658}],\"pagination\":{\"page\":1,\"per_page\":20,\"is_last_page\":false},\"warnings\":null}"
+      "text": "{\"data\":[{\"address\":\"0x377b8ce04761754e8ac153b47805a9cf6b190873\",\"address_label\":\"Token Millionaire\",\"token_amount\":5430811106.593699,\"total_outflow\":2418744317.9791775,\"total_inflow\":7849555424.572877,\"balance_change_24h\":-27000.000000000004,\"balance_change_7d\":201300.0,\"balance_change_30d\":-3076900.0,\"ownership_percentage\":0.07870740735334444,\"value_usd\":4715294.9631496705},{\"address\":\"0xf977814e90da44bfa03b6295a0616a897441acec\",\"address_label\":\"Token Millionaire\",\"token_amount\":5231553736.000001,\"total_outflow\":19074522844.0,\"total_inflow\":24306076580.0,\"balance_change_24h\":0.0,\"balance_change_7d\":470864626.0,\"balance_change_30d\":-911344599.0,\"ownership_percentage\":0.0758196193733071,\"value_usd\":4542289.999896544},{\"address\":\"0x221f8e99408f730981bfc311eb9372dc353f3ac0\",\"address_label\":\"Token Millionaire\",\"token_amount\":5104091162.239526,\"total_outflow\":4858253195.626074,\"total_inflow\":9962344357.8656,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.07397233569535133,\"value_usd\":4431620.779360933},{\"address\":\"0x211daf53d67c9bef19336864c10675b99a699da4\",\"address_label\":\"Token Millionaire\",\"token_amount\":3700000000.0,\"total_outflow\":74626738299.66872,\"total_inflow\":78326738299.66872,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.05362318841356851,\"value_usd\":3212520.380698085},{\"address\":\"0x5a52e96bacdabb82fd05763e25335261b270efcb\",\"address_label\":\"Token Billionaire\",\"token_amount\":2292898335.0,\"total_outflow\":2850000000.0,\"total_inflow\":5142898335.0,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":1142898335.0,\"ownership_percentage\":0.03323041065698987,\"value_usd\":1990806.1167719474},{\"address\":\"0x647361050f6fef5c9265854319567d6a46dff91c\",\"address_label\":\"Token Millionaire\",\"token_amount\":2059146931.0257123,\"total_outflow\":11205675941.4,\"total_inflow\":13264822872.425713,\"balance_change_24h\":163729.000074,\"balance_change_7d\":4944688.214167,\"balance_change_30d\":83456415.78672822,\"ownership_percentage\":0.02984270914962517,\"value_usd\":1787851.7521005445},{\"address\":\"0x611f7bf868a6212f871e89f7e44684045ddfb09d\",\"address_label\":\"Token Millionaire\",\"token_amount\":1679049319.143998,\"total_outflow\":11777405240.976004,\"total_inflow\":13456454560.12,\"balance_change_24h\":-7991290.333113301,\"balance_change_7d\":-129302271.9165597,\"balance_change_30d\":297267300.2339977,\"ownership_percentage\":0.02433404810706284,\"value_usd\":1457832.4751209018},{\"address\":\"0xa023f08c70a23abc7edfc5b6b5e171d78dfc947e\",\"address_label\":\"High Activity\",\"token_amount\":1457984242.7708795,\"total_outflow\":748208325.58,\"total_inflow\":2206192568.3508797,\"balance_change_24h\":0.0,\"balance_change_7d\":1534634.1321792966,\"balance_change_30d\":6924544.716081987,\"ownership_percentage\":0.021130206420031588,\"value_usd\":1265892.9985508418},{\"address\":\"0x9642b23ed1e01df1092b92641051881a322f5d4e\",\"address_label\":\"High Activity\",\"token_amount\":1385667741.8079805,\"total_outflow\":13244320217.172344,\"total_inflow\":14629987958.980326,\"balance_change_24h\":9916748.35649391,\"balance_change_7d\":175051437.92442966,\"balance_change_30d\":157540123.97590622,\"ownership_percentage\":0.020082141188533336,\"value_usd\":1203104.286874062},{\"address\":\"0x91d40e4818f4d4c57b4578d9eca6afc92ac8debe\",\"address_label\":\"Token Millionaire\",\"token_amount\":1184773322.420945,\"total_outflow\":39451852933.78397,\"total_inflow\":40636626256.20492,\"balance_change_24h\":67554897.1146513,\"balance_change_7d\":202229407.13952798,\"balance_change_30d\":-101039744.74460691,\"ownership_percentage\":0.017170627863661587,\"value_usd\":1028677.9580499106},{\"address\":\"0x76f2662eddb7b45121d5f4070a91839bd838fcde\",\"address_label\":\"High Balance\",\"token_amount\":1019930477.2018713,\"total_outflow\":6136344.936216506,\"total_inflow\":1026066822.1380876,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.014781601121009942,\"value_usd\":885553.3634881446},{\"address\":\"0x45b190b2260d08954791165cc57c7cdf6f5546ee\",\"address_label\":\"TURBO Whale\",\"token_amount\":990264952.8151128,\"total_outflow\":0.0,\"total_inflow\":990264952.8151128,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.014351665984907655,\"value_usd\":859796.3089755615},{\"address\":\"0x1c677c01fc5912fb5835c7ac69a46c50b8d71e2d\",\"address_label\":\"TURBO Whale\",\"token_amount\":990064945.7852812,\"total_outflow\":0.0,\"total_inflow\":990064945.7852812,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.014348767332300979,\"value_usd\":859622.653121611},{\"address\":\"0x583c7e0cc422f066daf5bd356685608e81c5bed0\",\"address_label\":\"TURBO Whale\",\"token_amount\":988525932.3714811,\"total_outflow\":0.0,\"total_inflow\":988525932.3714811,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.014326462790068759,\"value_usd\":858286.4066464757},{\"address\":\"0x16b75561308c528d48bdce9ea18ec64b42e6c283\",\"address_label\":\"TURBO Whale\",\"token_amount\":988464080.5250286,\"total_outflow\":0.0,\"total_inflow\":988464080.5250286,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.014325566386496855,\"value_usd\":858232.7038580128},{\"address\":\"0x8fce6784a300d2b2373cabc7b3b835816d9e22da\",\"address_label\":\"TURBO Whale\",\"token_amount\":987554248.8237735,\"total_outflow\":0.0,\"total_inflow\":987554248.8237735,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.014312380419810087,\"value_usd\":857442.7436192866},{\"address\":\"0x0d443749eaa7bc594512682c7afd19a2144c2631\",\"address_label\":\"TURBO Whale\",\"token_amount\":986394609.8269267,\"total_outflow\":0.0,\"total_inflow\":986394609.8269267,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.014295574057534509,\"value_usd\":856435.8885080372},{\"address\":\"0xc284e8939ae3ce48354d8723a9f57c82a99f17ed\",\"address_label\":\"High Balance\",\"token_amount\":972360356.8095864,\"total_outflow\":2423679630.7686954,\"total_inflow\":3396039987.578282,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":105085277.55955541,\"ownership_percentage\":0.01409217908623923,\"value_usd\":844250.6658469347},{\"address\":\"0x0529ea5885702715e83923c59746ae8734c553b7\",\"address_label\":\"Token Millionaire\",\"token_amount\":969366583.7529397,\"total_outflow\":15956322138.488314,\"total_inflow\":16925688722.241255,\"balance_change_24h\":0.0,\"balance_change_7d\":3777801.321884,\"balance_change_30d\":99320828.92953049,\"ownership_percentage\":0.014048791070919222,\"value_usd\":841651.326128107},{\"address\":\"0xc882b111a75c0c657fc507c04fbfcd2cc984f071\",\"address_label\":\"Token Millionaire\",\"token_amount\":944702720.69036,\"total_outflow\":30246809533.886314,\"total_inflow\":31191512254.57668,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":944702720.69036,\"ownership_percentage\":0.013691343780105393,\"value_usd\":820236.9578158681}],\"pagination\":{\"page\":1,\"per_page\":20,\"is_last_page\":false},\"warnings\":null}"
     },
     "7a314b5c6dc9b31707031cc08ac8544b": {
-      "storedAt": "2026-09-16T12:40:24.870Z",
+      "storedAt": "2026-09-16T13:51:45.834Z",
       "ttlMs": 1800000,
       "endpoint": "tgm/holders",
       "body": {
@@ -201,7 +201,7 @@
           "per_page": 20
         }
       },
-      "text": "{\"data\":[{\"address\":\"5Q544fKrFoe6tsEbD7S8EmxGTJYAKtTVhAW5Q5pge4j1\",\"address_label\":\"usedsaga.sol\",\"token_amount\":11926230.97051281,\"total_outflow\":2108591912.8117573,\"total_inflow\":2120518143.7822704,\"balance_change_24h\":-18461.51212128,\"balance_change_7d\":537844.73391638,\"balance_change_30d\":979399.42778793,\"ownership_percentage\":0.07695211255399115,\"value_usd\":10350.789726273619},{\"address\":\"DhmF9Y1RP1wfM1YmqxXKHstZWfYMLFZWmfARZjxQq716\",\"address_label\":\"\",\"token_amount\":3000000.36227889,\"total_outflow\":0.0,\"total_inflow\":3000000.36227889,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":3000000.36227889,\"ownership_percentage\":0.019357026214810336,\"value_usd\":2603.7038026069913},{\"address\":\"9WzDXwBbmkg8ZTbNMqUxvQRAyrZzDsGYdLVL9zYtAWWM\",\"address_label\":\"poppalsnft.sol\",\"token_amount\":2831201.161,\"total_outflow\":27087448.748,\"total_inflow\":29918649.909,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.018267876158270854,\"value_usd\":2457.202779549444},{\"address\":\"HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC\",\"address_label\":\"\",\"token_amount\":2731497.99409127,\"total_outflow\":5760595.53676112,\"total_inflow\":8492093.53085239,\"balance_change_24h\":-11700.49032889,\"balance_change_7d\":247999.19148115,\"balance_change_30d\":1728339.42541498,\"ownership_percentage\":0.017624557297440502,\"value_usd\":2370.67028506167},{\"address\":\"3ccGeC7gQDnN7wroDPpznRvDwLZHK8ec9bmznk9dMmbe\",\"address_label\":\"\",\"token_amount\":2406162.598,\"total_outflow\":0.0,\"total_inflow\":2406162.598,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.015525382287354629,\"value_usd\":2088.311316517404},{\"address\":\"CayodSQWmG6atoELfuD7ToeyTFFHvxpCCoNCVz9wBjxL\",\"address_label\":\"\",\"token_amount\":1798935.64155239,\"total_outflow\":442208.76751817,\"total_inflow\":2241144.40907056,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.011607346722396527,\"value_usd\":1561.2983349765927},{\"address\":\"5tzFkiKscXHK5ZXCGbXZxdw7gTjjD1mBwuoFbhUvuAi9\",\"address_label\":\"kiing.sol\",\"token_amount\":1587464.47614334,\"total_outflow\":333992464.4526296,\"total_inflow\":335579928.928773,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":121199.369,\"ownership_percentage\":0.010242862589671302,\"value_usd\":1377.7622646345822},{\"address\":\"7mw8YDtbeYuAzCDYLDrbrSMSkVZFJkiqWwRYXjhC6WNx\",\"address_label\":\"\",\"token_amount\":1533675.86811153,\"total_outflow\":0.0,\"total_inflow\":1533675.86811153,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.0098958001330058,\"value_usd\":1331.0790691822406},{\"address\":\"B5Jded4JyMG476bWemT7ZkzSYhDgLN33JwUbhKwNnPb8\",\"address_label\":\"\",\"token_amount\":1494707.15480304,\"total_outflow\":63634.13727296,\"total_inflow\":1558341.292076,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.00964436069501291,\"value_usd\":1297.2580775917786},{\"address\":\"9ogiuahciyLXoynb7ViBs1vbrKPqw2jjA618Jes95Wg2\",\"address_label\":\"\",\"token_amount\":1317075.6432971,\"total_outflow\":417.92772346,\"total_inflow\":1317493.57102056,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":153430.8762302,\"ownership_percentage\":0.00849822155848796,\"value_usd\":1143.0914822185985},{\"address\":\"32utPpzsbcqPJAWBKqcVeaPc3sX8fZJRYWg8bj4KuNEp\",\"address_label\":\"\",\"token_amount\":1314993.17823116,\"total_outflow\":0.0,\"total_inflow\":1314993.17823116,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.00848478478315297,\"value_usd\":1141.284108366528},{\"address\":\"Ba6KzHM6SmVjBt3FdUAoSyNRkmTW79vDgzCVQADV9Jbc\",\"address_label\":\"\",\"token_amount\":1255513.8,\"total_outflow\":0.0,\"total_inflow\":1255513.8,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.008101003534944525,\"value_usd\":1089.6618868413516},{\"address\":\"AsbCHwR6RZpqKh9T6Wgm24psgpuPLTE5GvDNc7S8wsHS\",\"address_label\":\"\",\"token_amount\":1251825.01306893,\"total_outflow\":283197.56071921,\"total_inflow\":1535022.57378814,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.008077202222710238,\"value_usd\":1086.4603843748193},{\"address\":\"Dzk76ActdM7Cm9eQEzCGqfR4xH1m4dqN8GP6zCQhQ8w6\",\"address_label\":\"\",\"token_amount\":1195193.72252982,\"total_outflow\":0.0,\"total_inflow\":1195193.72252982,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.0077117978083216425,\"value_usd\":1037.3100214691249},{\"address\":\"7bxLx8bkuJ22ChdsSSNYJgDwcDW8cDMJZ6sZqbBzBvDy\",\"address_label\":\"\",\"token_amount\":1156515.02608865,\"total_outflow\":200000.0,\"total_inflow\":1356515.02608865,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.007462229658137261,\"value_usd\":1003.7407358550208},{\"address\":\"HJNcfWJ47DJQbYnu57rhPoMwEYszjdodQE3rwNfbsKbK\",\"address_label\":\"\",\"token_amount\":1139062.85708748,\"total_outflow\":1611495.82303769,\"total_inflow\":2750558.68012517,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.007349622307448699,\"value_usd\":988.5939780867755},{\"address\":\"2zceLh2wto4Ytx4AccDFn3DHpRCsLqhzSgkFWfnp6pB2\",\"address_label\":\"\",\"token_amount\":1127205.19136067,\"total_outflow\":0.0,\"total_inflow\":1127205.19136067,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.007273112601247876,\"value_usd\":978.3026962152343},{\"address\":\"A3cRJJxHvgCmhmathYHUEQgqvjBwuBBVJu7SkBU5Gk6Q\",\"address_label\":\"\",\"token_amount\":1112980.06352263,\"total_outflow\":0.0,\"total_inflow\":1112980.06352263,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.007181327221508522,\"value_usd\":965.9566912246415},{\"address\":\"Kzs4qst9DRR2Ro9tg1dPjiVGgrG7JxqsFWWTMp2vqpR\",\"address_label\":\"\",\"token_amount\":1110920.76616144,\"total_outflow\":0.0,\"total_inflow\":1110920.76616144,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.007168039932111543,\"value_usd\":964.1694246504616},{\"address\":\"2KCLCHBAcKYAQCd8qd5p8cgDioDwaro9pH5guQQGhmAg\",\"address_label\":\"\",\"token_amount\":1084560.79486976,\"total_outflow\":0.0,\"total_inflow\":1084560.79486976,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.006997956400879202,\"value_usd\":941.2915749169294}],\"pagination\":{\"page\":1,\"per_page\":20,\"is_last_page\":false},\"warnings\":null}"
+      "text": "{\"data\":[{\"address\":\"5Q544fKrFoe6tsEbD7S8EmxGTJYAKtTVhAW5Q5pge4j1\",\"address_label\":\"usedsaga.sol\",\"token_amount\":11856345.0037962,\"total_outflow\":2108680365.7220695,\"total_inflow\":2120536710.7258656,\"balance_change_24h\":-88347.47883789,\"balance_change_7d\":467958.76719977,\"balance_change_30d\":1002833.19177221,\"ownership_percentage\":0.07650118444518468,\"value_usd\":10368.132970403753},{\"address\":\"DhmF9Y1RP1wfM1YmqxXKHstZWfYMLFZWmfARZjxQq716\",\"address_label\":\"\",\"token_amount\":3000000.36227889,\"total_outflow\":0.0,\"total_inflow\":3000000.36227889,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":3000000.36227889,\"ownership_percentage\":0.019357026214810304,\"value_usd\":2623.4394037460834},{\"address\":\"9WzDXwBbmkg8ZTbNMqUxvQRAyrZzDsGYdLVL9zYtAWWM\",\"address_label\":\"poppalsnft.sol\",\"token_amount\":2831201.161,\"total_outflow\":27087448.748,\"total_inflow\":29918649.909,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.018267876158270826,\"value_usd\":2475.8279295862885},{\"address\":\"HLnpSz9h2S4hiLQ43rnSD9XkcUThA7B8hQMKmDaiTLcC\",\"address_label\":\"\",\"token_amount\":2731497.99409127,\"total_outflow\":5760595.53676112,\"total_inflow\":8492093.53085239,\"balance_change_24h\":-11700.49032889,\"balance_change_7d\":247999.19148115,\"balance_change_30d\":1728677.09438396,\"ownership_percentage\":0.017624557297440478,\"value_usd\":2388.639534532915},{\"address\":\"3ccGeC7gQDnN7wroDPpznRvDwLZHK8ec9bmznk9dMmbe\",\"address_label\":\"\",\"token_amount\":2406162.598,\"total_outflow\":0.0,\"total_inflow\":2406162.598,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.015525382287354606,\"value_usd\":2104.140336375874},{\"address\":\"CayodSQWmG6atoELfuD7ToeyTFFHvxpCCoNCVz9wBjxL\",\"address_label\":\"\",\"token_amount\":1798935.64155239,\"total_outflow\":442208.76751817,\"total_inflow\":2241144.40907056,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.011607346722396508,\"value_usd\":1573.132692313005},{\"address\":\"5tzFkiKscXHK5ZXCGbXZxdw7gTjjD1mBwuoFbhUvuAi9\",\"address_label\":\"kiing.sol\",\"token_amount\":1587464.47614334,\"total_outflow\":333992464.4526296,\"total_inflow\":335579928.928773,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":121199.369,\"ownership_percentage\":0.010242862589671286,\"value_usd\":1388.2054519480143},{\"address\":\"7mw8YDtbeYuAzCDYLDrbrSMSkVZFJkiqWwRYXjhC6WNx\",\"address_label\":\"\",\"token_amount\":1533675.86811153,\"total_outflow\":0.0,\"total_inflow\":1533675.86811153,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.009895800133005785,\"value_usd\":1341.1684063670893},{\"address\":\"B5Jded4JyMG476bWemT7ZkzSYhDgLN33JwUbhKwNnPb8\",\"address_label\":\"\",\"token_amount\":1494707.15480304,\"total_outflow\":63634.13727296,\"total_inflow\":1558341.292076,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.009644360695012896,\"value_usd\":1307.0910578133316},{\"address\":\"9ogiuahciyLXoynb7ViBs1vbrKPqw2jjA618Jes95Wg2\",\"address_label\":\"\",\"token_amount\":1317075.6432971,\"total_outflow\":417.92772346,\"total_inflow\":1317493.57102056,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.008498221558487947,\"value_usd\":1151.7559076943273},{\"address\":\"32utPpzsbcqPJAWBKqcVeaPc3sX8fZJRYWg8bj4KuNEp\",\"address_label\":\"\",\"token_amount\":1314993.17823116,\"total_outflow\":0.0,\"total_inflow\":1314993.17823116,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.008484784783152958,\"value_usd\":1149.9348342772687},{\"address\":\"Ba6KzHM6SmVjBt3FdUAoSyNRkmTW79vDgzCVQADV9Jbc\",\"address_label\":\"\",\"token_amount\":1255513.8,\"total_outflow\":0.0,\"total_inflow\":1255513.8,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.008101003534944513,\"value_usd\":1097.9213257044203},{\"address\":\"AsbCHwR6RZpqKh9T6Wgm24psgpuPLTE5GvDNc7S8wsHS\",\"address_label\":\"\",\"token_amount\":1251825.01306893,\"total_outflow\":283197.56071921,\"total_inflow\":1535022.57378814,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.008077202222710226,\"value_usd\":1094.695556431632},{\"address\":\"Dzk76ActdM7Cm9eQEzCGqfR4xH1m4dqN8GP6zCQhQ8w6\",\"address_label\":\"\",\"token_amount\":1195193.72252982,\"total_outflow\":0.0,\"total_inflow\":1195193.72252982,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.00771179780832163,\"value_usd\":1045.1726427169026},{\"address\":\"7bxLx8bkuJ22ChdsSSNYJgDwcDW8cDMJZ6sZqbBzBvDy\",\"address_label\":\"\",\"token_amount\":1156515.02608865,\"total_outflow\":200000.0,\"total_inflow\":1356515.02608865,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.0074622296581372495,\"value_usd\":1011.3489080250116},{\"address\":\"HJNcfWJ47DJQbYnu57rhPoMwEYszjdodQE3rwNfbsKbK\",\"address_label\":\"\",\"token_amount\":1139062.85708748,\"total_outflow\":1611495.82303769,\"total_inflow\":2750558.68012517,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.007349622307448688,\"value_usd\":996.0873405884909},{\"address\":\"2zceLh2wto4Ytx4AccDFn3DHpRCsLqhzSgkFWfnp6pB2\",\"address_label\":\"\",\"token_amount\":1127205.19136067,\"total_outflow\":0.0,\"total_inflow\":1127205.19136067,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.007273112601247866,\"value_usd\":985.718052672628},{\"address\":\"A3cRJJxHvgCmhmathYHUEQgqvjBwuBBVJu7SkBU5Gk6Q\",\"address_label\":\"\",\"token_amount\":1112980.06352263,\"total_outflow\":0.0,\"total_inflow\":1112980.06352263,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.007181327221508511,\"value_usd\":973.2784672102813},{\"address\":\"Kzs4qst9DRR2Ro9tg1dPjiVGgrG7JxqsFWWTMp2vqpR\",\"address_label\":\"\",\"token_amount\":1110920.76616144,\"total_outflow\":0.0,\"total_inflow\":1110920.76616144,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.007168039932111531,\"value_usd\":971.4776534806215},{\"address\":\"2KCLCHBAcKYAQCd8qd5p8cgDioDwaro9pH5guQQGhmAg\",\"address_label\":\"\",\"token_amount\":1084560.79486976,\"total_outflow\":0.0,\"total_inflow\":1084560.79486976,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.006997956400879191,\"value_usd\":948.4263938082136}],\"pagination\":{\"page\":1,\"per_page\":20,\"is_last_page\":false},\"warnings\":null}"
     }
   },
   "verdict": {
@@ -211,41 +211,41 @@
       "address": "0xa35923162c49cf95e6bf26623385eb431ad920d3",
       "name": "Turbo",
       "symbol": "TURBO",
-      "marketCap": 59952953.3028,
-      "volume24h": 12761.89285723685,
-      "searchRank": 577,
-      "labelledWallets": 49,
+      "marketCap": 59924434.0434,
+      "volume24h": 12178.88032571461,
+      "searchRank": 573,
+      "labelledWallets": 50,
       "smartTraderWallets": 25,
       "whaleWallets": 0,
-      "topPnlWallets": 15,
+      "topPnlWallets": 16,
       "publicFigureWallets": 9,
       "smartTraderNetFlowUsd": 5.900180764877421,
-      "exchangeNetFlowUsd": 93167.4661438288,
+      "exchangeNetFlowUsd": 95726.96930057353,
       "freshNetFlowUsd": 0,
       "exchangeTouched": true,
       "freshShare": 0,
       "errors": [],
       "deploymentDate": "2023-04-29 03:58:11",
       "ageDays": 1236,
-      "marketCapUsd": 59952953.30344177,
-      "liquidityUsd": 64192.92063224224,
-      "totalHolders": 40106,
-      "uniqueBuyers": 53,
+      "marketCapUsd": 59909163.85626159,
+      "liquidityUsd": 65322.66983125921,
+      "totalHolders": 40159,
+      "uniqueBuyers": 54,
       "logo": "https://coin-images.coingecko.com/coins/images/30117/small/TurboMark-QL_200.png?1708079597",
       "website": "https://turbotoken.io",
-      "score": 20.04,
+      "score": 20.11,
       "terms": {
-        "labelled": 11.74,
-        "exchange": 1.18,
+        "labelled": 11.8,
+        "exchange": 1.19,
         "holders": 2.76,
-        "liquidity": 1.92,
+        "liquidity": 1.93,
         "age": 0,
         "fresh": 0,
         "recognisedHolders": 2.44
       },
       "reasons": [
-        "49 labelled wallets (25 smart traders, 15 top PnL, 0 whales, 9 public figures)",
-        "exchange flow $93K",
+        "50 labelled wallets (25 smart traders, 16 top PnL, 0 whales, 9 public figures)",
+        "exchange flow $96K",
         "40K holders",
         "3.4y old",
         "20 of top 20 holders tagged by Nansen (Token Millionaire ×9, TURBO Whale ×6, High Activity ×2)"
@@ -259,7 +259,7 @@
         "TURBO Whale ×6",
         "High Activity ×2"
       ],
-      "topHolderPct": 0.07870740735334456
+      "topHolderPct": 0.07870740735334444
     },
     "ranked": [
       {
@@ -267,41 +267,41 @@
         "address": "0xa35923162c49cf95e6bf26623385eb431ad920d3",
         "name": "Turbo",
         "symbol": "TURBO",
-        "marketCap": 59952953.3028,
-        "volume24h": 12761.89285723685,
-        "searchRank": 577,
-        "labelledWallets": 49,
+        "marketCap": 59924434.0434,
+        "volume24h": 12178.88032571461,
+        "searchRank": 573,
+        "labelledWallets": 50,
         "smartTraderWallets": 25,
         "whaleWallets": 0,
-        "topPnlWallets": 15,
+        "topPnlWallets": 16,
         "publicFigureWallets": 9,
         "smartTraderNetFlowUsd": 5.900180764877421,
-        "exchangeNetFlowUsd": 93167.4661438288,
+        "exchangeNetFlowUsd": 95726.96930057353,
         "freshNetFlowUsd": 0,
         "exchangeTouched": true,
         "freshShare": 0,
         "errors": [],
         "deploymentDate": "2023-04-29 03:58:11",
         "ageDays": 1236,
-        "marketCapUsd": 59952953.30344177,
-        "liquidityUsd": 64192.92063224224,
-        "totalHolders": 40106,
-        "uniqueBuyers": 53,
+        "marketCapUsd": 59909163.85626159,
+        "liquidityUsd": 65322.66983125921,
+        "totalHolders": 40159,
+        "uniqueBuyers": 54,
         "logo": "https://coin-images.coingecko.com/coins/images/30117/small/TurboMark-QL_200.png?1708079597",
         "website": "https://turbotoken.io",
-        "score": 20.04,
+        "score": 20.11,
         "terms": {
-          "labelled": 11.74,
-          "exchange": 1.18,
+          "labelled": 11.8,
+          "exchange": 1.19,
           "holders": 2.76,
-          "liquidity": 1.92,
+          "liquidity": 1.93,
           "age": 0,
           "fresh": 0,
           "recognisedHolders": 2.44
         },
         "reasons": [
-          "49 labelled wallets (25 smart traders, 15 top PnL, 0 whales, 9 public figures)",
-          "exchange flow $93K",
+          "50 labelled wallets (25 smart traders, 16 top PnL, 0 whales, 9 public figures)",
+          "exchange flow $96K",
           "40K holders",
           "3.4y old",
           "20 of top 20 holders tagged by Nansen (Token Millionaire ×9, TURBO Whale ×6, High Activity ×2)"
@@ -315,36 +315,36 @@
           "TURBO Whale ×6",
           "High Activity ×2"
         ],
-        "topHolderPct": 0.07870740735334456
+        "topHolderPct": 0.07870740735334444
       },
       {
         "chain": "solana",
         "address": "2Dyzu65QA9zdX1UeE7Gx71k7fiwyUK6sZdrvJ7auq5wm",
         "name": "Turbo (Wormhole)",
         "symbol": "TURBO",
-        "marketCap": 60611949.5949,
-        "volume24h": 947.4852320861547,
-        "searchRank": 576,
+        "marketCap": 59664452.5935,
+        "volume24h": 985.2541319786466,
+        "searchRank": 572,
         "labelledWallets": 0,
         "smartTraderWallets": 0,
         "whaleWallets": 0,
         "topPnlWallets": 0,
         "publicFigureWallets": 0,
         "smartTraderNetFlowUsd": 0,
-        "exchangeNetFlowUsd": 34.58806948798688,
+        "exchangeNetFlowUsd": 34.595278443334884,
         "freshNetFlowUsd": 0,
         "exchangeTouched": true,
         "freshShare": 0,
         "errors": [],
         "deploymentDate": "2024-02-18 03:06:30",
         "ageDays": 941,
-        "marketCapUsd": 59885180.228248596,
-        "liquidityUsd": 23113.034889387487,
-        "totalHolders": 3093,
-        "uniqueBuyers": 84,
+        "marketCapUsd": 60339098.99963266,
+        "liquidityUsd": 23085.185791343156,
+        "totalHolders": 3101,
+        "uniqueBuyers": 86,
         "logo": "https://coin-images.coingecko.com/coins/images/30117/small/TurboMark-QL_200.png?1708079597",
         "website": "",
-        "score": 4.95,
+        "score": 3.84,
         "terms": {
           "labelled": 0,
           "exchange": 0,
@@ -352,25 +352,21 @@
           "liquidity": 1.75,
           "age": 0,
           "fresh": 0,
-          "recognisedHolders": 1.11
+          "recognisedHolders": 0
         },
         "reasons": [
           "0 labelled wallets in 7 days",
           "no meaningful exchange flow",
           "3K holders",
           "2.6y old",
-          "3 of top 20 holders tagged by Nansen (usedsaga.sol, poppalsnft.sol, kiing.sol)"
+          "0 of top 20 holders tagged by Nansen"
         ],
         "impostor": false,
         "scorable": true,
         "unchecked": false,
-        "recognisedHolders": 3,
-        "topLabels": [
-          "usedsaga.sol",
-          "poppalsnft.sol",
-          "kiing.sol"
-        ],
-        "topHolderPct": 0.07695211255399115
+        "recognisedHolders": 0,
+        "topLabels": [],
+        "topHolderPct": 0.07650118444518468
       },
       {
         "chain": "base",
@@ -379,7 +375,7 @@
         "symbol": "TURBO",
         "marketCap": 79125.134451,
         "volume24h": 1.7568173376474894,
-        "searchRank": 10222,
+        "searchRank": 10238,
         "labelledWallets": 0,
         "smartTraderWallets": 0,
         "whaleWallets": 0,
@@ -424,42 +420,42 @@
         "address": "0x808a9d5071e7d5f58490cb7385027536bbe43ef0",
         "name": "Turbo on Robinhood",
         "symbol": "TURBO",
-        "marketCap": 28822.14045,
-        "volume24h": 5294.013956637256,
-        "searchRank": 4752,
+        "marketCap": 27001.31258,
+        "volume24h": 5600.842446358262,
+        "searchRank": 4609,
         "labelledWallets": 0,
         "smartTraderWallets": 0,
         "whaleWallets": 0,
         "topPnlWallets": 0,
         "publicFigureWallets": 0,
         "smartTraderNetFlowUsd": 0,
-        "exchangeNetFlowUsd": 1362.5205469040013,
+        "exchangeNetFlowUsd": 1635.2905250923288,
         "freshNetFlowUsd": 0,
         "exchangeTouched": true,
         "freshShare": 0,
         "errors": [],
         "deploymentDate": "2026-07-28 20:19:37",
         "ageDays": 49,
-        "marketCapUsd": 28789.0807099097,
-        "liquidityUsd": 9981.411379282656,
-        "totalHolders": 693,
-        "uniqueBuyers": 1220,
+        "marketCapUsd": 26814.603558459297,
+        "liquidityUsd": 9600.91394638958,
+        "totalHolders": 656,
+        "uniqueBuyers": 1221,
         "logo": "https://coin-images.coingecko.com/coins/images/102175487/small/IMG_6447.jpeg?1786441056",
         "website": "https://turborh.fun/",
-        "score": 3.39,
+        "score": 3.41,
         "terms": {
           "labelled": 0,
-          "exchange": 0.08,
-          "holders": 1.7,
-          "liquidity": 1.6,
+          "exchange": 0.13,
+          "holders": 1.69,
+          "liquidity": 1.59,
           "age": 0,
           "fresh": 0,
           "recognisedHolders": 0
         },
         "reasons": [
           "0 labelled wallets in 7 days",
-          "exchange flow $1K",
-          "693 holders",
+          "exchange flow $2K",
+          "656 holders",
           "49d old"
         ],
         "impostor": false,
@@ -471,24 +467,24 @@
         "address": "0x64920e7f4f270f302e8b728f69b5a9fc24fda2d3",
         "name": "TurboLoop Token",
         "symbol": "TURBO",
-        "marketCap": 568802.056330579,
-        "volume24h": 4389.340177073625,
-        "searchRank": 4848,
+        "marketCap": 568704.278169427,
+        "volume24h": 4420.633343549551,
+        "searchRank": 4857,
         "labelledWallets": 0,
         "smartTraderWallets": 0,
         "whaleWallets": 0,
         "topPnlWallets": 0,
         "publicFigureWallets": 0,
         "smartTraderNetFlowUsd": 0,
-        "exchangeNetFlowUsd": 15708.929890215786,
+        "exchangeNetFlowUsd": 15686.790677364635,
         "freshNetFlowUsd": 0,
         "exchangeTouched": true,
         "freshShare": 0,
         "errors": [],
         "marketCapUsd": 0,
         "liquidityUsd": 0,
-        "totalHolders": 2923,
-        "uniqueBuyers": 106,
+        "totalHolders": 2926,
+        "uniqueBuyers": 107,
         "logo": "",
         "website": "https://turboloop.io/",
         "score": 2.8,
@@ -518,7 +514,7 @@
         "symbol": "TURBO",
         "marketCap": 7042.79074626479,
         "volume24h": 0,
-        "searchRank": 14463,
+        "searchRank": 14501,
         "labelledWallets": 0,
         "smartTraderWallets": 0,
         "whaleWallets": 0,
@@ -566,7 +562,7 @@
         "symbol": "TURBO",
         "marketCap": 196808.103009371,
         "volume24h": 0,
-        "searchRank": 12578,
+        "searchRank": 12606,
         "labelledWallets": 0,
         "smartTraderWallets": 0,
         "whaleWallets": 0,
@@ -609,9 +605,9 @@
         "address": "TURBO",
         "name": "TURBO",
         "symbol": "TURBO",
-        "marketCap": 59952953.3028,
-        "volume24h": 93317.285412,
-        "searchRank": 282,
+        "marketCap": 59924434.0434,
+        "volume24h": 92911.983231,
+        "searchRank": 280,
         "labelledWallets": 0,
         "smartTraderWallets": 0,
         "whaleWallets": 0,
@@ -647,7 +643,7 @@
           "limit": 50
         },
         "credits": 0,
-        "ms": 383,
+        "ms": 460,
         "cached": false,
         "status": 200,
         "fieldsUsed": [
@@ -659,20 +655,89 @@
           "tokens[].volume_24h",
           "tokens[].rank"
         ],
-        "responseHash": "1ece9c37ff6033a5ce97f4acff455963244024e88661244560963da408866610",
+        "responseHash": "8c25d8c9caa9d78f2d4e3931011708d0c6362b1162c57b57f04500ccbb3ad32d",
         "attempts": 1,
-        "totalMs": 383,
+        "totalMs": 460,
         "ok": true
       },
       {
-        "endpoint": "tgm/flow-intelligence",
+        "endpoint": "tgm/token-information",
         "body": {
           "chain": "robinhood",
           "token_address": "0x808a9d5071e7d5f58490cb7385027536bbe43ef0",
           "timeframe": "7d"
         },
         "credits": 1,
-        "ms": 317,
+        "ms": 731,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "token_details.token_deployment_date",
+          "token_details.market_cap_usd",
+          "spot_metrics.liquidity_usd",
+          "spot_metrics.total_holders",
+          "spot_metrics.unique_buyers"
+        ],
+        "responseHash": "c04e28a3aac1d5f1d03389fc99949eadc4a7a9173195b18f87fab8200f48e0f6",
+        "attempts": 1,
+        "totalMs": 733,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/token-information",
+        "body": {
+          "chain": "bnb",
+          "token_address": "0x64920e7f4f270f302e8b728f69b5a9fc24fda2d3",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 815,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "token_details.token_deployment_date",
+          "token_details.market_cap_usd",
+          "spot_metrics.liquidity_usd",
+          "spot_metrics.total_holders",
+          "spot_metrics.unique_buyers"
+        ],
+        "responseHash": "57704c1f74e374661dc193f265668112168185633edb6c9813073c22cb23efa5",
+        "attempts": 1,
+        "totalMs": 817,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/token-information",
+        "body": {
+          "chain": "ethereum",
+          "token_address": "0xa35923162c49cf95e6bf26623385eb431ad920d3",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 823,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "token_details.token_deployment_date",
+          "token_details.market_cap_usd",
+          "spot_metrics.liquidity_usd",
+          "spot_metrics.total_holders",
+          "spot_metrics.unique_buyers"
+        ],
+        "responseHash": "7b60e56802043a1dbc0417002487303b3d4152326bb96250918a6663efec6631",
+        "attempts": 1,
+        "totalMs": 825,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/flow-intelligence",
+        "body": {
+          "chain": "ethereum",
+          "token_address": "0xa35923162c49cf95e6bf26623385eb431ad920d3",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 844,
         "cached": false,
         "status": 200,
         "fieldsUsed": [
@@ -687,32 +752,9 @@
           "exchange_net_flow_usd",
           "fresh_wallets_net_flow_usd"
         ],
-        "responseHash": "d8d5ad6ac9eb15215b625ce24e75ffdcec77190e2a2dc649e0ca602f2562fe68",
+        "responseHash": "8e443106d6cbc28a4f87174618994d34227fa962ecb1669425fa53074009b68f",
         "attempts": 1,
-        "totalMs": 318,
-        "ok": true
-      },
-      {
-        "endpoint": "tgm/token-information",
-        "body": {
-          "chain": "bnb",
-          "token_address": "0x64920e7f4f270f302e8b728f69b5a9fc24fda2d3",
-          "timeframe": "7d"
-        },
-        "credits": 1,
-        "ms": 316,
-        "cached": false,
-        "status": 200,
-        "fieldsUsed": [
-          "token_details.token_deployment_date",
-          "token_details.market_cap_usd",
-          "spot_metrics.liquidity_usd",
-          "spot_metrics.total_holders",
-          "spot_metrics.unique_buyers"
-        ],
-        "responseHash": "0234e13940c58b6c2898620aaba9378a4d23e747fe74c537eef4aee71bc34343",
-        "attempts": 1,
-        "totalMs": 318,
+        "totalMs": 845,
         "ok": true
       },
       {
@@ -723,7 +765,7 @@
           "timeframe": "7d"
         },
         "credits": 1,
-        "ms": 360,
+        "ms": 954,
         "cached": false,
         "status": 200,
         "fieldsUsed": [
@@ -740,104 +782,7 @@
         ],
         "responseHash": "10422383a58c9019d68dd0660f19da06ac72840aea3c097c27d3f713c4c44809",
         "attempts": 1,
-        "totalMs": 362,
-        "ok": true
-      },
-      {
-        "endpoint": "tgm/token-information",
-        "body": {
-          "chain": "robinhood",
-          "token_address": "0x808a9d5071e7d5f58490cb7385027536bbe43ef0",
-          "timeframe": "7d"
-        },
-        "credits": 1,
-        "ms": 553,
-        "cached": false,
-        "status": 200,
-        "fieldsUsed": [
-          "token_details.token_deployment_date",
-          "token_details.market_cap_usd",
-          "spot_metrics.liquidity_usd",
-          "spot_metrics.total_holders",
-          "spot_metrics.unique_buyers"
-        ],
-        "responseHash": "efef03bc405319f8838a13ca1665f5452ae696b5dd0d8f64b800cc655edc1349",
-        "attempts": 1,
-        "totalMs": 554,
-        "ok": true
-      },
-      {
-        "endpoint": "tgm/token-information",
-        "body": {
-          "chain": "ethereum",
-          "token_address": "0xa35923162c49cf95e6bf26623385eb431ad920d3",
-          "timeframe": "7d"
-        },
-        "credits": 1,
-        "ms": 739,
-        "cached": false,
-        "status": 200,
-        "fieldsUsed": [
-          "token_details.token_deployment_date",
-          "token_details.market_cap_usd",
-          "spot_metrics.liquidity_usd",
-          "spot_metrics.total_holders",
-          "spot_metrics.unique_buyers"
-        ],
-        "responseHash": "035148ef64fa766f4eb88f0935cfbf8f5df84b2b84ead33bd50a0fd84397d152",
-        "attempts": 1,
-        "totalMs": 741,
-        "ok": true
-      },
-      {
-        "endpoint": "tgm/token-information",
-        "body": {
-          "chain": "solana",
-          "token_address": "2Dyzu65QA9zdX1UeE7Gx71k7fiwyUK6sZdrvJ7auq5wm",
-          "timeframe": "7d"
-        },
-        "credits": 1,
-        "ms": 805,
-        "cached": false,
-        "status": 200,
-        "fieldsUsed": [
-          "token_details.token_deployment_date",
-          "token_details.market_cap_usd",
-          "spot_metrics.liquidity_usd",
-          "spot_metrics.total_holders",
-          "spot_metrics.unique_buyers"
-        ],
-        "responseHash": "f2deec9773ee25e0b77a23c7f9edda7b8ddd6f70b3a1077c8a77f1a7260baa20",
-        "attempts": 1,
-        "totalMs": 805,
-        "ok": true
-      },
-      {
-        "endpoint": "tgm/flow-intelligence",
-        "body": {
-          "chain": "ethereum",
-          "token_address": "0xa35923162c49cf95e6bf26623385eb431ad920d3",
-          "timeframe": "7d"
-        },
-        "credits": 1,
-        "ms": 953,
-        "cached": false,
-        "status": 200,
-        "fieldsUsed": [
-          "smart_trader_wallet_count",
-          "whale_wallet_count",
-          "top_pnl_wallet_count",
-          "public_figure_wallet_count",
-          "smart_trader_net_flow_usd",
-          "whale_net_flow_usd",
-          "top_pnl_net_flow_usd",
-          "public_figure_net_flow_usd",
-          "exchange_net_flow_usd",
-          "fresh_wallets_net_flow_usd"
-        ],
-        "responseHash": "a0c355a92fb3d2bc1ef917af331ecb5cee8912d8b103ee5c700f7990a2fed062",
-        "attempts": 1,
-        "totalMs": 954,
+        "totalMs": 956,
         "ok": true
       },
       {
@@ -848,7 +793,7 @@
           "timeframe": "7d"
         },
         "credits": 1,
-        "ms": 1162,
+        "ms": 997,
         "cached": false,
         "status": 200,
         "fieldsUsed": [
@@ -863,20 +808,20 @@
           "exchange_net_flow_usd",
           "fresh_wallets_net_flow_usd"
         ],
-        "responseHash": "4ae9cdecfdb3bbdbf6940e92925645e0230c068b9059bb1d4a0f9c2ad9817cc7",
+        "responseHash": "9716411adcc45dcef2602d13af8e4a166e67855ec690678d2c5d4f791670dc26",
         "attempts": 1,
-        "totalMs": 1164,
+        "totalMs": 999,
         "ok": true
       },
       {
         "endpoint": "tgm/token-information",
         "body": {
-          "chain": "bnb",
-          "token_address": "0x9d0211c1b1a217a574cb55b0e9c367e56debeae0",
+          "chain": "solana",
+          "token_address": "2Dyzu65QA9zdX1UeE7Gx71k7fiwyUK6sZdrvJ7auq5wm",
           "timeframe": "7d"
         },
         "credits": 1,
-        "ms": 322,
+        "ms": 999,
         "cached": false,
         "status": 200,
         "fieldsUsed": [
@@ -886,20 +831,20 @@
           "spot_metrics.total_holders",
           "spot_metrics.unique_buyers"
         ],
-        "responseHash": "8b2e14e94bfd8ceba36b70ba0fe8f025ff8213f4a301389b228647e5ebc671aa",
+        "responseHash": "37b78bbd049b4398cc3b152a167fe3d561429101d507aabe968bae4f11479e09",
         "attempts": 1,
-        "totalMs": 1329,
+        "totalMs": 999,
         "ok": true
       },
       {
         "endpoint": "tgm/flow-intelligence",
         "body": {
-          "chain": "ethereum",
-          "token_address": "0x109ba5f0230b7b39e4a8ab56e7361db89fa0e108",
+          "chain": "solana",
+          "token_address": "2Dyzu65QA9zdX1UeE7Gx71k7fiwyUK6sZdrvJ7auq5wm",
           "timeframe": "7d"
         },
         "credits": 1,
-        "ms": 370,
+        "ms": 1130,
         "cached": false,
         "status": 200,
         "fieldsUsed": [
@@ -914,9 +859,9 @@
           "exchange_net_flow_usd",
           "fresh_wallets_net_flow_usd"
         ],
-        "responseHash": "dd0dfa476a7ed511671b8287ebec6bbcb8a3108000ee1e5c9f0681540b48cd86",
+        "responseHash": "5d8b93b8e5472678d615c4f361a71a47ce92388478309fd70ae3cc86f496c687",
         "attempts": 1,
-        "totalMs": 1378,
+        "totalMs": 1131,
         "ok": true
       },
       {
@@ -927,7 +872,7 @@
           "timeframe": "7d"
         },
         "credits": 1,
-        "ms": 761,
+        "ms": 735,
         "cached": false,
         "status": 200,
         "fieldsUsed": [
@@ -939,41 +884,18 @@
         ],
         "responseHash": "f3376751f02eb624441154fdf55c8063fdf3eecfd8818def0659521a0f1644fd",
         "attempts": 1,
-        "totalMs": 1384,
-        "ok": true
-      },
-      {
-        "endpoint": "tgm/token-information",
-        "body": {
-          "chain": "ethereum",
-          "token_address": "0x109ba5f0230b7b39e4a8ab56e7361db89fa0e108",
-          "timeframe": "7d"
-        },
-        "credits": 1,
-        "ms": 423,
-        "cached": false,
-        "status": 200,
-        "fieldsUsed": [
-          "token_details.token_deployment_date",
-          "token_details.market_cap_usd",
-          "spot_metrics.liquidity_usd",
-          "spot_metrics.total_holders",
-          "spot_metrics.unique_buyers"
-        ],
-        "responseHash": "d349f786cc23086fe216683e2867e564375be4eec624310d87101280da665476",
-        "attempts": 1,
-        "totalMs": 1432,
+        "totalMs": 1280,
         "ok": true
       },
       {
         "endpoint": "tgm/flow-intelligence",
         "body": {
-          "chain": "solana",
-          "token_address": "2Dyzu65QA9zdX1UeE7Gx71k7fiwyUK6sZdrvJ7auq5wm",
+          "chain": "robinhood",
+          "token_address": "0x808a9d5071e7d5f58490cb7385027536bbe43ef0",
           "timeframe": "7d"
         },
         "credits": 1,
-        "ms": 1569,
+        "ms": 1349,
         "cached": false,
         "status": 200,
         "fieldsUsed": [
@@ -988,9 +910,55 @@
           "exchange_net_flow_usd",
           "fresh_wallets_net_flow_usd"
         ],
-        "responseHash": "5e175a0999d76fe7946d2be2ddcfabf8f8f292c4cd007b9c8be4e37a6fa1efe3",
+        "responseHash": "e79c2cbec7d02084b932c0ff51e8da60b4d7de0bdf10ffc4aedb0ca4ffbbd1a8",
         "attempts": 1,
-        "totalMs": 1570,
+        "totalMs": 1351,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/token-information",
+        "body": {
+          "chain": "ethereum",
+          "token_address": "0x109ba5f0230b7b39e4a8ab56e7361db89fa0e108",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 548,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "token_details.token_deployment_date",
+          "token_details.market_cap_usd",
+          "spot_metrics.liquidity_usd",
+          "spot_metrics.total_holders",
+          "spot_metrics.unique_buyers"
+        ],
+        "responseHash": "d349f786cc23086fe216683e2867e564375be4eec624310d87101280da665476",
+        "attempts": 1,
+        "totalMs": 1555,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/token-information",
+        "body": {
+          "chain": "bnb",
+          "token_address": "0x9d0211c1b1a217a574cb55b0e9c367e56debeae0",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 635,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "token_details.token_deployment_date",
+          "token_details.market_cap_usd",
+          "spot_metrics.liquidity_usd",
+          "spot_metrics.total_holders",
+          "spot_metrics.unique_buyers"
+        ],
+        "responseHash": "8b2e14e94bfd8ceba36b70ba0fe8f025ff8213f4a301389b228647e5ebc671aa",
+        "attempts": 1,
+        "totalMs": 1641,
         "ok": true
       },
       {
@@ -1001,7 +969,7 @@
           "timeframe": "7d"
         },
         "credits": 1,
-        "ms": 775,
+        "ms": 715,
         "cached": false,
         "status": 200,
         "fieldsUsed": [
@@ -1018,7 +986,35 @@
         ],
         "responseHash": "74ed4cc63cc89caca820515f8d6ad91c8abe62bd453de71eda7b406049f3b408",
         "attempts": 1,
-        "totalMs": 1780,
+        "totalMs": 1720,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/flow-intelligence",
+        "body": {
+          "chain": "ethereum",
+          "token_address": "0x109ba5f0230b7b39e4a8ab56e7361db89fa0e108",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 721,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "smart_trader_wallet_count",
+          "whale_wallet_count",
+          "top_pnl_wallet_count",
+          "public_figure_wallet_count",
+          "smart_trader_net_flow_usd",
+          "whale_net_flow_usd",
+          "top_pnl_net_flow_usd",
+          "public_figure_net_flow_usd",
+          "exchange_net_flow_usd",
+          "fresh_wallets_net_flow_usd"
+        ],
+        "responseHash": "dd0dfa476a7ed511671b8287ebec6bbcb8a3108000ee1e5c9f0681540b48cd86",
+        "attempts": 1,
+        "totalMs": 1728,
         "ok": true
       },
       {
@@ -1032,16 +1028,16 @@
           }
         },
         "credits": 5,
-        "ms": 933,
+        "ms": 665,
         "cached": false,
         "status": 200,
         "fieldsUsed": [
           "data[].address_label",
           "data[].ownership_percentage"
         ],
-        "responseHash": "93efb26283b24dede3b0e4426d5fc6db310d7ab80dc6e55eaf7248dd368fac0e",
+        "responseHash": "ebaba2e04761e5b2058b79c3ce2958be4366531dba88213e60e421135b2eb484",
         "attempts": 1,
-        "totalMs": 933,
+        "totalMs": 665,
         "ok": true
       },
       {
@@ -1055,20 +1051,20 @@
           }
         },
         "credits": 5,
-        "ms": 949,
+        "ms": 1045,
         "cached": false,
         "status": 200,
         "fieldsUsed": [
           "data[].address_label",
           "data[].ownership_percentage"
         ],
-        "responseHash": "ac05081481a51c9aef125a03593aca5f29600d104e2152d159d3806199964120",
+        "responseHash": "c8d63b334102e8e6924077dbf117348bc50cefa9fe7bfa07832dec5e75b58c98",
         "attempts": 1,
-        "totalMs": 950,
+        "totalMs": 1046,
         "ok": true
       }
     ],
-    "ms": 3115,
+    "ms": 3236,
     "weights": {
       "labelled": 3,
       "exchange": 0.6,
@@ -1079,6 +1075,6 @@
       "freshPenalty": 1.5,
       "recognisedHolders": 0.8
     },
-    "hash": "a8c08db9529d1c87e49aba411798cf769b854ed6385ad8c88bc30eafd0b03ac5"
+    "hash": "57bbd0c724a37528f7ad84a46c439f2aff0005ef1a873878cef314ded0949470"
   }
 }

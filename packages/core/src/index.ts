@@ -2,9 +2,9 @@ export { NansenClient, NansenError, clientFromEnv, sha256, CREDITS } from "./cli
 export type { Call, ClientOptions, CallOptions } from "./client.js";
 export { searchCandidates, sameName, scorable, SCORABLE_CHAINS, TokenSearchResult } from "./search.js";
 export type { Candidate } from "./search.js";
-export { fetchFacts, fetchHolderFacts, STABLECOINS } from "./facts.js";
+export { fetchFacts, fetchHolderFacts, STABLECOINS, STRUCTURAL_TAG } from "./facts.js";
 export type { CandidateFacts } from "./facts.js";
-export { score, unscorable, rank, WEIGHTS, ABSTAIN_THRESHOLD } from "./score.js";
+export { score, unscorable, rank, WEIGHTS, ABSTAIN_THRESHOLD, MIN_RECOGNISED_TO_CROWN } from "./score.js";
 export type { Scored } from "./score.js";
 export { whichOnesReal } from "./verdict.js";
 export type { Verdict, VerdictOptions } from "./verdict.js";

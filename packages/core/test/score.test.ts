@@ -63,3 +63,11 @@ describe("score()", () => {
     expect(score(facts({ totalHolders: 50 })).score).toBeLessThan(ABSTAIN_THRESHOLD);
   });
 });
+
+describe("structural tags are not evidence (live finding 2026-09-16: dead $36K tokens were crowned on a UniswapV2 pool + deployer tag)", () => {
+  it("STRUCTURAL_TAG matches pools, deployers, name-service names, the token contract and burn addresses; not wealth/activity tags", async () => {
+    const { STRUCTURAL_TAG } = await import("../src/facts.js");
+    for (const t of ["UniswapV2", "Uniswap V3: PEPE-WETH", "PEPE Token Deployer", "usedsaga.sol", "vitalik.eth", "Token Contract", "Liquidity Pool", "Raydium Pool", "Null Address", "Burn"]) expect(STRUCTURAL_TAG.test(t), t).toBe(true);
+    for (const t of ["Token Millionaire", "High Activity", "High Balance", "PEPE Whale", "Smart Trader", "Binance", "Fund"]) expect(STRUCTURAL_TAG.test(t), t).toBe(false);
+  });
+});

@@ -1,17 +1,17 @@
 {
-  "edge": "11 · weakest signal in the set: one 3-year-old token, 0 labelled wallets, crowned on holder tags alone (the all-impostor abstain could not be produced live on 2026-09-16 — see specs/rubric-history.md)",
+  "edge": "11 · one dead 3-year-old token, 0 labelled wallets, only a pool + deployer tag among holders → abstain, not green",
   "query": "SHIB2",
   "options": {},
-  "now": 1789562427310,
-  "recordedAt": "2026-09-16T12:40:27.310Z",
+  "now": 1789566708271,
+  "recordedAt": "2026-09-16T13:51:48.271Z",
   "live": {
     "calls": 4,
     "credits": 7,
-    "ms": 1399
+    "ms": 2296
   },
   "responses": {
     "887e124628a8664f90978525856e0850": {
-      "storedAt": "2026-09-16T12:40:27.827Z",
+      "storedAt": "2026-09-16T13:51:48.746Z",
       "ttlMs": 1800000,
       "endpoint": "search/general",
       "body": {
@@ -19,10 +19,10 @@
         "result_type": "token",
         "limit": 50
       },
-      "text": "{\"tokens\":[{\"name\":\"SHIB2\",\"symbol\":\"SHIB2\",\"chain\":\"ethereum\",\"address\":\"0x2de7b02ae3b1f11d51ca7b2495e9094874a064c0\",\"price\":0.0000357816969218879,\"volume_24h\":0.0,\"market_cap\":39411.51399,\"rank\":13388}],\"entities\":[],\"total_results\":1}"
+      "text": "{\"tokens\":[{\"name\":\"SHIB2\",\"symbol\":\"SHIB2\",\"chain\":\"ethereum\",\"address\":\"0x2de7b02ae3b1f11d51ca7b2495e9094874a064c0\",\"price\":0.0000357816969218879,\"volume_24h\":0.0,\"market_cap\":39411.51399,\"rank\":13432}],\"entities\":[],\"total_results\":1}"
     },
     "c38eb96f54c10ea38931e2fbeff64141": {
-      "storedAt": "2026-09-16T12:40:28.125Z",
+      "storedAt": "2026-09-16T13:51:49.370Z",
       "ttlMs": 1800000,
       "endpoint": "tgm/token-information",
       "body": {
@@ -33,7 +33,7 @@
       "text": "{\"data\":{\"name\":\"SHIB2\",\"symbol\":\"SHIB2\",\"contract_address\":\"0x2de7b02ae3b1f11d51ca7b2495e9094874a064c0\",\"logo\":\"https://coin-images.coingecko.com/coins/images/31776/small/IMG_6344_2.jpg?1696530594\",\"token_details\":{\"token_deployment_date\":\"2023-09-14 16:50:11\",\"website\":\"https://shib2official.com/\",\"x\":\"shib2__official\",\"telegram\":\"S2Portal\",\"market_cap_usd\":35781.696921887895,\"fdv_usd\":26876.8053402853,\"circulating_supply\":1000000000.0,\"total_supply\":1000000000.0},\"spot_metrics\":{\"volume_total_usd\":112.15242094024701,\"buy_volume_usd\":0.0,\"sell_volume_usd\":112.15242094024701,\"total_buys\":0,\"total_sells\":6,\"unique_buyers\":0,\"unique_sellers\":5,\"liquidity_usd\":10796.382119452952,\"total_holders\":568}}}"
     },
     "c8be746c027401ce7c38e8d4d523243c": {
-      "storedAt": "2026-09-16T12:40:28.136Z",
+      "storedAt": "2026-09-16T13:51:49.616Z",
       "ttlMs": 1800000,
       "endpoint": "tgm/flow-intelligence",
       "body": {
@@ -44,7 +44,7 @@
       "text": "{\"data\":[{\"public_figure_net_flow_usd\":0.0,\"public_figure_avg_flow_usd\":null,\"public_figure_wallet_count\":0,\"top_pnl_net_flow_usd\":0.0,\"top_pnl_avg_flow_usd\":null,\"top_pnl_wallet_count\":0,\"whale_net_flow_usd\":0.0,\"whale_avg_flow_usd\":null,\"whale_wallet_count\":0,\"smart_trader_net_flow_usd\":0.0,\"smart_trader_avg_flow_usd\":null,\"smart_trader_wallet_count\":0,\"exchange_net_flow_usd\":108.21113573853464,\"exchange_avg_flow_usd\":108.21113565434652,\"exchange_wallet_count\":0,\"fresh_wallets_net_flow_usd\":0.0,\"fresh_wallets_avg_flow_usd\":0.0,\"fresh_wallets_wallet_count\":0}],\"warnings\":[\"exchange_wallet_count is always 0 (not tracked), even when exchange net flow is non-zero.\"]}"
     },
     "0a7550849626927affd43baade998cdc": {
-      "storedAt": "2026-09-16T12:40:28.709Z",
+      "storedAt": "2026-09-16T13:51:50.567Z",
       "ttlMs": 1800000,
       "endpoint": "tgm/holders",
       "body": {
@@ -60,59 +60,7 @@
   },
   "verdict": {
     "query": "SHIB2",
-    "winner": {
-      "chain": "ethereum",
-      "address": "0x2de7b02ae3b1f11d51ca7b2495e9094874a064c0",
-      "name": "SHIB2",
-      "symbol": "SHIB2",
-      "marketCap": 39411.51399,
-      "volume24h": 0,
-      "searchRank": 13388,
-      "labelledWallets": 0,
-      "smartTraderWallets": 0,
-      "whaleWallets": 0,
-      "topPnlWallets": 0,
-      "publicFigureWallets": 0,
-      "smartTraderNetFlowUsd": 0,
-      "exchangeNetFlowUsd": 108.21113573853464,
-      "freshNetFlowUsd": 0,
-      "exchangeTouched": true,
-      "freshShare": 0,
-      "errors": [],
-      "deploymentDate": "2023-09-14 16:50:11",
-      "ageDays": 1097,
-      "marketCapUsd": 35781.696921887895,
-      "liquidityUsd": 10796.382119452952,
-      "totalHolders": 568,
-      "uniqueBuyers": 0,
-      "logo": "https://coin-images.coingecko.com/coins/images/31776/small/IMG_6344_2.jpg?1696530594",
-      "website": "https://shib2official.com/",
-      "score": 3.82,
-      "terms": {
-        "labelled": 0,
-        "exchange": 0,
-        "holders": 1.65,
-        "liquidity": 1.61,
-        "age": 0,
-        "fresh": 0,
-        "recognisedHolders": 0.55
-      },
-      "reasons": [
-        "0 labelled wallets in 7 days",
-        "no meaningful exchange flow",
-        "568 holders",
-        "3.0y old",
-        "1 of top 20 holders tagged by Nansen (UniswapV2)"
-      ],
-      "impostor": false,
-      "scorable": true,
-      "unchecked": false,
-      "recognisedHolders": 1,
-      "topLabels": [
-        "UniswapV2"
-      ],
-      "topHolderPct": 0.2940817258551246
-    },
+    "winner": null,
     "ranked": [
       {
         "chain": "ethereum",
@@ -121,7 +69,7 @@
         "symbol": "SHIB2",
         "marketCap": 39411.51399,
         "volume24h": 0,
-        "searchRank": 13388,
+        "searchRank": 13432,
         "labelledWallets": 0,
         "smartTraderWallets": 0,
         "whaleWallets": 0,
@@ -141,7 +89,7 @@
         "uniqueBuyers": 0,
         "logo": "https://coin-images.coingecko.com/coins/images/31776/small/IMG_6344_2.jpg?1696530594",
         "website": "https://shib2official.com/",
-        "score": 3.82,
+        "score": 3.27,
         "terms": {
           "labelled": 0,
           "exchange": 0,
@@ -149,26 +97,25 @@
           "liquidity": 1.61,
           "age": 0,
           "fresh": 0,
-          "recognisedHolders": 0.55
+          "recognisedHolders": 0
         },
         "reasons": [
           "0 labelled wallets in 7 days",
           "no meaningful exchange flow",
           "568 holders",
           "3.0y old",
-          "1 of top 20 holders tagged by Nansen (UniswapV2)"
+          "0 of top 20 holders tagged by Nansen"
         ],
         "impostor": false,
         "scorable": true,
         "unchecked": false,
-        "recognisedHolders": 1,
-        "topLabels": [
-          "UniswapV2"
-        ],
+        "recognisedHolders": 0,
+        "topLabels": [],
         "topHolderPct": 0.2940817258551246
       }
     ],
-    "abstained": false,
+    "abstained": true,
+    "abstainReason": "none of these looks real — nothing labelled has touched any of them",
     "stablecoin": false,
     "candidatesTotal": 1,
     "warnings": [],
@@ -182,7 +129,7 @@
           "limit": 50
         },
         "credits": 0,
-        "ms": 516,
+        "ms": 475,
         "cached": false,
         "status": 200,
         "fieldsUsed": [
@@ -194,9 +141,9 @@
           "tokens[].volume_24h",
           "tokens[].rank"
         ],
-        "responseHash": "1f30ae6976fb8d30aee05dc0671acdffc82709da856bf693dfb2d6e7a41e37cc",
+        "responseHash": "963d0151f074d4001b1da126469c0cd4529904c0c5ded0fda5c6e2246127040e",
         "attempts": 1,
-        "totalMs": 516,
+        "totalMs": 475,
         "ok": true
       },
       {
@@ -207,7 +154,7 @@
           "timeframe": "7d"
         },
         "credits": 1,
-        "ms": 294,
+        "ms": 623,
         "cached": false,
         "status": 200,
         "fieldsUsed": [
@@ -219,7 +166,7 @@
         ],
         "responseHash": "aaf273133ceb8ee26b359073fc74ed31fce414608992eeda6a23262a73bd99da",
         "attempts": 1,
-        "totalMs": 295,
+        "totalMs": 623,
         "ok": true
       },
       {
@@ -230,7 +177,7 @@
           "timeframe": "7d"
         },
         "credits": 1,
-        "ms": 306,
+        "ms": 869,
         "cached": false,
         "status": 200,
         "fieldsUsed": [
@@ -247,7 +194,7 @@
         ],
         "responseHash": "651610eacc7465dcce9c7d610b78400c27b52e040c8d1d9f21bf639dd870013c",
         "attempts": 1,
-        "totalMs": 306,
+        "totalMs": 869,
         "ok": true
       },
       {
@@ -261,7 +208,7 @@
           }
         },
         "credits": 5,
-        "ms": 572,
+        "ms": 951,
         "cached": false,
         "status": 200,
         "fieldsUsed": [
@@ -270,11 +217,11 @@
         ],
         "responseHash": "cc29507b3fddeacc48ef6c9c32ca209457228b7d064a947e9aa0664e022b6d3f",
         "attempts": 1,
-        "totalMs": 572,
+        "totalMs": 951,
         "ok": true
       }
     ],
-    "ms": 1399,
+    "ms": 2296,
     "weights": {
       "labelled": 3,
       "exchange": 0.6,
@@ -285,6 +232,6 @@
       "freshPenalty": 1.5,
       "recognisedHolders": 0.8
     },
-    "hash": "bd0d01cfd84ea8d1fd434b012ec1616559c58e10b977efd5bcaf15b4bbfa76f8"
+    "hash": "525078af17c01f1ec02e23926522ac95953257ec56e46d53a1b4ba5de003a2e2"
   }
 }

@@ -20,7 +20,7 @@ export const FIXTURE_SET: Array<{ query: string; edge: string; chain?: string }>
   { query: "BABYPEPE", edge: "8 · closest top-2 found live (0.15 pts) — holders tiebreak called on both; a true flow tie is proven in verdict.test.ts" },
   { query: "TURBO", edge: "9 · a candidate with no deployment date — 'age unknown', skipped gracefully" },
   { query: "PEPE", chain: "base", edge: "10 · chain-filtered query — only base cards" },
-  { query: "SHIB2", edge: "11 · weakest signal in the set: one 3-year-old token, 0 labelled wallets, crowned on holder tags alone (the all-impostor abstain could not be produced live on 2026-09-16 — see specs/rubric-history.md)" },
+  { query: "SHIB2", edge: "11 · one dead 3-year-old token, 0 labelled wallets, only a pool + deployer tag among holders → abstain, not green" },
   { query: "DOGE", edge: "12 · large, boring, fast — cache-warm timing baseline" },
 ];
 

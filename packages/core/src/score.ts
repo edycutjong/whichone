@@ -24,6 +24,12 @@ export const WEIGHTS = {
   recognisedHolders: 0.8,
 } as const;
 
+/**
+ * A candidate with 0 labelled wallets can still be crowned only if at least this many of its top-20 holders carry a
+ * wealth/activity tag — one tagged holder is noise (live check 2026-09-16: SHIB2/DOGEAI/PEPEAI all had 1–3).
+ */
+export const MIN_RECOGNISED_TO_CROWN = 3;
+
 /** Below this the best candidate is not crowned; the tool abstains instead of guessing. */
 export const ABSTAIN_THRESHOLD = 2.0;
 

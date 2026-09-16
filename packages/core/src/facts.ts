@@ -60,6 +60,14 @@ const HolderRow = z.object({
 });
 const HoldersResponse = z.object({ data: z.array(HolderRow).default([]) });
 
+/**
+ * Holder tags every token carries whether or not it is real: its own contract, the DEX pool, the deployer, and
+ * ENS / SNS names (anyone can register one). These are NOT evidence — a $36K dead token has a UniswapV2 pool and a
+ * "<X> Token Deployer" too (live check 2026-09-16). Wealth/activity tags (Token Millionaire, High Activity,
+ * <TOKEN> Whale, Smart Trader…) stay in.
+ */
+export const STRUCTURAL_TAG = /token contract|deployer|liquidity pool|\bpool\b|uniswap|pancake|sushi|raydium|orca|meteora|curve|balancer|aerodrome|velodrome|\.eth$|\.sol$|\.bnb$|\.base$|burn|null address|dead/i;
+
 /** Symbols where many same-name results are canonical per-chain issues, not impostors. */
 export const STABLECOINS = new Set(["USDC", "USDT", "DAI", "USDE", "USDS", "PYUSD", "FDUSD", "TUSD", "USD1", "USDG", "EURC", "GHO", "FRAX", "LUSD", "CRVUSD"]);
 
@@ -173,7 +181,7 @@ export async function fetchHolderFacts(client: NansenClient, f: CandidateFacts, 
     const parsed = HoldersResponse.safeParse(raw);
     if (!parsed.success) { f.errors.push("holders failed: schema"); return f; }
     const rows = parsed.data.data;
-    const tagged = rows.filter((r) => r.address_label && r.address_label.trim().length > 0 && r.address_label !== "Token Contract");
+    const tagged = rows.filter((r) => r.address_label && r.address_label.trim().length > 0 && !STRUCTURAL_TAG.test(r.address_label));
     f.recognisedHolders = tagged.length;
     // most frequent tags first, so the reason line reads "Token Millionaire ×17, Liquidity Pool"
     const freq = new Map<string, number>();

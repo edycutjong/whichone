@@ -2,16 +2,16 @@
   "edge": "8 · closest top-2 found live (0.15 pts) — holders tiebreak called on both; a true flow tie is proven in verdict.test.ts",
   "query": "BABYPEPE",
   "options": {},
-  "now": 1789562419427,
-  "recordedAt": "2026-09-16T12:40:19.427Z",
+  "now": 1789566700208,
+  "recordedAt": "2026-09-16T13:51:40.208Z",
   "live": {
     "calls": 13,
     "credits": 20,
-    "ms": 2324
+    "ms": 2387
   },
   "responses": {
     "ff979953ab5fd49c4bf34502d6ce1e76": {
-      "storedAt": "2026-09-16T12:40:19.928Z",
+      "storedAt": "2026-09-16T13:51:40.743Z",
       "ttlMs": 1800000,
       "endpoint": "search/general",
       "body": {
@@ -19,54 +19,10 @@
         "result_type": "token",
         "limit": 50
       },
-      "text": "{\"tokens\":[{\"name\":\"BabyPepe\",\"symbol\":\"BABYPEPE\",\"chain\":\"ethereum\",\"address\":\"0x5c559f3ee9a81da83e069c0093471cb05d84052a\",\"price\":1.632418211264e-11,\"volume_24h\":1386.5150773148093,\"market_cap\":69854.0873589167,\"rank\":5601},{\"name\":\"Baby Pepe\",\"symbol\":\"BABYPEPE\",\"chain\":\"ethereum\",\"address\":\"0x69babe9811cc86dcfc3b8f9a14de6470dd18eda4\",\"price\":7.88872008080771e-7,\"volume_24h\":247.36497994631748,\"market_cap\":334863.171672957,\"rank\":7017},{\"name\":\"Baby Pepe\",\"symbol\":\"BABYPEPE\",\"chain\":\"base\",\"address\":\"0x36692131ccc0a478e26b3a1ada6447d95f79df21\",\"price\":1.510710105e-7,\"volume_24h\":24.181579613873563,\"market_cap\":63684.1421214772,\"rank\":8836},{\"name\":\"Baby Pepe\",\"symbol\":\"BABYPEPE\",\"chain\":\"bnb\",\"address\":\"0x9d6db6382444b70a51307a4291188f60d4eef205\",\"price\":1.34523650151494e-7,\"volume_24h\":0.14411135940771624,\"market_cap\":51968.6118358533,\"rank\":10625},{\"name\":\"BabyPepeFi\",\"symbol\":\"BABYPEPE\",\"chain\":\"bnb\",\"address\":\"0xf1dc2f7d9b9de5421ee89ef746f482a16e213383\",\"price\":0.00636808781031265,\"volume_24h\":0.0,\"market_cap\":134640.243759,\"rank\":12779}],\"entities\":[],\"total_results\":5}"
-    },
-    "c84f431e32de9166a09c5e2c6849dd6c": {
-      "storedAt": "2026-09-16T12:40:20.241Z",
-      "ttlMs": 1800000,
-      "endpoint": "tgm/flow-intelligence",
-      "body": {
-        "chain": "ethereum",
-        "token_address": "0x69babe9811cc86dcfc3b8f9a14de6470dd18eda4",
-        "timeframe": "7d"
-      },
-      "text": "{\"data\":[{\"public_figure_net_flow_usd\":0.0,\"public_figure_avg_flow_usd\":null,\"public_figure_wallet_count\":0,\"top_pnl_net_flow_usd\":0.0,\"top_pnl_avg_flow_usd\":null,\"top_pnl_wallet_count\":0,\"whale_net_flow_usd\":0.0,\"whale_avg_flow_usd\":null,\"whale_wallet_count\":0,\"smart_trader_net_flow_usd\":0.0,\"smart_trader_avg_flow_usd\":null,\"smart_trader_wallet_count\":0,\"exchange_net_flow_usd\":-2030.6877027228645,\"exchange_avg_flow_usd\":1851.4199099370808,\"exchange_wallet_count\":0,\"fresh_wallets_net_flow_usd\":0.0,\"fresh_wallets_avg_flow_usd\":0.0,\"fresh_wallets_wallet_count\":0}],\"warnings\":[\"exchange_wallet_count is always 0 (not tracked), even when exchange net flow is non-zero.\"]}"
-    },
-    "79eb6ca682d40e78f60e434d797ff294": {
-      "storedAt": "2026-09-16T12:40:20.254Z",
-      "ttlMs": 1800000,
-      "endpoint": "tgm/token-information",
-      "body": {
-        "chain": "base",
-        "token_address": "0x36692131ccc0a478e26b3a1ada6447d95f79df21",
-        "timeframe": "7d"
-      },
-      "text": "{\"data\":{\"name\":\"Baby Pepe\",\"symbol\":\"BABYPEPE\",\"contract_address\":\"0x36692131ccc0a478e26b3a1ada6447d95f79df21\",\"logo\":\"https://coin-images.coingecko.com/coins/images/55369/small/200kb_200x200px.png?1745665423\",\"token_details\":{\"token_deployment_date\":\"2025-04-23 10:36:31\",\"website\":\"https://babypepe.vip/\",\"x\":\"BabyPepeOfBase\",\"telegram\":\"\",\"market_cap_usd\":63449.82441,\"fdv_usd\":63449.82441,\"circulating_supply\":420000000000.0,\"total_supply\":420000000000.0},\"spot_metrics\":{\"volume_total_usd\":1289.961539931654,\"buy_volume_usd\":0.0,\"sell_volume_usd\":1289.961539931654,\"total_buys\":0,\"total_sells\":2,\"unique_buyers\":0,\"unique_sellers\":2,\"liquidity_usd\":58316.24970679356,\"total_holders\":186}}}"
-    },
-    "c806bab8aa52b08a900656d2719f6341": {
-      "storedAt": "2026-09-16T12:40:20.281Z",
-      "ttlMs": 1800000,
-      "endpoint": "tgm/flow-intelligence",
-      "body": {
-        "chain": "base",
-        "token_address": "0x36692131ccc0a478e26b3a1ada6447d95f79df21",
-        "timeframe": "7d"
-      },
-      "text": "{\"data\":[{\"public_figure_net_flow_usd\":0.0,\"public_figure_avg_flow_usd\":null,\"public_figure_wallet_count\":0,\"top_pnl_net_flow_usd\":0.0,\"top_pnl_avg_flow_usd\":null,\"top_pnl_wallet_count\":0,\"whale_net_flow_usd\":0.0,\"whale_avg_flow_usd\":null,\"whale_wallet_count\":0,\"smart_trader_net_flow_usd\":0.0,\"smart_trader_avg_flow_usd\":null,\"smart_trader_wallet_count\":0,\"exchange_net_flow_usd\":26.03634481170439,\"exchange_avg_flow_usd\":null,\"exchange_wallet_count\":0,\"fresh_wallets_net_flow_usd\":0.0,\"fresh_wallets_avg_flow_usd\":0.0,\"fresh_wallets_wallet_count\":0}],\"warnings\":[\"exchange_wallet_count is always 0 (not tracked), even when exchange net flow is non-zero.\"]}"
-    },
-    "0fae9f045f54b6442b664ef484482f43": {
-      "storedAt": "2026-09-16T12:40:20.299Z",
-      "ttlMs": 1800000,
-      "endpoint": "tgm/token-information",
-      "body": {
-        "chain": "bnb",
-        "token_address": "0x9d6db6382444b70a51307a4291188f60d4eef205",
-        "timeframe": "7d"
-      },
-      "text": "{\"data\":{\"name\":\"\",\"symbol\":\"\",\"contract_address\":\"0x9d6db6382444b70a51307a4291188f60d4eef205\",\"logo\":\"\",\"token_details\":{\"token_deployment_date\":\"\",\"website\":\"https://babypepetoken.io/\",\"x\":\"BabyPepeBNB\",\"telegram\":\"BabyPepeBep20\",\"market_cap_usd\":0.0,\"fdv_usd\":0.0,\"circulating_supply\":0.0,\"total_supply\":0.0},\"spot_metrics\":{\"volume_total_usd\":61.75761685543413,\"buy_volume_usd\":3.851308694566825,\"sell_volume_usd\":57.906308160867304,\"total_buys\":4,\"total_sells\":5,\"unique_buyers\":3,\"unique_sellers\":5,\"liquidity_usd\":0.0,\"total_holders\":49191}}}"
+      "text": "{\"tokens\":[{\"name\":\"BabyPepe\",\"symbol\":\"BABYPEPE\",\"chain\":\"ethereum\",\"address\":\"0x5c559f3ee9a81da83e069c0093471cb05d84052a\",\"price\":1.632418211264e-11,\"volume_24h\":1386.5150773148093,\"market_cap\":69854.0873589167,\"rank\":5624},{\"name\":\"Baby Pepe\",\"symbol\":\"BABYPEPE\",\"chain\":\"ethereum\",\"address\":\"0x69babe9811cc86dcfc3b8f9a14de6470dd18eda4\",\"price\":7.88872008080771e-7,\"volume_24h\":198.02377761347094,\"market_cap\":334863.171672957,\"rank\":7234},{\"name\":\"Baby Pepe\",\"symbol\":\"BABYPEPE\",\"chain\":\"base\",\"address\":\"0x36692131ccc0a478e26b3a1ada6447d95f79df21\",\"price\":1.510710105e-7,\"volume_24h\":24.181579613873563,\"market_cap\":63684.1421214772,\"rank\":8887},{\"name\":\"Baby Pepe\",\"symbol\":\"BABYPEPE\",\"chain\":\"bnb\",\"address\":\"0x9d6db6382444b70a51307a4291188f60d4eef205\",\"price\":1.34523650151494e-7,\"volume_24h\":0.07225170320400405,\"market_cap\":51968.6118358533,\"rank\":10723},{\"name\":\"BabyPepeFi\",\"symbol\":\"BABYPEPE\",\"chain\":\"bnb\",\"address\":\"0xf1dc2f7d9b9de5421ee89ef746f482a16e213383\",\"price\":0.00636808781031265,\"volume_24h\":0.0,\"market_cap\":134640.243759,\"rank\":12810}],\"entities\":[],\"total_results\":5}"
     },
     "efbeb0aa93fa4f18e5e453912e3d542f": {
-      "storedAt": "2026-09-16T12:40:20.384Z",
+      "storedAt": "2026-09-16T13:51:41.293Z",
       "ttlMs": 1800000,
       "endpoint": "tgm/token-information",
       "body": {
@@ -76,8 +32,41 @@
       },
       "text": "{\"data\":{\"name\":\"Baby Pepe\",\"symbol\":\"BABYPEPE\",\"contract_address\":\"0x69babe9811cc86dcfc3b8f9a14de6470dd18eda4\",\"logo\":\"https://coin-images.coingecko.com/coins/images/38672/small/NEW_BABYPEPE_LOGO.jpg?1734403634\",\"token_details\":{\"token_deployment_date\":\"2024-05-24 00:13:11\",\"website\":\"https://babypepe.com/\",\"x\":\"0x69babEPepe\",\"telegram\":\"BabyPepeGo\",\"market_cap_usd\":331870.56507949956,\"fdv_usd\":331870.565079122,\"circulating_supply\":420690000000.0,\"total_supply\":420690000000.0},\"spot_metrics\":{\"volume_total_usd\":7903.182308567519,\"buy_volume_usd\":4967.2692188979345,\"sell_volume_usd\":2935.913089669584,\"total_buys\":21,\"total_sells\":25,\"unique_buyers\":14,\"unique_sellers\":23,\"liquidity_usd\":54492.14200497087,\"total_holders\":2057}}}"
     },
+    "0fae9f045f54b6442b664ef484482f43": {
+      "storedAt": "2026-09-16T13:51:41.443Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/token-information",
+      "body": {
+        "chain": "bnb",
+        "token_address": "0x9d6db6382444b70a51307a4291188f60d4eef205",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":{\"name\":\"\",\"symbol\":\"\",\"contract_address\":\"0x9d6db6382444b70a51307a4291188f60d4eef205\",\"logo\":\"\",\"token_details\":{\"token_deployment_date\":\"\",\"website\":\"https://babypepetoken.io/\",\"x\":\"BabyPepeBNB\",\"telegram\":\"BabyPepeBep20\",\"market_cap_usd\":0.0,\"fdv_usd\":0.0,\"circulating_supply\":0.0,\"total_supply\":0.0},\"spot_metrics\":{\"volume_total_usd\":61.75761685543413,\"buy_volume_usd\":3.851308694566825,\"sell_volume_usd\":57.906308160867304,\"total_buys\":4,\"total_sells\":5,\"unique_buyers\":3,\"unique_sellers\":5,\"liquidity_usd\":0.0,\"total_holders\":49191}}}"
+    },
+    "c806bab8aa52b08a900656d2719f6341": {
+      "storedAt": "2026-09-16T13:51:41.511Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/flow-intelligence",
+      "body": {
+        "chain": "base",
+        "token_address": "0x36692131ccc0a478e26b3a1ada6447d95f79df21",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":[{\"public_figure_net_flow_usd\":0.0,\"public_figure_avg_flow_usd\":null,\"public_figure_wallet_count\":0,\"top_pnl_net_flow_usd\":0.0,\"top_pnl_avg_flow_usd\":null,\"top_pnl_wallet_count\":0,\"whale_net_flow_usd\":0.0,\"whale_avg_flow_usd\":null,\"whale_wallet_count\":0,\"smart_trader_net_flow_usd\":0.0,\"smart_trader_avg_flow_usd\":null,\"smart_trader_wallet_count\":0,\"exchange_net_flow_usd\":26.03634481170439,\"exchange_avg_flow_usd\":null,\"exchange_wallet_count\":0,\"fresh_wallets_net_flow_usd\":0.0,\"fresh_wallets_avg_flow_usd\":0.0,\"fresh_wallets_wallet_count\":0}],\"warnings\":[\"exchange_wallet_count is always 0 (not tracked), even when exchange net flow is non-zero.\"]}"
+    },
+    "79eb6ca682d40e78f60e434d797ff294": {
+      "storedAt": "2026-09-16T13:51:41.513Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/token-information",
+      "body": {
+        "chain": "base",
+        "token_address": "0x36692131ccc0a478e26b3a1ada6447d95f79df21",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":{\"name\":\"Baby Pepe\",\"symbol\":\"BABYPEPE\",\"contract_address\":\"0x36692131ccc0a478e26b3a1ada6447d95f79df21\",\"logo\":\"https://coin-images.coingecko.com/coins/images/55369/small/200kb_200x200px.png?1745665423\",\"token_details\":{\"token_deployment_date\":\"2025-04-23 10:36:31\",\"website\":\"https://babypepe.vip/\",\"x\":\"BabyPepeOfBase\",\"telegram\":\"\",\"market_cap_usd\":63449.82441,\"fdv_usd\":63449.82441,\"circulating_supply\":420000000000.0,\"total_supply\":420000000000.0},\"spot_metrics\":{\"volume_total_usd\":1289.961539931654,\"buy_volume_usd\":0.0,\"sell_volume_usd\":1289.961539931654,\"total_buys\":0,\"total_sells\":2,\"unique_buyers\":0,\"unique_sellers\":2,\"liquidity_usd\":58316.24970679356,\"total_holders\":186}}}"
+    },
     "59cc9a5bd80d0430663a125afdc22e50": {
-      "storedAt": "2026-09-16T12:40:20.443Z",
+      "storedAt": "2026-09-16T13:51:41.539Z",
       "ttlMs": 1800000,
       "endpoint": "tgm/token-information",
       "body": {
@@ -87,30 +76,8 @@
       },
       "text": "{\"data\":{\"name\":\"BabyPepe\",\"symbol\":\"BABYPEPE\",\"contract_address\":\"0x5c559f3ee9a81da83e069c0093471cb05d84052a\",\"logo\":\"https://coin-images.coingecko.com/coins/images/29869/small/BabyPepe200.png?1696528794\",\"token_details\":{\"token_deployment_date\":\"2023-04-17 06:02:59\",\"website\":\"https://babypepe.org\",\"x\":\"babypepeeth\",\"telegram\":\"babypepeportal\",\"market_cap_usd\":68674.33246199308,\"fdv_usd\":68673.615623549,\"circulating_supply\":4206908008507070.0,\"total_supply\":4206908008507070.0},\"spot_metrics\":{\"volume_total_usd\":1423.535386537499,\"buy_volume_usd\":202.57131122175642,\"sell_volume_usd\":1220.9640753157428,\"total_buys\":2,\"total_sells\":8,\"unique_buyers\":2,\"unique_sellers\":8,\"liquidity_usd\":28902.18053180655,\"total_holders\":1958}}}"
     },
-    "53411366d69419daeebe020f545f955f": {
-      "storedAt": "2026-09-16T12:40:20.754Z",
-      "ttlMs": 1800000,
-      "endpoint": "tgm/token-information",
-      "body": {
-        "chain": "bnb",
-        "token_address": "0xf1dc2f7d9b9de5421ee89ef746f482a16e213383",
-        "timeframe": "7d"
-      },
-      "text": "{\"data\":{\"name\":\"\",\"symbol\":\"\",\"contract_address\":\"0xf1dc2f7d9b9de5421ee89ef746f482a16e213383\",\"logo\":\"\",\"token_details\":{\"token_deployment_date\":\"\",\"website\":\"https://babypepefi.com\",\"x\":\"Babypepefi\",\"telegram\":\"BABYPEPEGlobal\",\"market_cap_usd\":0.0,\"fdv_usd\":0.0,\"circulating_supply\":0.0,\"total_supply\":0.0},\"spot_metrics\":{\"volume_total_usd\":1.238436958186535,\"buy_volume_usd\":0.0,\"sell_volume_usd\":1.238436958186535,\"total_buys\":0,\"total_sells\":2,\"unique_buyers\":0,\"unique_sellers\":2,\"liquidity_usd\":0.0,\"total_holders\":4295}}}"
-    },
-    "82a7866f64036640851e7578f8a8c227": {
-      "storedAt": "2026-09-16T12:40:20.969Z",
-      "ttlMs": 1800000,
-      "endpoint": "tgm/flow-intelligence",
-      "body": {
-        "chain": "ethereum",
-        "token_address": "0x5c559f3ee9a81da83e069c0093471cb05d84052a",
-        "timeframe": "7d"
-      },
-      "text": "{\"data\":[{\"public_figure_net_flow_usd\":0.0,\"public_figure_avg_flow_usd\":null,\"public_figure_wallet_count\":0,\"top_pnl_net_flow_usd\":0.0,\"top_pnl_avg_flow_usd\":null,\"top_pnl_wallet_count\":0,\"whale_net_flow_usd\":0.0,\"whale_avg_flow_usd\":null,\"whale_wallet_count\":0,\"smart_trader_net_flow_usd\":0.0,\"smart_trader_avg_flow_usd\":null,\"smart_trader_wallet_count\":0,\"exchange_net_flow_usd\":1029.9017363149276,\"exchange_avg_flow_usd\":393.4299371819861,\"exchange_wallet_count\":0,\"fresh_wallets_net_flow_usd\":0.0,\"fresh_wallets_avg_flow_usd\":0.0,\"fresh_wallets_wallet_count\":0}],\"warnings\":[\"exchange_wallet_count is always 0 (not tracked), even when exchange net flow is non-zero.\"]}"
-    },
     "ebca468b6937c0d6f8f159af5ac44cb8": {
-      "storedAt": "2026-09-16T12:40:21.004Z",
+      "storedAt": "2026-09-16T13:51:41.584Z",
       "ttlMs": 1800000,
       "endpoint": "tgm/flow-intelligence",
       "body": {
@@ -120,8 +87,30 @@
       },
       "text": "{\"data\":[{\"public_figure_net_flow_usd\":0.0,\"public_figure_avg_flow_usd\":null,\"public_figure_wallet_count\":0,\"top_pnl_net_flow_usd\":0.0,\"top_pnl_avg_flow_usd\":null,\"top_pnl_wallet_count\":0,\"whale_net_flow_usd\":0.0,\"whale_avg_flow_usd\":null,\"whale_wallet_count\":0,\"smart_trader_net_flow_usd\":0.0,\"smart_trader_avg_flow_usd\":null,\"smart_trader_wallet_count\":0,\"exchange_net_flow_usd\":57.07531668070153,\"exchange_avg_flow_usd\":57.075316678663526,\"exchange_wallet_count\":0,\"fresh_wallets_net_flow_usd\":0.0,\"fresh_wallets_avg_flow_usd\":0.0,\"fresh_wallets_wallet_count\":0}],\"warnings\":[\"exchange_wallet_count is always 0 (not tracked), even when exchange net flow is non-zero.\"]}"
     },
+    "c84f431e32de9166a09c5e2c6849dd6c": {
+      "storedAt": "2026-09-16T13:51:41.618Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/flow-intelligence",
+      "body": {
+        "chain": "ethereum",
+        "token_address": "0x69babe9811cc86dcfc3b8f9a14de6470dd18eda4",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":[{\"public_figure_net_flow_usd\":0.0,\"public_figure_avg_flow_usd\":null,\"public_figure_wallet_count\":0,\"top_pnl_net_flow_usd\":0.0,\"top_pnl_avg_flow_usd\":null,\"top_pnl_wallet_count\":0,\"whale_net_flow_usd\":0.0,\"whale_avg_flow_usd\":null,\"whale_wallet_count\":0,\"smart_trader_net_flow_usd\":0.0,\"smart_trader_avg_flow_usd\":null,\"smart_trader_wallet_count\":0,\"exchange_net_flow_usd\":-2030.6877027228645,\"exchange_avg_flow_usd\":1851.4199099370808,\"exchange_wallet_count\":0,\"fresh_wallets_net_flow_usd\":0.0,\"fresh_wallets_avg_flow_usd\":0.0,\"fresh_wallets_wallet_count\":0}],\"warnings\":[\"exchange_wallet_count is always 0 (not tracked), even when exchange net flow is non-zero.\"]}"
+    },
+    "82a7866f64036640851e7578f8a8c227": {
+      "storedAt": "2026-09-16T13:51:41.657Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/flow-intelligence",
+      "body": {
+        "chain": "ethereum",
+        "token_address": "0x5c559f3ee9a81da83e069c0093471cb05d84052a",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":[{\"public_figure_net_flow_usd\":0.0,\"public_figure_avg_flow_usd\":null,\"public_figure_wallet_count\":0,\"top_pnl_net_flow_usd\":0.0,\"top_pnl_avg_flow_usd\":null,\"top_pnl_wallet_count\":0,\"whale_net_flow_usd\":0.0,\"whale_avg_flow_usd\":null,\"whale_wallet_count\":0,\"smart_trader_net_flow_usd\":0.0,\"smart_trader_avg_flow_usd\":null,\"smart_trader_wallet_count\":0,\"exchange_net_flow_usd\":1029.9017363149276,\"exchange_avg_flow_usd\":393.4299371819861,\"exchange_wallet_count\":0,\"fresh_wallets_net_flow_usd\":0.0,\"fresh_wallets_avg_flow_usd\":0.0,\"fresh_wallets_wallet_count\":0}],\"warnings\":[\"exchange_wallet_count is always 0 (not tracked), even when exchange net flow is non-zero.\"]}"
+    },
     "fb5d239ddc39da89ddf656edd8272be0": {
-      "storedAt": "2026-09-16T12:40:21.008Z",
+      "storedAt": "2026-09-16T13:51:41.778Z",
       "ttlMs": 1800000,
       "endpoint": "tgm/flow-intelligence",
       "body": {
@@ -131,8 +120,33 @@
       },
       "text": "{\"data\":[{\"public_figure_net_flow_usd\":0.0,\"public_figure_avg_flow_usd\":null,\"public_figure_wallet_count\":0,\"top_pnl_net_flow_usd\":0.0,\"top_pnl_avg_flow_usd\":null,\"top_pnl_wallet_count\":0,\"whale_net_flow_usd\":0.0,\"whale_avg_flow_usd\":null,\"whale_wallet_count\":0,\"smart_trader_net_flow_usd\":0.0,\"smart_trader_avg_flow_usd\":null,\"smart_trader_wallet_count\":0,\"exchange_net_flow_usd\":1.2509514316041532,\"exchange_avg_flow_usd\":null,\"exchange_wallet_count\":0,\"fresh_wallets_net_flow_usd\":0.0,\"fresh_wallets_avg_flow_usd\":0.0,\"fresh_wallets_wallet_count\":0}],\"warnings\":[\"exchange_wallet_count is always 0 (not tracked), even when exchange net flow is non-zero.\"]}"
     },
+    "53411366d69419daeebe020f545f955f": {
+      "storedAt": "2026-09-16T13:51:41.825Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/token-information",
+      "body": {
+        "chain": "bnb",
+        "token_address": "0xf1dc2f7d9b9de5421ee89ef746f482a16e213383",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":{\"name\":\"\",\"symbol\":\"\",\"contract_address\":\"0xf1dc2f7d9b9de5421ee89ef746f482a16e213383\",\"logo\":\"\",\"token_details\":{\"token_deployment_date\":\"\",\"website\":\"https://babypepefi.com\",\"x\":\"Babypepefi\",\"telegram\":\"BABYPEPEGlobal\",\"market_cap_usd\":0.0,\"fdv_usd\":0.0,\"circulating_supply\":0.0,\"total_supply\":0.0},\"spot_metrics\":{\"volume_total_usd\":1.238436958186535,\"buy_volume_usd\":0.0,\"sell_volume_usd\":1.238436958186535,\"total_buys\":0,\"total_sells\":2,\"unique_buyers\":0,\"unique_sellers\":2,\"liquidity_usd\":0.0,\"total_holders\":4295}}}"
+    },
+    "7765fc7c399adc2119062c516fdecde4": {
+      "storedAt": "2026-09-16T13:51:42.563Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/holders",
+      "body": {
+        "chain": "ethereum",
+        "token_address": "0x5c559f3ee9a81da83e069c0093471cb05d84052a",
+        "pagination": {
+          "page": 1,
+          "per_page": 20
+        }
+      },
+      "text": "{\"data\":[{\"address\":\"0x5b6a17d4e84b8d9b40eaaae821fc141d6158fe44\",\"address_label\":\"UniswapV2\",\"token_amount\":1765666363007505.5,\"total_outflow\":9.024086530314584e+16,\"total_inflow\":9.200653166615334e+16,\"balance_change_24h\":58823807357009.82,\"balance_change_7d\":60983233296736.98,\"balance_change_30d\":72779776427485.84,\"ownership_percentage\":0.41970643509129213,\"value_usd\":28823.059259897247},{\"address\":\"0x29065a4c1f2f20d1e263930088890d6f49fe715a\",\"address_label\":\"Proxy\",\"token_amount\":261785754448797.0,\"total_outflow\":306000000000000.0,\"total_inflow\":567785754448797.0,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.06222759183690804,\"value_usd\":4273.438330117019},{\"address\":\"0xf5e9446db70b7cecb2f97abf76bcb9097d4cb617\",\"address_label\":\"\",\"token_amount\":77619612054861.3,\"total_outflow\":0.0,\"total_inflow\":77619612054861.3,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.018450513274333946,\"value_usd\":1267.076682696023},{\"address\":\"0xcb2ec50616ef8d301d6db02d2afd5de9f5208714\",\"address_label\":\"\",\"token_amount\":74455541708714.2,\"total_outflow\":6545241166841.759,\"total_inflow\":81000782875555.97,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.01769840024030781,\"value_usd\":1215.425822148314},{\"address\":\"0xf9614c8ae30a0392e5e14a8a98dc14313b664a0d\",\"address_label\":\"\",\"token_amount\":70207159427502.51,\"total_outflow\":0.0,\"total_inflow\":70207159427502.51,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.016688541628562373,\"value_usd\":1146.0744561057013},{\"address\":\"0xbc87cfbad42ae6fa2c80e3d2b41f615a96b1067e\",\"address_label\":\"\",\"token_amount\":63468920657929.59,\"total_outflow\":0.0,\"total_inflow\":63468920657929.59,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.015086833496141346,\"value_usd\":1036.0782193127416},{\"address\":\"0x8fca4ade3a517133ff23ca55cdaea29c78c990b8\",\"address_label\":\"Token Millionaire\",\"token_amount\":54492389151432.98,\"total_outflow\":611000635902739.5,\"total_inflow\":665493025054172.5,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.012953073621110898,\"value_usd\":889.5436842608402},{\"address\":\"0x7c9f24a81ce671a4ad610d84e236f5f2bdfaa4ba\",\"address_label\":\"\",\"token_amount\":52530208574592.22,\"total_outflow\":0.0,\"total_inflow\":52530208574592.22,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.012486654918141184,\"value_usd\":857.5126911866066},{\"address\":\"0xe28633333b2ab76bea54841829443ca2556f4b77\",\"address_label\":\"\",\"token_amount\":49604143871751.36,\"total_outflow\":0.0,\"total_inflow\":49604143871751.36,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.011791116841976012,\"value_usd\":809.7470781040646},{\"address\":\"0x3b96d678758bdbd279d0bb2a90c6b4279c071479\",\"address_label\":\"\",\"token_amount\":43932766314826.26,\"total_outflow\":0.0,\"total_inflow\":43932766314826.26,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.010443006176029277,\"value_usd\":717.16647803528},{\"address\":\"0x819fd76791f464750ebb9db044ec14cbd63df0cd\",\"address_label\":\"\",\"token_amount\":42912895875455.01,\"total_outflow\":0.0,\"total_inflow\":42912895875455.01,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.0102005786170456,\"value_usd\":700.5179272516855},{\"address\":\"0xdba68f07d1b7ca219f78ae8582c213d975c25caf\",\"address_label\":\"Token Millionaire\",\"token_amount\":42500000000000.0,\"total_outflow\":6679272453587.557,\"total_inflow\":49179272453587.555,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.010102431504101827,\"value_usd\":693.7777397872001},{\"address\":\"0xec400e8e71a439c786d9b8d7fb65b5e618822b3d\",\"address_label\":\"\",\"token_amount\":36790616752155.984,\"total_outflow\":36790616752155.984,\"total_inflow\":73581233504311.97,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.008745286723113343,\"value_usd\":600.5767278985383},{\"address\":\"0xa23e6d371830c9fdcc766d0fa6c513f8822ad088\",\"address_label\":\"\",\"token_amount\":33369402402086.484,\"total_outflow\":0.0,\"total_inflow\":33369402402086.484,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.007932049461173875,\"value_usd\":544.7282018016265},{\"address\":\"0xc56bf267bd54c0cdf4a76a6515822170176b9801\",\"address_label\":\"\",\"token_amount\":30675363602882.223,\"total_outflow\":0.0,\"total_inflow\":30675363602882.223,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.007291664933212609,\"value_usd\":500.7502218248981},{\"address\":\"0x19c6d9c0e0deac12a9b1b8e94b43a4959ffbbd61\",\"address_label\":\"\",\"token_amount\":24034300000000.0,\"total_outflow\":140061969336414.03,\"total_inflow\":164096269336414.03,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.00571305575291846,\"value_usd\":392.34029014982355},{\"address\":\"0x2c145c6356101580d78c3ab7874dda6c46a1a05e\",\"address_label\":\"High Balance\",\"token_amount\":23866350878991.703,\"total_outflow\":0.0,\"total_inflow\":23866350878991.703,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.005673133529597038,\"value_usd\":389.5986581128263},{\"address\":\"0x67a314f60038197ceb837feb4488636b59f53b7a\",\"address_label\":\"\",\"token_amount\":22790185122290.305,\"total_outflow\":58241584201408.555,\"total_inflow\":81031769323698.86,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.005417324333264431,\"value_usd\":372.03113231704566},{\"address\":\"0xb7f0a717b79222cfb90eff4d26668d1be241a987\",\"address_label\":\"\",\"token_amount\":21578267595965.61,\"total_outflow\":80661461001311.4,\"total_inflow\":102239728597277.02,\"balance_change_24h\":-14287415966760.924,\"balance_change_7d\":-14287415966760.924,\"balance_change_30d\":-14287415966760.924,\"ownership_percentage\":0.0051292463615393545,\"value_usd\":352.24756991182113},{\"address\":\"0x40b9bd1b50ea5b6c6b29165bd586dbb625629bb6\",\"address_label\":\"\",\"token_amount\":21497108950488.492,\"total_outflow\":0.0,\"total_inflow\":21497108950488.492,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.005109954604906455,\"value_usd\":350.9227214030375}],\"pagination\":{\"page\":1,\"per_page\":20,\"is_last_page\":false},\"warnings\":null}"
+    },
     "c8624a5ac9368c5af579c2bc566bd903": {
-      "storedAt": "2026-09-16T12:40:21.565Z",
+      "storedAt": "2026-09-16T13:51:42.595Z",
       "ttlMs": 1800000,
       "endpoint": "tgm/holders",
       "body": {
@@ -143,136 +157,67 @@
           "per_page": 20
         }
       },
-      "text": "{\"data\":[{\"address\":\"0x2c8f9bbae004854b9548f6c84720c70a8fceea23\",\"address_label\":\"Uniswap V2\",\"token_amount\":68176313207.21389,\"total_outflow\":7096679236112.659,\"total_inflow\":7164855549319.873,\"balance_change_24h\":312756471.3844684,\"balance_change_7d\":-2097251721.7403042,\"balance_change_30d\":12062717833.333258,\"ownership_percentage\":0.1620583165922979,\"value_usd\":53782.38510331841},{\"address\":\"0x9b81ef9b913fe8711121cc7de3a370887f54806b\",\"address_label\":\"Proxy\",\"token_amount\":8633086277.858877,\"total_outflow\":17110379162.390612,\"total_inflow\":25743465440.24949,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.020521253839784325,\"value_usd\":6810.400107949082},{\"address\":\"0x9f3095269bc6bd24e8e3eef5163a04cae686a455\",\"address_label\":\"baphomette.eth\",\"token_amount\":8400000000.0,\"total_outflow\":4200000000.0,\"total_inflow\":12600000000.0,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":-4200000000.0,\"ownership_percentage\":0.019967196748199363,\"value_usd\":6626.5248678784765},{\"address\":\"0x222cfea345add6d5030662234c335c2f6af57218\",\"address_label\":\"High Balance\",\"token_amount\":7951092025.450905,\"total_outflow\":0.0,\"total_inflow\":7951092025.450905,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.01890012128990681,\"value_usd\":6272.393932552461},{\"address\":\"0xd03a0452d765ee784cae1576b78d46306ccedc6c\",\"address_label\":\"\",\"token_amount\":7215762751.2108135,\"total_outflow\":100000000.0,\"total_inflow\":7315762751.2108135,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.017152208874018412,\"value_usd\":5692.313251382104},{\"address\":\"0xde67589be9427a930d61e7158eded10f4484dcb2\",\"address_label\":\"\",\"token_amount\":6916017756.395537,\"total_outflow\":6796467396.769755,\"total_inflow\":13712485153.165293,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":1879163911.5998101,\"ownership_percentage\":0.016439700863808335,\"value_usd\":5455.852815410016},{\"address\":\"0xc20a8a0804706d1e7376c18658f7708465961b3b\",\"address_label\":\"\",\"token_amount\":6649718907.577323,\"total_outflow\":2950000000.0,\"total_inflow\":9599718907.577324,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.015806695922359254,\"value_usd\":5245.777107793194},{\"address\":\"0x54bd568dbd8f1d3c1d78dfbe85207c287a91de1f\",\"address_label\":\"\",\"token_amount\":6480845042.721809,\"total_outflow\":720000000.0,\"total_inflow\":7200845042.721809,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.01540527476935939,\"value_usd\":5112.557242912264},{\"address\":\"0xba26c5cdef9d3ab113c0a59fc3da51d01102cd40\",\"address_label\":\"\",\"token_amount\":6126908429.115349,\"total_outflow\":4032774925.586124,\"total_inflow\":10159683354.701473,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.014563950721708007,\"value_usd\":4833.346555803228},{\"address\":\"0x2756a8fd5c0beac6bbcfcc28b866e54f83a5a8ad\",\"address_label\":\"\",\"token_amount\":5036371284.993431,\"total_outflow\":1641381307.777699,\"total_inflow\":6677752592.771131,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.011971692421957796,\"value_usd\":3973.052329033101},{\"address\":\"0x59ad6bfe46fbb1a416635b3abe38a32a44469042\",\"address_label\":\"\",\"token_amount\":5001908642.204586,\"total_outflow\":3756983646.911621,\"total_inflow\":8758892289.116207,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.011889773092311632,\"value_usd\":3945.8657148124944},{\"address\":\"0xacfe382977d9b5e3e869b8f9a87cf6850a349c66\",\"address_label\":\"\",\"token_amount\":4326593332.275605,\"total_outflow\":2484510886.685444,\"total_inflow\":6811104218.961048,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":15269797.054291612,\"ownership_percentage\":0.010284516704166014,\"value_usd\":3413.1283701811312},{\"address\":\"0xcb0bc7a3950ae9c2b90f5025a5e631682df65ad2\",\"address_label\":\"\",\"token_amount\":4292207571.7575884,\"total_outflow\":0.0,\"total_inflow\":4292207571.7575884,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":2152369410.4313927,\"ownership_percentage\":0.010202780127308905,\"value_usd\":3386.002406231899},{\"address\":\"0xe5b11cbaf8c9f55e974bbe16be57f8322d79fa09\",\"address_label\":\"\",\"token_amount\":4221601536.431671,\"total_outflow\":420000000.0,\"total_inflow\":4641601536.431671,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.010034946246479989,\"value_usd\":3330.3032813617206},{\"address\":\"0xad177976941dedf91a1b538e72ebabdfb6a58475\",\"address_label\":\"\",\"token_amount\":4076363885.030155,\"total_outflow\":5874348567.518788,\"total_inflow\":9950712452.548944,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.00968970948924422,\"value_usd\":3215.7293636516715},{\"address\":\"0xeea4e66c5774bcd99723852e8a6864b340da1bf3\",\"address_label\":\"\",\"token_amount\":4046054734.701947,\"total_outflow\":4794190814.879913,\"total_inflow\":8840245549.58186,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.009617663207354448,\"value_usd\":3191.8193233690363},{\"address\":\"0xd9089b6add790d935580726f8c2be114d696f5d8\",\"address_label\":\"\",\"token_amount\":4008501292.2760305,\"total_outflow\":3446411550.9803066,\"total_inflow\":7454912843.256336,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.009528396900986537,\"value_usd\":3162.194463832158},{\"address\":\"0x42cfb19a0ba0a6436b8192017dffabf9e7652515\",\"address_label\":\"\",\"token_amount\":3987320810.0060906,\"total_outflow\":86000000.0,\"total_inflow\":4073320810.0060906,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.009478049894235865,\"value_usd\":3145.485774251751},{\"address\":\"0xf75d78fca3435d39f276808c5fee4d60f9771f28\",\"address_label\":\"\",\"token_amount\":3982484663.1063023,\"total_outflow\":1187313306.8963666,\"total_inflow\":5169797970.002668,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.009466554144634523,\"value_usd\":3141.6706733355413},{\"address\":\"0xbe5aeb2cf4944a6fc11727c70e71c2ac60cf9fc1\",\"address_label\":\"\",\"token_amount\":3967198111.1987133,\"total_outflow\":0.0,\"total_inflow\":3967198111.1987133,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.009430217288736858,\"value_usd\":3129.611540435571}],\"pagination\":{\"page\":1,\"per_page\":20,\"is_last_page\":false},\"warnings\":null}"
-    },
-    "7765fc7c399adc2119062c516fdecde4": {
-      "storedAt": "2026-09-16T12:40:21.750Z",
-      "ttlMs": 1800000,
-      "endpoint": "tgm/holders",
-      "body": {
-        "chain": "ethereum",
-        "token_address": "0x5c559f3ee9a81da83e069c0093471cb05d84052a",
-        "pagination": {
-          "page": 1,
-          "per_page": 20
-        }
-      },
-      "text": "{\"data\":[{\"address\":\"0x5b6a17d4e84b8d9b40eaaae821fc141d6158fe44\",\"address_label\":\"UniswapV2\",\"token_amount\":1765666363007505.5,\"total_outflow\":9.024086530314584e+16,\"total_inflow\":9.200653166615334e+16,\"balance_change_24h\":58823807357009.82,\"balance_change_7d\":60983233296736.98,\"balance_change_30d\":72779776427485.84,\"ownership_percentage\":0.41970643509129235,\"value_usd\":28823.059259897247},{\"address\":\"0x29065a4c1f2f20d1e263930088890d6f49fe715a\",\"address_label\":\"Proxy\",\"token_amount\":261785754448797.0,\"total_outflow\":306000000000000.0,\"total_inflow\":567785754448797.0,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.062227591836908076,\"value_usd\":4273.438330117019},{\"address\":\"0xf5e9446db70b7cecb2f97abf76bcb9097d4cb617\",\"address_label\":\"\",\"token_amount\":77619612054861.3,\"total_outflow\":0.0,\"total_inflow\":77619612054861.3,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.018450513274333957,\"value_usd\":1267.076682696023},{\"address\":\"0xcb2ec50616ef8d301d6db02d2afd5de9f5208714\",\"address_label\":\"\",\"token_amount\":74455541708714.2,\"total_outflow\":6545241166841.759,\"total_inflow\":81000782875555.97,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.01769840024030782,\"value_usd\":1215.425822148314},{\"address\":\"0xf9614c8ae30a0392e5e14a8a98dc14313b664a0d\",\"address_label\":\"\",\"token_amount\":70207159427502.51,\"total_outflow\":0.0,\"total_inflow\":70207159427502.51,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.016688541628562384,\"value_usd\":1146.0744561057013},{\"address\":\"0xbc87cfbad42ae6fa2c80e3d2b41f615a96b1067e\",\"address_label\":\"\",\"token_amount\":63468920657929.59,\"total_outflow\":0.0,\"total_inflow\":63468920657929.59,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.015086833496141353,\"value_usd\":1036.0782193127416},{\"address\":\"0x8fca4ade3a517133ff23ca55cdaea29c78c990b8\",\"address_label\":\"Token Millionaire\",\"token_amount\":54492389151432.98,\"total_outflow\":611000635902739.5,\"total_inflow\":665493025054172.5,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.012953073621110903,\"value_usd\":889.5436842608402},{\"address\":\"0x7c9f24a81ce671a4ad610d84e236f5f2bdfaa4ba\",\"address_label\":\"\",\"token_amount\":52530208574592.22,\"total_outflow\":0.0,\"total_inflow\":52530208574592.22,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.012486654918141191,\"value_usd\":857.5126911866066},{\"address\":\"0xe28633333b2ab76bea54841829443ca2556f4b77\",\"address_label\":\"\",\"token_amount\":49604143871751.36,\"total_outflow\":0.0,\"total_inflow\":49604143871751.36,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.011791116841976017,\"value_usd\":809.7470781040646},{\"address\":\"0x3b96d678758bdbd279d0bb2a90c6b4279c071479\",\"address_label\":\"\",\"token_amount\":43932766314826.26,\"total_outflow\":0.0,\"total_inflow\":43932766314826.26,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.010443006176029283,\"value_usd\":717.16647803528},{\"address\":\"0x819fd76791f464750ebb9db044ec14cbd63df0cd\",\"address_label\":\"\",\"token_amount\":42912895875455.01,\"total_outflow\":0.0,\"total_inflow\":42912895875455.01,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.010200578617045606,\"value_usd\":700.5179272516855},{\"address\":\"0xdba68f07d1b7ca219f78ae8582c213d975c25caf\",\"address_label\":\"Token Millionaire\",\"token_amount\":42500000000000.0,\"total_outflow\":6679272453587.557,\"total_inflow\":49179272453587.555,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.010102431504101832,\"value_usd\":693.7777397872001},{\"address\":\"0xec400e8e71a439c786d9b8d7fb65b5e618822b3d\",\"address_label\":\"\",\"token_amount\":36790616752155.984,\"total_outflow\":36790616752155.984,\"total_inflow\":73581233504311.97,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.008745286723113347,\"value_usd\":600.5767278985383},{\"address\":\"0xa23e6d371830c9fdcc766d0fa6c513f8822ad088\",\"address_label\":\"\",\"token_amount\":33369402402086.484,\"total_outflow\":0.0,\"total_inflow\":33369402402086.484,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.007932049461173879,\"value_usd\":544.7282018016265},{\"address\":\"0xc56bf267bd54c0cdf4a76a6515822170176b9801\",\"address_label\":\"\",\"token_amount\":30675363602882.223,\"total_outflow\":0.0,\"total_inflow\":30675363602882.223,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.007291664933212613,\"value_usd\":500.7502218248981},{\"address\":\"0x19c6d9c0e0deac12a9b1b8e94b43a4959ffbbd61\",\"address_label\":\"\",\"token_amount\":24034300000000.0,\"total_outflow\":140061969336414.03,\"total_inflow\":164096269336414.03,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.005713055752918463,\"value_usd\":392.34029014982355},{\"address\":\"0x2c145c6356101580d78c3ab7874dda6c46a1a05e\",\"address_label\":\"High Balance\",\"token_amount\":23866350878991.703,\"total_outflow\":0.0,\"total_inflow\":23866350878991.703,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.005673133529597041,\"value_usd\":389.5986581128263},{\"address\":\"0x67a314f60038197ceb837feb4488636b59f53b7a\",\"address_label\":\"\",\"token_amount\":22790185122290.305,\"total_outflow\":58241584201408.555,\"total_inflow\":81031769323698.86,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.005417324333264434,\"value_usd\":372.03113231704566},{\"address\":\"0xb7f0a717b79222cfb90eff4d26668d1be241a987\",\"address_label\":\"\",\"token_amount\":21578267595965.61,\"total_outflow\":80661461001311.4,\"total_inflow\":102239728597277.02,\"balance_change_24h\":-14287415966760.924,\"balance_change_7d\":-14287415966760.924,\"balance_change_30d\":-14287415966760.924,\"ownership_percentage\":0.005129246361539357,\"value_usd\":352.24756991182113},{\"address\":\"0x40b9bd1b50ea5b6c6b29165bd586dbb625629bb6\",\"address_label\":\"\",\"token_amount\":21497108950488.492,\"total_outflow\":0.0,\"total_inflow\":21497108950488.492,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.005109954604906456,\"value_usd\":350.9227214030375}],\"pagination\":{\"page\":1,\"per_page\":20,\"is_last_page\":false},\"warnings\":null}"
+      "text": "{\"data\":[{\"address\":\"0x2c8f9bbae004854b9548f6c84720c70a8fceea23\",\"address_label\":\"Uniswap V2\",\"token_amount\":68176313207.21389,\"total_outflow\":7096679236112.659,\"total_inflow\":7164855549319.873,\"balance_change_24h\":252413570.14668542,\"balance_change_7d\":-2097251721.7403042,\"balance_change_30d\":12062717833.333258,\"ownership_percentage\":0.16205831659229794,\"value_usd\":53782.38510331841},{\"address\":\"0x9b81ef9b913fe8711121cc7de3a370887f54806b\",\"address_label\":\"Proxy\",\"token_amount\":8633086277.858877,\"total_outflow\":17110379162.390612,\"total_inflow\":25743465440.24949,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.020521253839784325,\"value_usd\":6810.400107949082},{\"address\":\"0x9f3095269bc6bd24e8e3eef5163a04cae686a455\",\"address_label\":\"baphomette.eth\",\"token_amount\":8400000000.0,\"total_outflow\":4200000000.0,\"total_inflow\":12600000000.0,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":-4200000000.0,\"ownership_percentage\":0.019967196748199367,\"value_usd\":6626.5248678784765},{\"address\":\"0x222cfea345add6d5030662234c335c2f6af57218\",\"address_label\":\"High Balance\",\"token_amount\":7951092025.450905,\"total_outflow\":0.0,\"total_inflow\":7951092025.450905,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.018900121289906813,\"value_usd\":6272.393932552461},{\"address\":\"0xd03a0452d765ee784cae1576b78d46306ccedc6c\",\"address_label\":\"\",\"token_amount\":7215762751.2108135,\"total_outflow\":100000000.0,\"total_inflow\":7315762751.2108135,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.017152208874018412,\"value_usd\":5692.313251382104},{\"address\":\"0xde67589be9427a930d61e7158eded10f4484dcb2\",\"address_label\":\"\",\"token_amount\":6916017756.395537,\"total_outflow\":6796467396.769755,\"total_inflow\":13712485153.165293,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":1879163911.5998101,\"ownership_percentage\":0.01643970086380834,\"value_usd\":5455.852815410016},{\"address\":\"0xc20a8a0804706d1e7376c18658f7708465961b3b\",\"address_label\":\"\",\"token_amount\":6649718907.577323,\"total_outflow\":2950000000.0,\"total_inflow\":9599718907.577324,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.015806695922359257,\"value_usd\":5245.777107793194},{\"address\":\"0x54bd568dbd8f1d3c1d78dfbe85207c287a91de1f\",\"address_label\":\"\",\"token_amount\":6480845042.721809,\"total_outflow\":720000000.0,\"total_inflow\":7200845042.721809,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.015405274769359392,\"value_usd\":5112.557242912264},{\"address\":\"0xba26c5cdef9d3ab113c0a59fc3da51d01102cd40\",\"address_label\":\"\",\"token_amount\":6126908429.115349,\"total_outflow\":4032774925.586124,\"total_inflow\":10159683354.701473,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.01456395072170801,\"value_usd\":4833.346555803228},{\"address\":\"0x2756a8fd5c0beac6bbcfcc28b866e54f83a5a8ad\",\"address_label\":\"\",\"token_amount\":5036371284.993431,\"total_outflow\":1641381307.777699,\"total_inflow\":6677752592.771131,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.011971692421957798,\"value_usd\":3973.052329033101},{\"address\":\"0x59ad6bfe46fbb1a416635b3abe38a32a44469042\",\"address_label\":\"\",\"token_amount\":5001908642.204586,\"total_outflow\":3756983646.911621,\"total_inflow\":8758892289.116207,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.011889773092311633,\"value_usd\":3945.8657148124944},{\"address\":\"0xacfe382977d9b5e3e869b8f9a87cf6850a349c66\",\"address_label\":\"\",\"token_amount\":4326593332.275605,\"total_outflow\":2484510886.685444,\"total_inflow\":6811104218.961048,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":15269797.054291612,\"ownership_percentage\":0.010284516704166014,\"value_usd\":3413.1283701811312},{\"address\":\"0xcb0bc7a3950ae9c2b90f5025a5e631682df65ad2\",\"address_label\":\"\",\"token_amount\":4292207571.7575884,\"total_outflow\":0.0,\"total_inflow\":4292207571.7575884,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":2152369410.4313927,\"ownership_percentage\":0.010202780127308906,\"value_usd\":3386.002406231899},{\"address\":\"0xe5b11cbaf8c9f55e974bbe16be57f8322d79fa09\",\"address_label\":\"\",\"token_amount\":4221601536.431671,\"total_outflow\":420000000.0,\"total_inflow\":4641601536.431671,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.01003494624647999,\"value_usd\":3330.3032813617206},{\"address\":\"0xad177976941dedf91a1b538e72ebabdfb6a58475\",\"address_label\":\"\",\"token_amount\":4076363885.030155,\"total_outflow\":5874348567.518788,\"total_inflow\":9950712452.548944,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.009689709489244221,\"value_usd\":3215.7293636516715},{\"address\":\"0xeea4e66c5774bcd99723852e8a6864b340da1bf3\",\"address_label\":\"\",\"token_amount\":4046054734.701947,\"total_outflow\":4794190814.879913,\"total_inflow\":8840245549.58186,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.009617663207354448,\"value_usd\":3191.8193233690363},{\"address\":\"0xd9089b6add790d935580726f8c2be114d696f5d8\",\"address_label\":\"\",\"token_amount\":4008501292.2760305,\"total_outflow\":3446411550.9803066,\"total_inflow\":7454912843.256336,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.009528396900986537,\"value_usd\":3162.194463832158},{\"address\":\"0x42cfb19a0ba0a6436b8192017dffabf9e7652515\",\"address_label\":\"\",\"token_amount\":3987320810.0060906,\"total_outflow\":86000000.0,\"total_inflow\":4073320810.0060906,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.009478049894235866,\"value_usd\":3145.485774251751},{\"address\":\"0xf75d78fca3435d39f276808c5fee4d60f9771f28\",\"address_label\":\"\",\"token_amount\":3982484663.1063023,\"total_outflow\":1187313306.8963666,\"total_inflow\":5169797970.002668,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.009466554144634525,\"value_usd\":3141.6706733355413},{\"address\":\"0xbe5aeb2cf4944a6fc11727c70e71c2ac60cf9fc1\",\"address_label\":\"\",\"token_amount\":3967198111.1987133,\"total_outflow\":0.0,\"total_inflow\":3967198111.1987133,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.009430217288736858,\"value_usd\":3129.611540435571}],\"pagination\":{\"page\":1,\"per_page\":20,\"is_last_page\":false},\"warnings\":null}"
     }
   },
   "verdict": {
     "query": "BABYPEPE",
     "winner": {
       "chain": "ethereum",
-      "address": "0x69babe9811cc86dcfc3b8f9a14de6470dd18eda4",
-      "name": "Baby Pepe",
+      "address": "0x5c559f3ee9a81da83e069c0093471cb05d84052a",
+      "name": "BabyPepe",
       "symbol": "BABYPEPE",
-      "marketCap": 334863.171672957,
-      "volume24h": 247.36497994631748,
-      "searchRank": 7017,
+      "marketCap": 69854.0873589167,
+      "volume24h": 1386.5150773148093,
+      "searchRank": 5624,
       "labelledWallets": 0,
       "smartTraderWallets": 0,
       "whaleWallets": 0,
       "topPnlWallets": 0,
       "publicFigureWallets": 0,
       "smartTraderNetFlowUsd": 0,
-      "exchangeNetFlowUsd": -2030.6877027228645,
+      "exchangeNetFlowUsd": 1029.9017363149276,
       "freshNetFlowUsd": 0,
       "exchangeTouched": true,
       "freshShare": 0,
       "errors": [],
-      "deploymentDate": "2024-05-24 00:13:11",
-      "ageDays": 845,
-      "marketCapUsd": 331870.56507949956,
-      "liquidityUsd": 54492.14200497087,
-      "totalHolders": 2057,
-      "uniqueBuyers": 14,
-      "logo": "https://coin-images.coingecko.com/coins/images/38672/small/NEW_BABYPEPE_LOGO.jpg?1734403634",
-      "website": "https://babypepe.com/",
-      "score": 5.35,
+      "deploymentDate": "2023-04-17 06:02:59",
+      "ageDays": 1248,
+      "marketCapUsd": 68674.33246199308,
+      "liquidityUsd": 28902.18053180655,
+      "totalHolders": 1958,
+      "uniqueBuyers": 2,
+      "logo": "https://coin-images.coingecko.com/coins/images/29869/small/BabyPepe200.png?1696528794",
+      "website": "https://babypepe.org",
+      "score": 5.05,
       "terms": {
         "labelled": 0,
-        "exchange": 0.18,
-        "holders": 1.99,
-        "liquidity": 1.89,
+        "exchange": 0.01,
+        "holders": 1.98,
+        "liquidity": 1.78,
         "age": 0,
         "fresh": 0,
         "recognisedHolders": 1.29
       },
       "reasons": [
         "0 labelled wallets in 7 days",
-        "exchange flow $2K",
+        "exchange flow $1K",
         "2K holders",
-        "2.3y old",
-        "4 of top 20 holders tagged by Nansen (Uniswap V2, Proxy, baphomette.eth)"
+        "3.4y old",
+        "4 of top 20 holders tagged by Nansen (Token Millionaire ×2, Proxy, High Balance)"
       ],
       "impostor": false,
       "scorable": true,
       "unchecked": false,
       "recognisedHolders": 4,
       "topLabels": [
-        "Uniswap V2",
+        "Token Millionaire ×2",
         "Proxy",
-        "baphomette.eth"
+        "High Balance"
       ],
-      "topHolderPct": 0.1620583165922979
+      "topHolderPct": 0.41970643509129213
     },
     "ranked": [
-      {
-        "chain": "ethereum",
-        "address": "0x69babe9811cc86dcfc3b8f9a14de6470dd18eda4",
-        "name": "Baby Pepe",
-        "symbol": "BABYPEPE",
-        "marketCap": 334863.171672957,
-        "volume24h": 247.36497994631748,
-        "searchRank": 7017,
-        "labelledWallets": 0,
-        "smartTraderWallets": 0,
-        "whaleWallets": 0,
-        "topPnlWallets": 0,
-        "publicFigureWallets": 0,
-        "smartTraderNetFlowUsd": 0,
-        "exchangeNetFlowUsd": -2030.6877027228645,
-        "freshNetFlowUsd": 0,
-        "exchangeTouched": true,
-        "freshShare": 0,
-        "errors": [],
-        "deploymentDate": "2024-05-24 00:13:11",
-        "ageDays": 845,
-        "marketCapUsd": 331870.56507949956,
-        "liquidityUsd": 54492.14200497087,
-        "totalHolders": 2057,
-        "uniqueBuyers": 14,
-        "logo": "https://coin-images.coingecko.com/coins/images/38672/small/NEW_BABYPEPE_LOGO.jpg?1734403634",
-        "website": "https://babypepe.com/",
-        "score": 5.35,
-        "terms": {
-          "labelled": 0,
-          "exchange": 0.18,
-          "holders": 1.99,
-          "liquidity": 1.89,
-          "age": 0,
-          "fresh": 0,
-          "recognisedHolders": 1.29
-        },
-        "reasons": [
-          "0 labelled wallets in 7 days",
-          "exchange flow $2K",
-          "2K holders",
-          "2.3y old",
-          "4 of top 20 holders tagged by Nansen (Uniswap V2, Proxy, baphomette.eth)"
-        ],
-        "impostor": false,
-        "scorable": true,
-        "unchecked": false,
-        "recognisedHolders": 4,
-        "topLabels": [
-          "Uniswap V2",
-          "Proxy",
-          "baphomette.eth"
-        ],
-        "topHolderPct": 0.1620583165922979
-      },
       {
         "chain": "ethereum",
         "address": "0x5c559f3ee9a81da83e069c0093471cb05d84052a",
@@ -280,7 +225,7 @@
         "symbol": "BABYPEPE",
         "marketCap": 69854.0873589167,
         "volume24h": 1386.5150773148093,
-        "searchRank": 5601,
+        "searchRank": 5624,
         "labelledWallets": 0,
         "smartTraderWallets": 0,
         "whaleWallets": 0,
@@ -300,7 +245,7 @@
         "uniqueBuyers": 2,
         "logo": "https://coin-images.coingecko.com/coins/images/29869/small/BabyPepe200.png?1696528794",
         "website": "https://babypepe.org",
-        "score": 5.2,
+        "score": 5.05,
         "terms": {
           "labelled": 0,
           "exchange": 0.01,
@@ -308,25 +253,79 @@
           "liquidity": 1.78,
           "age": 0,
           "fresh": 0,
-          "recognisedHolders": 1.43
+          "recognisedHolders": 1.29
         },
         "reasons": [
           "0 labelled wallets in 7 days",
           "exchange flow $1K",
           "2K holders",
           "3.4y old",
-          "5 of top 20 holders tagged by Nansen (Token Millionaire ×2, UniswapV2, Proxy)"
+          "4 of top 20 holders tagged by Nansen (Token Millionaire ×2, Proxy, High Balance)"
         ],
         "impostor": false,
         "scorable": true,
         "unchecked": false,
-        "recognisedHolders": 5,
+        "recognisedHolders": 4,
         "topLabels": [
           "Token Millionaire ×2",
-          "UniswapV2",
-          "Proxy"
+          "Proxy",
+          "High Balance"
         ],
-        "topHolderPct": 0.41970643509129235
+        "topHolderPct": 0.41970643509129213
+      },
+      {
+        "chain": "ethereum",
+        "address": "0x69babe9811cc86dcfc3b8f9a14de6470dd18eda4",
+        "name": "Baby Pepe",
+        "symbol": "BABYPEPE",
+        "marketCap": 334863.171672957,
+        "volume24h": 198.02377761347094,
+        "searchRank": 7234,
+        "labelledWallets": 0,
+        "smartTraderWallets": 0,
+        "whaleWallets": 0,
+        "topPnlWallets": 0,
+        "publicFigureWallets": 0,
+        "smartTraderNetFlowUsd": 0,
+        "exchangeNetFlowUsd": -2030.6877027228645,
+        "freshNetFlowUsd": 0,
+        "exchangeTouched": true,
+        "freshShare": 0,
+        "errors": [],
+        "deploymentDate": "2024-05-24 00:13:11",
+        "ageDays": 845,
+        "marketCapUsd": 331870.56507949956,
+        "liquidityUsd": 54492.14200497087,
+        "totalHolders": 2057,
+        "uniqueBuyers": 14,
+        "logo": "https://coin-images.coingecko.com/coins/images/38672/small/NEW_BABYPEPE_LOGO.jpg?1734403634",
+        "website": "https://babypepe.com/",
+        "score": 4.95,
+        "terms": {
+          "labelled": 0,
+          "exchange": 0.18,
+          "holders": 1.99,
+          "liquidity": 1.89,
+          "age": 0,
+          "fresh": 0,
+          "recognisedHolders": 0.88
+        },
+        "reasons": [
+          "0 labelled wallets in 7 days",
+          "exchange flow $2K",
+          "2K holders",
+          "2.3y old",
+          "2 of top 20 holders tagged by Nansen (Proxy, High Balance)"
+        ],
+        "impostor": false,
+        "scorable": true,
+        "unchecked": false,
+        "recognisedHolders": 2,
+        "topLabels": [
+          "Proxy",
+          "High Balance"
+        ],
+        "topHolderPct": 0.16205831659229794
       },
       {
         "chain": "base",
@@ -335,7 +334,7 @@
         "symbol": "BABYPEPE",
         "marketCap": 63684.1421214772,
         "volume24h": 24.181579613873563,
-        "searchRank": 8836,
+        "searchRank": 8887,
         "labelledWallets": 0,
         "smartTraderWallets": 0,
         "whaleWallets": 0,
@@ -382,8 +381,8 @@
         "name": "Baby Pepe",
         "symbol": "BABYPEPE",
         "marketCap": 51968.6118358533,
-        "volume24h": 0.14411135940771624,
-        "searchRank": 10625,
+        "volume24h": 0.07225170320400405,
+        "searchRank": 10723,
         "labelledWallets": 0,
         "smartTraderWallets": 0,
         "whaleWallets": 0,
@@ -428,7 +427,7 @@
         "symbol": "BABYPEPE",
         "marketCap": 134640.243759,
         "volume24h": 0,
-        "searchRank": 12779,
+        "searchRank": 12810,
         "labelledWallets": 0,
         "smartTraderWallets": 0,
         "whaleWallets": 0,
@@ -481,7 +480,7 @@
           "limit": 50
         },
         "credits": 0,
-        "ms": 500,
+        "ms": 535,
         "cached": false,
         "status": 200,
         "fieldsUsed": [
@@ -493,48 +492,20 @@
           "tokens[].volume_24h",
           "tokens[].rank"
         ],
-        "responseHash": "89a7f836597d8e5a548d5b8be7db7bca9a096118caaec8b542bc4fffde775026",
+        "responseHash": "a77ea94a48d580437c8f842be8dd04af1e72c7dd10d6a578fb35e06b617d688d",
         "attempts": 1,
-        "totalMs": 500,
+        "totalMs": 535,
         "ok": true
       },
       {
-        "endpoint": "tgm/flow-intelligence",
+        "endpoint": "tgm/token-information",
         "body": {
           "chain": "ethereum",
           "token_address": "0x69babe9811cc86dcfc3b8f9a14de6470dd18eda4",
           "timeframe": "7d"
         },
         "credits": 1,
-        "ms": 311,
-        "cached": false,
-        "status": 200,
-        "fieldsUsed": [
-          "smart_trader_wallet_count",
-          "whale_wallet_count",
-          "top_pnl_wallet_count",
-          "public_figure_wallet_count",
-          "smart_trader_net_flow_usd",
-          "whale_net_flow_usd",
-          "top_pnl_net_flow_usd",
-          "public_figure_net_flow_usd",
-          "exchange_net_flow_usd",
-          "fresh_wallets_net_flow_usd"
-        ],
-        "responseHash": "005a89ae7ffea8ba4a3e4c4ffc157d85a073095b77a94ec38384d82329c9b309",
-        "attempts": 1,
-        "totalMs": 313,
-        "ok": true
-      },
-      {
-        "endpoint": "tgm/token-information",
-        "body": {
-          "chain": "base",
-          "token_address": "0x36692131ccc0a478e26b3a1ada6447d95f79df21",
-          "timeframe": "7d"
-        },
-        "credits": 1,
-        "ms": 323,
+        "ms": 548,
         "cached": false,
         "status": 200,
         "fieldsUsed": [
@@ -544,9 +515,32 @@
           "spot_metrics.total_holders",
           "spot_metrics.unique_buyers"
         ],
-        "responseHash": "aad9168c87fbb6fc81200161d8cc54754255d96bdf2242dec1e29d8d97d5af4c",
+        "responseHash": "1251c07984c0a782e8d09ac3b8004616a7bff38c35570b831aefbd1d11a46de5",
         "attempts": 1,
-        "totalMs": 326,
+        "totalMs": 549,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/token-information",
+        "body": {
+          "chain": "bnb",
+          "token_address": "0x9d6db6382444b70a51307a4291188f60d4eef205",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 698,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "token_details.token_deployment_date",
+          "token_details.market_cap_usd",
+          "spot_metrics.liquidity_usd",
+          "spot_metrics.total_holders",
+          "spot_metrics.unique_buyers"
+        ],
+        "responseHash": "3023353ec3a64a547e54e3e839a6e0703490d51056d63deaedeab4ce23e5c03b",
+        "attempts": 1,
+        "totalMs": 700,
         "ok": true
       },
       {
@@ -557,7 +551,7 @@
           "timeframe": "7d"
         },
         "credits": 1,
-        "ms": 351,
+        "ms": 766,
         "cached": false,
         "status": 200,
         "fieldsUsed": [
@@ -574,18 +568,18 @@
         ],
         "responseHash": "6a7334c462df2eb53ed672b6d1df0bb867edad9ef547414d7f7471738c92a864",
         "attempts": 1,
-        "totalMs": 353,
+        "totalMs": 768,
         "ok": true
       },
       {
         "endpoint": "tgm/token-information",
         "body": {
-          "chain": "bnb",
-          "token_address": "0x9d6db6382444b70a51307a4291188f60d4eef205",
+          "chain": "base",
+          "token_address": "0x36692131ccc0a478e26b3a1ada6447d95f79df21",
           "timeframe": "7d"
         },
         "credits": 1,
-        "ms": 367,
+        "ms": 767,
         "cached": false,
         "status": 200,
         "fieldsUsed": [
@@ -595,32 +589,9 @@
           "spot_metrics.total_holders",
           "spot_metrics.unique_buyers"
         ],
-        "responseHash": "3023353ec3a64a547e54e3e839a6e0703490d51056d63deaedeab4ce23e5c03b",
+        "responseHash": "aad9168c87fbb6fc81200161d8cc54754255d96bdf2242dec1e29d8d97d5af4c",
         "attempts": 1,
-        "totalMs": 371,
-        "ok": true
-      },
-      {
-        "endpoint": "tgm/token-information",
-        "body": {
-          "chain": "ethereum",
-          "token_address": "0x69babe9811cc86dcfc3b8f9a14de6470dd18eda4",
-          "timeframe": "7d"
-        },
-        "credits": 1,
-        "ms": 454,
-        "cached": false,
-        "status": 200,
-        "fieldsUsed": [
-          "token_details.token_deployment_date",
-          "token_details.market_cap_usd",
-          "spot_metrics.liquidity_usd",
-          "spot_metrics.total_holders",
-          "spot_metrics.unique_buyers"
-        ],
-        "responseHash": "1251c07984c0a782e8d09ac3b8004616a7bff38c35570b831aefbd1d11a46de5",
-        "attempts": 1,
-        "totalMs": 456,
+        "totalMs": 769,
         "ok": true
       },
       {
@@ -631,7 +602,7 @@
           "timeframe": "7d"
         },
         "credits": 1,
-        "ms": 514,
+        "ms": 795,
         "cached": false,
         "status": 200,
         "fieldsUsed": [
@@ -643,58 +614,7 @@
         ],
         "responseHash": "b4088254a6d03efc5d0522e6ead8e241ecfa84ef9e5bc2f89bc6eec6f3818074",
         "attempts": 1,
-        "totalMs": 515,
-        "ok": true
-      },
-      {
-        "endpoint": "tgm/token-information",
-        "body": {
-          "chain": "bnb",
-          "token_address": "0xf1dc2f7d9b9de5421ee89ef746f482a16e213383",
-          "timeframe": "7d"
-        },
-        "credits": 1,
-        "ms": 320,
-        "cached": false,
-        "status": 200,
-        "fieldsUsed": [
-          "token_details.token_deployment_date",
-          "token_details.market_cap_usd",
-          "spot_metrics.liquidity_usd",
-          "spot_metrics.total_holders",
-          "spot_metrics.unique_buyers"
-        ],
-        "responseHash": "d488f7ae03e24364353987785733025f6e0fa9db246eef779e07f7a7b57a5a24",
-        "attempts": 1,
-        "totalMs": 826,
-        "ok": true
-      },
-      {
-        "endpoint": "tgm/flow-intelligence",
-        "body": {
-          "chain": "ethereum",
-          "token_address": "0x5c559f3ee9a81da83e069c0093471cb05d84052a",
-          "timeframe": "7d"
-        },
-        "credits": 1,
-        "ms": 1041,
-        "cached": false,
-        "status": 200,
-        "fieldsUsed": [
-          "smart_trader_wallet_count",
-          "whale_wallet_count",
-          "top_pnl_wallet_count",
-          "public_figure_wallet_count",
-          "smart_trader_net_flow_usd",
-          "whale_net_flow_usd",
-          "top_pnl_net_flow_usd",
-          "public_figure_net_flow_usd",
-          "exchange_net_flow_usd",
-          "fresh_wallets_net_flow_usd"
-        ],
-        "responseHash": "69722bd52d74ab4f35d903caf33ded1a62483abffb9b2af043b72fc542fe57f3",
-        "attempts": 1,
-        "totalMs": 1041,
+        "totalMs": 796,
         "ok": true
       },
       {
@@ -705,7 +625,7 @@
           "timeframe": "7d"
         },
         "credits": 1,
-        "ms": 1073,
+        "ms": 839,
         "cached": false,
         "status": 200,
         "fieldsUsed": [
@@ -722,7 +642,63 @@
         ],
         "responseHash": "890a7cdece03a46131d4d9ff597ffcad7743a9b0f09e59320eef4844d891740b",
         "attempts": 1,
-        "totalMs": 1076,
+        "totalMs": 841,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/flow-intelligence",
+        "body": {
+          "chain": "ethereum",
+          "token_address": "0x69babe9811cc86dcfc3b8f9a14de6470dd18eda4",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 874,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "smart_trader_wallet_count",
+          "whale_wallet_count",
+          "top_pnl_wallet_count",
+          "public_figure_wallet_count",
+          "smart_trader_net_flow_usd",
+          "whale_net_flow_usd",
+          "top_pnl_net_flow_usd",
+          "public_figure_net_flow_usd",
+          "exchange_net_flow_usd",
+          "fresh_wallets_net_flow_usd"
+        ],
+        "responseHash": "005a89ae7ffea8ba4a3e4c4ffc157d85a073095b77a94ec38384d82329c9b309",
+        "attempts": 1,
+        "totalMs": 875,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/flow-intelligence",
+        "body": {
+          "chain": "ethereum",
+          "token_address": "0x5c559f3ee9a81da83e069c0093471cb05d84052a",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 914,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "smart_trader_wallet_count",
+          "whale_wallet_count",
+          "top_pnl_wallet_count",
+          "public_figure_wallet_count",
+          "smart_trader_net_flow_usd",
+          "whale_net_flow_usd",
+          "top_pnl_net_flow_usd",
+          "public_figure_net_flow_usd",
+          "exchange_net_flow_usd",
+          "fresh_wallets_net_flow_usd"
+        ],
+        "responseHash": "69722bd52d74ab4f35d903caf33ded1a62483abffb9b2af043b72fc542fe57f3",
+        "attempts": 1,
+        "totalMs": 914,
         "ok": true
       },
       {
@@ -733,7 +709,7 @@
           "timeframe": "7d"
         },
         "credits": 1,
-        "ms": 1076,
+        "ms": 1033,
         "cached": false,
         "status": 200,
         "fieldsUsed": [
@@ -750,30 +726,30 @@
         ],
         "responseHash": "6cac3fff4ee13ed86da672a909e60dc1d3f175caa7a068b5dea69953a2c41b8b",
         "attempts": 1,
-        "totalMs": 1080,
+        "totalMs": 1035,
         "ok": true
       },
       {
-        "endpoint": "tgm/holders",
+        "endpoint": "tgm/token-information",
         "body": {
-          "chain": "ethereum",
-          "token_address": "0x69babe9811cc86dcfc3b8f9a14de6470dd18eda4",
-          "pagination": {
-            "page": 1,
-            "per_page": 20
-          }
+          "chain": "bnb",
+          "token_address": "0xf1dc2f7d9b9de5421ee89ef746f482a16e213383",
+          "timeframe": "7d"
         },
-        "credits": 5,
-        "ms": 557,
+        "credits": 1,
+        "ms": 611,
         "cached": false,
         "status": 200,
         "fieldsUsed": [
-          "data[].address_label",
-          "data[].ownership_percentage"
+          "token_details.token_deployment_date",
+          "token_details.market_cap_usd",
+          "spot_metrics.liquidity_usd",
+          "spot_metrics.total_holders",
+          "spot_metrics.unique_buyers"
         ],
-        "responseHash": "44a5f17fc87bb8a396c9fe7d4079273a4f3344fe64c82e06e38a238089611cc6",
+        "responseHash": "d488f7ae03e24364353987785733025f6e0fa9db246eef779e07f7a7b57a5a24",
         "attempts": 1,
-        "totalMs": 557,
+        "totalMs": 1082,
         "ok": true
       },
       {
@@ -787,20 +763,43 @@
           }
         },
         "credits": 5,
-        "ms": 741,
+        "ms": 737,
         "cached": false,
         "status": 200,
         "fieldsUsed": [
           "data[].address_label",
           "data[].ownership_percentage"
         ],
-        "responseHash": "1dc25c1062e277a27e6764f2e660876c3bcabab977bec8427b39dc3d33d30d7b",
+        "responseHash": "61e076266e2b0c88848f3eb32904ecaab4dc0fc94c7a89c3a9e9896c8e79acfc",
         "attempts": 1,
-        "totalMs": 742,
+        "totalMs": 737,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/holders",
+        "body": {
+          "chain": "ethereum",
+          "token_address": "0x69babe9811cc86dcfc3b8f9a14de6470dd18eda4",
+          "pagination": {
+            "page": 1,
+            "per_page": 20
+          }
+        },
+        "credits": 5,
+        "ms": 769,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "data[].address_label",
+          "data[].ownership_percentage"
+        ],
+        "responseHash": "53cfce4b985d6eccc9c7681777c7d9c2d465aadbfccd8d40984e5c20112601e8",
+        "attempts": 1,
+        "totalMs": 769,
         "ok": true
       }
     ],
-    "ms": 2324,
+    "ms": 2387,
     "weights": {
       "labelled": 3,
       "exchange": 0.6,
@@ -811,6 +810,6 @@
       "freshPenalty": 1.5,
       "recognisedHolders": 0.8
     },
-    "hash": "321080037d720c2d671fdd678b05bfd2c76cc8bccab0812417d4dcdc8f187a21"
+    "hash": "d6b0b7e1f8c185feff4911d831c1342c0086cc167ac72639cc985da9df23ce7c"
   }
 }

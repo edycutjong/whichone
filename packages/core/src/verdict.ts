@@ -2,7 +2,7 @@ import type { NansenClient, Call } from "./client.js";
 import { sha256 } from "./client.js";
 import { searchCandidates, sameName, scorable } from "./search.js";
 import { fetchFacts, fetchHolderFacts, STABLECOINS } from "./facts.js";
-import { score, unscorable, rank, ABSTAIN_THRESHOLD, WEIGHTS, type Scored } from "./score.js";
+import { score, unscorable, rank, ABSTAIN_THRESHOLD, MIN_RECOGNISED_TO_CROWN, WEIGHTS, type Scored } from "./score.js";
 
 export type Verdict = {
   query: string;
@@ -72,7 +72,7 @@ export async function whichOnesReal(client: NansenClient, query: string, opts: V
   else if (!best || !best.scorable) abstainReason = "no candidate on a chain Nansen can score";
   else if (best.unchecked) abstainReason = "Nansen lookups failed for every candidate — retry";
   else if (best.labelledWallets === 0 && best.recognisedHolders == null && best.errors.some((e) => e.startsWith("holders failed"))) abstainReason = "the deciding holders lookup failed for the top candidate — retry";
-  else if (best.score < ABSTAIN_THRESHOLD || (best.labelledWallets === 0 && !(best.recognisedHolders && best.recognisedHolders > 0))) abstainReason = "none of these looks real — nothing labelled has touched any of them";
+  else if (best.score < ABSTAIN_THRESHOLD || (best.labelledWallets === 0 && (best.recognisedHolders ?? 0) < MIN_RECOGNISED_TO_CROWN)) abstainReason = "none of these looks real — nothing labelled has touched any of them";
   else winner = best;
 
   const provenance = client.calls.slice(callsBefore);
