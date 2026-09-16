@@ -1,0 +1,82 @@
+import type { NansenClient, Call } from "./client.js";
+import { sha256 } from "./client.js";
+import { searchCandidates, sameName, scorable } from "./search.js";
+import { fetchFacts, fetchHolderFacts, STABLECOINS } from "./facts.js";
+import { score, unscorable, rank, ABSTAIN_THRESHOLD, WEIGHTS, type Scored } from "./score.js";
+
+export type Verdict = {
+  query: string;
+  chainFilter?: string;
+  /** the one green card, or null when the tool abstains */
+  winner: Scored | null;
+  ranked: Scored[];
+  abstained: boolean;
+  abstainReason?: string;
+  /** stablecoins: many same-name results are canonical per chain — header copy changes, no impostor flags */
+  stablecoin: boolean;
+  candidatesTotal: number;
+  provenance: Call[];
+  credits: number;
+  ms: number;
+  cachedAt?: string;
+  weights: typeof WEIGHTS;
+  /** sha256 of the decision (query, ranking, winner, weights) — never cost or timing — printed on the share card */
+  hash: string;
+};
+
+export type VerdictOptions = {
+  chain?: string;
+  /** max candidates scored (after the same-name filter). Default 8. */
+  cap?: number;
+  /** finalists that get the holders tiebreak call. Default 2. */
+  finalists?: number;
+  now?: number;
+};
+
+/** The whole product: ticker in → one green winner (or an honest abstain). ≤ 26 credits at cap 8. */
+export async function whichOnesReal(client: NansenClient, query: string, opts: VerdictOptions = {}): Promise<Verdict> {
+  const started = Date.now();
+  const callsBefore = client.calls.length;
+  const cap = opts.cap ?? 8;
+  const q = query.trim();
+  const stablecoin = STABLECOINS.has(q.toUpperCase());
+
+  const all = await searchCandidates(client, q, { chain: opts.chain });
+  const same = all.filter((c) => sameName(q, c));
+  const chosen = same.slice(0, cap);
+
+  const facts = await Promise.all(chosen.map(async (c) =>
+    scorable(c) ? fetchFacts(client, c, opts.now) : { ...c, ...emptyFacts(), errors: [] }));
+  let scored: Scored[] = facts.map((f, i) =>
+    scorable(chosen[i]) ? score(f) : unscorable(f, `${f.chain}: perp market, not a token contract — not ranked`));
+
+  // Tiebreak: labelled holders for the finalists, then re-score.
+  const finalists = rank(scored).filter((s) => s.scorable).slice(0, opts.finalists ?? 2);
+  for (const fin of finalists) {
+    const withHolders = await fetchHolderFacts(client, fin);
+    scored = scored.map((s) => (s.chain === fin.chain && s.address === fin.address ? score(withHolders) : s));
+  }
+  if (stablecoin) scored = scored.map((s) => ({ ...s, impostor: false, reasons: s.reasons.filter((r) => !r.startsWith("IMPOSTOR")) }));
+  const ranked = rank(scored);
+
+  const best = ranked[0];
+  let winner: Scored | null = null;
+  let abstainReason: string | undefined;
+  if (same.length === 0) abstainReason = `no token named ${q} on Nansen`;
+  else if (!best || !best.scorable) abstainReason = "no candidate on a chain Nansen can score";
+  else if (best.score < ABSTAIN_THRESHOLD || (best.labelledWallets === 0 && !(best.labelledHolders && best.labelledHolders > 0))) abstainReason = "none of these looks real — nothing labelled has touched any of them";
+  else winner = best;
+
+  const provenance = client.calls.slice(callsBefore);
+  const credits = provenance.reduce((n, c) => n + c.credits, 0);
+  // The hash covers the decision (inputs → ranking → winner), never cost or timing, so a cached replay hashes identically.
+  const decision = { query: q, chainFilter: opts.chain, winner, ranked, abstained: winner === null, abstainReason, stablecoin, candidatesTotal: same.length, weights: WEIGHTS };
+  return { ...decision, credits, provenance, ms: Date.now() - started, hash: sha256(JSON.stringify(decision)) };
+}
+
+function emptyFacts() {
+  return {
+    labelledWallets: 0, smartTraderWallets: 0, whaleWallets: 0, topPnlWallets: 0, publicFigureWallets: 0,
+    smartTraderNetFlowUsd: 0, exchangeNetFlowUsd: 0, freshNetFlowUsd: 0, exchangeTouched: false, freshShare: NaN,
+  };
+}

@@ -1,0 +1,9 @@
+{
+  "name": "whichone",
+  "version": "0.1.0",
+  "description": "Type a ticker. Fourteen tokens share the name — Nansen labels decide which one is real.",
+  "license": "MIT",
+  "type": "module",
+  "bin": { "whichone": "./src/cli.ts" },
+  "dependencies": { "@whichone/core": "0.1.0" }
+}

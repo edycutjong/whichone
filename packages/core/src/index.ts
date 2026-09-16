@@ -2,3 +2,11 @@ export { NansenClient, NansenError, clientFromEnv, sha256, CREDITS } from "./cli
 export type { Call, ClientOptions } from "./client.js";
 export { searchCandidates, sameName, scorable, SCORABLE_CHAINS, TokenSearchResult } from "./search.js";
 export type { Candidate } from "./search.js";
+export { fetchFacts, fetchHolderFacts, STABLECOINS } from "./facts.js";
+export type { CandidateFacts } from "./facts.js";
+export { score, unscorable, rank, WEIGHTS, ABSTAIN_THRESHOLD } from "./score.js";
+export type { Scored } from "./score.js";
+export { whichOnesReal } from "./verdict.js";
+export type { Verdict, VerdictOptions } from "./verdict.js";
+export { CachedNansenClient, cachedClientFromEnv, DiskCache, MemoryCache, cacheKey, DEFAULT_TTL_MS } from "./cache.js";
+export type { CacheStore, CacheEntry, CachedClientOptions } from "./cache.js";

@@ -15,7 +15,7 @@ export type Call = {
 
 export type ClientOptions = {
   baseUrl?: string;
-  /** requests per second, client-side cap (Nansen: 300/min) */
+  /** requests per second, client-side burst cap (Nansen: 300/min) */
   rps?: number;
   timeoutMs?: number;
   fetchImpl?: typeof fetch;
@@ -77,13 +77,20 @@ export class NansenClient {
       throw new Error("NANSEN_API_KEY missing or malformed (expected nsn_…)");
     }
     this.baseUrl = opts.baseUrl ?? "https://api.nansen.ai/api/v1";
-    this.limiter = new RateLimiter(opts.rps ?? 5);
+    this.limiter = new RateLimiter(opts.rps ?? 10); // Nansen cap is 300/min; a 10 rps burst on ≤26 calls stays far under it
     this.timeoutMs = opts.timeoutMs ?? 8000;
     this.fetchImpl = opts.fetchImpl ?? fetch;
   }
 
   /** POST `endpoint` with a JSON body; one retry on 429/5xx; records the call. */
   async post<T = unknown>(endpoint: string, body: Record<string, unknown>, fieldsUsed: string[] = []): Promise<T> {
+    const { text, ms, status } = await this.postRaw(endpoint, body);
+    this.calls.push({ endpoint, body, credits: CREDITS[endpoint] ?? 1, ms, cached: false, status, fieldsUsed, responseHash: sha256(text) });
+    return JSON.parse(text) as T;
+  }
+
+  /** The network call itself, returning the raw body so callers (and the cache) hash exactly what Nansen sent. */
+  protected async postRaw(endpoint: string, body: Record<string, unknown>): Promise<{ text: string; ms: number; status: number }> {
     const url = `${this.baseUrl}/${endpoint}`;
     let lastErr: unknown;
     for (let attempt = 0; attempt < 2; attempt++) {
@@ -102,24 +109,11 @@ export class NansenClient {
         const ms = Date.now() - started;
         if (res.status === 429 || res.status >= 500) {
           lastErr = new NansenError(endpoint, res.status, text);
-          if (attempt === 0) {
-            await new Promise((r) => setTimeout(r, 750));
-            continue;
-          }
+          if (attempt === 0) { await new Promise((r) => setTimeout(r, 750)); continue; }
           throw lastErr;
         }
         if (!res.ok) throw new NansenError(endpoint, res.status, text);
-        this.calls.push({
-          endpoint,
-          body,
-          credits: CREDITS[endpoint] ?? 1,
-          ms,
-          cached: false,
-          status: res.status,
-          fieldsUsed,
-          responseHash: sha256(text),
-        });
-        return JSON.parse(text) as T;
+        return { text, ms, status: res.status };
       } catch (e) {
         lastErr = e;
         if (attempt === 1 || !(e instanceof Error && e.name === "AbortError")) throw e;

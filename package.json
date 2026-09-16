@@ -11,7 +11,9 @@
   "scripts": {
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "vitest run",
-    "spike": "tsx scripts/spike.ts"
+    "spike": "tsx scripts/spike.ts",
+    "probe": "tsx scripts/probe.ts",
+    "whichone": "tsx packages/cli/src/cli.ts"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",
