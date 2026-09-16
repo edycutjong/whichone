@@ -47,6 +47,7 @@ export async function GET(req: NextRequest) {
         </div>
       </div>
     ),
-    { width: 1200, height: 630 },
+    // crawlers fetch a shared link 3–5× from different cold instances; let Vercel's edge serve repeats for the cache window
+    { width: 1200, height: 630, headers: { "cache-control": "public, s-maxage=1800, stale-while-revalidate=3600" } },
   );
 }

@@ -17,7 +17,7 @@ export async function GET(req: NextRequest) {
   const q = (url.searchParams.get("q") ?? "").trim();
   const chainParam = url.searchParams.get("chain") ?? undefined;
   const chain = chainParam && (CHAINS as readonly string[]).includes(chainParam) ? chainParam : undefined;
-  if (!SAFE_QUERY.test(q)) return Response.json({ error: "query must be 1–32 letters, digits, spaces or . _ $ -" }, { status: 400 });
+  if (!SAFE_QUERY.test(q)) return Response.json({ error: "query must be 1–44 letters, digits, spaces or . _ $ -" }, { status: 400 });
   if (!process.env.NANSEN_API_KEY) return Response.json({ error: "server has no NANSEN_API_KEY" }, { status: 500 });
 
   if (url.searchParams.get("stream") !== "1") {
@@ -32,14 +32,20 @@ export async function GET(req: NextRequest) {
   const enc = new TextEncoder();
   const stream = new ReadableStream<Uint8Array>({
     async start(controller) {
-      const send = (e: VerdictEvent | { type: "error"; message: string } | { type: "asOf"; asOf: string | null }) => controller.enqueue(enc.encode(JSON.stringify(e) + "\n"));
+      // The browser aborts this fetch when the user submits a new ticker mid-stream; after that every enqueue throws,
+      // so a closed stream turns `send` into a no-op and the verdict simply finishes unobserved.
+      let closed = false;
+      const send = (e: VerdictEvent | { type: "error"; message: string } | { type: "asOf"; asOf: string | null }) => {
+        if (closed) return;
+        try { controller.enqueue(enc.encode(JSON.stringify(e) + "\n")); } catch { closed = true; }
+      };
       try {
         const { oldestHit } = await verdictFor(q, chain, { onProgress: send });
         send({ type: "asOf", asOf: oldestHit ?? null });
       } catch (e) {
         send({ type: "error", message: (e as Error).message });
       } finally {
-        controller.close();
+        if (!closed) { closed = true; try { controller.close(); } catch { /* already closed by the client */ } }
       }
     },
   });

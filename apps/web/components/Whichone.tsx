@@ -54,6 +54,7 @@ export function Whichone({ initialQuery, initialChain, initialVerdict }: { initi
       const reader = res.body.getReader();
       const dec = new TextDecoder();
       let buf = "";
+      let sawVerdict = false;
       for (;;) {
         const { value, done } = await reader.read();
         if (done) break;
@@ -65,11 +66,12 @@ export function Whichone({ initialQuery, initialChain, initialVerdict }: { initi
           const e = JSON.parse(line) as StreamEvent;
           if (e.type === "candidates") { setCandidates(e.candidates); setProgress({ done: 0, of: e.candidates.length }); setPhase("checking"); }
           else if (e.type === "scored") { setScored((m) => new Map(m).set(id(e.candidate), e.candidate)); setProgress({ done: e.done, of: e.of }); }
-          else if (e.type === "verdict") { setVerdict(e.verdict); setPhase("done"); }
+          else if (e.type === "verdict") { sawVerdict = true; setVerdict(e.verdict); setPhase("done"); }
           else if (e.type === "asOf") setAsOf(e.asOf);
           else if (e.type === "error") throw new Error(e.message);
         }
       }
+      if (!sawVerdict) throw new Error("the stream ended before a verdict arrived — try again");
     } catch (err) {
       if ((err as Error).name === "AbortError") return;
       setError((err as Error).message); setPhase("error");
@@ -103,7 +105,7 @@ export function Whichone({ initialQuery, initialChain, initialVerdict }: { initi
       </header>
 
       <form className="search" onSubmit={(e) => { e.preventDefault(); void run(q, chain); }}>
-        <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="type a ticker — PEPE, WLFI, TRUMP" aria-label="ticker" autoFocus maxLength={32} spellCheck={false} autoCapitalize="characters" />
+        <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="type a ticker — PEPE, WLFI, TRUMP" aria-label="ticker" autoFocus maxLength={44} spellCheck={false} autoCapitalize="characters" />
         <button type="submit" disabled={phase === "searching" || phase === "checking"}>Check</button>
       </form>
       <div className="chips" role="group" aria-label="chain filter">

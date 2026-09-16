@@ -14,7 +14,8 @@ export function client(): CachedNansenClient {
   return new CachedNansenClient(process.env.NANSEN_API_KEY ?? "", { store });
 }
 
-export const SAFE_QUERY = /^[A-Za-z0-9 ._$-]{1,32}$/;
+// 44 so a pasted contract address (42 hex / up to 44 base58) reaches the engine and gets the "type the ticker" hint
+export const SAFE_QUERY = /^[A-Za-z0-9 ._$-]{1,44}$/;
 export const CHAINS = ["ethereum", "base", "solana", "bnb", "arbitrum", "polygon", "avalanche"] as const;
 
 export async function verdictFor(q: string, chain?: string, opts: Omit<VerdictOptions, "chain"> = {}) {

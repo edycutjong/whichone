@@ -8,7 +8,7 @@ export const maxDuration = 60;
 type Props = { params: Promise<{ query: string }>; searchParams: Promise<{ chain?: string }> };
 
 export async function generateMetadata({ params, searchParams }: Props): Promise<Metadata> {
-  const q = decodeURIComponent((await params).query);
+  const q = (await params).query; // Next 15 already decodes dynamic params
   const chain = (await searchParams).chain;
   const og = `/api/og?q=${encodeURIComponent(q)}${chain ? `&chain=${chain}` : ""}`;
   return {
@@ -21,7 +21,7 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
 
 /** Permalink: the verdict is computed server-side (cached 30 min) and rendered fully, so the share card and the page agree. */
 export default async function Page({ params, searchParams }: Props) {
-  const q = decodeURIComponent((await params).query);
+  const q = (await params).query; // Next 15 already decodes dynamic params
   const chainParam = (await searchParams).chain;
   const chain = chainParam && (CHAINS as readonly string[]).includes(chainParam) ? chainParam : undefined;
   if (!SAFE_QUERY.test(q)) return <Whichone initialQuery="" />;
