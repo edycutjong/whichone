@@ -20,8 +20,8 @@ export const WEIGHTS = {
   young30: 1.0,
   /** fresh-wallet share of flow, applied only when fewer than 3 labelled wallets are present */
   freshPenalty: 1.5,
-  /** labelled holders among the top 20 (tiebreak call, finalists only) */
-  labelledHolders: 0.8,
+  /** top-20 holders Nansen recognises with any (non-premium) tag — a legitimacy proxy, not entity labels; finalists only */
+  recognisedHolders: 0.8,
 } as const;
 
 /** Below this the best candidate is not crowned; the tool abstains instead of guessing. */
@@ -29,6 +29,8 @@ export const ABSTAIN_THRESHOLD = 2.0;
 
 export type Scored = CandidateFacts & {
   score: number;
+  /** flow-intelligence failed for this candidate: it is shown, never crowned, never called an impostor */
+  unchecked: boolean;
   /** each term's contribution, for the provenance drawer and `--explain` */
   terms: Record<string, number>;
   reasons: string[];
@@ -42,6 +44,11 @@ const log10p = (x: number) => Math.log10(1 + Math.max(0, x));
 export function score(f: CandidateFacts, w = WEIGHTS): Scored {
   const terms: Record<string, number> = {};
   const reasons: string[] = [];
+
+  // No flow facts → no verdict on this candidate. Zeroed defaults are not evidence of anything.
+  if (f.errors.some((e) => e.startsWith("flow-intelligence"))) {
+    return { ...f, score: Number.NEGATIVE_INFINITY, terms: {}, reasons: ["could not be checked (flow lookup failed) — retry"], impostor: false, scorable: true, unchecked: true };
+  }
 
   terms.labelled = w.labelled * log1p(f.labelledWallets);
   reasons.push(f.labelledWallets > 0
@@ -65,25 +72,27 @@ export function score(f: CandidateFacts, w = WEIGHTS): Scored {
   terms.fresh = freshApplies ? -w.freshPenalty * f.freshShare : 0;
   if (freshApplies && f.freshShare > 0.5) reasons.push(`${Math.round(f.freshShare * 100)}% of flow is fresh wallets`);
 
-  terms.labelledHolders = f.labelledHolders != null ? w.labelledHolders * log1p(f.labelledHolders) : 0;
-  if (f.labelledHolders != null) reasons.push(`${f.labelledHolders} of top 20 holders labelled${f.topLabels?.length ? ` (${f.topLabels.slice(0, 3).join(", ")})` : ""}`);
+  terms.recognisedHolders = f.recognisedHolders != null ? w.recognisedHolders * log1p(f.recognisedHolders) : 0;
+  if (f.recognisedHolders != null) reasons.push(`${f.recognisedHolders} of top 20 holders tagged by Nansen${f.topLabels?.length ? ` (${f.topLabels.join(", ")})` : ""}`);
 
   const total = Object.values(terms).reduce((a, b) => a + b, 0);
   const impostor = f.labelledWallets === 0 && exchMag < 10_000 && ((f.ageDays != null && f.ageDays < 14) || (f.totalHolders != null && f.totalHolders < 500));
   if (impostor) reasons.push("IMPOSTOR: nothing labelled has ever touched it");
 
-  return { ...f, score: round(total), terms: mapValues(terms, round), reasons, impostor, scorable: true };
+  if (f.errors.length) reasons.push("partial: " + f.errors.map((e) => e.split(":")[0]).join(", ") + " lookup failed");
+  return { ...f, score: round(total), terms: mapValues(terms, round), reasons, impostor, scorable: true, unchecked: false };
 }
 
 /** A candidate on a chain flow-intelligence cannot score (e.g. a hyperliquid perp market). */
 export function unscorable(f: CandidateFacts, why: string): Scored {
-  return { ...f, score: -Infinity, terms: {}, reasons: [why], impostor: false, scorable: false };
+  return { ...f, score: -Infinity, terms: {}, reasons: [why], impostor: false, scorable: false, unchecked: false };
 }
 
-/** Sort: scorable first by score desc, then by labelled wallets, then by holders; unscorable last. */
+/** Sort: checked+scorable first by score desc, then labelled wallets, then holders; unchecked next; unscorable last. */
 export function rank(list: Scored[]): Scored[] {
+  const tier = (s: Scored) => (!s.scorable ? 0 : s.unchecked ? 1 : 2);
   return [...list].sort((a, b) =>
-    (b.scorable ? 1 : 0) - (a.scorable ? 1 : 0) ||
+    tier(b) - tier(a) ||
     b.score - a.score ||
     b.labelledWallets - a.labelledWallets ||
     (b.totalHolders ?? 0) - (a.totalHolders ?? 0));

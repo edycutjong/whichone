@@ -1,6 +1,6 @@
 import { mkdirSync, readFileSync, writeFileSync, existsSync } from "node:fs";
 import { join } from "node:path";
-import { NansenClient, sha256, CREDITS, type ClientOptions } from "./client.js";
+import { NansenClient, sha256, CREDITS, type ClientOptions, type CallOptions } from "./client.js";
 
 export type CacheEntry = { storedAt: string; ttlMs: number; endpoint: string; body: Record<string, unknown>; text: string };
 
@@ -31,10 +31,16 @@ export class MemoryCache implements CacheStore {
 
 export const DEFAULT_TTL_MS = 30 * 60 * 1000;
 
-/** Stable key: endpoint + canonical body (sorted keys). */
+/** Recursively sort object keys so `{a:{y,x}}` and `{a:{x,y}}` serialize identically (arrays keep order). */
+export function canonicalize(v: unknown): unknown {
+  if (Array.isArray(v)) return v.map(canonicalize);
+  if (v && typeof v === "object") return Object.fromEntries(Object.keys(v as object).sort().map((k) => [k, canonicalize((v as Record<string, unknown>)[k])]));
+  return v;
+}
+
+/** Stable key: endpoint + canonical body (keys sorted at every depth). */
 export function cacheKey(endpoint: string, body: Record<string, unknown>): string {
-  const canon = JSON.stringify(body, Object.keys(body).sort());
-  return sha256(`${endpoint}\n${canon}`).slice(0, 32);
+  return sha256(`${endpoint}\n${JSON.stringify(canonicalize(body))}`).slice(0, 32);
 }
 
 export type CachedClientOptions = ClientOptions & {
@@ -62,18 +68,24 @@ export class CachedNansenClient extends NansenClient {
     this.offline = opts.offline ?? process.env.NANSEN_OFFLINE === "1";
   }
 
-  override async post<T = unknown>(endpoint: string, body: Record<string, unknown>, fieldsUsed: string[] = []): Promise<T> {
+  override async post<T = unknown>(endpoint: string, body: Record<string, unknown>, fieldsUsed: string[] = [], opts: CallOptions = {}): Promise<T> {
     const key = cacheKey(endpoint, body);
-    const hit = this.store.get(key);
-    const fresh = hit && Date.now() - Date.parse(hit.storedAt) < hit.ttlMs;
+    // Freshness is judged by THIS client's TTL, not the TTL the entry was written with — so `ttlMs: 0` (--no-cache)
+    // really bypasses reads. Offline mode serves any entry regardless of age (it is a replay, and says so).
+    const hit = this.ttlMs > 0 || this.offline ? this.store.get(key) : undefined;
+    const fresh = hit && Date.now() - Date.parse(hit.storedAt) < this.ttlMs;
     if (hit && (fresh || this.offline)) {
-      this.calls.push({ endpoint, body, credits: 0, ms: 0, cached: true, status: 200, fieldsUsed, responseHash: sha256(hit.text) });
+      this.calls.push({ endpoint, body, credits: 0, ms: 0, cached: true, status: 200, fieldsUsed, responseHash: sha256(hit.text), attempts: 0, totalMs: 0, ok: true });
       if (!this.oldestHit || hit.storedAt < this.oldestHit) this.oldestHit = hit.storedAt;
       return JSON.parse(hit.text) as T;
     }
     if (this.offline) throw new Error(`NANSEN_OFFLINE=1 and no cached response for ${endpoint} ${JSON.stringify(body)}`);
-    const { text, ms, status } = await this.postRaw(endpoint, body);
-    this.calls.push({ endpoint, body, credits: CREDITS[endpoint] ?? 1, ms, cached: false, status, fieldsUsed, responseHash: sha256(text) });
+    const t0 = Date.now();
+    let raw: Awaited<ReturnType<NansenClient["postRaw"]>>;
+    try { raw = await this.postRaw(endpoint, body, opts); }
+    catch (e) { this.recordFailure(endpoint, body, fieldsUsed, e, Date.now() - t0); throw e; }
+    const { text, ms, status, attempts, totalMs } = raw;
+    this.calls.push({ endpoint, body, credits: CREDITS[endpoint] ?? 1, ms, cached: false, status, fieldsUsed, responseHash: sha256(text), attempts, totalMs, ok: true });
     this.store.set(key, { storedAt: new Date().toISOString(), ttlMs: this.ttlMs, endpoint, body, text });
     return JSON.parse(text) as T;
   }

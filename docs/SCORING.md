@@ -11,10 +11,10 @@ score = 3.0 · ln(1 + labelled_wallets)                       # smart_trader + w
       + 0.4 · log10(1 + liquidity_usd)                          # depth, can be bought → low weight                    (tgm/token-information)
       − 2.0 · [age < 7d]  − 1.0 · [7d ≤ age < 30d]                # token_deployment_date                                (tgm/token-information)
       − 1.5 · fresh_share · [labelled_wallets < 3]              # |fresh net flow| / Σ|net flow|; only when nothing labelled is present
-      + 0.8 · ln(1 + labelled_holders)                          # top-20 holders with an address_label; finalists only  (tgm/holders, 5 cr)
+      + 0.8 · ln(1 + recognised_holders)                        # top-20 holders carrying ANY non-premium Nansen tag; finalists only (tgm/holders, 5 cr)
 
 IMPOSTOR  = labelled_wallets == 0 ∧ |exchange flow| < $10K ∧ (age < 14d ∨ total_holders < 500)
-ABSTAIN   = best.score < 2.0 ∨ (best.labelled_wallets == 0 ∧ best.labelled_holders == 0)   → "none of these looks real"
+ABSTAIN   = best.score < 2.0 ∨ (best.labelled_wallets == 0 ∧ best.recognised_holders == 0)   → "none of these looks real"
 STABLECOIN (USDC, USDT, DAI, …) = many same-name results are canonical per chain → no impostor flags, header says so
 ```
 
@@ -22,7 +22,7 @@ Why these shapes: `ln(1+x)` on wallet counts so 69 vs 21 matters but 690 vs 210 
 
 ## Worked example — `PEPE`, live on 2026-09-16 (verdict `9f9cd7b90e7c`, 26 credits cold · 0 on a cached replay, 19 calls)
 
-| candidate | labelled 7d | exchange flow | holders | liquidity | age d | labelled top-20 | terms (labelled + exchange + holders + liquidity + age + fresh + holdersTiebreak) | score |
+| candidate | labelled 7d | exchange flow | holders | liquidity | age d | tagged top-20 | terms (labelled + exchange + holders + liquidity + age + fresh + recognisedHolders) | score |
 |---|---|---|---|---|---|---|---|---|
 | ethereum `0x6982…1933` | 69 | $1,895,907 | 400,392 | $13,803,929 | 1250 | 18 | 12.75 + 1.97 + 3.36 + 2.86 + 0 + 0 + 2.36 | **23.29** |
 | bnb `0x25d8…bb00` | 21 | $593,866 | 94,718 | $0 | ? | 20 | 9.27 + 1.66 + 2.99 + 0 + 0 + 0 + 2.44 | **16.36** |
@@ -38,6 +38,7 @@ Why these shapes: `ln(1+x)` on wallet counts so 69 vs 21 matters but 690 vs 210 
 **Impostor flag fired on:** robinhood `0x9b09…` (368 holders, 40d old, 0 labelled).
 
 ## What the data taught us (2026-09-16 probe)
+- **The holders tiebreak is a legitimacy proxy, not entity labels.** Non-premium `address_label` on `tgm/holders` is almost entirely wealth/activity tags — "Token Millionaire" (115 of ~200 rows we saw), "<TOKEN> Whale", "Liquidity Pool", "High Balance", ENS/SNS names. Exchange / fund / Smart Money entity labels are the 150-credit premium tier and are deliberately not used. What the field still tells you: real tokens have 18–20 of their top 20 holders tagged; the TRUMP impostor had 4. Hence the name `recognised_holders`, the low weight (max ≈ 2.4 of a ~23 winning score), and the reason line that prints the actual tags.
 - `exchange_wallet_count` and `fresh_wallets_wallet_count` are always 0 — Nansen's response `warnings` say so. The USD net flows are the real fields.
 - `tgm/token-information` requires `timeframe` even though the schema marks it optional (422 "Missing field" without it).
 - `tgm/position-intelligence` is perp positioning only; it is not used.

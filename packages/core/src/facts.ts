@@ -87,8 +87,12 @@ export type CandidateFacts = Candidate & {
   marketCapUsd?: number;
   logo?: string;
   website?: string;
-  /** set only for the top-2 after the holders tiebreak call */
-  labelledHolders?: number;
+  /**
+   * Top-20 holders carrying ANY non-premium Nansen tag, set only for finalists. These are wealth/activity tags
+   * ("Token Millionaire", "<TOKEN> Whale", "Liquidity Pool", ENS names) — NOT exchange/fund/Smart Money entity
+   * labels, which are the 150-credit premium tier and deliberately not used. Real tokens: 18–20/20; impostors: few.
+   */
+  recognisedHolders?: number;
   topHolderPct?: number;
   topLabels?: string[];
   /** which lookups failed; the candidate is still shown, marked unscored/partial */
@@ -115,7 +119,8 @@ export async function fetchFacts(client: NansenClient, c: Candidate, now = Date.
   };
   const [flow, info] = await Promise.allSettled([
     client.post("tgm/flow-intelligence", { chain: c.chain, token_address: c.address, timeframe: "7d" }, FLOW_FIELDS),
-    client.post("tgm/token-information", { chain: c.chain, token_address: c.address, timeframe: "7d" }, INFO_FIELDS),
+    // secondary facts: shorter timeout, no retry — a hung call degrades this candidate to "age unknown", never stalls the verdict
+    client.post("tgm/token-information", { chain: c.chain, token_address: c.address, timeframe: "7d" }, INFO_FIELDS, { timeoutMs: 4000, retries: 0 }),
   ]);
 
   if (flow.status === "fulfilled") {
@@ -160,16 +165,19 @@ export async function fetchFacts(client: NansenClient, c: Candidate, now = Date.
   return base;
 }
 
-/** Tiebreak facts for a finalist: how many of the top holders carry a Nansen label. 5 credits. */
+/** Tiebreak facts for a finalist: how many of the top holders Nansen recognises (any non-premium tag). 5 credits. */
 export async function fetchHolderFacts(client: NansenClient, f: CandidateFacts, perPage = 20): Promise<CandidateFacts> {
   try {
-    const raw = await client.post("tgm/holders", { chain: f.chain, token_address: f.address, pagination: { page: 1, per_page: perPage } }, HOLDER_FIELDS);
+    const raw = await client.post("tgm/holders", { chain: f.chain, token_address: f.address, pagination: { page: 1, per_page: perPage } }, HOLDER_FIELDS, { timeoutMs: 5000, retries: 0 });
     const parsed = HoldersResponse.safeParse(raw);
     if (!parsed.success) { f.errors.push("holders: schema"); return f; }
     const rows = parsed.data.data;
-    const labelled = rows.filter((r) => r.address_label && r.address_label.trim().length > 0);
-    f.labelledHolders = labelled.length;
-    f.topLabels = [...new Set(labelled.map((r) => r.address_label as string))].slice(0, 5);
+    const tagged = rows.filter((r) => r.address_label && r.address_label.trim().length > 0 && r.address_label !== "Token Contract");
+    f.recognisedHolders = tagged.length;
+    // most frequent tags first, so the reason line reads "Token Millionaire ×17, Liquidity Pool"
+    const freq = new Map<string, number>();
+    for (const r of tagged) freq.set(r.address_label as string, (freq.get(r.address_label as string) ?? 0) + 1);
+    f.topLabels = [...freq.entries()].sort((a, b) => b[1] - a[1]).slice(0, 3).map(([l, n]) => (n > 1 ? `${l} ×${n}` : l));
     f.topHolderPct = rows.reduce((m, r) => Math.max(m, n(r.ownership_percentage)), 0);
   } catch (e) {
     f.errors.push(`holders: ${String((e as Error).message).slice(0, 80)}`);

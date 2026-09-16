@@ -15,6 +15,8 @@ export type Verdict = {
   /** stablecoins: many same-name results are canonical per chain — header copy changes, no impostor flags */
   stablecoin: boolean;
   candidatesTotal: number;
+  /** honest caveats the UI must show, e.g. "2 candidates could not be checked" */
+  warnings: string[];
   provenance: Call[];
   credits: number;
   ms: number;
@@ -51,27 +53,37 @@ export async function whichOnesReal(client: NansenClient, query: string, opts: V
     scorable(chosen[i]) ? score(f) : unscorable(f, `${f.chain}: perp market, not a token contract — not ranked`));
 
   // Tiebreak: labelled holders for the finalists, then re-score.
-  const finalists = rank(scored).filter((s) => s.scorable).slice(0, opts.finalists ?? 2);
-  for (const fin of finalists) {
-    const withHolders = await fetchHolderFacts(client, fin);
-    scored = scored.map((s) => (s.chain === fin.chain && s.address === fin.address ? score(withHolders) : s));
-  }
+  const finalists = rank(scored).filter((s) => s.scorable && !s.unchecked).slice(0, opts.finalists ?? 2);
+  const withHolders = await Promise.all(finalists.map((fin) => fetchHolderFacts(client, fin)));
+  for (const wh of withHolders) scored = scored.map((s) => (s.chain === wh.chain && s.address === wh.address ? score(wh) : s));
   if (stablecoin) scored = scored.map((s) => ({ ...s, impostor: false, reasons: s.reasons.filter((r) => !r.startsWith("IMPOSTOR")) }));
   const ranked = rank(scored);
+
+  const unchecked = ranked.filter((s) => s.unchecked);
+  const warnings: string[] = [];
+  if (unchecked.length) warnings.push(`${unchecked.length} candidate${unchecked.length === 1 ? "" : "s"} could not be checked (Nansen lookup failed) — the verdict is among the ${ranked.length - unchecked.length} that were`);
+  if (same.length > cap) warnings.push(`${same.length} same-name tokens found; the ${cap} highest-ranked by Nansen search were checked`);
 
   const best = ranked[0];
   let winner: Scored | null = null;
   let abstainReason: string | undefined;
   if (same.length === 0) abstainReason = `no token named ${q} on Nansen`;
   else if (!best || !best.scorable) abstainReason = "no candidate on a chain Nansen can score";
-  else if (best.score < ABSTAIN_THRESHOLD || (best.labelledWallets === 0 && !(best.labelledHolders && best.labelledHolders > 0))) abstainReason = "none of these looks real — nothing labelled has touched any of them";
+  else if (best.unchecked) abstainReason = "Nansen lookups failed for every candidate — retry";
+  else if (best.score < ABSTAIN_THRESHOLD || (best.labelledWallets === 0 && !(best.recognisedHolders && best.recognisedHolders > 0))) abstainReason = "none of these looks real — nothing labelled has touched any of them";
   else winner = best;
 
   const provenance = client.calls.slice(callsBefore);
   const credits = provenance.reduce((n, c) => n + c.credits, 0);
-  // The hash covers the decision (inputs → ranking → winner), never cost or timing, so a cached replay hashes identically.
-  const decision = { query: q, chainFilter: opts.chain, winner, ranked, abstained: winner === null, abstainReason, stablecoin, candidatesTotal: same.length, weights: WEIGHTS };
-  return { ...decision, credits, provenance, ms: Date.now() - started, hash: sha256(JSON.stringify(decision)) };
+  // The hash covers the DECISION only — query, filter, the ordered candidate list, who won, who was flagged, and the
+  // weights. Never cost, timing, market cap, volume, search rank or error text, so two live runs that reach the same
+  // decision hash identically and a cached replay matches the live run it came from.
+  const decision = {
+    query: q, chainFilter: opts.chain ?? null, weights: WEIGHTS, stablecoin, abstained: winner === null, abstainReason: abstainReason ?? null,
+    winner: winner ? `${winner.chain}:${winner.address}` : null,
+    ranked: ranked.map((s) => ({ id: `${s.chain}:${s.address}`, score: s.scorable && !s.unchecked ? s.score : null, impostor: s.impostor, unchecked: s.unchecked })),
+  };
+  return { query: q, chainFilter: opts.chain, winner, ranked, abstained: winner === null, abstainReason, stablecoin, candidatesTotal: same.length, warnings, credits, provenance, ms: Date.now() - started, weights: WEIGHTS, hash: sha256(JSON.stringify(decision)) };
 }
 
 function emptyFacts() {
