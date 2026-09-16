@@ -1,0 +1,75 @@
+{
+  "edge": "6 · zero search results → abstain",
+  "query": "XQZPLM",
+  "options": {},
+  "now": 1789562414279,
+  "recordedAt": "2026-09-16T12:40:14.279Z",
+  "live": {
+    "calls": 1,
+    "credits": 0,
+    "ms": 482
+  },
+  "responses": {
+    "f57014206b145de09f4ed59e07ae5598": {
+      "storedAt": "2026-09-16T12:40:14.761Z",
+      "ttlMs": 1800000,
+      "endpoint": "search/general",
+      "body": {
+        "search_query": "XQZPLM",
+        "result_type": "token",
+        "limit": 50
+      },
+      "text": "{\"tokens\":[],\"entities\":[],\"total_results\":0}"
+    }
+  },
+  "verdict": {
+    "query": "XQZPLM",
+    "winner": null,
+    "ranked": [],
+    "abstained": true,
+    "abstainReason": "no token named XQZPLM on Nansen",
+    "stablecoin": false,
+    "candidatesTotal": 0,
+    "warnings": [],
+    "credits": 0,
+    "provenance": [
+      {
+        "endpoint": "search/general",
+        "body": {
+          "search_query": "XQZPLM",
+          "result_type": "token",
+          "limit": 50
+        },
+        "credits": 0,
+        "ms": 482,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "tokens[].name",
+          "tokens[].symbol",
+          "tokens[].chain",
+          "tokens[].address",
+          "tokens[].market_cap",
+          "tokens[].volume_24h",
+          "tokens[].rank"
+        ],
+        "responseHash": "7b618709926104ef1e68ea865edbf638e1e0ab6511ad44e6943ad98f4a73c1ec",
+        "attempts": 1,
+        "totalMs": 482,
+        "ok": true
+      }
+    ],
+    "ms": 482,
+    "weights": {
+      "labelled": 3,
+      "exchange": 0.6,
+      "holders": 0.6,
+      "liquidity": 0.4,
+      "young7": 2,
+      "young30": 1,
+      "freshPenalty": 1.5,
+      "recognisedHolders": 0.8
+    },
+    "hash": "f19176759b081dd1fe811a6e96ef3aa1345fb6aed3773faf1e135bb917a10a9e"
+  }
+}

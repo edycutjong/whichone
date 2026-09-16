@@ -13,7 +13,9 @@
     "test": "vitest run",
     "spike": "tsx scripts/spike.ts",
     "probe": "tsx scripts/probe.ts",
-    "whichone": "tsx packages/cli/src/cli.ts"
+    "whichone": "tsx packages/cli/src/cli.ts",
+    "seed": "tsx scripts/seed.ts",
+    "verify": "tsx scripts/verify.ts"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",

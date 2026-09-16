@@ -1,0 +1,1057 @@
+{
+  "edge": "5 · single dominant result — works without a sort beat",
+  "query": "BONK",
+  "options": {},
+  "now": 1789562406794,
+  "recordedAt": "2026-09-16T12:40:06.794Z",
+  "live": {
+    "calls": 17,
+    "credits": 24,
+    "ms": 7477
+  },
+  "responses": {
+    "ea44e784c12caac9315a33e183db3175": {
+      "storedAt": "2026-09-16T12:40:07.294Z",
+      "ttlMs": 1800000,
+      "endpoint": "search/general",
+      "body": {
+        "search_query": "BONK",
+        "result_type": "token",
+        "limit": 50
+      },
+      "text": "{\"tokens\":[{\"name\":\"kBONK\",\"symbol\":\"kBONK\",\"chain\":\"hyperliquid\",\"address\":\"kBONK\",\"price\":0.002512,\"volume_24h\":665929.689371,\"market_cap\":222339907.203037,\"rank\":172},{\"name\":\"Bonk\",\"symbol\":\"BONK\",\"chain\":\"solana\",\"address\":\"DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263\",\"price\":2.5282759018486873e-6,\"volume_24h\":693826.7347725232,\"market_cap\":222339907.203037,\"rank\":475},{\"name\":\"Bonk\",\"symbol\":\"BONK\",\"chain\":\"ethereum\",\"address\":\"0x1151cb3d861920e07a38e03eead12c32178567f6\",\"price\":2.55193004316294e-6,\"volume_24h\":15001.63733170541,\"market_cap\":224555746.786671,\"rank\":476},{\"name\":\"Baby Bonk\",\"symbol\":\"BABYBONK\",\"chain\":\"bnb\",\"address\":\"0x180b25beb6c84c2b3855e630d50c965425fb5de2\",\"price\":3.02580246177305e-6,\"volume_24h\":7006.324154614094,\"market_cap\":1091333.74885275,\"rank\":2332},{\"name\":\"BonkEarn\",\"symbol\":\"BERN\",\"chain\":\"solana\",\"address\":\"CKfatsPMUf8SkiURsDXs7eK6GWb4Jsd6UDbs7twMCWxo\",\"price\":0.0011639619643861855,\"volume_24h\":114.11470445855392,\"market_cap\":1102666.63383163,\"rank\":2877},{\"name\":\"Bonk Level Saviour\",\"symbol\":\"SAVIOUR\",\"chain\":\"solana\",\"address\":\"5Htub56zFC6gyp4UKKjEb21JTSrWheHbNwbxmXedbonk\",\"price\":0.007978526798757296,\"volume_24h\":33.894680747570476,\"market_cap\":135604.148641774,\"rank\":2915},{\"name\":\"Bonk\",\"symbol\":\"BONK\",\"chain\":\"bnb\",\"address\":\"0xa697e272a73744b343528c3bc4702f2565b2f422\",\"price\":2.52585903945739e-6,\"volume_24h\":8207.891708348841,\"market_cap\":222106810.364221,\"rank\":4090},{\"name\":\"bonkSOL\",\"symbol\":\"BONKSOL\",\"chain\":\"solana\",\"address\":\"BonK1YhkXEGLZzwtcvRTip3gAL9nCeQD7ppZBLXhtTs\",\"price\":117.043750882133,\"volume_24h\":5847.260093889439,\"market_cap\":9693712.46896583,\"rank\":4695},{\"name\":\"Let's BONK\",\"symbol\":\"LETSBONK\",\"chain\":\"solana\",\"address\":\"CDBdbNqmrLu1PcgjrFG52yxg71QnFhBZcUE6PSFdbonk\",\"price\":0.0034809876897419034,\"volume_24h\":2067.570438899673,\"market_cap\":236918.743212633,\"rank\":5116},{\"name\":\"Bonk\",\"symbol\":\"BONK\",\"chain\":\"arbitrum\",\"address\":\"0x09199d9a5f4448d0848e4395d065e1ad9c4a1f74\",\"price\":2.527329983643325e-6,\"volume_24h\":710.6242688214086,\"market_cap\":222283842.0,\"rank\":5947},{\"name\":\"BonkAI\",\"symbol\":\"BONKAI\",\"chain\":\"solana\",\"address\":\"hqYtLoxviwGENvogcJ5324YTbYqW5H9LHtmQu5Jbonk\",\"price\":0.00032608355716281937,\"volume_24h\":859.6355053077576,\"market_cap\":327024.985612881,\"rank\":5965},{\"name\":\"bonkguy was right\",\"symbol\":\"UNIPCS\",\"chain\":\"solana\",\"address\":\"E3enwdJowhDeRe3f7mMwAZGVkJ5aWEtPUGRusP2Jpump\",\"price\":0.000017690682570128774,\"volume_24h\":160.58793961989448,\"market_cap\":17441.6672357143,\"rank\":6834},{\"name\":\"Bonk\",\"symbol\":\"BONK\",\"chain\":\"polygon\",\"address\":\"0xe5b49820e5a1063f6f4ddf851327b5e8b2301048\",\"price\":2.527329983643325e-6,\"volume_24h\":60.617546952086094,\"market_cap\":222283842.0,\"rank\":8156},{\"name\":\"Bonkyo\",\"symbol\":\"BONKYO\",\"chain\":\"solana\",\"address\":\"oha3mwwm2tqWRouJ2KGUiz4Vz9FCRcPm1fApm87bonk\",\"price\":0.000013643931513574234,\"volume_24h\":33.37264279428243,\"market_cap\":14082.8209212506,\"rank\":8613},{\"name\":\"Bonk Computer Token\",\"symbol\":\"BCT\",\"chain\":\"solana\",\"address\":\"D3CVUkqyXZKgVBdRD7XfuRxQXFKJ86474XyFZrqAbonk\",\"price\":7.056911263100497e-6,\"volume_24h\":30.81948099859029,\"market_cap\":7140.0220898462,\"rank\":8665},{\"name\":\"Bonk Level Saviour\",\"symbol\":\"SAVIOUR\",\"chain\":\"solana\",\"address\":\"6q6tqND6J8fPpAf2VNbFYLuXKVgbPC7BUbPjQTyrbonk\",\"price\":5.452786083281202e-6,\"volume_24h\":16.224165804328262,\"market_cap\":5443.31118976894,\"rank\":9091},{\"name\":\"Bonk 2.0\",\"symbol\":\"BONK2.0\",\"chain\":\"solana\",\"address\":\"6yiDKPDbqWLGAEBkDvVg6UNrKsLsPVkLbA1TJo4KCdzP\",\"price\":3.7951654399759685e-10,\"volume_24h\":10.074578452189714,\"market_cap\":31091.7572898256,\"rank\":9388},{\"name\":\"Bonk\",\"symbol\":\"BONK\",\"chain\":\"base\",\"address\":\"0x72499bddb67f4ca150e1f522ca82c87bc9fb18c8\",\"price\":9.24477691297812e-10,\"volume_24h\":7.872057845812366,\"market_cap\":92853.89203,\"rank\":9559},{\"name\":\"The Bonk Prophecy\",\"symbol\":\"PROPHECY\",\"chain\":\"solana\",\"address\":\"3pKf5xsDUU5BTWzDUaS3XfiGPi1ihcvoP68pXpU1bonk\",\"price\":8.649572648772193e-6,\"volume_24h\":5.610139257329586,\"market_cap\":9389.89560173831,\"rank\":9707},{\"name\":\"Baby Bonk\",\"symbol\":\"BABYBONK\",\"chain\":\"solana\",\"address\":\"Dx1Lq5FjangW5ifRMEogAiakm24LyB5AoHmQifepvNjV\",\"price\":0.00020923256744835562,\"volume_24h\":1.496913858075415,\"market_cap\":20918.8279142458,\"rank\":10281},{\"name\":\"Bonk on ETH\",\"symbol\":\"BONK\",\"chain\":\"ethereum\",\"address\":\"0x4fbaf51b95b024d0d7cab575be2a1f0afedc9b64\",\"price\":4.10410791284043e-10,\"volume_24h\":0.0,\"market_cap\":42162.90993,\"rank\":13353},{\"name\":\"donk on bonk\",\"symbol\":\"DONK\",\"chain\":\"solana\",\"address\":\"5Psvm4XSKDzFyXykWeYxWUPFgJDfT4EWQMa6mabCbonk\",\"price\":1.2893045559051083e-7,\"volume_24h\":0.0,\"market_cap\":8921.53128782685,\"rank\":14313},{\"name\":\"BONKE\",\"symbol\":\"BONKE\",\"chain\":\"base\",\"address\":\"0xb9898511bd2bad8bfc23eba641ef97a08f27e730\",\"price\":8.31818513697281e-7,\"volume_24h\":0.0,\"market_cap\":8206.163171,\"rank\":14367},{\"name\":\"ACT B : The Bonk Prophecy\",\"symbol\":\"ACT B\",\"chain\":\"solana\",\"address\":\"8MxjSs3kEPmfiqKN1S4o3PABp198uYyx4gLF1TvZbonk\",\"price\":7.388168346357059e-6,\"volume_24h\":0.0,\"market_cap\":7345.50789004956,\"rank\":14431},{\"name\":\"Bonke\",\"symbol\":\"BONKE\",\"chain\":\"base\",\"address\":\"0x1754e5aadce9567a95f545b146a616ce34eead53\",\"price\":5.26630860986863e-6,\"volume_24h\":0.0,\"market_cap\":5305.709011,\"rank\":14585}],\"entities\":[],\"total_results\":25}"
+    },
+    "25fd1db3fa59180f04bfe0f35a5eb780": {
+      "storedAt": "2026-09-16T12:40:07.761Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/token-information",
+      "body": {
+        "chain": "arbitrum",
+        "token_address": "0x09199d9a5f4448d0848e4395d065e1ad9c4a1f74",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":{\"name\":\"Bonk\",\"symbol\":\"BONK\",\"contract_address\":\"0x09199d9a5f4448d0848e4395d065e1ad9c4a1f74\",\"logo\":\"https://coin-images.coingecko.com/coins/images/28600/small/bonk.jpg?1696527587\",\"token_details\":{\"token_deployment_date\":\"2023-03-15 20:35:24\",\"website\":\"\",\"x\":\"\",\"telegram\":\"\",\"market_cap_usd\":220137423.90757546,\"fdv_usd\":220585474.0,\"circulating_supply\":87994475946796.7,\"total_supply\":87994475946796.7},\"spot_metrics\":{\"volume_total_usd\":2908.5805995314104,\"buy_volume_usd\":336.56804512270674,\"sell_volume_usd\":2572.0125544087036,\"total_buys\":7,\"total_sells\":27,\"unique_buyers\":4,\"unique_sellers\":12,\"liquidity_usd\":10367.238136415592,\"total_holders\":1135}}}"
+    },
+    "6524a1c6589e444e84b78f6f886d9de4": {
+      "storedAt": "2026-09-16T12:40:07.870Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/token-information",
+      "body": {
+        "chain": "bnb",
+        "token_address": "0xa697e272a73744b343528c3bc4702f2565b2f422",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":{\"name\":\"\",\"symbol\":\"\",\"contract_address\":\"0xa697e272a73744b343528c3bc4702f2565b2f422\",\"logo\":\"\",\"token_details\":{\"token_deployment_date\":\"\",\"website\":\"\",\"x\":\"\",\"telegram\":\"\",\"market_cap_usd\":0.0,\"fdv_usd\":0.0,\"circulating_supply\":0.0,\"total_supply\":0.0},\"spot_metrics\":{\"volume_total_usd\":223371.73635139078,\"buy_volume_usd\":99525.24279113936,\"sell_volume_usd\":123846.49356025143,\"total_buys\":1560,\"total_sells\":1709,\"unique_buyers\":161,\"unique_sellers\":243,\"liquidity_usd\":0.0,\"total_holders\":57962}}}"
+    },
+    "465012f142b15ee42a3a09aa38293922": {
+      "storedAt": "2026-09-16T12:40:08.132Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/token-information",
+      "body": {
+        "chain": "ethereum",
+        "token_address": "0x1151cb3d861920e07a38e03eead12c32178567f6",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":{\"name\":\"Bonk\",\"symbol\":\"BONK\",\"contract_address\":\"0x1151cb3d861920e07a38e03eead12c32178567f6\",\"logo\":\"https://coin-images.coingecko.com/coins/images/28600/small/bonk.jpg?1696527587\",\"token_details\":{\"token_deployment_date\":\"2023-02-14 18:16:47\",\"website\":\"\",\"x\":\"\",\"telegram\":\"\",\"market_cap_usd\":224555746.80100918,\"fdv_usd\":782074.537871123,\"circulating_supply\":87994475946796.7,\"total_supply\":87994475946796.7},\"spot_metrics\":{\"volume_total_usd\":31965.955567204866,\"buy_volume_usd\":17219.661206326644,\"sell_volume_usd\":14746.29436087822,\"total_buys\":80,\"total_sells\":106,\"unique_buyers\":30,\"unique_sellers\":45,\"liquidity_usd\":76403.74045051287,\"total_holders\":10886}}}"
+    },
+    "cabd66f38ef508268d9b4f8cb0edf8a5": {
+      "storedAt": "2026-09-16T12:40:08.152Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/flow-intelligence",
+      "body": {
+        "chain": "ethereum",
+        "token_address": "0x1151cb3d861920e07a38e03eead12c32178567f6",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":[{\"public_figure_net_flow_usd\":0.0,\"public_figure_avg_flow_usd\":null,\"public_figure_wallet_count\":0,\"top_pnl_net_flow_usd\":-199.96874697593876,\"top_pnl_avg_flow_usd\":1033.1338936418827,\"top_pnl_wallet_count\":2,\"whale_net_flow_usd\":0.0,\"whale_avg_flow_usd\":null,\"whale_wallet_count\":0,\"smart_trader_net_flow_usd\":0.0,\"smart_trader_avg_flow_usd\":null,\"smart_trader_wallet_count\":0,\"exchange_net_flow_usd\":443.2907834216954,\"exchange_avg_flow_usd\":1667.938337715395,\"exchange_wallet_count\":0,\"fresh_wallets_net_flow_usd\":0.0,\"fresh_wallets_avg_flow_usd\":0.0,\"fresh_wallets_wallet_count\":0}],\"warnings\":[\"exchange_wallet_count is always 0 (not tracked), even when exchange net flow is non-zero.\"]}"
+    },
+    "7185339ef92187c402280c2d193e043c": {
+      "storedAt": "2026-09-16T12:40:08.290Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/token-information",
+      "body": {
+        "chain": "solana",
+        "token_address": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":{\"name\":\"Bonk\",\"symbol\":\"BONK\",\"contract_address\":\"DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263\",\"logo\":\"https://coin-images.coingecko.com/coins/images/28600/small/bonk.jpg?1696527587\",\"token_details\":{\"token_deployment_date\":\"2022-12-08 20:33:32\",\"website\":\"https://www.bonkcoin.com/\",\"x\":\"bonk_inu\",\"telegram\":\"\",\"market_cap_usd\":220562069.56880057,\"fdv_usd\":220903611.201673,\"circulating_supply\":87994475946796.7,\"total_supply\":87994475946796.7},\"spot_metrics\":{\"volume_total_usd\":8386735.97510624,\"buy_volume_usd\":4154050.079782188,\"sell_volume_usd\":4232685.895324052,\"total_buys\":81175,\"total_sells\":88804,\"unique_buyers\":4546,\"unique_sellers\":9457,\"liquidity_usd\":1362976.9136903812,\"total_holders\":213311}}}"
+    },
+    "6e90e8ceebf7db228354e8a01abce271": {
+      "storedAt": "2026-09-16T12:40:08.297Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/flow-intelligence",
+      "body": {
+        "chain": "arbitrum",
+        "token_address": "0x09199d9a5f4448d0848e4395d065e1ad9c4a1f74",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":[{\"public_figure_net_flow_usd\":0.0,\"public_figure_avg_flow_usd\":null,\"public_figure_wallet_count\":0,\"top_pnl_net_flow_usd\":0.0,\"top_pnl_avg_flow_usd\":null,\"top_pnl_wallet_count\":0,\"whale_net_flow_usd\":0.0,\"whale_avg_flow_usd\":null,\"whale_wallet_count\":0,\"smart_trader_net_flow_usd\":0.0,\"smart_trader_avg_flow_usd\":null,\"smart_trader_wallet_count\":0,\"exchange_net_flow_usd\":1488.4181833637697,\"exchange_avg_flow_usd\":623.5640779527324,\"exchange_wallet_count\":0,\"fresh_wallets_net_flow_usd\":0.0,\"fresh_wallets_avg_flow_usd\":0.0,\"fresh_wallets_wallet_count\":0}],\"warnings\":[\"exchange_wallet_count is always 0 (not tracked), even when exchange net flow is non-zero.\"]}"
+    },
+    "c242c5bf8123c55b3afb17214b7efbef": {
+      "storedAt": "2026-09-16T12:40:08.354Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/flow-intelligence",
+      "body": {
+        "chain": "bnb",
+        "token_address": "0xa697e272a73744b343528c3bc4702f2565b2f422",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":[{\"public_figure_net_flow_usd\":-4.174090654731486,\"public_figure_avg_flow_usd\":null,\"public_figure_wallet_count\":1,\"top_pnl_net_flow_usd\":-2.570896606224904,\"top_pnl_avg_flow_usd\":null,\"top_pnl_wallet_count\":1,\"whale_net_flow_usd\":0.0,\"whale_avg_flow_usd\":null,\"whale_wallet_count\":0,\"smart_trader_net_flow_usd\":0.0,\"smart_trader_avg_flow_usd\":null,\"smart_trader_wallet_count\":0,\"exchange_net_flow_usd\":27596.1334718868,\"exchange_avg_flow_usd\":17412.55654972906,\"exchange_wallet_count\":0,\"fresh_wallets_net_flow_usd\":0.0,\"fresh_wallets_avg_flow_usd\":0.0,\"fresh_wallets_wallet_count\":0}],\"warnings\":[\"exchange_wallet_count is always 0 (not tracked), even when exchange net flow is non-zero.\"]}"
+    },
+    "786198ce5032670ee3fbe9a6d2079598": {
+      "storedAt": "2026-09-16T12:40:08.381Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/token-information",
+      "body": {
+        "chain": "polygon",
+        "token_address": "0xe5b49820e5a1063f6f4ddf851327b5e8b2301048",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":{\"name\":\"Bonk\",\"symbol\":\"BONK\",\"contract_address\":\"0xe5b49820e5a1063f6f4ddf851327b5e8b2301048\",\"logo\":\"https://coin-images.coingecko.com/coins/images/28600/small/bonk.jpg?1696527587\",\"token_details\":{\"token_deployment_date\":\"2023-03-15 20:48:04\",\"website\":\"\",\"x\":\"\",\"telegram\":\"\",\"market_cap_usd\":220137423.90757546,\"fdv_usd\":220585474.0,\"circulating_supply\":87994475946796.7,\"total_supply\":87994475946796.7},\"spot_metrics\":{\"volume_total_usd\":381.9776036104038,\"buy_volume_usd\":151.2858610905453,\"sell_volume_usd\":230.6917425198585,\"total_buys\":37,\"total_sells\":21,\"unique_buyers\":21,\"unique_sellers\":13,\"liquidity_usd\":1372.785246137492,\"total_holders\":2192}}}"
+    },
+    "9d71af0aa7cd5e1f6b075af95fb184b1": {
+      "storedAt": "2026-09-16T12:40:08.732Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/flow-intelligence",
+      "body": {
+        "chain": "polygon",
+        "token_address": "0xe5b49820e5a1063f6f4ddf851327b5e8b2301048",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":[{\"public_figure_net_flow_usd\":0.0,\"public_figure_avg_flow_usd\":null,\"public_figure_wallet_count\":0,\"top_pnl_net_flow_usd\":0.0,\"top_pnl_avg_flow_usd\":null,\"top_pnl_wallet_count\":0,\"whale_net_flow_usd\":0.0,\"whale_avg_flow_usd\":null,\"whale_wallet_count\":0,\"smart_trader_net_flow_usd\":0.0,\"smart_trader_avg_flow_usd\":null,\"smart_trader_wallet_count\":0,\"exchange_net_flow_usd\":190.02001236242694,\"exchange_avg_flow_usd\":135.2359482296411,\"exchange_wallet_count\":0,\"fresh_wallets_net_flow_usd\":0.0,\"fresh_wallets_avg_flow_usd\":0.0,\"fresh_wallets_wallet_count\":0}],\"warnings\":[\"exchange_wallet_count is always 0 (not tracked), even when exchange net flow is non-zero.\"]}"
+    },
+    "70c4cdbfeb5fe627ccc74bd3a27e4e32": {
+      "storedAt": "2026-09-16T12:40:08.834Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/token-information",
+      "body": {
+        "chain": "ethereum",
+        "token_address": "0x4fbaf51b95b024d0d7cab575be2a1f0afedc9b64",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":{\"name\":\"Bonk on ETH\",\"symbol\":\"BONK\",\"contract_address\":\"0x4fbaf51b95b024d0d7cab575be2a1f0afedc9b64\",\"logo\":\"https://coin-images.coingecko.com/coins/images/37672/small/bonkethlogo_%282%29.png?1715186040\",\"token_details\":{\"token_deployment_date\":\"2024-05-06 17:27:23\",\"website\":\"https://bonketh.io/\",\"x\":\"\",\"telegram\":\"+plxQRVhhiNM0Yjc0\",\"market_cap_usd\":41041.0791284043,\"fdv_usd\":41041.055624678,\"circulating_supply\":100000000000000.0,\"total_supply\":100000000000000.0},\"spot_metrics\":{\"volume_total_usd\":362.3284084178472,\"buy_volume_usd\":0.0,\"sell_volume_usd\":362.3284084178472,\"total_buys\":0,\"total_sells\":7,\"unique_buyers\":0,\"unique_sellers\":3,\"liquidity_usd\":20039.106805199594,\"total_holders\":910}}}"
+    },
+    "0f9f78c9415006f64098cdb9d0db464e": {
+      "storedAt": "2026-09-16T12:40:08.862Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/flow-intelligence",
+      "body": {
+        "chain": "solana",
+        "token_address": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":[{\"public_figure_net_flow_usd\":-13707.042394843678,\"public_figure_avg_flow_usd\":1007.962267932953,\"public_figure_wallet_count\":38,\"top_pnl_net_flow_usd\":-2145.429542599098,\"top_pnl_avg_flow_usd\":6691.125255368468,\"top_pnl_wallet_count\":5,\"whale_net_flow_usd\":-83991.37740126878,\"whale_avg_flow_usd\":82393.74055262859,\"whale_wallet_count\":5,\"smart_trader_net_flow_usd\":-6317.807750942267,\"smart_trader_avg_flow_usd\":886.8913885544263,\"smart_trader_wallet_count\":31,\"exchange_net_flow_usd\":1328651.1224866672,\"exchange_avg_flow_usd\":2594672.398393783,\"exchange_wallet_count\":0,\"fresh_wallets_net_flow_usd\":2194854.742406168,\"fresh_wallets_avg_flow_usd\":3900484.2439880483,\"fresh_wallets_wallet_count\":0}],\"warnings\":[\"exchange_wallet_count is always 0 (not tracked), even when exchange net flow is non-zero.\",\"fresh_wallets_wallet_count is always 0 (not tracked), even when fresh-wallet net flow is non-zero.\"]}"
+    },
+    "331e8ff67580ae7015c8b43b57ada32d": {
+      "storedAt": "2026-09-16T12:40:09.209Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/flow-intelligence",
+      "body": {
+        "chain": "base",
+        "token_address": "0x72499bddb67f4ca150e1f522ca82c87bc9fb18c8",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":[{\"public_figure_net_flow_usd\":0.0,\"public_figure_avg_flow_usd\":null,\"public_figure_wallet_count\":0,\"top_pnl_net_flow_usd\":0.0,\"top_pnl_avg_flow_usd\":null,\"top_pnl_wallet_count\":0,\"whale_net_flow_usd\":0.0,\"whale_avg_flow_usd\":null,\"whale_wallet_count\":0,\"smart_trader_net_flow_usd\":0.0,\"smart_trader_avg_flow_usd\":null,\"smart_trader_wallet_count\":0,\"exchange_net_flow_usd\":58.234388870802654,\"exchange_avg_flow_usd\":225.38247365867943,\"exchange_wallet_count\":0,\"fresh_wallets_net_flow_usd\":0.0,\"fresh_wallets_avg_flow_usd\":0.0,\"fresh_wallets_wallet_count\":0}],\"warnings\":[\"exchange_wallet_count is always 0 (not tracked), even when exchange net flow is non-zero.\"]}"
+    },
+    "859afe93a53faa075e55d7ab83fb8339": {
+      "storedAt": "2026-09-16T12:40:09.269Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/token-information",
+      "body": {
+        "chain": "base",
+        "token_address": "0x72499bddb67f4ca150e1f522ca82c87bc9fb18c8",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":{\"name\":\"Bonk\",\"symbol\":\"BONK\",\"contract_address\":\"0x72499bddb67f4ca150e1f522ca82c87bc9fb18c8\",\"logo\":\"https://coin-images.coingecko.com/coins/images/37123/small/200x200.png?1713367524\",\"token_details\":{\"token_deployment_date\":\"2024-04-10 02:59:09\",\"website\":\"https://bonkonbase.vip/\",\"x\":\"Bonk_On_Base\",\"telegram\":\"Bonk_On_Base\",\"market_cap_usd\":92447.7691297812,\"fdv_usd\":91903.5373968381,\"circulating_supply\":100000000000000.0,\"total_supply\":100000000000000.0},\"spot_metrics\":{\"volume_total_usd\":220.2238422336609,\"buy_volume_usd\":82.58986965869394,\"sell_volume_usd\":137.63397257496695,\"total_buys\":17,\"total_sells\":14,\"unique_buyers\":9,\"unique_sellers\":13,\"liquidity_usd\":23841.087208759414,\"total_holders\":2634}}}"
+    },
+    "781451b51130b255dccdbdf25964bdf0": {
+      "storedAt": "2026-09-16T12:40:11.193Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/flow-intelligence",
+      "body": {
+        "chain": "ethereum",
+        "token_address": "0x4fbaf51b95b024d0d7cab575be2a1f0afedc9b64",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":[{\"public_figure_net_flow_usd\":0.0,\"public_figure_avg_flow_usd\":null,\"public_figure_wallet_count\":0,\"top_pnl_net_flow_usd\":0.0,\"top_pnl_avg_flow_usd\":null,\"top_pnl_wallet_count\":0,\"whale_net_flow_usd\":0.0,\"whale_avg_flow_usd\":null,\"whale_wallet_count\":0,\"smart_trader_net_flow_usd\":0.0,\"smart_trader_avg_flow_usd\":null,\"smart_trader_wallet_count\":0,\"exchange_net_flow_usd\":352.5737520791441,\"exchange_avg_flow_usd\":352.57375203105875,\"exchange_wallet_count\":0,\"fresh_wallets_net_flow_usd\":0.0,\"fresh_wallets_avg_flow_usd\":0.0,\"fresh_wallets_wallet_count\":0}],\"warnings\":[\"exchange_wallet_count is always 0 (not tracked), even when exchange net flow is non-zero.\"]}"
+    },
+    "994e68ded6886a44f5e938f1abd460c7": {
+      "storedAt": "2026-09-16T12:40:12.934Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/holders",
+      "body": {
+        "chain": "ethereum",
+        "token_address": "0x1151cb3d861920e07a38e03eead12c32178567f6",
+        "pagination": {
+          "page": 1,
+          "per_page": 20
+        }
+      },
+      "text": "{\"data\":[{\"address\":\"0xeb2201be755923670c4863bb3f5f799fa7df9f51\",\"address_label\":\"High Balance\",\"token_amount\":25452699487.73897,\"total_outflow\":24670868593.44597,\"total_inflow\":50123568081.18494,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.08286591399298075,\"value_usd\":64953.50850235905},{\"address\":\"0x403b1b747b1efb309070436c9ac99bf476f299ea\",\"address_label\":\"Liquidity Pool\",\"token_amount\":11555556350.74253,\"total_outflow\":4967351597140.909,\"total_inflow\":4978907153491.651,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":97090.90355,\"ownership_percentage\":0.03762122517350067,\"value_usd\":29488.97141692217},{\"address\":\"0x719eba3fb0799e215b6f82872f947418298e395e\",\"address_label\":\"Liquidity Pool\",\"token_amount\":7723596258.27145,\"total_outflow\":185189445864.28348,\"total_inflow\":192913042122.55493,\"balance_change_24h\":250723603.50911,\"balance_change_7d\":733723387.04916,\"balance_change_30d\":-228636447.43342,\"ownership_percentage\":0.02514557890265198,\"value_usd\":19710.077332743782},{\"address\":\"0xd249942f6d417cbfdcb792b1229353b66c790726\",\"address_label\":\"High Balance\",\"token_amount\":5009899396.83477,\"total_outflow\":397800951291.42584,\"total_inflow\":402810850688.2606,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.01631064291359671,\"value_usd\":12784.912784006541},{\"address\":\"0x88e23c83417cf07e9dcdf13ce0a19b4650cf7b0e\",\"address_label\":\"BONK Whale\",\"token_amount\":5005480703.0,\"total_outflow\":0.0,\"total_inflow\":5005480703.0,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.01629625704841766,\"value_usd\":12773.636586458053},{\"address\":\"0x820f94fa305db0dae2504ace89e963ec13733115\",\"address_label\":\"BONK Whale\",\"token_amount\":3726110417.52553,\"total_outflow\":0.0,\"total_inflow\":3726110417.52553,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.012131033312822441,\"value_usd\":9508.773118625804},{\"address\":\"0x37dced5bbe5d68370c8d043aa8fcbc7e23709dc9\",\"address_label\":\"sashkacobracelets.eth\",\"token_amount\":3706484169.97442,\"total_outflow\":0.0,\"total_inflow\":3706484169.97442,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.012067136477739835,\"value_usd\":9458.688307865576},{\"address\":\"0x5ea523e496d049e2ba8b303c8d85c83fb6f285f8\",\"address_label\":\"Liquidity Pool\",\"token_amount\":3690501824.24327,\"total_outflow\":63122056000.8714,\"total_inflow\":66812557825.11467,\"balance_change_24h\":110660041.93853,\"balance_change_7d\":335657023.17451,\"balance_change_30d\":-133078138.46195,\"ownership_percentage\":0.012015103030859217,\"value_usd\":9417.902479634036},{\"address\":\"0xa6340102a1c5b54bd0e2db122ac231d2e8dc8063\",\"address_label\":\"BONK Whale\",\"token_amount\":3237456742.64664,\"total_outflow\":12026513146.18491,\"total_inflow\":15263969888.83155,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.010540131985661675,\"value_usd\":8261.76312500039},{\"address\":\"0xaa10c4436df50010ae6eb26e8cbe568cb52acbdc\",\"address_label\":\"BONK Whale\",\"token_amount\":2964842399.57925,\"total_outflow\":0.0,\"total_inflow\":2964842399.57925,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":2964842399.57925,\"ownership_percentage\":0.009652586178712692,\"value_usd\":7566.070392729589},{\"address\":\"0x4f9eaabbe3dfa48953e9d7b3026a38c1cbcc641e\",\"address_label\":\"BONK Whale\",\"token_amount\":2479932461.17131,\"total_outflow\":2526080.0,\"total_inflow\":2482458541.17131,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.008073873269702369,\"value_usd\":6328.614152678077},{\"address\":\"0xa951a246493e53bf464e0664631be7b65cd61842\",\"address_label\":\"BONK Whale\",\"token_amount\":1626424805.40125,\"total_outflow\":0.0,\"total_inflow\":1626424805.40125,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.005295123140292215,\"value_usd\":4150.522323848888},{\"address\":\"0x0b2a4e7e22e390b53b738e42bd4d11c212150c94\",\"address_label\":\"BONK Whale\",\"token_amount\":1617485846.52234,\"total_outflow\":0.0,\"total_inflow\":1617485846.52234,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.005266020726302557,\"value_usd\":4127.710726131199},{\"address\":\"0x8e7d05f1cf2f4a29b3c44764b63df8e42c6cf7d1\",\"address_label\":\"Uses \\\"RABBYWALLET\\\" HL Referral Code\",\"token_amount\":1600000000.0,\"total_outflow\":250456339.50909,\"total_inflow\":1850456339.50909,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.0052090923578710395,\"value_usd\":4083.0880690607037},{\"address\":\"0x6e6641923fe552933da54af7b03a02ebbdcc36d1\",\"address_label\":\"BONK Whale\",\"token_amount\":1563940364.30569,\"total_outflow\":0.0,\"total_inflow\":1563940364.30569,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.005091693624919263,\"value_usd\":3991.0664013868836},{\"address\":\"0x53d62b4fa4d729bc1eafc33f1345f32ae612df8d\",\"address_label\":\"Liquidity Pool\",\"token_amount\":1556887669.26677,\"total_outflow\":4307357971.27965,\"total_inflow\":5864245640.54642,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.005068732287525741,\"value_usd\":3973.068417031797},{\"address\":\"0x9d12d21657f7dc569e531845f89237c670c48104\",\"address_label\":\"Uses \\\"MMREFCSI\\\" HL Referral Code\",\"token_amount\":1552927887.26254,\"total_outflow\":0.0,\"total_inflow\":1552927887.26254,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.005055840493665073,\"value_usd\":3962.963330370827},{\"address\":\"0x2b3af06096c80d8c2d6b65afe20d9c536388a7d0\",\"address_label\":\"BONK Whale\",\"token_amount\":1436859388.19161,\"total_outflow\":0.0,\"total_inflow\":1436859388.19161,\"balance_change_24h\":1436859388.19161,\"balance_change_7d\":1436859388.19161,\"balance_change_30d\":1436859388.19161,\"ownership_percentage\":0.004677958286477608,\"value_usd\":3666.764640526891},{\"address\":\"0x1e84865e17b49286f26d356dc39ff671edfaa199\",\"address_label\":\"Liquidity Pool\",\"token_amount\":1409487253.82466,\"total_outflow\":45273600885.54033,\"total_inflow\":46683088139.36499,\"balance_change_24h\":46906203.80018,\"balance_change_7d\":131074531.02078,\"balance_change_30d\":-35850883.10258,\"ownership_percentage\":0.004588843301509171,\"value_usd\":3596.912868490378},{\"address\":\"0x549a0522aaa53e729ff1298bc4f23fb55409c8ff\",\"address_label\":\"High Balance\",\"token_amount\":1370557006.64212,\"total_outflow\":0.0,\"total_inflow\":1370557006.64212,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.004462098768328797,\"value_usd\":3497.5656011174947}],\"pagination\":{\"page\":1,\"per_page\":20,\"is_last_page\":false},\"warnings\":null}"
+    },
+    "df1f6b7913870f6b63669ec607fed65c": {
+      "storedAt": "2026-09-16T12:40:14.269Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/holders",
+      "body": {
+        "chain": "solana",
+        "token_address": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+        "pagination": {
+          "page": 1,
+          "per_page": 20
+        }
+      },
+      "text": "{\"data\":[{\"address\":\"9WzDXwBbmkg8ZTbNMqUxvQRAyrZzDsGYdLVL9zYtAWWM\",\"address_label\":\"poppalsnft.sol\",\"token_amount\":7770515063166.431,\"total_outflow\":20026951232607.797,\"total_inflow\":27797466295774.227,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":1010146674524.794,\"ownership_percentage\":0.088284563959654,\"value_usd\":19477141.78085196},{\"address\":\"51yZyDSnec4xnUv7XLRVYcDyV4x3wUtzrDcRaYbmQU5j\",\"address_label\":\"\",\"token_amount\":5772593511837.953,\"total_outflow\":1444219.71463,\"total_inflow\":5772594956057.668,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":400001576471.7668,\"ownership_percentage\":0.06558521500391643,\"value_usd\":14469262.508253606},{\"address\":\"4xLpwxgYuPwPvtQjE94RLS4WZ4aD8NJYYKr2AJk99Qdg\",\"address_label\":\"Active SOL Millionaire\",\"token_amount\":3228504395867.44,\"total_outflow\":11796779437553.725,\"total_inflow\":15025283833421.166,\"balance_change_24h\":23410350779.19474,\"balance_change_7d\":140557001379.277,\"balance_change_30d\":22232456194.02165,\"ownership_percentage\":0.03668059330868044,\"value_usd\":8092389.931329718},{\"address\":\"8Mm46CsqxiyAputDUp2cXHg41HE3BfynTeMBDwzrMZQH\",\"address_label\":\"Token Millionaire\",\"token_amount\":2725998053337.9375,\"total_outflow\":10173556433699.934,\"total_inflow\":12899554487037.87,\"balance_change_24h\":6373025302.93247,\"balance_change_7d\":99358840189.33405,\"balance_change_30d\":563884269492.8966,\"ownership_percentage\":0.030971376741111,\"value_usd\":6832835.423081176},{\"address\":\"3B7XAQrLoEMDEGvX8569F9GRb9PcXXocJmj5wvhhei9z\",\"address_label\":\"TRUMP Whale\",\"token_amount\":2689444104195.628,\"total_outflow\":5509808657885.562,\"total_inflow\":8199252762081.189,\"balance_change_24h\":0.0,\"balance_change_7d\":196037059766.817,\"balance_change_30d\":-145963034407.8603,\"ownership_percentage\":0.03055606972030238,\"value_usd\":6741211.322965901},{\"address\":\"9RpzaFh4J8F6Qg1gjnhrhSp9eXdVDjsesZXe53qp7ubB\",\"address_label\":\"BONK Whale\",\"token_amount\":2688260337507.0693,\"total_outflow\":0.0,\"total_inflow\":2688260337507.0693,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":1576471.76678,\"ownership_percentage\":0.030542620376844472,\"value_usd\":6738244.159085376},{\"address\":\"EbLm4ZtRqDftrQnZaMMvnwcKjK5ef5vm1Hg3sAPv3tKi\",\"address_label\":\"BONK Whale\",\"token_amount\":2677127770008.6846,\"total_outflow\":0.0,\"total_inflow\":2677127770008.6846,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":1576471.76678,\"ownership_percentage\":0.03041613791598353,\"value_usd\":6710339.883269895},{\"address\":\"DDrxSAP14UxBJ9Xz2EaqM9WSTuavX6SuBNtsDpiVhGr6\",\"address_label\":\"BONK Whale\",\"token_amount\":2225861028926.293,\"total_outflow\":87388970439.84879,\"total_inflow\":2313249999366.1416,\"balance_change_24h\":0.0,\"balance_change_7d\":2082988394052.6582,\"balance_change_30d\":2078254584312.9087,\"ownership_percentage\":0.025289079137756472,\"value_usd\":5579219.7161257705},{\"address\":\"1tjoQzWg21ceMAhyLVs4s2Zc1Pm27mLTcJ9EfEFu7km\",\"address_label\":\"Token Millionaire\",\"token_amount\":2155369217149.9302,\"total_outflow\":528389189482.97473,\"total_inflow\":2683758406632.905,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":1576471.76678,\"ownership_percentage\":0.024488187714882603,\"value_usd\":5402528.853139672},{\"address\":\"CJjCPXBnSt6wRoyi7wzcMj5NbWvmPtzxE2JpWDMTRxj4\",\"address_label\":\"BONK Whale\",\"token_amount\":2054055468867.3499,\"total_outflow\":423827847764.14,\"total_inflow\":2477883316631.4897,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":1576471.76678,\"ownership_percentage\":0.023337113427330684,\"value_usd\":5148581.434775715},{\"address\":\"CK8i4zFXkDE2KWfyg7g9S748r6mwxajbcKcyGhQMR3qQ\",\"address_label\":\"Token Millionaire\",\"token_amount\":1682939664225.9272,\"total_outflow\":23666085450043.22,\"total_inflow\":25349025114269.145,\"balance_change_24h\":144671989647.42285,\"balance_change_7d\":-169678622412.68103,\"balance_change_30d\":469673486742.3774,\"ownership_percentage\":0.019120688039184906,\"value_usd\":4218363.156404541},{\"address\":\"EZ41WcMH3FmyWGV9WQaDLo5uo4ysVNdeAm1ZoTybxjsJ\",\"address_label\":\"PNUT Whale\",\"token_amount\":1645368389823.7363,\"total_outflow\":607573451101.4276,\"total_inflow\":2252941840925.164,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":1576471.76678,\"ownership_percentage\":0.01869382269614878,\"value_usd\":4124189.0852560876},{\"address\":\"Am8MAEorCMAKxphqjAz3Ff59NEwPm4W2eS3DQLi2B4hg\",\"address_label\":\"TRUMP Whale\",\"token_amount\":1404921058139.2163,\"total_outflow\":5463206120228.089,\"total_inflow\":6868127178367.305,\"balance_change_24h\":-764933074.99,\"balance_change_7d\":376357880874.6092,\"balance_change_30d\":123336686314.83356,\"ownership_percentage\":0.01596198475999272,\"value_usd\":3521497.1488815956},{\"address\":\"AVPKzX2QZ8E23SWR728yhMTnnqr9UjAZdgemfaE3qHg5\",\"address_label\":\"TRUMP Whale\",\"token_amount\":1185001892216.8005,\"total_outflow\":1437026001307.0,\"total_inflow\":2622027893523.8003,\"balance_change_24h\":11363190240.00501,\"balance_change_7d\":72559964972.03366,\"balance_change_30d\":86392250279.80045,\"ownership_percentage\":0.013463377201548632,\"value_usd\":2970259.9734591283},{\"address\":\"5oNhn2ESFHgg52xiEKBt93cEEnbsoUoekcxXsWpLbHUJ\",\"address_label\":\"BONK Whale\",\"token_amount\":1000001576471.7668,\"total_outflow\":0.0,\"total_inflow\":1000001576471.7668,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":1576471.76678,\"ownership_percentage\":0.011361499517099081,\"value_usd\":2506548.4498371547},{\"address\":\"GBrURzmtWujJRTA3Bkvo7ZgWuZYLMMwPCwre7BejJXnK\",\"address_label\":\"\",\"token_amount\":986434345525.55,\"total_outflow\":1000000.0,\"total_inflow\":986435345525.55,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.011207355672258687,\"value_usd\":2472541.5817512},{\"address\":\"5tzFkiKscXHK5ZXCGbXZxdw7gTjjD1mBwuoFbhUvuAi9\",\"address_label\":\"kiing.sol\",\"token_amount\":980492896559.5938,\"total_outflow\":210610667393306.47,\"total_inflow\":211591160289866.06,\"balance_change_24h\":206868030824.55344,\"balance_change_7d\":239513365659.3899,\"balance_change_30d\":-248495921740.35184,\"ownership_percentage\":0.011139852009118725,\"value_usd\":2457649.075533411},{\"address\":\"F18jTyiQivKmuy3zYsJRjMBPgHab4is16betYFEY67WF\",\"address_label\":\"\",\"token_amount\":880735010090.3693,\"total_outflow\":320703031601.30383,\"total_inflow\":1201438041691.673,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":1576471.76678,\"ownership_percentage\":0.010006454616940795,\"value_usd\":2207601.4940378983},{\"address\":\"634QWfYYzXuqdDWoVtNgQisVYkTdBmfBbBPYZoNZyHwE\",\"address_label\":\"Token Millionaire\",\"token_amount\":872058768456.5187,\"total_outflow\":751889338841.9396,\"total_inflow\":1623948107298.4583,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.009907879657208208,\"value_usd\":2185854.108304297},{\"address\":\"EfEgUV2uQAzTooo6L4oYiEm15F6JBTnGiWMejqxPaqL3\",\"address_label\":\"BONK Whale\",\"token_amount\":868729255292.3567,\"total_outflow\":1600001000000.0,\"total_inflow\":2468730255292.357,\"balance_change_24h\":0.0,\"balance_change_7d\":-1600000000000.0,\"balance_change_30d\":-1599999423528.2334,\"ownership_percentage\":0.0098700514546365,\"value_usd\":2177508.5354005145}],\"pagination\":{\"page\":1,\"per_page\":20,\"is_last_page\":false},\"warnings\":null}"
+    }
+  },
+  "verdict": {
+    "query": "BONK",
+    "winner": {
+      "chain": "solana",
+      "address": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+      "name": "Bonk",
+      "symbol": "BONK",
+      "marketCap": 222339907.203037,
+      "volume24h": 693826.7347725232,
+      "searchRank": 475,
+      "labelledWallets": 79,
+      "smartTraderWallets": 31,
+      "whaleWallets": 5,
+      "topPnlWallets": 5,
+      "publicFigureWallets": 38,
+      "smartTraderNetFlowUsd": -6317.807750942267,
+      "exchangeNetFlowUsd": 1328651.1224866672,
+      "freshNetFlowUsd": 2194854.742406168,
+      "exchangeTouched": true,
+      "freshShare": 0.6046985651201903,
+      "errors": [],
+      "deploymentDate": "2022-12-08 20:33:32",
+      "ageDays": 1377,
+      "marketCapUsd": 220562069.56880057,
+      "liquidityUsd": 1362976.9136903812,
+      "totalHolders": 213311,
+      "uniqueBuyers": 4546,
+      "logo": "https://coin-images.coingecko.com/coins/images/28600/small/bonk.jpg?1696527587",
+      "website": "https://www.bonkcoin.com/",
+      "score": 22.98,
+      "terms": {
+        "labelled": 13.15,
+        "exchange": 1.87,
+        "holders": 3.2,
+        "liquidity": 2.45,
+        "age": 0,
+        "fresh": 0,
+        "recognisedHolders": 2.31
+      },
+      "reasons": [
+        "79 labelled wallets (31 smart traders, 5 top PnL, 5 whales, 38 public figures)",
+        "exchange flow $1.3M",
+        "213K holders",
+        "3.8y old",
+        "17 of top 20 holders tagged by Nansen (BONK Whale ×6, Token Millionaire ×4, TRUMP Whale ×3)"
+      ],
+      "impostor": false,
+      "scorable": true,
+      "unchecked": false,
+      "recognisedHolders": 17,
+      "topLabels": [
+        "BONK Whale ×6",
+        "Token Millionaire ×4",
+        "TRUMP Whale ×3"
+      ],
+      "topHolderPct": 0.088284563959654
+    },
+    "ranked": [
+      {
+        "chain": "solana",
+        "address": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+        "name": "Bonk",
+        "symbol": "BONK",
+        "marketCap": 222339907.203037,
+        "volume24h": 693826.7347725232,
+        "searchRank": 475,
+        "labelledWallets": 79,
+        "smartTraderWallets": 31,
+        "whaleWallets": 5,
+        "topPnlWallets": 5,
+        "publicFigureWallets": 38,
+        "smartTraderNetFlowUsd": -6317.807750942267,
+        "exchangeNetFlowUsd": 1328651.1224866672,
+        "freshNetFlowUsd": 2194854.742406168,
+        "exchangeTouched": true,
+        "freshShare": 0.6046985651201903,
+        "errors": [],
+        "deploymentDate": "2022-12-08 20:33:32",
+        "ageDays": 1377,
+        "marketCapUsd": 220562069.56880057,
+        "liquidityUsd": 1362976.9136903812,
+        "totalHolders": 213311,
+        "uniqueBuyers": 4546,
+        "logo": "https://coin-images.coingecko.com/coins/images/28600/small/bonk.jpg?1696527587",
+        "website": "https://www.bonkcoin.com/",
+        "score": 22.98,
+        "terms": {
+          "labelled": 13.15,
+          "exchange": 1.87,
+          "holders": 3.2,
+          "liquidity": 2.45,
+          "age": 0,
+          "fresh": 0,
+          "recognisedHolders": 2.31
+        },
+        "reasons": [
+          "79 labelled wallets (31 smart traders, 5 top PnL, 5 whales, 38 public figures)",
+          "exchange flow $1.3M",
+          "213K holders",
+          "3.8y old",
+          "17 of top 20 holders tagged by Nansen (BONK Whale ×6, Token Millionaire ×4, TRUMP Whale ×3)"
+        ],
+        "impostor": false,
+        "scorable": true,
+        "unchecked": false,
+        "recognisedHolders": 17,
+        "topLabels": [
+          "BONK Whale ×6",
+          "Token Millionaire ×4",
+          "TRUMP Whale ×3"
+        ],
+        "topHolderPct": 0.088284563959654
+      },
+      {
+        "chain": "ethereum",
+        "address": "0x1151cb3d861920e07a38e03eead12c32178567f6",
+        "name": "Bonk",
+        "symbol": "BONK",
+        "marketCap": 224555746.786671,
+        "volume24h": 15001.63733170541,
+        "searchRank": 476,
+        "labelledWallets": 2,
+        "smartTraderWallets": 0,
+        "whaleWallets": 0,
+        "topPnlWallets": 2,
+        "publicFigureWallets": 0,
+        "smartTraderNetFlowUsd": 0,
+        "exchangeNetFlowUsd": 443.2907834216954,
+        "freshNetFlowUsd": 0,
+        "exchangeTouched": true,
+        "freshShare": 0,
+        "errors": [],
+        "deploymentDate": "2023-02-14 18:16:47",
+        "ageDays": 1309,
+        "marketCapUsd": 224555746.80100918,
+        "liquidityUsd": 76403.74045051287,
+        "totalHolders": 10886,
+        "uniqueBuyers": 30,
+        "logo": "https://coin-images.coingecko.com/coins/images/28600/small/bonk.jpg?1696527587",
+        "website": "",
+        "score": 10.11,
+        "terms": {
+          "labelled": 3.3,
+          "exchange": 0,
+          "holders": 2.42,
+          "liquidity": 1.95,
+          "age": 0,
+          "fresh": 0,
+          "recognisedHolders": 2.44
+        },
+        "reasons": [
+          "2 labelled wallets (0 smart traders, 2 top PnL, 0 whales, 0 public figures)",
+          "no meaningful exchange flow",
+          "11K holders",
+          "3.6y old",
+          "20 of top 20 holders tagged by Nansen (BONK Whale ×9, Liquidity Pool ×5, High Balance ×3)"
+        ],
+        "impostor": false,
+        "scorable": true,
+        "unchecked": false,
+        "recognisedHolders": 20,
+        "topLabels": [
+          "BONK Whale ×9",
+          "Liquidity Pool ×5",
+          "High Balance ×3"
+        ],
+        "topHolderPct": 0.08286591399298075
+      },
+      {
+        "chain": "bnb",
+        "address": "0xa697e272a73744b343528c3bc4702f2565b2f422",
+        "name": "Bonk",
+        "symbol": "BONK",
+        "marketCap": 222106810.364221,
+        "volume24h": 8207.891708348841,
+        "searchRank": 4090,
+        "labelledWallets": 2,
+        "smartTraderWallets": 0,
+        "whaleWallets": 0,
+        "topPnlWallets": 1,
+        "publicFigureWallets": 1,
+        "smartTraderNetFlowUsd": 0,
+        "exchangeNetFlowUsd": 27596.1334718868,
+        "freshNetFlowUsd": 0,
+        "exchangeTouched": true,
+        "freshShare": 0,
+        "errors": [],
+        "marketCapUsd": 0,
+        "liquidityUsd": 0,
+        "totalHolders": 57962,
+        "uniqueBuyers": 161,
+        "logo": "",
+        "website": "",
+        "score": 7.02,
+        "terms": {
+          "labelled": 3.3,
+          "exchange": 0.86,
+          "holders": 2.86,
+          "liquidity": 0,
+          "age": 0,
+          "fresh": 0,
+          "recognisedHolders": 0
+        },
+        "reasons": [
+          "2 labelled wallets (0 smart traders, 1 top PnL, 0 whales, 1 public figures)",
+          "exchange flow $28K",
+          "58K holders",
+          "age unknown"
+        ],
+        "impostor": false,
+        "scorable": true,
+        "unchecked": false
+      },
+      {
+        "chain": "base",
+        "address": "0x72499bddb67f4ca150e1f522ca82c87bc9fb18c8",
+        "name": "Bonk",
+        "symbol": "BONK",
+        "marketCap": 92853.89203,
+        "volume24h": 7.872057845812366,
+        "searchRank": 9559,
+        "labelledWallets": 0,
+        "smartTraderWallets": 0,
+        "whaleWallets": 0,
+        "topPnlWallets": 0,
+        "publicFigureWallets": 0,
+        "smartTraderNetFlowUsd": 0,
+        "exchangeNetFlowUsd": 58.234388870802654,
+        "freshNetFlowUsd": 0,
+        "exchangeTouched": true,
+        "freshShare": 0,
+        "errors": [],
+        "deploymentDate": "2024-04-10 02:59:09",
+        "ageDays": 889,
+        "marketCapUsd": 92447.7691297812,
+        "liquidityUsd": 23841.087208759414,
+        "totalHolders": 2634,
+        "uniqueBuyers": 9,
+        "logo": "https://coin-images.coingecko.com/coins/images/37123/small/200x200.png?1713367524",
+        "website": "https://bonkonbase.vip/",
+        "score": 3.8,
+        "terms": {
+          "labelled": 0,
+          "exchange": 0,
+          "holders": 2.05,
+          "liquidity": 1.75,
+          "age": 0,
+          "fresh": 0,
+          "recognisedHolders": 0
+        },
+        "reasons": [
+          "0 labelled wallets in 7 days",
+          "no meaningful exchange flow",
+          "3K holders",
+          "2.4y old"
+        ],
+        "impostor": false,
+        "scorable": true,
+        "unchecked": false
+      },
+      {
+        "chain": "arbitrum",
+        "address": "0x09199d9a5f4448d0848e4395d065e1ad9c4a1f74",
+        "name": "Bonk",
+        "symbol": "BONK",
+        "marketCap": 222283842,
+        "volume24h": 710.6242688214086,
+        "searchRank": 5947,
+        "labelledWallets": 0,
+        "smartTraderWallets": 0,
+        "whaleWallets": 0,
+        "topPnlWallets": 0,
+        "publicFigureWallets": 0,
+        "smartTraderNetFlowUsd": 0,
+        "exchangeNetFlowUsd": 1488.4181833637697,
+        "freshNetFlowUsd": 0,
+        "exchangeTouched": true,
+        "freshShare": 0,
+        "errors": [],
+        "deploymentDate": "2023-03-15 20:35:24",
+        "ageDays": 1280,
+        "marketCapUsd": 220137423.90757546,
+        "liquidityUsd": 10367.238136415592,
+        "totalHolders": 1135,
+        "uniqueBuyers": 4,
+        "logo": "https://coin-images.coingecko.com/coins/images/28600/small/bonk.jpg?1696527587",
+        "website": "",
+        "score": 3.54,
+        "terms": {
+          "labelled": 0,
+          "exchange": 0.1,
+          "holders": 1.83,
+          "liquidity": 1.61,
+          "age": 0,
+          "fresh": 0,
+          "recognisedHolders": 0
+        },
+        "reasons": [
+          "0 labelled wallets in 7 days",
+          "exchange flow $1K",
+          "1K holders",
+          "3.5y old"
+        ],
+        "impostor": false,
+        "scorable": true,
+        "unchecked": false
+      },
+      {
+        "chain": "ethereum",
+        "address": "0x4fbaf51b95b024d0d7cab575be2a1f0afedc9b64",
+        "name": "Bonk on ETH",
+        "symbol": "BONK",
+        "marketCap": 42162.90993,
+        "volume24h": 0,
+        "searchRank": 13353,
+        "labelledWallets": 0,
+        "smartTraderWallets": 0,
+        "whaleWallets": 0,
+        "topPnlWallets": 0,
+        "publicFigureWallets": 0,
+        "smartTraderNetFlowUsd": 0,
+        "exchangeNetFlowUsd": 352.5737520791441,
+        "freshNetFlowUsd": 0,
+        "exchangeTouched": true,
+        "freshShare": 0,
+        "errors": [],
+        "deploymentDate": "2024-05-06 17:27:23",
+        "ageDays": 862,
+        "marketCapUsd": 41041.0791284043,
+        "liquidityUsd": 20039.106805199594,
+        "totalHolders": 910,
+        "uniqueBuyers": 0,
+        "logo": "https://coin-images.coingecko.com/coins/images/37672/small/bonkethlogo_%282%29.png?1715186040",
+        "website": "https://bonketh.io/",
+        "score": 3.5,
+        "terms": {
+          "labelled": 0,
+          "exchange": 0,
+          "holders": 1.78,
+          "liquidity": 1.72,
+          "age": 0,
+          "fresh": 0,
+          "recognisedHolders": 0
+        },
+        "reasons": [
+          "0 labelled wallets in 7 days",
+          "no meaningful exchange flow",
+          "910 holders",
+          "2.4y old"
+        ],
+        "impostor": false,
+        "scorable": true,
+        "unchecked": false
+      },
+      {
+        "chain": "polygon",
+        "address": "0xe5b49820e5a1063f6f4ddf851327b5e8b2301048",
+        "name": "Bonk",
+        "symbol": "BONK",
+        "marketCap": 222283842,
+        "volume24h": 60.617546952086094,
+        "searchRank": 8156,
+        "labelledWallets": 0,
+        "smartTraderWallets": 0,
+        "whaleWallets": 0,
+        "topPnlWallets": 0,
+        "publicFigureWallets": 0,
+        "smartTraderNetFlowUsd": 0,
+        "exchangeNetFlowUsd": 190.02001236242694,
+        "freshNetFlowUsd": 0,
+        "exchangeTouched": true,
+        "freshShare": 0,
+        "errors": [],
+        "deploymentDate": "2023-03-15 20:48:04",
+        "ageDays": 1280,
+        "marketCapUsd": 220137423.90757546,
+        "liquidityUsd": 1372.785246137492,
+        "totalHolders": 2192,
+        "uniqueBuyers": 21,
+        "logo": "https://coin-images.coingecko.com/coins/images/28600/small/bonk.jpg?1696527587",
+        "website": "",
+        "score": 3.26,
+        "terms": {
+          "labelled": 0,
+          "exchange": 0,
+          "holders": 2,
+          "liquidity": 1.26,
+          "age": 0,
+          "fresh": 0,
+          "recognisedHolders": 0
+        },
+        "reasons": [
+          "0 labelled wallets in 7 days",
+          "no meaningful exchange flow",
+          "2K holders",
+          "3.5y old"
+        ],
+        "impostor": false,
+        "scorable": true,
+        "unchecked": false
+      }
+    ],
+    "abstained": false,
+    "stablecoin": false,
+    "candidatesTotal": 7,
+    "warnings": [],
+    "credits": 24,
+    "provenance": [
+      {
+        "endpoint": "search/general",
+        "body": {
+          "search_query": "BONK",
+          "result_type": "token",
+          "limit": 50
+        },
+        "credits": 0,
+        "ms": 500,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "tokens[].name",
+          "tokens[].symbol",
+          "tokens[].chain",
+          "tokens[].address",
+          "tokens[].market_cap",
+          "tokens[].volume_24h",
+          "tokens[].rank"
+        ],
+        "responseHash": "549abe90c4a095a5988cb3c0dc2880ad7bebc021ab0ffc6bf73cbfcbede0c90e",
+        "attempts": 1,
+        "totalMs": 500,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/token-information",
+        "body": {
+          "chain": "arbitrum",
+          "token_address": "0x09199d9a5f4448d0848e4395d065e1ad9c4a1f74",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 460,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "token_details.token_deployment_date",
+          "token_details.market_cap_usd",
+          "spot_metrics.liquidity_usd",
+          "spot_metrics.total_holders",
+          "spot_metrics.unique_buyers"
+        ],
+        "responseHash": "25b2ca137df0a7f038145c83bf7a3f3918c953a993482b8edff2085e164a94d6",
+        "attempts": 1,
+        "totalMs": 465,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/token-information",
+        "body": {
+          "chain": "bnb",
+          "token_address": "0xa697e272a73744b343528c3bc4702f2565b2f422",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 570,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "token_details.token_deployment_date",
+          "token_details.market_cap_usd",
+          "spot_metrics.liquidity_usd",
+          "spot_metrics.total_holders",
+          "spot_metrics.unique_buyers"
+        ],
+        "responseHash": "c701f02742ffc9d709712c48c4c757fa48aae6a4798646e75c416fbf41322d9f",
+        "attempts": 1,
+        "totalMs": 574,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/token-information",
+        "body": {
+          "chain": "ethereum",
+          "token_address": "0x1151cb3d861920e07a38e03eead12c32178567f6",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 834,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "token_details.token_deployment_date",
+          "token_details.market_cap_usd",
+          "spot_metrics.liquidity_usd",
+          "spot_metrics.total_holders",
+          "spot_metrics.unique_buyers"
+        ],
+        "responseHash": "fdbc57dae1caced9520317744cef09d33d0ee7191d4172b2b80d732a1dec7d07",
+        "attempts": 1,
+        "totalMs": 836,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/flow-intelligence",
+        "body": {
+          "chain": "ethereum",
+          "token_address": "0x1151cb3d861920e07a38e03eead12c32178567f6",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 855,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "smart_trader_wallet_count",
+          "whale_wallet_count",
+          "top_pnl_wallet_count",
+          "public_figure_wallet_count",
+          "smart_trader_net_flow_usd",
+          "whale_net_flow_usd",
+          "top_pnl_net_flow_usd",
+          "public_figure_net_flow_usd",
+          "exchange_net_flow_usd",
+          "fresh_wallets_net_flow_usd"
+        ],
+        "responseHash": "7892b4fe13c06a9aa49be3d436fe674972a2e04564b153b4719af2154a4e4e92",
+        "attempts": 1,
+        "totalMs": 856,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/token-information",
+        "body": {
+          "chain": "solana",
+          "token_address": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 993,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "token_details.token_deployment_date",
+          "token_details.market_cap_usd",
+          "spot_metrics.liquidity_usd",
+          "spot_metrics.total_holders",
+          "spot_metrics.unique_buyers"
+        ],
+        "responseHash": "26adab7a8a5903d4cc242594133e987881c1d0e3eb91001ccb7b8d8fb73c6953",
+        "attempts": 1,
+        "totalMs": 994,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/flow-intelligence",
+        "body": {
+          "chain": "arbitrum",
+          "token_address": "0x09199d9a5f4448d0848e4395d065e1ad9c4a1f74",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 996,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "smart_trader_wallet_count",
+          "whale_wallet_count",
+          "top_pnl_wallet_count",
+          "public_figure_wallet_count",
+          "smart_trader_net_flow_usd",
+          "whale_net_flow_usd",
+          "top_pnl_net_flow_usd",
+          "public_figure_net_flow_usd",
+          "exchange_net_flow_usd",
+          "fresh_wallets_net_flow_usd"
+        ],
+        "responseHash": "971f9fb27a648f7fb8c51ddf1dc24b512b0afde76462416a9aea79de33b8f0ad",
+        "attempts": 1,
+        "totalMs": 1001,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/flow-intelligence",
+        "body": {
+          "chain": "bnb",
+          "token_address": "0xa697e272a73744b343528c3bc4702f2565b2f422",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 1054,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "smart_trader_wallet_count",
+          "whale_wallet_count",
+          "top_pnl_wallet_count",
+          "public_figure_wallet_count",
+          "smart_trader_net_flow_usd",
+          "whale_net_flow_usd",
+          "top_pnl_net_flow_usd",
+          "public_figure_net_flow_usd",
+          "exchange_net_flow_usd",
+          "fresh_wallets_net_flow_usd"
+        ],
+        "responseHash": "b485db87c8a0d1fee6411994d2c316dd1fb674e7345aa7abbbdf26eca10cd46e",
+        "attempts": 1,
+        "totalMs": 1058,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/token-information",
+        "body": {
+          "chain": "polygon",
+          "token_address": "0xe5b49820e5a1063f6f4ddf851327b5e8b2301048",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 582,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "token_details.token_deployment_date",
+          "token_details.market_cap_usd",
+          "spot_metrics.liquidity_usd",
+          "spot_metrics.total_holders",
+          "spot_metrics.unique_buyers"
+        ],
+        "responseHash": "a312316511fb49ecaf07f418e6f5a58a208b0756a31880e9387e882e1cfd5130",
+        "attempts": 1,
+        "totalMs": 1085,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/flow-intelligence",
+        "body": {
+          "chain": "polygon",
+          "token_address": "0xe5b49820e5a1063f6f4ddf851327b5e8b2301048",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 1431,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "smart_trader_wallet_count",
+          "whale_wallet_count",
+          "top_pnl_wallet_count",
+          "public_figure_wallet_count",
+          "smart_trader_net_flow_usd",
+          "whale_net_flow_usd",
+          "top_pnl_net_flow_usd",
+          "public_figure_net_flow_usd",
+          "exchange_net_flow_usd",
+          "fresh_wallets_net_flow_usd"
+        ],
+        "responseHash": "68917cc05a0f772d0cf067ba4209c506c80272c93a74230a73337ce9b7452943",
+        "attempts": 1,
+        "totalMs": 1436,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/token-information",
+        "body": {
+          "chain": "ethereum",
+          "token_address": "0x4fbaf51b95b024d0d7cab575be2a1f0afedc9b64",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 534,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "token_details.token_deployment_date",
+          "token_details.market_cap_usd",
+          "spot_metrics.liquidity_usd",
+          "spot_metrics.total_holders",
+          "spot_metrics.unique_buyers"
+        ],
+        "responseHash": "dea171d4d2eef03112d9cd82c8fc565808db41affb7e5c13f28192f482e06c1b",
+        "attempts": 1,
+        "totalMs": 1538,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/flow-intelligence",
+        "body": {
+          "chain": "solana",
+          "token_address": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 1566,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "smart_trader_wallet_count",
+          "whale_wallet_count",
+          "top_pnl_wallet_count",
+          "public_figure_wallet_count",
+          "smart_trader_net_flow_usd",
+          "whale_net_flow_usd",
+          "top_pnl_net_flow_usd",
+          "public_figure_net_flow_usd",
+          "exchange_net_flow_usd",
+          "fresh_wallets_net_flow_usd"
+        ],
+        "responseHash": "4db447359540bb1b832e17222a5f423d07d6ffece0157024431fdef7ef653155",
+        "attempts": 1,
+        "totalMs": 1567,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/flow-intelligence",
+        "body": {
+          "chain": "base",
+          "token_address": "0x72499bddb67f4ca150e1f522ca82c87bc9fb18c8",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 907,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "smart_trader_wallet_count",
+          "whale_wallet_count",
+          "top_pnl_wallet_count",
+          "public_figure_wallet_count",
+          "smart_trader_net_flow_usd",
+          "whale_net_flow_usd",
+          "top_pnl_net_flow_usd",
+          "public_figure_net_flow_usd",
+          "exchange_net_flow_usd",
+          "fresh_wallets_net_flow_usd"
+        ],
+        "responseHash": "3166ebfbeb0c385ad83b0ea25e76c468d9c227400fd6458b69a60a6f82a32d00",
+        "attempts": 1,
+        "totalMs": 1913,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/token-information",
+        "body": {
+          "chain": "base",
+          "token_address": "0x72499bddb67f4ca150e1f522ca82c87bc9fb18c8",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 966,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "token_details.token_deployment_date",
+          "token_details.market_cap_usd",
+          "spot_metrics.liquidity_usd",
+          "spot_metrics.total_holders",
+          "spot_metrics.unique_buyers"
+        ],
+        "responseHash": "18d924d5e0a9a5315c0a774387f669ed83157e55b7d3a13a557de5af81624377",
+        "attempts": 1,
+        "totalMs": 1973,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/flow-intelligence",
+        "body": {
+          "chain": "ethereum",
+          "token_address": "0x4fbaf51b95b024d0d7cab575be2a1f0afedc9b64",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 2889,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "smart_trader_wallet_count",
+          "whale_wallet_count",
+          "top_pnl_wallet_count",
+          "public_figure_wallet_count",
+          "smart_trader_net_flow_usd",
+          "whale_net_flow_usd",
+          "top_pnl_net_flow_usd",
+          "public_figure_net_flow_usd",
+          "exchange_net_flow_usd",
+          "fresh_wallets_net_flow_usd"
+        ],
+        "responseHash": "df9d5fe41d15743f157bf1d466ee1c763c79569474dd51ade6886b3c82d842e0",
+        "attempts": 1,
+        "totalMs": 3897,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/holders",
+        "body": {
+          "chain": "ethereum",
+          "token_address": "0x1151cb3d861920e07a38e03eead12c32178567f6",
+          "pagination": {
+            "page": 1,
+            "per_page": 20
+          }
+        },
+        "credits": 5,
+        "ms": 1738,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "data[].address_label",
+          "data[].ownership_percentage"
+        ],
+        "responseHash": "4cdd9f9ecad6bb2e4b1dc27e137ec1aaeb7085cc6c4c9e14ba9f250467761951",
+        "attempts": 1,
+        "totalMs": 1740,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/holders",
+        "body": {
+          "chain": "solana",
+          "token_address": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+          "pagination": {
+            "page": 1,
+            "per_page": 20
+          }
+        },
+        "credits": 5,
+        "ms": 3075,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "data[].address_label",
+          "data[].ownership_percentage"
+        ],
+        "responseHash": "705f77a9fa9d94c2ce0c2e6181384d492fbe68f9152f7da9bafe62209d511d53",
+        "attempts": 1,
+        "totalMs": 3075,
+        "ok": true
+      }
+    ],
+    "ms": 7477,
+    "weights": {
+      "labelled": 3,
+      "exchange": 0.6,
+      "holders": 0.6,
+      "liquidity": 0.4,
+      "young7": 2,
+      "young30": 1,
+      "freshPenalty": 1.5,
+      "recognisedHolders": 0.8
+    },
+    "hash": "15a9378079e950b9bbac3261edc67f771c6db2da02c69c4bfdfac5ec649e312b"
+  }
+}

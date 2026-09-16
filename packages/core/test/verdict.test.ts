@@ -1,35 +1,9 @@
 import { describe, it, expect } from "vitest";
 import { whichOnesReal } from "../src/verdict.js";
-import { fakeClient, searchTokens, flowRow, infoRow, holdersRows } from "./helpers.js";
+import { fakeClient, searchTokens, flowRow, infoRow, holdersRows, pepeRoutes, PEPE_REAL, PEPE_IMP, PEPE_OLD } from "./helpers.js";
 
 const NOW = Date.parse("2026-09-16T12:00:00Z");
-const REAL = "0x6982508145454ce325ddbe47a25d4ec3d2311933";
-const IMP = "0x" + "b".repeat(40);
-const OLD = "0x" + "c".repeat(40);
-
-/** Routes modelled on the live PEPE probe: one real, one 3-day-old impostor, one old dead token, one perp market. */
-function pepeRoutes(endpoint: string, body: Record<string, unknown>) {
-  if (endpoint === "search/general") return searchTokens([
-    { chain: "hyperliquid", address: "PEPE", rank: 1 },
-    { chain: "ethereum", address: REAL, rank: 2, market_cap: 1.4e9 },
-    { chain: "base", address: IMP, rank: 3, market_cap: 2e9 },          // impostor with the bigger cap
-    { chain: "base", address: OLD, rank: 4 },
-    { chain: "solana", address: "Fuzzy", rank: 5, symbol: "PEPEX", name: "Pepe X" }, // fuzzy hit, filtered
-  ]);
-  const a = String(body.token_address);
-  if (endpoint === "tgm/flow-intelligence") {
-    if (a === REAL) return flowRow({ smart_trader_wallet_count: 38, top_pnl_wallet_count: 26, whale_wallet_count: 1, public_figure_wallet_count: 4, exchange_net_flow_usd: 1_895_861, fresh_wallets_net_flow_usd: 17_027_659, smart_trader_net_flow_usd: 29_948 });
-    if (a === IMP) return flowRow({ fresh_wallets_net_flow_usd: 90_000, exchange_net_flow_usd: 300 });
-    return flowRow({ exchange_net_flow_usd: 4_310 });
-  }
-  if (endpoint === "tgm/token-information") {
-    if (a === REAL) return infoRow({ deployed: "2023-04-14 14:51:35", holders: 400_392, liquidity: 13_803_928 });
-    if (a === IMP) return infoRow({ deployed: "2026-09-13 09:00:00", holders: 900, liquidity: 500_000 });
-    return infoRow({ deployed: "2024-08-10 00:00:00", holders: 11_225, liquidity: 176_747 });
-  }
-  if (endpoint === "tgm/holders") return holdersRows(a === REAL ? Array(18).fill("Binance").concat(["Token Contract", null]) : [null, null, null]);
-  throw new Error("unexpected " + endpoint);
-}
+const REAL = PEPE_REAL, IMP = PEPE_IMP, OLD = PEPE_OLD;
 
 describe("whichOnesReal()", () => {
   it("crowns the labelled token over a younger, bigger-cap impostor; flags the impostor; excludes fuzzy and perp rows from ranking", async () => {
@@ -209,5 +183,24 @@ describe("review round 2 (2026-09-16)", () => {
     const v = await whichOnesReal(c, "PEPE", { now: NOW });
     expect(v.abstained).toBe(true);
     expect(v.abstainReason).toMatch(/holders lookup failed .* retry/);
+  });
+});
+
+describe("holders tiebreak (fixture edge 8 — no live ticker produced a flow tie on 2026-09-16, so the flip is proven here)", () => {
+  it("two candidates with identical flow facts: the one Nansen recognises more holders of wins, and the reason says so", async () => {
+    const A = "0x" + "1".repeat(40), B = "0x" + "2".repeat(40);
+    const c = fakeClient((ep, body) => {
+      if (ep === "search/general") return searchTokens([{ chain: "ethereum", address: A }, { chain: "base", address: B }]);
+      if (ep === "tgm/flow-intelligence") return flowRow({ smart_trader_wallet_count: 3, exchange_net_flow_usd: 50_000 });
+      if (ep === "tgm/token-information") return infoRow({ deployed: "2024-01-01 00:00:00", holders: 5000, liquidity: 200_000 });
+      if (ep === "tgm/holders") return holdersRows(body.token_address === B ? Array(15).fill("Token Millionaire").concat(Array(5).fill(null)) : [null, "Token Millionaire"]);
+      throw new Error("unexpected " + ep);
+    });
+    const v = await whichOnesReal(c, "PEPE", { now: NOW });
+    expect(v.winner?.address).toBe(B);
+    const [first, second] = v.ranked;
+    expect(first.score - first.terms.recognisedHolders).toBeCloseTo(second.score - second.terms.recognisedHolders, 6); // tied before the tiebreak
+    expect(first.reasons).toContain("15 of top 20 holders tagged by Nansen (Token Millionaire ×15)");
+    expect(v.provenance.filter((p) => p.endpoint === "tgm/holders")).toHaveLength(2);
   });
 });

@@ -1,0 +1,1185 @@
+{
+  "edge": "7 · an impostor with a higher market cap than the winner — score beats market cap",
+  "query": "DEGEN",
+  "options": {},
+  "now": 1789562414761,
+  "recordedAt": "2026-09-16T12:40:14.761Z",
+  "live": {
+    "calls": 19,
+    "credits": 26,
+    "ms": 4663
+  },
+  "responses": {
+    "bf8b81b1054c47ce8957504b15821acf": {
+      "storedAt": "2026-09-16T12:40:15.206Z",
+      "ttlMs": 1800000,
+      "endpoint": "search/general",
+      "body": {
+        "search_query": "DEGEN",
+        "result_type": "token",
+        "limit": 50
+      },
+      "text": "{\"tokens\":[{\"name\":\"Degen\",\"symbol\":\"DEGEN\",\"chain\":\"base\",\"address\":\"0x4ed4e862860bed51a9570b96d89af5e1b0efefed\",\"price\":0.000965788387003728,\"volume_24h\":34014.81536422938,\"market_cap\":34929299.8103937,\"rank\":1819},{\"name\":\"Degen Spartan AI\",\"symbol\":\"DEGENAI\",\"chain\":\"solana\",\"address\":\"Gu3LDkn7Vx3bmCzLafYNKcDxv2mH7YN44NJZFXnypump\",\"price\":0.00011842871504105055,\"volume_24h\":345.2395775456934,\"market_cap\":118411.614633011,\"rank\":2793},{\"name\":\"Degen\",\"symbol\":\"DEGEN\",\"chain\":\"ethereum\",\"address\":\"0xbe92b510007bd3ec0adb3d1fca338dd631e98de7\",\"price\":1.34276751508602e-6,\"volume_24h\":7.549663748888609,\"market_cap\":207746.084216674,\"rank\":2995},{\"name\":\"Bullish Degen\",\"symbol\":\"BULLISH\",\"chain\":\"solana\",\"address\":\"C2omVhcvt3DDY77S2KZzawFJQeETZofgZ4eNWWkXpump\",\"price\":0.0006482922909644067,\"volume_24h\":15523.585874320317,\"market_cap\":660620.9532,\"rank\":4142},{\"name\":\"Degen\",\"symbol\":\"DEGEN\",\"chain\":\"solana\",\"address\":\"A7n89LqW67HJKzJkdWZa2xojuK4N5GBKHz3dfjATCZPz\",\"price\":0.0009735638580079025,\"volume_24h\":1692.9388729574707,\"market_cap\":35198730.3191944,\"rank\":5471},{\"name\":\"Degenerate\",\"symbol\":\"DEGEN\",\"chain\":\"solana\",\"address\":\"6ztpBm31cmBNPwa396ocmDfaWyKKY95Bu8T664QfCe7f\",\"price\":0.00002208333229008467,\"volume_24h\":103.38204371024544,\"market_cap\":21928.586471132,\"rank\":7676},{\"name\":\"DEGEN\",\"symbol\":\"DEGEN\",\"chain\":\"ethereum\",\"address\":\"0xfee293840d23b0b2de8c55e1cf7a9f01c157767c\",\"price\":0.00108087538435689,\"volume_24h\":32.94680794717681,\"market_cap\":41937813.0738376,\"rank\":8619},{\"name\":\"Degen\",\"symbol\":\"DGN\",\"chain\":\"solana\",\"address\":\"Fd8TNp5GhhTk6Uq6utMvK13vfQdLN1yUUHCnapWvpump\",\"price\":0.00025370663302571624,\"volume_24h\":27.938720472207688,\"market_cap\":253706.633,\"rank\":8738},{\"name\":\"Degen Danny\",\"symbol\":\"DANNY\",\"chain\":\"solana\",\"address\":\"5NHd3MsP6dXi9r1saPkeB2DoZyXLvPiqv4n9J54Cpump\",\"price\":8.215592186159545e-6,\"volume_24h\":4.623837695174241,\"market_cap\":8702.91789054644,\"rank\":9805},{\"name\":\"Degen Perp Dex\",\"symbol\":\"PDGN\",\"chain\":\"bnb\",\"address\":\"0x6dc9f6764f18a4a299c968653d1ad8ccdda04444\",\"price\":5.04973924494102e-6,\"volume_24h\":2.666133505860079,\"market_cap\":5049.739245,\"rank\":10062},{\"name\":\"degenerative SITCOM\",\"symbol\":\"SITCOM\",\"chain\":\"solana\",\"address\":\"AK9yVoXKK1Cjww7HDyjYNyW5FujD3FJ2xbjMUStspump\",\"price\":0.00013441807062423126,\"volume_24h\":0.16075695975519264,\"market_cap\":135714.990607364,\"rank\":10616},{\"name\":\"Degen Point Of View\",\"symbol\":\"POV\",\"chain\":\"base\",\"address\":\"0x4c96a67b0577358894407af7bc3158fc1dffbeb5\",\"price\":1.47022149563052e-8,\"volume_24h\":0.0019124458361705495,\"market_cap\":14702.21496,\"rank\":10862},{\"name\":\"DEGEN\",\"symbol\":\"DEGEN\",\"chain\":\"robinhood\",\"address\":\"0x0830a9dd26a04e959657ab6788d45f5725590c32\",\"price\":0.000529814062385693,\"volume_24h\":0.0,\"market_cap\":18998499.7951854,\"rank\":11259},{\"name\":\"DEGEN\",\"symbol\":\"DEGEN\",\"chain\":\"arbitrum\",\"address\":\"0x9f07f8a82cb1af1466252e505b7b7ddee103bc91\",\"price\":0.0009635031160869854,\"volume_24h\":0.0,\"market_cap\":34866827.0,\"rank\":11373},{\"name\":\"US Degen Index 6900\",\"symbol\":\"DXY\",\"chain\":\"ethereum\",\"address\":\"0x6900f7b42fb4abb615c938db6a26d73a9afbed69\",\"price\":0.000102691407611549,\"volume_24h\":0.0,\"market_cap\":103736.620827625,\"rank\":12908},{\"name\":\"Degenerate SQuiD by Virtuals\",\"symbol\":\"SQDGN\",\"chain\":\"base\",\"address\":\"0x4674f73545f1db4036250ff8c33a39ad1678d864\",\"price\":0.0000574488030226619,\"volume_24h\":0.0,\"market_cap\":57235.31728,\"rank\":13189},{\"name\":\"degenOS\",\"symbol\":\"DEGENOS\",\"chain\":\"base\",\"address\":\"0x1014fc96b37225e56f171a107bebef03800ff8f8\",\"price\":3.77032075362611e-7,\"volume_24h\":0.0,\"market_cap\":39468.27857,\"rank\":13387},{\"name\":\"World Series of Degens\",\"symbol\":\"WSOD\",\"chain\":\"solana\",\"address\":\"CLyhG2aVrnvbxXAXokBGvKjmNfsamPKtGW4Gu9AHpump\",\"price\":0.000035272654561644,\"volume_24h\":0.0,\"market_cap\":35166.59297,\"rank\":13459},{\"name\":\"Degen Capital by Virtuals\",\"symbol\":\"DEGENC\",\"chain\":\"base\",\"address\":\"0x99298c6be0e8ec9e56b7a2be5850abe1fc109d94\",\"price\":0.0000195450494702592,\"volume_24h\":0.0,\"market_cap\":19218.1360444627,\"rank\":13807},{\"name\":\"Degen Arena\",\"symbol\":\"DEGEN\",\"chain\":\"ethereum\",\"address\":\"0x420658a1d8b8f5c36ddaf1bb828f347ba9011969\",\"price\":3.82070991516373e-11,\"volume_24h\":0.0,\"market_cap\":16073.3445414135,\"rank\":13913},{\"name\":\"Morpho Degen\",\"symbol\":\"MDEGEN\",\"chain\":\"base\",\"address\":\"0x8c3a6b12332a6354805eb4b72ef619aedd22bcdd\",\"price\":0.000364519450964683,\"volume_24h\":0.0,\"market_cap\":1016.2633087318,\"rank\":14896},{\"name\":\"Degen\",\"symbol\":\"DEGN\",\"chain\":\"solana\",\"address\":\"A9UhP1xfQHWUhSd54NgKPub2XB3ZuQMdPEvf9aMTHxGT\",\"price\":5.952805228e-8,\"volume_24h\":0.0,\"market_cap\":878.1574436425,\"rank\":14912}],\"entities\":[],\"total_results\":22}"
+    },
+    "1b9615e953f5c38a00ee8c40da738ec1": {
+      "storedAt": "2026-09-16T12:40:15.683Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/flow-intelligence",
+      "body": {
+        "chain": "ethereum",
+        "token_address": "0xbe92b510007bd3ec0adb3d1fca338dd631e98de7",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":[{\"public_figure_net_flow_usd\":0.0,\"public_figure_avg_flow_usd\":null,\"public_figure_wallet_count\":0,\"top_pnl_net_flow_usd\":0.0,\"top_pnl_avg_flow_usd\":null,\"top_pnl_wallet_count\":0,\"whale_net_flow_usd\":0.0,\"whale_avg_flow_usd\":null,\"whale_wallet_count\":0,\"smart_trader_net_flow_usd\":0.0,\"smart_trader_avg_flow_usd\":null,\"smart_trader_wallet_count\":0,\"exchange_net_flow_usd\":1663.293656863112,\"exchange_avg_flow_usd\":1663.293656400197,\"exchange_wallet_count\":0,\"fresh_wallets_net_flow_usd\":0.0,\"fresh_wallets_avg_flow_usd\":0.0,\"fresh_wallets_wallet_count\":0}],\"warnings\":[\"exchange_wallet_count is always 0 (not tracked), even when exchange net flow is non-zero.\"]}"
+    },
+    "059a06b08ae987d76a62f1327f4e8046": {
+      "storedAt": "2026-09-16T12:40:15.751Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/token-information",
+      "body": {
+        "chain": "ethereum",
+        "token_address": "0xbe92b510007bd3ec0adb3d1fca338dd631e98de7",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":{\"name\":\"Degen\",\"symbol\":\"DEGEN\",\"contract_address\":\"0xbe92b510007bd3ec0adb3d1fca338dd631e98de7\",\"logo\":\"https://coin-images.coingecko.com/coins/images/30487/small/degen_logo_twit.png?1696529373\",\"token_details\":{\"token_deployment_date\":\"2023-05-11 20:35:11\",\"website\":\"https://degenstogether.com\",\"x\":\"degenstogether\",\"telegram\":\"degenstogether\",\"market_cap_usd\":200754.70355784966,\"fdv_usd\":200754.703556661,\"circulating_supply\":149508162286.0,\"total_supply\":149508162286.0},\"spot_metrics\":{\"volume_total_usd\":1650.0858235678295,\"buy_volume_usd\":0.0,\"sell_volume_usd\":1650.0858235678295,\"total_buys\":0,\"total_sells\":12,\"unique_buyers\":0,\"unique_sellers\":12,\"liquidity_usd\":167128.42958819366,\"total_holders\":1739}}}"
+    },
+    "2a657cb3f43ea4bdfe3edf10d9e68a3f": {
+      "storedAt": "2026-09-16T12:40:15.811Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/token-information",
+      "body": {
+        "chain": "base",
+        "token_address": "0x4ed4e862860bed51a9570b96d89af5e1b0efefed",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":{\"name\":\"Degen\",\"symbol\":\"DEGEN\",\"contract_address\":\"0x4ed4e862860bed51a9570b96d89af5e1b0efefed\",\"logo\":\"https://coin-images.coingecko.com/coins/images/34515/small/android-chrome-512x512.png?1706198225\",\"token_details\":{\"token_deployment_date\":\"2024-01-07 15:25:35\",\"website\":\"https://www.degen.tips/\",\"x\":\"degentokenbase\",\"telegram\":\"degentokenbase\",\"market_cap_usd\":34669303.17388986,\"fdv_usd\":35447187.9363496,\"circulating_supply\":36154516244.57741,\"total_supply\":36154516244.57741},\"spot_metrics\":{\"volume_total_usd\":204303.49131069024,\"buy_volume_usd\":79781.61979932536,\"sell_volume_usd\":124521.8715113649,\"total_buys\":3920,\"total_sells\":9881,\"unique_buyers\":848,\"unique_sellers\":2316,\"liquidity_usd\":814792.4027412458,\"total_holders\":54523}}}"
+    },
+    "2d312f8a610e8fbaffab4bb7d82aa7da": {
+      "storedAt": "2026-09-16T12:40:15.983Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/token-information",
+      "body": {
+        "chain": "solana",
+        "token_address": "A7n89LqW67HJKzJkdWZa2xojuK4N5GBKHz3dfjATCZPz",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":{\"name\":\"Degen\",\"symbol\":\"DEGEN\",\"contract_address\":\"A7n89LqW67HJKzJkdWZa2xojuK4N5GBKHz3dfjATCZPz\",\"logo\":\"https://coin-images.coingecko.com/coins/images/34515/small/android-chrome-512x512.png?1706198225\",\"token_details\":{\"token_deployment_date\":\"2025-01-13 14:22:29\",\"website\":\"\",\"x\":\"\",\"telegram\":\"\",\"market_cap_usd\":35198730.319480166,\"fdv_usd\":319274.313830005,\"circulating_supply\":36154516244.57741,\"total_supply\":36154516244.57741},\"spot_metrics\":{\"volume_total_usd\":15290.214711295874,\"buy_volume_usd\":6376.978365310602,\"sell_volume_usd\":8913.236345985271,\"total_buys\":170,\"total_sells\":293,\"unique_buyers\":13,\"unique_sellers\":21,\"liquidity_usd\":98059.88448461158,\"total_holders\":375}}}"
+    },
+    "293b04c02f16a43b90562518293f9bcf": {
+      "storedAt": "2026-09-16T12:40:16.071Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/flow-intelligence",
+      "body": {
+        "chain": "solana",
+        "token_address": "A7n89LqW67HJKzJkdWZa2xojuK4N5GBKHz3dfjATCZPz",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":[{\"public_figure_net_flow_usd\":0.0,\"public_figure_avg_flow_usd\":null,\"public_figure_wallet_count\":0,\"top_pnl_net_flow_usd\":0.0,\"top_pnl_avg_flow_usd\":null,\"top_pnl_wallet_count\":0,\"whale_net_flow_usd\":0.0,\"whale_avg_flow_usd\":null,\"whale_wallet_count\":0,\"smart_trader_net_flow_usd\":0.0,\"smart_trader_avg_flow_usd\":null,\"smart_trader_wallet_count\":0,\"exchange_net_flow_usd\":965.0745189560546,\"exchange_avg_flow_usd\":745.3511377488509,\"exchange_wallet_count\":0,\"fresh_wallets_net_flow_usd\":0.0,\"fresh_wallets_avg_flow_usd\":0.0,\"fresh_wallets_wallet_count\":0}],\"warnings\":[\"exchange_wallet_count is always 0 (not tracked), even when exchange net flow is non-zero.\"]}"
+    },
+    "7edfd58f0827a7de484d1296b1569d72": {
+      "storedAt": "2026-09-16T12:40:16.079Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/token-information",
+      "body": {
+        "chain": "ethereum",
+        "token_address": "0xfee293840d23b0b2de8c55e1cf7a9f01c157767c",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":{\"name\":\"DEGEN\",\"symbol\":\"DEGEN\",\"contract_address\":\"0xfee293840d23b0b2de8c55e1cf7a9f01c157767c\",\"logo\":\"https://coin-images.coingecko.com/coins/images/34515/small/android-chrome-512x512.png?1706198225\",\"token_details\":{\"token_deployment_date\":\"2024-04-19 14:48:23\",\"website\":\"\",\"x\":\"\",\"telegram\":\"\",\"market_cap_usd\":39078526.64209503,\"fdv_usd\":31135.7398247684,\"circulating_supply\":36154516244.57741,\"total_supply\":36154516244.57741},\"spot_metrics\":{\"volume_total_usd\":32.94691076979045,\"buy_volume_usd\":0.0,\"sell_volume_usd\":32.94691076979045,\"total_buys\":0,\"total_sells\":2,\"unique_buyers\":0,\"unique_sellers\":2,\"liquidity_usd\":13451.025757806921,\"total_holders\":268}}}"
+    },
+    "780930d59eca65853266cfbaa3f377f1": {
+      "storedAt": "2026-09-16T12:40:16.174Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/flow-intelligence",
+      "body": {
+        "chain": "base",
+        "token_address": "0x4ed4e862860bed51a9570b96d89af5e1b0efefed",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":[{\"public_figure_net_flow_usd\":-19.91489435331169,\"public_figure_avg_flow_usd\":null,\"public_figure_wallet_count\":1,\"top_pnl_net_flow_usd\":301.65877472019145,\"top_pnl_avg_flow_usd\":272.13729061889785,\"top_pnl_wallet_count\":1,\"whale_net_flow_usd\":0.0,\"whale_avg_flow_usd\":null,\"whale_wallet_count\":0,\"smart_trader_net_flow_usd\":0.0,\"smart_trader_avg_flow_usd\":null,\"smart_trader_wallet_count\":0,\"exchange_net_flow_usd\":-90472.15793820396,\"exchange_avg_flow_usd\":101465.18287773654,\"exchange_wallet_count\":0,\"fresh_wallets_net_flow_usd\":0.0,\"fresh_wallets_avg_flow_usd\":0.0,\"fresh_wallets_wallet_count\":0}],\"warnings\":[\"exchange_wallet_count is always 0 (not tracked), even when exchange net flow is non-zero.\"]}"
+    },
+    "c4056a0bc6f7079c315ff34b13c9b08d": {
+      "storedAt": "2026-09-16T12:40:16.193Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/token-information",
+      "body": {
+        "chain": "solana",
+        "token_address": "6ztpBm31cmBNPwa396ocmDfaWyKKY95Bu8T664QfCe7f",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":{\"name\":\"Degenerate\",\"symbol\":\"DEGEN\",\"contract_address\":\"6ztpBm31cmBNPwa396ocmDfaWyKKY95Bu8T664QfCe7f\",\"logo\":\"https://coin-images.coingecko.com/coins/images/66735/small/cg.png?1750323793\",\"token_details\":{\"token_deployment_date\":\"2024-03-18 21:29:57\",\"website\":\"https://soldegens.com\",\"x\":\"ogdegenonsol\",\"telegram\":\"werealldegens\",\"market_cap_usd\":22205.23821555044,\"fdv_usd\":22205.2382155504,\"circulating_supply\":999367204.882548,\"total_supply\":999367204.882548},\"spot_metrics\":{\"volume_total_usd\":948.8766368887627,\"buy_volume_usd\":277.2388345927182,\"sell_volume_usd\":671.6378022960446,\"total_buys\":14,\"total_sells\":18,\"unique_buyers\":4,\"unique_sellers\":12,\"liquidity_usd\":9006.981477576626,\"total_holders\":180}}}"
+    },
+    "cdff3742f49bfadc2ad703e349fdcfd1": {
+      "storedAt": "2026-09-16T12:40:16.280Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/flow-intelligence",
+      "body": {
+        "chain": "ethereum",
+        "token_address": "0xfee293840d23b0b2de8c55e1cf7a9f01c157767c",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":[{\"public_figure_net_flow_usd\":0.0,\"public_figure_avg_flow_usd\":null,\"public_figure_wallet_count\":0,\"top_pnl_net_flow_usd\":0.0,\"top_pnl_avg_flow_usd\":null,\"top_pnl_wallet_count\":0,\"whale_net_flow_usd\":0.0,\"whale_avg_flow_usd\":null,\"whale_wallet_count\":0,\"smart_trader_net_flow_usd\":0.0,\"smart_trader_avg_flow_usd\":null,\"smart_trader_wallet_count\":0,\"exchange_net_flow_usd\":36.8964279065086,\"exchange_avg_flow_usd\":159.14006457317646,\"exchange_wallet_count\":0,\"fresh_wallets_net_flow_usd\":0.0,\"fresh_wallets_avg_flow_usd\":0.0,\"fresh_wallets_wallet_count\":0}],\"warnings\":[\"exchange_wallet_count is always 0 (not tracked), even when exchange net flow is non-zero.\"]}"
+    },
+    "c93696dbb37a4dba53903dc388ed1f56": {
+      "storedAt": "2026-09-16T12:40:16.280Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/flow-intelligence",
+      "body": {
+        "chain": "solana",
+        "token_address": "6ztpBm31cmBNPwa396ocmDfaWyKKY95Bu8T664QfCe7f",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":[{\"public_figure_net_flow_usd\":-0.9983815317897751,\"public_figure_avg_flow_usd\":null,\"public_figure_wallet_count\":1,\"top_pnl_net_flow_usd\":0.0,\"top_pnl_avg_flow_usd\":null,\"top_pnl_wallet_count\":0,\"whale_net_flow_usd\":0.0,\"whale_avg_flow_usd\":null,\"whale_wallet_count\":0,\"smart_trader_net_flow_usd\":0.0,\"smart_trader_avg_flow_usd\":null,\"smart_trader_wallet_count\":0,\"exchange_net_flow_usd\":-314.97698165594767,\"exchange_avg_flow_usd\":463.00699485601814,\"exchange_wallet_count\":0,\"fresh_wallets_net_flow_usd\":0.0,\"fresh_wallets_avg_flow_usd\":0.0,\"fresh_wallets_wallet_count\":0}],\"warnings\":[\"exchange_wallet_count is always 0 (not tracked), even when exchange net flow is non-zero.\"]}"
+    },
+    "d61b2ffa16255e1248b7aad258c424cf": {
+      "storedAt": "2026-09-16T12:40:16.517Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/flow-intelligence",
+      "body": {
+        "chain": "solana",
+        "token_address": "Fd8TNp5GhhTk6Uq6utMvK13vfQdLN1yUUHCnapWvpump",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":[{\"public_figure_net_flow_usd\":0.0,\"public_figure_avg_flow_usd\":null,\"public_figure_wallet_count\":0,\"top_pnl_net_flow_usd\":0.0,\"top_pnl_avg_flow_usd\":null,\"top_pnl_wallet_count\":0,\"whale_net_flow_usd\":0.0,\"whale_avg_flow_usd\":null,\"whale_wallet_count\":0,\"smart_trader_net_flow_usd\":0.0,\"smart_trader_avg_flow_usd\":null,\"smart_trader_wallet_count\":0,\"exchange_net_flow_usd\":-4233.514163060179,\"exchange_avg_flow_usd\":1153.153473598833,\"exchange_wallet_count\":0,\"fresh_wallets_net_flow_usd\":0.0,\"fresh_wallets_avg_flow_usd\":0.0,\"fresh_wallets_wallet_count\":0}],\"warnings\":[\"exchange_wallet_count is always 0 (not tracked), even when exchange net flow is non-zero.\"]}"
+    },
+    "da1c80d3cc60e4c2659c38dfe0126f60": {
+      "storedAt": "2026-09-16T12:40:16.543Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/token-information",
+      "body": {
+        "chain": "arbitrum",
+        "token_address": "0x9f07f8a82cb1af1466252e505b7b7ddee103bc91",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":{\"name\":\"DEGEN\",\"symbol\":\"DEGEN\",\"contract_address\":\"0x9f07f8a82cb1af1466252e505b7b7ddee103bc91\",\"logo\":\"https://coin-images.coingecko.com/coins/images/34515/small/android-chrome-512x512.png?1706198225\",\"token_details\":{\"token_deployment_date\":\"2024-04-19 14:23:13\",\"website\":\"\",\"x\":\"\",\"telegram\":\"\",\"market_cap_usd\":34782915.07022905,\"fdv_usd\":34885655.0,\"circulating_supply\":36154516244.57741,\"total_supply\":36154516244.57741},\"spot_metrics\":{\"volume_total_usd\":0.000998869116714453,\"buy_volume_usd\":0.000998869116714453,\"sell_volume_usd\":0.0,\"total_buys\":1,\"total_sells\":0,\"unique_buyers\":1,\"unique_sellers\":0,\"liquidity_usd\":0.0,\"total_holders\":40}}}"
+    },
+    "d20b060e85b0b72584e3ed61acbb82b7": {
+      "storedAt": "2026-09-16T12:40:16.885Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/flow-intelligence",
+      "body": {
+        "chain": "robinhood",
+        "token_address": "0x0830a9dd26a04e959657ab6788d45f5725590c32",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":[{\"public_figure_net_flow_usd\":0.0,\"public_figure_avg_flow_usd\":null,\"public_figure_wallet_count\":0,\"top_pnl_net_flow_usd\":0.0,\"top_pnl_avg_flow_usd\":null,\"top_pnl_wallet_count\":0,\"whale_net_flow_usd\":0.0,\"whale_avg_flow_usd\":null,\"whale_wallet_count\":0,\"smart_trader_net_flow_usd\":0.0,\"smart_trader_avg_flow_usd\":null,\"smart_trader_wallet_count\":0,\"exchange_net_flow_usd\":132.35088383610793,\"exchange_avg_flow_usd\":132.35088385296382,\"exchange_wallet_count\":0,\"fresh_wallets_net_flow_usd\":0.0,\"fresh_wallets_avg_flow_usd\":0.0,\"fresh_wallets_wallet_count\":0}],\"warnings\":[\"exchange_wallet_count is always 0 (not tracked), even when exchange net flow is non-zero.\"]}"
+    },
+    "8ef5cce26f7363d8e566369726e3a193": {
+      "storedAt": "2026-09-16T12:40:17.015Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/token-information",
+      "body": {
+        "chain": "robinhood",
+        "token_address": "0x0830a9dd26a04e959657ab6788d45f5725590c32",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":{\"name\":\"DEGEN\",\"symbol\":\"DEGEN\",\"contract_address\":\"0x0830a9dd26a04e959657ab6788d45f5725590c32\",\"logo\":\"https://coin-images.coingecko.com/coins/images/34515/small/android-chrome-512x512.png?1706198225\",\"token_details\":{\"token_deployment_date\":\"2026-07-16 08:51:26\",\"website\":\"\",\"x\":\"\",\"telegram\":\"\",\"market_cap_usd\":19155171.12512909,\"fdv_usd\":590836.50923947,\"circulating_supply\":36154516244.57741,\"total_supply\":36154516244.57741},\"spot_metrics\":{\"volume_total_usd\":226.41326504485448,\"buy_volume_usd\":13.963873821749353,\"sell_volume_usd\":212.44939122310512,\"total_buys\":9,\"total_sells\":17,\"unique_buyers\":3,\"unique_sellers\":9,\"liquidity_usd\":819.3889256686102,\"total_holders\":31}}}"
+    },
+    "3e5a34073b6d22d866d4b3fd4ecc3119": {
+      "storedAt": "2026-09-16T12:40:17.021Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/flow-intelligence",
+      "body": {
+        "chain": "arbitrum",
+        "token_address": "0x9f07f8a82cb1af1466252e505b7b7ddee103bc91",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":[{\"public_figure_net_flow_usd\":0.0,\"public_figure_avg_flow_usd\":null,\"public_figure_wallet_count\":0,\"top_pnl_net_flow_usd\":0.0,\"top_pnl_avg_flow_usd\":null,\"top_pnl_wallet_count\":0,\"whale_net_flow_usd\":0.0,\"whale_avg_flow_usd\":null,\"whale_wallet_count\":0,\"smart_trader_net_flow_usd\":0.0,\"smart_trader_avg_flow_usd\":null,\"smart_trader_wallet_count\":0,\"exchange_net_flow_usd\":-0.0001453319468100059,\"exchange_avg_flow_usd\":null,\"exchange_wallet_count\":0,\"fresh_wallets_net_flow_usd\":0.0,\"fresh_wallets_avg_flow_usd\":0.0,\"fresh_wallets_wallet_count\":0}],\"warnings\":[\"exchange_wallet_count is always 0 (not tracked), even when exchange net flow is non-zero.\"]}"
+    },
+    "ee33a061089067f75011b893da6d2479": {
+      "storedAt": "2026-09-16T12:40:17.059Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/token-information",
+      "body": {
+        "chain": "solana",
+        "token_address": "Fd8TNp5GhhTk6Uq6utMvK13vfQdLN1yUUHCnapWvpump",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":{\"name\":\"Degen\",\"symbol\":\"DGN\",\"contract_address\":\"Fd8TNp5GhhTk6Uq6utMvK13vfQdLN1yUUHCnapWvpump\",\"logo\":\"https://coin-images.coingecko.com/coins/images/68000/small/dgn-logo-200x200.png?1754549112\",\"token_details\":{\"token_deployment_date\":\"2025-07-02 14:04:30\",\"website\":\"https://degen.fyi\",\"x\":\"degen_fyi\",\"telegram\":\"degen_fyi\",\"market_cap_usd\":253706.63302571623,\"fdv_usd\":253704.468452821,\"circulating_supply\":1000000000.0,\"total_supply\":1000000000.0},\"spot_metrics\":{\"volume_total_usd\":7906.866886461807,\"buy_volume_usd\":6076.2753734058015,\"sell_volume_usd\":1830.5915130560052,\"total_buys\":78,\"total_sells\":33,\"unique_buyers\":40,\"unique_sellers\":31,\"liquidity_usd\":26142.152021812813,\"total_holders\":250}}}"
+    },
+    "442eadb041d86174d062e8eaf7b81bcd": {
+      "storedAt": "2026-09-16T12:40:18.242Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/holders",
+      "body": {
+        "chain": "base",
+        "token_address": "0x4ed4e862860bed51a9570b96d89af5e1b0efefed",
+        "pagination": {
+          "page": 1,
+          "per_page": 20
+        }
+      },
+      "text": "{\"data\":[{\"address\":\"0x06a19654e0872ba71c2261ea691ecf8a0c677156\",\"address_label\":\"Token Millionaire\",\"token_amount\":8146548469.70615,\"total_outflow\":18077302568.512306,\"total_inflow\":26223851038.218456,\"balance_change_24h\":0.0,\"balance_change_7d\":7205327.135002076,\"balance_change_30d\":53342877.1162829,\"ownership_percentage\":0.225302395255636,\"value_usd\":7811891.516025794},{\"address\":\"0x82d4cd9bf16017fd518511d8bbe6d0493af31a10\",\"address_label\":\"Token Millionaire\",\"token_amount\":2023345890.1207378,\"total_outflow\":1479724107.5645761,\"total_inflow\":3503069997.6853137,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.055958014264572635,\"value_usd\":1940227.6500037794},{\"address\":\"0x9773c9e7d048ae91a4fd9a48cd0b984e31fa418c\",\"address_label\":\"Token Millionaire\",\"token_amount\":1908210966.989285,\"total_outflow\":0.0,\"total_inflow\":1908210966.989285,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.05277382232665546,\"value_usd\":1829822.4234770513},{\"address\":\"0x7d00d30269fc62ab5fab54418feedbdc71fdb25f\",\"address_label\":\"Token Millionaire\",\"token_amount\":1848296798.0,\"total_outflow\":0.0,\"total_inflow\":1848296798.0,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.05111682539927773,\"value_usd\":1772369.504592741},{\"address\":\"0xefef4558802bf373ce3307189c79a9cab0a4cb9c\",\"address_label\":\"Token Millionaire\",\"token_amount\":1782603135.9689164,\"total_outflow\":4593746374.41185,\"total_inflow\":6376349510.380766,\"balance_change_24h\":0.0,\"balance_change_7d\":1585919.042789,\"balance_change_30d\":-58970176.04291782,\"ownership_percentage\":0.04929998978309545,\"value_usd\":1709374.5119298175},{\"address\":\"0x4cc69ff3264e61d5d5e8f368331320c66dad2714\",\"address_label\":\"Token Millionaire\",\"token_amount\":1725081559.4520583,\"total_outflow\":0.0,\"total_inflow\":1725081559.4520583,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.047709162819219796,\"value_usd\":1654215.8987758618},{\"address\":\"0x13454580bd3300075eb4b2470a107a5cf4e6af35\",\"address_label\":\"Token Millionaire\",\"token_amount\":1467257237.7048428,\"total_outflow\":0.0,\"total_inflow\":1467257237.7048428,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.04057872746235477,\"value_usd\":1406982.8970731385},{\"address\":\"0x21bb2a7e0e26449e60e6fb994cd435b11bfe1a1a\",\"address_label\":\"Token Millionaire\",\"token_amount\":1300831594.4486198,\"total_outflow\":547465202.55138,\"total_inflow\":1848296797.0,\"balance_change_24h\":-10127653.68219178,\"balance_change_7d\":-40510614.72876712,\"balance_change_30d\":-151914805.23287672,\"ownership_percentage\":0.03597603023456309,\"value_usd\":1247393.9526954077},{\"address\":\"0x17891b029eaead89a82bde0f398f87f5def4a1dd\",\"address_label\":\"Token Millionaire\",\"token_amount\":1196329091.0,\"total_outflow\":0.0,\"total_inflow\":1196329091.0,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.033085890388867965,\"value_usd\":1147184.37030239},{\"address\":\"0xbaed383ede0e5d9d72430661f3285daa77e9439f\",\"address_label\":\"High Activity\",\"token_amount\":733556177.5368865,\"total_outflow\":25329976491.293423,\"total_inflow\":26063532668.83031,\"balance_change_24h\":5195989.505335039,\"balance_change_7d\":-55520448.0945951,\"balance_change_30d\":-126590610.13465153,\"ownership_percentage\":0.020287360281254243,\"value_usd\":703421.9830813104},{\"address\":\"0x0ca6485b7e9cf814a3fd09d81672b07323535b64\",\"address_label\":\"Liquidity Pool\",\"token_amount\":730467716.5963401,\"total_outflow\":1463782065.9684231,\"total_inflow\":2194249782.564763,\"balance_change_24h\":-2221037.0326452795,\"balance_change_7d\":16982485.09254623,\"balance_change_30d\":158023953.4913078,\"ownership_percentage\":0.02020194525547417,\"value_usd\":700460.3948812586},{\"address\":\"0x4e4c31e49d430a4c57c30b3ea00ab259887e915d\",\"address_label\":\"High Balance\",\"token_amount\":651967706.0,\"total_outflow\":0.0,\"total_inflow\":651967706.0,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.018030934982753582,\"value_usd\":625185.1333314303},{\"address\":\"0xc8802feab2fafb48b7d1ade77e197002c210f391\",\"address_label\":\"Token Millionaire\",\"token_amount\":641462707.7855259,\"total_outflow\":10337068254.257158,\"total_inflow\":10978530962.042685,\"balance_change_24h\":363964.03405907005,\"balance_change_7d\":-17693515.674283843,\"balance_change_30d\":2923640.690533773,\"ownership_percentage\":0.017740406881352307,\"value_usd\":615111.6762431088},{\"address\":\"0x4ea46c826ad7518de6eba54dac26a2e9c3eb0ffe\",\"address_label\":\"High Balance\",\"token_amount\":588549331.2562296,\"total_outflow\":501272050.6739697,\"total_inflow\":1089821381.9301994,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":97129234.08041763,\"ownership_percentage\":0.016277025116983597,\"value_usd\":564371.9600638472},{\"address\":\"0x4e3ae00e8323558fa5cac04b152238924aa31b60\",\"address_label\":\"High Activity\",\"token_amount\":504025870.35058475,\"total_outflow\":2096947453.9436994,\"total_inflow\":2600973324.294284,\"balance_change_24h\":-1488487.75576882,\"balance_change_7d\":2192220.83212914,\"balance_change_30d\":2288190.2273882763,\"ownership_percentage\":0.013939429229823204,\"value_usd\":483320.689134901},{\"address\":\"0xb7fa700fb515cc7f85e4684656e8e527185410ed\",\"address_label\":\"High Balance\",\"token_amount\":443764102.161638,\"total_outflow\":404243888.147808,\"total_inflow\":848007990.3094461,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.01227281903707745,\"value_usd\":425534.45028706087},{\"address\":\"0xd3e0341b361134014e0c89378b3e36bc5020cd97\",\"address_label\":\"Token Millionaire\",\"token_amount\":433828147.4341179,\"total_outflow\":267726545.20000002,\"total_inflow\":701554692.6341178,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":-9026711.954664497,\"ownership_percentage\":0.011998028503689438,\"value_usd\":416006.6606067853},{\"address\":\"0xf8191d98ae98d2f7abdfb63a9b0b812b93c873aa\",\"address_label\":\"Token Millionaire\",\"token_amount\":378789911.2020519,\"total_outflow\":14976777843.999,\"total_inflow\":15355567755.201052,\"balance_change_24h\":0.0,\"balance_change_7d\":79088402.00000001,\"balance_change_30d\":81504697.0,\"ownership_percentage\":0.010475881240975454,\"value_usd\":363229.37311170355},{\"address\":\"0xb7333d779c6ecdfc4507a53706b0e173bd086a18\",\"address_label\":\"Token Millionaire\",\"token_amount\":336873435.72817737,\"total_outflow\":1560393132.3700001,\"total_inflow\":1897266568.0981774,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":-5734906.233659999,\"ownership_percentage\":0.009316631730577748,\"value_usd\":323034.8096896959},{\"address\":\"0x15da7556d5ed888306839bed06f868aeaedcb0d7\",\"address_label\":\"Token Millionaire\",\"token_amount\":327968682.050775,\"total_outflow\":4313965389.0,\"total_inflow\":4641934071.050776,\"balance_change_24h\":-7545785.000000001,\"balance_change_7d\":-18676881.0,\"balance_change_30d\":5303122.0,\"ownership_percentage\":0.00907036027707315,\"value_usd\":314495.8597327323}],\"pagination\":{\"page\":1,\"per_page\":20,\"is_last_page\":false},\"warnings\":null}"
+    },
+    "23085cc2e2a2027b24e8a9f4b99ae96b": {
+      "storedAt": "2026-09-16T12:40:19.422Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/holders",
+      "body": {
+        "chain": "solana",
+        "token_address": "6ztpBm31cmBNPwa396ocmDfaWyKKY95Bu8T664QfCe7f",
+        "pagination": {
+          "page": 1,
+          "per_page": 20
+        }
+      },
+      "text": "{\"data\":[{\"address\":\"HFNekd429efPTM8eux66dDcgAC6WcSRoRNLtn6e81cEn\",\"address_label\":\"Liquidity Pool\",\"token_amount\":406401751.146752,\"total_outflow\":27528089238.89938,\"total_inflow\":27934490990.04613,\"balance_change_24h\":1825557.141175,\"balance_change_7d\":29762181.987357,\"balance_change_30d\":61053098.986862,\"ownership_percentage\":0.40665908302896026,\"value_usd\":9029.961811175368},{\"address\":\"5SeYGVYTy52bkLqgmkUUs8iHVVJXejxJ7DiZLAwJQZTQ\",\"address_label\":\"\",\"token_amount\":170129355.034811,\"total_outflow\":181893630.888317,\"total_inflow\":352022985.923128,\"balance_change_24h\":-3111112.0,\"balance_change_7d\":-17111112.0,\"balance_change_30d\":-9750280.608221,\"ownership_percentage\":0.17023708022798856,\"value_usd\":3780.1549195822577},{\"address\":\"D8aNzdTnJEPWRRks45QuDV3mUV4NMm364gD2FvKTMpqh\",\"address_label\":\"\",\"token_amount\":50195612.184298,\"total_outflow\":104723058.849208,\"total_inflow\":154918671.033506,\"balance_change_24h\":0.0,\"balance_change_7d\":20000000.0,\"balance_change_30d\":50000000.0,\"ownership_percentage\":0.05022739583514481,\"value_usd\":1115.3112894661365},{\"address\":\"4LSdk7XE4B8oPuPSG3XTZFP4UjQ7ZsJCMQa7msEEF44m\",\"address_label\":\"\",\"token_amount\":32743548.191359,\"total_outflow\":0.0,\"total_inflow\":32743548.191359,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.03276428126857257,\"value_usd\":727.5386705299512},{\"address\":\"4J2oGGq741PB4Uaga6tfNgxWDELZ3hkKrRyaYEqtULG9\",\"address_label\":\"\",\"token_amount\":30337269.363839,\"total_outflow\":1936421.448755,\"total_inflow\":32273690.812594,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.030356478795403766,\"value_usd\":674.0728430372463},{\"address\":\"AoidH3n9UJ5aLuwuLwAvACE9xXqkQtL51DnGc5rqDEvy\",\"address_label\":\"\",\"token_amount\":28728907.225327,\"total_outflow\":0.0,\"total_inflow\":28728907.225327,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.028747098248739715,\"value_usd\":638.3361646190982},{\"address\":\"5E5A5gWMWwYfrQ62StqcxuDPDzSUQR64dNKuHVeR9dvq\",\"address_label\":\"\",\"token_amount\":27874108.113441,\"total_outflow\":10000000.0,\"total_inflow\":37874108.113441,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.027891757881645662,\"value_usd\":619.3431280123984},{\"address\":\"DigtMuSPqaXpQUCaXSr8zazkwiJAQdiqMv8QrXbjBaHs\",\"address_label\":\"\",\"token_amount\":20374632.220944,\"total_outflow\":0.0,\"total_inflow\":20374632.220944,\"balance_change_24h\":0.0,\"balance_change_7d\":20374632.220944,\"balance_change_30d\":20374632.220944,\"ownership_percentage\":0.020387533352506353,\"value_usd\":452.7100347198833},{\"address\":\"DRHrU9ZFZ5GGUx5qQLxq7RKZMLGX6AnsehVc2Wa2zRGT\",\"address_label\":\"\",\"token_amount\":20000000.0,\"total_outflow\":0.0,\"total_inflow\":20000000.0,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.020012663916013262,\"value_usd\":444.385969582825},{\"address\":\"6gL5GqtqXP75RYtQTRf2cuMBDYsjuDFoExFWdyMGxqKh\",\"address_label\":\"Ziggy Token Deployer\",\"token_amount\":17839345.73738,\"total_outflow\":1278647.9851,\"total_inflow\":19117993.72248,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.017850641536187487,\"value_usd\":396.37774761144243},{\"address\":\"FrqrtgqoBTGZFqCo5EpiDi7sUpgv3LRJ3k3G1R274r8a\",\"address_label\":\"\",\"token_amount\":11553931.913582,\"total_outflow\":42000000.0,\"total_inflow\":53553931.913582,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.011561247814750828,\"value_usd\":256.7202617955541},{\"address\":\"GCt57vG56vf4kvtSfJzZQxxEz5vct3S72JpUDrdZpW4v\",\"address_label\":\"\",\"token_amount\":10003034.514243,\"total_outflow\":16372962.809318,\"total_inflow\":26375997.323561,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.010009368393691306,\"value_usd\":222.26040956911692},{\"address\":\"5SBexmcdCsNrYQVhnThf7nHzxN8Fmued58pzwBfLaZSU\",\"address_label\":\"\",\"token_amount\":10000000.0,\"total_outflow\":0.0,\"total_inflow\":10000000.0,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.010006331958006631,\"value_usd\":222.1929847914125},{\"address\":\"2jXceK5AsQ4gKPMJ8n99zmEUYRqqpAs4FKoUBP8RHQLd\",\"address_label\":\"\",\"token_amount\":8764771.951199,\"total_outflow\":33035302.67899,\"total_inflow\":41800074.630189,\"balance_change_24h\":0.0,\"balance_change_7d\":-6470830.337466,\"balance_change_30d\":-13822270.263753,\"ownership_percentage\":0.00877032176799227,\"value_usd\":194.74708408529585},{\"address\":\"Eu6v3LmwznS6S2Pn1mtwVDgCmEi3Tdqt5SMDtEsRDTWa\",\"address_label\":\"\",\"token_amount\":7500000.0,\"total_outflow\":0.0,\"total_inflow\":7500000.0,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.007504748968504973,\"value_usd\":166.64473859355937},{\"address\":\"E3hgx9cqwC8JHYRjHT4qkJRu2pvrRyMiuxAwVTgMQVzJ\",\"address_label\":\"\",\"token_amount\":5844648.714439,\"total_outflow\":5873628.184861,\"total_inflow\":11718276.8993,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.005848349521461333,\"value_usd\":129.86399429184934},{\"address\":\"FBFbvW491gogKyYskys52MRV3VBTkCX9ufLg1CzCqrik\",\"address_label\":\"\",\"token_amount\":5525304.764725,\"total_outflow\":1461925.026883,\"total_inflow\":6987229.791608,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.005528803364499407,\"value_usd\":122.76839575564608},{\"address\":\"8wzru9myuGTv2o42yfmpMVF9g5gKPXZkPvrTsU955t47\",\"address_label\":\"\",\"token_amount\":5439405.930542,\"total_outflow\":31878519.802623,\"total_inflow\":37317925.733165,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.005442850139535321,\"value_usd\":120.85978391992374},{\"address\":\"AzSrCZVVrgTSaFePvxQisFSH6kJr6F77f6iHrrAW15mF\",\"address_label\":\"\",\"token_amount\":5000000.0,\"total_outflow\":0.0,\"total_inflow\":5000000.0,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.0050031659790033154,\"value_usd\":111.09649239570625},{\"address\":\"FXeYg3nmMDybkTKf3koc5yy7jwxSvM1yAC3DGEVJALBL\",\"address_label\":\"\",\"token_amount\":5000000.0,\"total_outflow\":0.0,\"total_inflow\":5000000.0,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.0050031659790033154,\"value_usd\":111.09649239570625}],\"pagination\":{\"page\":1,\"per_page\":20,\"is_last_page\":false},\"warnings\":null}"
+    }
+  },
+  "verdict": {
+    "query": "DEGEN",
+    "winner": {
+      "chain": "base",
+      "address": "0x4ed4e862860bed51a9570b96d89af5e1b0efefed",
+      "name": "Degen",
+      "symbol": "DEGEN",
+      "marketCap": 34929299.8103937,
+      "volume24h": 34014.81536422938,
+      "searchRank": 1819,
+      "labelledWallets": 2,
+      "smartTraderWallets": 0,
+      "whaleWallets": 0,
+      "topPnlWallets": 1,
+      "publicFigureWallets": 1,
+      "smartTraderNetFlowUsd": 0,
+      "exchangeNetFlowUsd": -90472.15793820396,
+      "freshNetFlowUsd": 0,
+      "exchangeTouched": true,
+      "freshShare": 0,
+      "errors": [],
+      "deploymentDate": "2024-01-07 15:25:35",
+      "ageDays": 982,
+      "marketCapUsd": 34669303.17388986,
+      "liquidityUsd": 814792.4027412458,
+      "totalHolders": 54523,
+      "uniqueBuyers": 848,
+      "logo": "https://coin-images.coingecko.com/coins/images/34515/small/android-chrome-512x512.png?1706198225",
+      "website": "https://www.degen.tips/",
+      "score": 12.11,
+      "terms": {
+        "labelled": 3.3,
+        "exchange": 1.17,
+        "holders": 2.84,
+        "liquidity": 2.36,
+        "age": 0,
+        "fresh": 0,
+        "recognisedHolders": 2.44
+      },
+      "reasons": [
+        "2 labelled wallets (0 smart traders, 1 top PnL, 0 whales, 1 public figures)",
+        "exchange flow $90K",
+        "55K holders",
+        "2.7y old",
+        "20 of top 20 holders tagged by Nansen (Token Millionaire ×14, High Balance ×3, High Activity ×2)"
+      ],
+      "impostor": false,
+      "scorable": true,
+      "unchecked": false,
+      "recognisedHolders": 20,
+      "topLabels": [
+        "Token Millionaire ×14",
+        "High Balance ×3",
+        "High Activity ×2"
+      ],
+      "topHolderPct": 0.225302395255636
+    },
+    "ranked": [
+      {
+        "chain": "base",
+        "address": "0x4ed4e862860bed51a9570b96d89af5e1b0efefed",
+        "name": "Degen",
+        "symbol": "DEGEN",
+        "marketCap": 34929299.8103937,
+        "volume24h": 34014.81536422938,
+        "searchRank": 1819,
+        "labelledWallets": 2,
+        "smartTraderWallets": 0,
+        "whaleWallets": 0,
+        "topPnlWallets": 1,
+        "publicFigureWallets": 1,
+        "smartTraderNetFlowUsd": 0,
+        "exchangeNetFlowUsd": -90472.15793820396,
+        "freshNetFlowUsd": 0,
+        "exchangeTouched": true,
+        "freshShare": 0,
+        "errors": [],
+        "deploymentDate": "2024-01-07 15:25:35",
+        "ageDays": 982,
+        "marketCapUsd": 34669303.17388986,
+        "liquidityUsd": 814792.4027412458,
+        "totalHolders": 54523,
+        "uniqueBuyers": 848,
+        "logo": "https://coin-images.coingecko.com/coins/images/34515/small/android-chrome-512x512.png?1706198225",
+        "website": "https://www.degen.tips/",
+        "score": 12.11,
+        "terms": {
+          "labelled": 3.3,
+          "exchange": 1.17,
+          "holders": 2.84,
+          "liquidity": 2.36,
+          "age": 0,
+          "fresh": 0,
+          "recognisedHolders": 2.44
+        },
+        "reasons": [
+          "2 labelled wallets (0 smart traders, 1 top PnL, 0 whales, 1 public figures)",
+          "exchange flow $90K",
+          "55K holders",
+          "2.7y old",
+          "20 of top 20 holders tagged by Nansen (Token Millionaire ×14, High Balance ×3, High Activity ×2)"
+        ],
+        "impostor": false,
+        "scorable": true,
+        "unchecked": false,
+        "recognisedHolders": 20,
+        "topLabels": [
+          "Token Millionaire ×14",
+          "High Balance ×3",
+          "High Activity ×2"
+        ],
+        "topHolderPct": 0.225302395255636
+      },
+      {
+        "chain": "solana",
+        "address": "6ztpBm31cmBNPwa396ocmDfaWyKKY95Bu8T664QfCe7f",
+        "name": "Degenerate",
+        "symbol": "DEGEN",
+        "marketCap": 21928.586471132,
+        "volume24h": 103.38204371024544,
+        "searchRank": 7676,
+        "labelledWallets": 1,
+        "smartTraderWallets": 0,
+        "whaleWallets": 0,
+        "topPnlWallets": 0,
+        "publicFigureWallets": 1,
+        "smartTraderNetFlowUsd": 0,
+        "exchangeNetFlowUsd": -314.97698165594767,
+        "freshNetFlowUsd": 0,
+        "exchangeTouched": true,
+        "freshShare": 0,
+        "errors": [],
+        "deploymentDate": "2024-03-18 21:29:57",
+        "ageDays": 911,
+        "marketCapUsd": 22205.23821555044,
+        "liquidityUsd": 9006.981477576626,
+        "totalHolders": 180,
+        "uniqueBuyers": 4,
+        "logo": "https://coin-images.coingecko.com/coins/images/66735/small/cg.png?1750323793",
+        "website": "https://soldegens.com",
+        "score": 5.89,
+        "terms": {
+          "labelled": 2.08,
+          "exchange": 0,
+          "holders": 1.35,
+          "liquidity": 1.58,
+          "age": 0,
+          "fresh": 0,
+          "recognisedHolders": 0.88
+        },
+        "reasons": [
+          "1 labelled wallets (0 smart traders, 0 top PnL, 0 whales, 1 public figures)",
+          "no meaningful exchange flow",
+          "180 holders",
+          "2.5y old",
+          "2 of top 20 holders tagged by Nansen (Liquidity Pool, Ziggy Token Deployer)"
+        ],
+        "impostor": false,
+        "scorable": true,
+        "unchecked": false,
+        "recognisedHolders": 2,
+        "topLabels": [
+          "Liquidity Pool",
+          "Ziggy Token Deployer"
+        ],
+        "topHolderPct": 0.40665908302896026
+      },
+      {
+        "chain": "ethereum",
+        "address": "0xbe92b510007bd3ec0adb3d1fca338dd631e98de7",
+        "name": "Degen",
+        "symbol": "DEGEN",
+        "marketCap": 207746.084216674,
+        "volume24h": 7.549663748888609,
+        "searchRank": 2995,
+        "labelledWallets": 0,
+        "smartTraderWallets": 0,
+        "whaleWallets": 0,
+        "topPnlWallets": 0,
+        "publicFigureWallets": 0,
+        "smartTraderNetFlowUsd": 0,
+        "exchangeNetFlowUsd": 1663.293656863112,
+        "freshNetFlowUsd": 0,
+        "exchangeTouched": true,
+        "freshShare": 0,
+        "errors": [],
+        "deploymentDate": "2023-05-11 20:35:11",
+        "ageDays": 1223,
+        "marketCapUsd": 200754.70355784966,
+        "liquidityUsd": 167128.42958819366,
+        "totalHolders": 1739,
+        "uniqueBuyers": 0,
+        "logo": "https://coin-images.coingecko.com/coins/images/30487/small/degen_logo_twit.png?1696529373",
+        "website": "https://degenstogether.com",
+        "score": 4.17,
+        "terms": {
+          "labelled": 0,
+          "exchange": 0.13,
+          "holders": 1.94,
+          "liquidity": 2.09,
+          "age": 0,
+          "fresh": 0,
+          "recognisedHolders": 0
+        },
+        "reasons": [
+          "0 labelled wallets in 7 days",
+          "exchange flow $2K",
+          "2K holders",
+          "3.4y old"
+        ],
+        "impostor": false,
+        "scorable": true,
+        "unchecked": false
+      },
+      {
+        "chain": "solana",
+        "address": "Fd8TNp5GhhTk6Uq6utMvK13vfQdLN1yUUHCnapWvpump",
+        "name": "Degen",
+        "symbol": "DGN",
+        "marketCap": 253706.633,
+        "volume24h": 27.938720472207688,
+        "searchRank": 8738,
+        "labelledWallets": 0,
+        "smartTraderWallets": 0,
+        "whaleWallets": 0,
+        "topPnlWallets": 0,
+        "publicFigureWallets": 0,
+        "smartTraderNetFlowUsd": 0,
+        "exchangeNetFlowUsd": -4233.514163060179,
+        "freshNetFlowUsd": 0,
+        "exchangeTouched": true,
+        "freshShare": 0,
+        "errors": [],
+        "deploymentDate": "2025-07-02 14:04:30",
+        "ageDays": 440,
+        "marketCapUsd": 253706.63302571623,
+        "liquidityUsd": 26142.152021812813,
+        "totalHolders": 250,
+        "uniqueBuyers": 40,
+        "logo": "https://coin-images.coingecko.com/coins/images/68000/small/dgn-logo-200x200.png?1754549112",
+        "website": "https://degen.fyi",
+        "score": 3.58,
+        "terms": {
+          "labelled": 0,
+          "exchange": 0.38,
+          "holders": 1.44,
+          "liquidity": 1.77,
+          "age": 0,
+          "fresh": 0,
+          "recognisedHolders": 0
+        },
+        "reasons": [
+          "0 labelled wallets in 7 days",
+          "exchange flow $4K",
+          "250 holders",
+          "1.2y old",
+          "IMPOSTOR: nothing labelled has ever touched it"
+        ],
+        "impostor": true,
+        "scorable": true,
+        "unchecked": false
+      },
+      {
+        "chain": "solana",
+        "address": "A7n89LqW67HJKzJkdWZa2xojuK4N5GBKHz3dfjATCZPz",
+        "name": "Degen",
+        "symbol": "DEGEN",
+        "marketCap": 35198730.3191944,
+        "volume24h": 1692.9388729574707,
+        "searchRank": 5471,
+        "labelledWallets": 0,
+        "smartTraderWallets": 0,
+        "whaleWallets": 0,
+        "topPnlWallets": 0,
+        "publicFigureWallets": 0,
+        "smartTraderNetFlowUsd": 0,
+        "exchangeNetFlowUsd": 965.0745189560546,
+        "freshNetFlowUsd": 0,
+        "exchangeTouched": true,
+        "freshShare": 0,
+        "errors": [],
+        "deploymentDate": "2025-01-13 14:22:29",
+        "ageDays": 610,
+        "marketCapUsd": 35198730.319480166,
+        "liquidityUsd": 98059.88448461158,
+        "totalHolders": 375,
+        "uniqueBuyers": 13,
+        "logo": "https://coin-images.coingecko.com/coins/images/34515/small/android-chrome-512x512.png?1706198225",
+        "website": "",
+        "score": 3.54,
+        "terms": {
+          "labelled": 0,
+          "exchange": 0,
+          "holders": 1.55,
+          "liquidity": 2,
+          "age": 0,
+          "fresh": 0,
+          "recognisedHolders": 0
+        },
+        "reasons": [
+          "0 labelled wallets in 7 days",
+          "no meaningful exchange flow",
+          "375 holders",
+          "1.7y old",
+          "IMPOSTOR: nothing labelled has ever touched it"
+        ],
+        "impostor": true,
+        "scorable": true,
+        "unchecked": false
+      },
+      {
+        "chain": "ethereum",
+        "address": "0xfee293840d23b0b2de8c55e1cf7a9f01c157767c",
+        "name": "DEGEN",
+        "symbol": "DEGEN",
+        "marketCap": 41937813.0738376,
+        "volume24h": 32.94680794717681,
+        "searchRank": 8619,
+        "labelledWallets": 0,
+        "smartTraderWallets": 0,
+        "whaleWallets": 0,
+        "topPnlWallets": 0,
+        "publicFigureWallets": 0,
+        "smartTraderNetFlowUsd": 0,
+        "exchangeNetFlowUsd": 36.8964279065086,
+        "freshNetFlowUsd": 0,
+        "exchangeTouched": true,
+        "freshShare": 0,
+        "errors": [],
+        "deploymentDate": "2024-04-19 14:48:23",
+        "ageDays": 879,
+        "marketCapUsd": 39078526.64209503,
+        "liquidityUsd": 13451.025757806921,
+        "totalHolders": 268,
+        "uniqueBuyers": 0,
+        "logo": "https://coin-images.coingecko.com/coins/images/34515/small/android-chrome-512x512.png?1706198225",
+        "website": "",
+        "score": 3.11,
+        "terms": {
+          "labelled": 0,
+          "exchange": 0,
+          "holders": 1.46,
+          "liquidity": 1.65,
+          "age": 0,
+          "fresh": 0,
+          "recognisedHolders": 0
+        },
+        "reasons": [
+          "0 labelled wallets in 7 days",
+          "no meaningful exchange flow",
+          "268 holders",
+          "2.4y old",
+          "IMPOSTOR: nothing labelled has ever touched it"
+        ],
+        "impostor": true,
+        "scorable": true,
+        "unchecked": false
+      },
+      {
+        "chain": "robinhood",
+        "address": "0x0830a9dd26a04e959657ab6788d45f5725590c32",
+        "name": "DEGEN",
+        "symbol": "DEGEN",
+        "marketCap": 18998499.7951854,
+        "volume24h": 0,
+        "searchRank": 11259,
+        "labelledWallets": 0,
+        "smartTraderWallets": 0,
+        "whaleWallets": 0,
+        "topPnlWallets": 0,
+        "publicFigureWallets": 0,
+        "smartTraderNetFlowUsd": 0,
+        "exchangeNetFlowUsd": 132.35088383610793,
+        "freshNetFlowUsd": 0,
+        "exchangeTouched": true,
+        "freshShare": 0,
+        "errors": [],
+        "deploymentDate": "2026-07-16 08:51:26",
+        "ageDays": 62,
+        "marketCapUsd": 19155171.12512909,
+        "liquidityUsd": 819.3889256686102,
+        "totalHolders": 31,
+        "uniqueBuyers": 3,
+        "logo": "https://coin-images.coingecko.com/coins/images/34515/small/android-chrome-512x512.png?1706198225",
+        "website": "",
+        "score": 2.07,
+        "terms": {
+          "labelled": 0,
+          "exchange": 0,
+          "holders": 0.9,
+          "liquidity": 1.17,
+          "age": 0,
+          "fresh": 0,
+          "recognisedHolders": 0
+        },
+        "reasons": [
+          "0 labelled wallets in 7 days",
+          "no meaningful exchange flow",
+          "31 holders",
+          "62d old",
+          "IMPOSTOR: nothing labelled has ever touched it"
+        ],
+        "impostor": true,
+        "scorable": true,
+        "unchecked": false
+      },
+      {
+        "chain": "arbitrum",
+        "address": "0x9f07f8a82cb1af1466252e505b7b7ddee103bc91",
+        "name": "DEGEN",
+        "symbol": "DEGEN",
+        "marketCap": 34866827,
+        "volume24h": 0,
+        "searchRank": 11373,
+        "labelledWallets": 0,
+        "smartTraderWallets": 0,
+        "whaleWallets": 0,
+        "topPnlWallets": 0,
+        "publicFigureWallets": 0,
+        "smartTraderNetFlowUsd": 0,
+        "exchangeNetFlowUsd": -0.0001453319468100059,
+        "freshNetFlowUsd": 0,
+        "exchangeTouched": true,
+        "freshShare": 0,
+        "errors": [],
+        "deploymentDate": "2024-04-19 14:23:13",
+        "ageDays": 879,
+        "marketCapUsd": 34782915.07022905,
+        "liquidityUsd": 0,
+        "totalHolders": 40,
+        "uniqueBuyers": 1,
+        "logo": "https://coin-images.coingecko.com/coins/images/34515/small/android-chrome-512x512.png?1706198225",
+        "website": "",
+        "score": 0.97,
+        "terms": {
+          "labelled": 0,
+          "exchange": 0,
+          "holders": 0.97,
+          "liquidity": 0,
+          "age": 0,
+          "fresh": 0,
+          "recognisedHolders": 0
+        },
+        "reasons": [
+          "0 labelled wallets in 7 days",
+          "no meaningful exchange flow",
+          "40 holders",
+          "2.4y old",
+          "IMPOSTOR: nothing labelled has ever touched it"
+        ],
+        "impostor": true,
+        "scorable": true,
+        "unchecked": false
+      }
+    ],
+    "abstained": false,
+    "stablecoin": false,
+    "candidatesTotal": 10,
+    "warnings": [
+      "10 same-name tokens found; the 8 highest-ranked by Nansen search were checked"
+    ],
+    "credits": 26,
+    "provenance": [
+      {
+        "endpoint": "search/general",
+        "body": {
+          "search_query": "DEGEN",
+          "result_type": "token",
+          "limit": 50
+        },
+        "credits": 0,
+        "ms": 445,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "tokens[].name",
+          "tokens[].symbol",
+          "tokens[].chain",
+          "tokens[].address",
+          "tokens[].market_cap",
+          "tokens[].volume_24h",
+          "tokens[].rank"
+        ],
+        "responseHash": "d3aa38727d6b29af24c8198ea7d99564420425fd01870cd7f9d38a22798db72d",
+        "attempts": 1,
+        "totalMs": 445,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/flow-intelligence",
+        "body": {
+          "chain": "ethereum",
+          "token_address": "0xbe92b510007bd3ec0adb3d1fca338dd631e98de7",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 474,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "smart_trader_wallet_count",
+          "whale_wallet_count",
+          "top_pnl_wallet_count",
+          "public_figure_wallet_count",
+          "smart_trader_net_flow_usd",
+          "whale_net_flow_usd",
+          "top_pnl_net_flow_usd",
+          "public_figure_net_flow_usd",
+          "exchange_net_flow_usd",
+          "fresh_wallets_net_flow_usd"
+        ],
+        "responseHash": "7222c6b722e6066c52317a539c648561cad403eb8ce558a24fec86fcf7555564",
+        "attempts": 1,
+        "totalMs": 476,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/token-information",
+        "body": {
+          "chain": "ethereum",
+          "token_address": "0xbe92b510007bd3ec0adb3d1fca338dd631e98de7",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 542,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "token_details.token_deployment_date",
+          "token_details.market_cap_usd",
+          "spot_metrics.liquidity_usd",
+          "spot_metrics.total_holders",
+          "spot_metrics.unique_buyers"
+        ],
+        "responseHash": "be1b7adf823848d35d6ac45d2a5a02e4ca9fde5215bef01f6ba2b85185298909",
+        "attempts": 1,
+        "totalMs": 544,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/token-information",
+        "body": {
+          "chain": "base",
+          "token_address": "0x4ed4e862860bed51a9570b96d89af5e1b0efefed",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 603,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "token_details.token_deployment_date",
+          "token_details.market_cap_usd",
+          "spot_metrics.liquidity_usd",
+          "spot_metrics.total_holders",
+          "spot_metrics.unique_buyers"
+        ],
+        "responseHash": "72c25c124c90d80b42749830c85ffb3f7f713a56b182a8aa8568329819430d1a",
+        "attempts": 1,
+        "totalMs": 604,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/token-information",
+        "body": {
+          "chain": "solana",
+          "token_address": "A7n89LqW67HJKzJkdWZa2xojuK4N5GBKHz3dfjATCZPz",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 773,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "token_details.token_deployment_date",
+          "token_details.market_cap_usd",
+          "spot_metrics.liquidity_usd",
+          "spot_metrics.total_holders",
+          "spot_metrics.unique_buyers"
+        ],
+        "responseHash": "d882b8b85a424312eca3125c6faf9bf1d9a5d923505444904834ef9588440304",
+        "attempts": 1,
+        "totalMs": 776,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/flow-intelligence",
+        "body": {
+          "chain": "solana",
+          "token_address": "A7n89LqW67HJKzJkdWZa2xojuK4N5GBKHz3dfjATCZPz",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 862,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "smart_trader_wallet_count",
+          "whale_wallet_count",
+          "top_pnl_wallet_count",
+          "public_figure_wallet_count",
+          "smart_trader_net_flow_usd",
+          "whale_net_flow_usd",
+          "top_pnl_net_flow_usd",
+          "public_figure_net_flow_usd",
+          "exchange_net_flow_usd",
+          "fresh_wallets_net_flow_usd"
+        ],
+        "responseHash": "a8b59ad1dd8e77f400d1b0e9c264f48015b32da4da066369d94c27701aeb4bce",
+        "attempts": 1,
+        "totalMs": 864,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/token-information",
+        "body": {
+          "chain": "ethereum",
+          "token_address": "0xfee293840d23b0b2de8c55e1cf7a9f01c157767c",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 312,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "token_details.token_deployment_date",
+          "token_details.market_cap_usd",
+          "spot_metrics.liquidity_usd",
+          "spot_metrics.total_holders",
+          "spot_metrics.unique_buyers"
+        ],
+        "responseHash": "9fb560eb522188fa8831090671a2395c933f0e43b96d7a76d00adb6d639380ac",
+        "attempts": 1,
+        "totalMs": 872,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/flow-intelligence",
+        "body": {
+          "chain": "base",
+          "token_address": "0x4ed4e862860bed51a9570b96d89af5e1b0efefed",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 967,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "smart_trader_wallet_count",
+          "whale_wallet_count",
+          "top_pnl_wallet_count",
+          "public_figure_wallet_count",
+          "smart_trader_net_flow_usd",
+          "whale_net_flow_usd",
+          "top_pnl_net_flow_usd",
+          "public_figure_net_flow_usd",
+          "exchange_net_flow_usd",
+          "fresh_wallets_net_flow_usd"
+        ],
+        "responseHash": "e7862a5c757f7ec578a58a4665c38d8579d816a9dc2f30ce7d85a7bf05c4527a",
+        "attempts": 1,
+        "totalMs": 967,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/token-information",
+        "body": {
+          "chain": "solana",
+          "token_address": "6ztpBm31cmBNPwa396ocmDfaWyKKY95Bu8T664QfCe7f",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 983,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "token_details.token_deployment_date",
+          "token_details.market_cap_usd",
+          "spot_metrics.liquidity_usd",
+          "spot_metrics.total_holders",
+          "spot_metrics.unique_buyers"
+        ],
+        "responseHash": "2bae3afbce42f7b2551e1f7ba01db19ac528ff76ee42d9778368f51029974740",
+        "attempts": 1,
+        "totalMs": 986,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/flow-intelligence",
+        "body": {
+          "chain": "ethereum",
+          "token_address": "0xfee293840d23b0b2de8c55e1cf7a9f01c157767c",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 1069,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "smart_trader_wallet_count",
+          "whale_wallet_count",
+          "top_pnl_wallet_count",
+          "public_figure_wallet_count",
+          "smart_trader_net_flow_usd",
+          "whale_net_flow_usd",
+          "top_pnl_net_flow_usd",
+          "public_figure_net_flow_usd",
+          "exchange_net_flow_usd",
+          "fresh_wallets_net_flow_usd"
+        ],
+        "responseHash": "a9bee836c4d018785f858a7230f5326cdb2da6268cab9ca0f67ed477a0dc2c3c",
+        "attempts": 1,
+        "totalMs": 1073,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/flow-intelligence",
+        "body": {
+          "chain": "solana",
+          "token_address": "6ztpBm31cmBNPwa396ocmDfaWyKKY95Bu8T664QfCe7f",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 1070,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "smart_trader_wallet_count",
+          "whale_wallet_count",
+          "top_pnl_wallet_count",
+          "public_figure_wallet_count",
+          "smart_trader_net_flow_usd",
+          "whale_net_flow_usd",
+          "top_pnl_net_flow_usd",
+          "public_figure_net_flow_usd",
+          "exchange_net_flow_usd",
+          "fresh_wallets_net_flow_usd"
+        ],
+        "responseHash": "35d0d3ac1f7d6994b42c2ba677e8ca4b1341cf0789e3004a4943d7a537461ffb",
+        "attempts": 1,
+        "totalMs": 1073,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/flow-intelligence",
+        "body": {
+          "chain": "solana",
+          "token_address": "Fd8TNp5GhhTk6Uq6utMvK13vfQdLN1yUUHCnapWvpump",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 304,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "smart_trader_wallet_count",
+          "whale_wallet_count",
+          "top_pnl_wallet_count",
+          "public_figure_wallet_count",
+          "smart_trader_net_flow_usd",
+          "whale_net_flow_usd",
+          "top_pnl_net_flow_usd",
+          "public_figure_net_flow_usd",
+          "exchange_net_flow_usd",
+          "fresh_wallets_net_flow_usd"
+        ],
+        "responseHash": "26ba402450db760a85204028707a5e3e37538b1430e9b4d576c4794da7475ff9",
+        "attempts": 1,
+        "totalMs": 1310,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/token-information",
+        "body": {
+          "chain": "arbitrum",
+          "token_address": "0x9f07f8a82cb1af1466252e505b7b7ddee103bc91",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 321,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "token_details.token_deployment_date",
+          "token_details.market_cap_usd",
+          "spot_metrics.liquidity_usd",
+          "spot_metrics.total_holders",
+          "spot_metrics.unique_buyers"
+        ],
+        "responseHash": "95b27aa06eed078533cea24d023fa3b45b8d8af0486b5cce57c2e117588270d8",
+        "attempts": 1,
+        "totalMs": 1336,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/flow-intelligence",
+        "body": {
+          "chain": "robinhood",
+          "token_address": "0x0830a9dd26a04e959657ab6788d45f5725590c32",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 669,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "smart_trader_wallet_count",
+          "whale_wallet_count",
+          "top_pnl_wallet_count",
+          "public_figure_wallet_count",
+          "smart_trader_net_flow_usd",
+          "whale_net_flow_usd",
+          "top_pnl_net_flow_usd",
+          "public_figure_net_flow_usd",
+          "exchange_net_flow_usd",
+          "fresh_wallets_net_flow_usd"
+        ],
+        "responseHash": "53867d626cd5dd5433ab87845b580b60b01d87a6ae3429c2c548126a806482e5",
+        "attempts": 1,
+        "totalMs": 1678,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/token-information",
+        "body": {
+          "chain": "robinhood",
+          "token_address": "0x0830a9dd26a04e959657ab6788d45f5725590c32",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 797,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "token_details.token_deployment_date",
+          "token_details.market_cap_usd",
+          "spot_metrics.liquidity_usd",
+          "spot_metrics.total_holders",
+          "spot_metrics.unique_buyers"
+        ],
+        "responseHash": "46f6664b57936f5dae6c1cc027b0a9ecbd2bbf6ace8ffbf15fe49308027821a2",
+        "attempts": 1,
+        "totalMs": 1808,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/flow-intelligence",
+        "body": {
+          "chain": "arbitrum",
+          "token_address": "0x9f07f8a82cb1af1466252e505b7b7ddee103bc91",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 801,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "smart_trader_wallet_count",
+          "whale_wallet_count",
+          "top_pnl_wallet_count",
+          "public_figure_wallet_count",
+          "smart_trader_net_flow_usd",
+          "whale_net_flow_usd",
+          "top_pnl_net_flow_usd",
+          "public_figure_net_flow_usd",
+          "exchange_net_flow_usd",
+          "fresh_wallets_net_flow_usd"
+        ],
+        "responseHash": "fd8eda478c84df5b1b344a591d556fcbf7fe1c4f446b3469e925760a69aa83f3",
+        "attempts": 1,
+        "totalMs": 1814,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/token-information",
+        "body": {
+          "chain": "solana",
+          "token_address": "Fd8TNp5GhhTk6Uq6utMvK13vfQdLN1yUUHCnapWvpump",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 844,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "token_details.token_deployment_date",
+          "token_details.market_cap_usd",
+          "spot_metrics.liquidity_usd",
+          "spot_metrics.total_holders",
+          "spot_metrics.unique_buyers"
+        ],
+        "responseHash": "0eb9f4222ccd5cb15912c18e71b4b3a5dd7b252257193365fb5c6cc47fa5b6b6",
+        "attempts": 1,
+        "totalMs": 1852,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/holders",
+        "body": {
+          "chain": "base",
+          "token_address": "0x4ed4e862860bed51a9570b96d89af5e1b0efefed",
+          "pagination": {
+            "page": 1,
+            "per_page": 20
+          }
+        },
+        "credits": 5,
+        "ms": 1182,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "data[].address_label",
+          "data[].ownership_percentage"
+        ],
+        "responseHash": "1fe846e62297316edcda297e94845f8846f021951df9aee9e1f6a1b01334ba43",
+        "attempts": 1,
+        "totalMs": 1182,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/holders",
+        "body": {
+          "chain": "solana",
+          "token_address": "6ztpBm31cmBNPwa396ocmDfaWyKKY95Bu8T664QfCe7f",
+          "pagination": {
+            "page": 1,
+            "per_page": 20
+          }
+        },
+        "credits": 5,
+        "ms": 2362,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "data[].address_label",
+          "data[].ownership_percentage"
+        ],
+        "responseHash": "2a120c8c9559d7459f8a7af11b0e2780ed0a360992f4fee5717fa9c1b0f0215d",
+        "attempts": 1,
+        "totalMs": 2362,
+        "ok": true
+      }
+    ],
+    "ms": 4663,
+    "weights": {
+      "labelled": 3,
+      "exchange": 0.6,
+      "holders": 0.6,
+      "liquidity": 0.4,
+      "young7": 2,
+      "young30": 1,
+      "freshPenalty": 1.5,
+      "recognisedHolders": 0.8
+    },
+    "hash": "2832cbac5021064c3d2dddb9cf4c3e1c7eca5fc99f4087d9a63be5701ca5c01d"
+  }
+}

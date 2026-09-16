@@ -1,0 +1,290 @@
+{
+  "edge": "11 · weakest signal in the set: one 3-year-old token, 0 labelled wallets, crowned on holder tags alone (the all-impostor abstain could not be produced live on 2026-09-16 — see specs/rubric-history.md)",
+  "query": "SHIB2",
+  "options": {},
+  "now": 1789562427310,
+  "recordedAt": "2026-09-16T12:40:27.310Z",
+  "live": {
+    "calls": 4,
+    "credits": 7,
+    "ms": 1399
+  },
+  "responses": {
+    "887e124628a8664f90978525856e0850": {
+      "storedAt": "2026-09-16T12:40:27.827Z",
+      "ttlMs": 1800000,
+      "endpoint": "search/general",
+      "body": {
+        "search_query": "SHIB2",
+        "result_type": "token",
+        "limit": 50
+      },
+      "text": "{\"tokens\":[{\"name\":\"SHIB2\",\"symbol\":\"SHIB2\",\"chain\":\"ethereum\",\"address\":\"0x2de7b02ae3b1f11d51ca7b2495e9094874a064c0\",\"price\":0.0000357816969218879,\"volume_24h\":0.0,\"market_cap\":39411.51399,\"rank\":13388}],\"entities\":[],\"total_results\":1}"
+    },
+    "c38eb96f54c10ea38931e2fbeff64141": {
+      "storedAt": "2026-09-16T12:40:28.125Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/token-information",
+      "body": {
+        "chain": "ethereum",
+        "token_address": "0x2de7b02ae3b1f11d51ca7b2495e9094874a064c0",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":{\"name\":\"SHIB2\",\"symbol\":\"SHIB2\",\"contract_address\":\"0x2de7b02ae3b1f11d51ca7b2495e9094874a064c0\",\"logo\":\"https://coin-images.coingecko.com/coins/images/31776/small/IMG_6344_2.jpg?1696530594\",\"token_details\":{\"token_deployment_date\":\"2023-09-14 16:50:11\",\"website\":\"https://shib2official.com/\",\"x\":\"shib2__official\",\"telegram\":\"S2Portal\",\"market_cap_usd\":35781.696921887895,\"fdv_usd\":26876.8053402853,\"circulating_supply\":1000000000.0,\"total_supply\":1000000000.0},\"spot_metrics\":{\"volume_total_usd\":112.15242094024701,\"buy_volume_usd\":0.0,\"sell_volume_usd\":112.15242094024701,\"total_buys\":0,\"total_sells\":6,\"unique_buyers\":0,\"unique_sellers\":5,\"liquidity_usd\":10796.382119452952,\"total_holders\":568}}}"
+    },
+    "c8be746c027401ce7c38e8d4d523243c": {
+      "storedAt": "2026-09-16T12:40:28.136Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/flow-intelligence",
+      "body": {
+        "chain": "ethereum",
+        "token_address": "0x2de7b02ae3b1f11d51ca7b2495e9094874a064c0",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":[{\"public_figure_net_flow_usd\":0.0,\"public_figure_avg_flow_usd\":null,\"public_figure_wallet_count\":0,\"top_pnl_net_flow_usd\":0.0,\"top_pnl_avg_flow_usd\":null,\"top_pnl_wallet_count\":0,\"whale_net_flow_usd\":0.0,\"whale_avg_flow_usd\":null,\"whale_wallet_count\":0,\"smart_trader_net_flow_usd\":0.0,\"smart_trader_avg_flow_usd\":null,\"smart_trader_wallet_count\":0,\"exchange_net_flow_usd\":108.21113573853464,\"exchange_avg_flow_usd\":108.21113565434652,\"exchange_wallet_count\":0,\"fresh_wallets_net_flow_usd\":0.0,\"fresh_wallets_avg_flow_usd\":0.0,\"fresh_wallets_wallet_count\":0}],\"warnings\":[\"exchange_wallet_count is always 0 (not tracked), even when exchange net flow is non-zero.\"]}"
+    },
+    "0a7550849626927affd43baade998cdc": {
+      "storedAt": "2026-09-16T12:40:28.709Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/holders",
+      "body": {
+        "chain": "ethereum",
+        "token_address": "0x2de7b02ae3b1f11d51ca7b2495e9094874a064c0",
+        "pagination": {
+          "page": 1,
+          "per_page": 20
+        }
+      },
+      "text": "{\"data\":[{\"address\":\"0x22479662bd1561b45da6f27331d9b154ef7d15b5\",\"address_label\":\"UniswapV2\",\"token_amount\":294081725.8551246,\"total_outflow\":3764452353.8423805,\"total_inflow\":4058534079.697505,\"balance_change_24h\":20398692.727795392,\"balance_change_7d\":23254613.69283046,\"balance_change_30d\":9228212.404041084,\"ownership_percentage\":0.2940817258551246,\"value_usd\":10522.743184813791},{\"address\":\"0x000000000000000000000000000000000000dead\",\"address_label\":\"\",\"token_amount\":248867223.96207723,\"total_outflow\":0.0,\"total_inflow\":248867223.96207723,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.24886722396207722,\"value_usd\":8904.891581602646},{\"address\":\"0x5a831d3ed894c96e92e9256b63c734bd81d01dde\",\"address_label\":\"\",\"token_amount\":30564458.95709992,\"total_outflow\":0.0,\"total_inflow\":30564458.95709992,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.03056445895709992,\"value_usd\":1093.6482069844312},{\"address\":\"0x647872173e943fbd35a3f77b141b974456b09548\",\"address_label\":\"\",\"token_amount\":26499985.964747608,\"total_outflow\":54984.0,\"total_inflow\":26554969.96474761,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.02649998596474761,\"value_usd\":948.2144662248819},{\"address\":\"0xc547e1deb6625fe7845dcdfb8840be609fcf6e4d\",\"address_label\":\"\",\"token_amount\":22002857.067510907,\"total_outflow\":0.0,\"total_inflow\":22002857.067510907,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.022002857067510907,\"value_usd\":787.2995630052944},{\"address\":\"0x3a1b6021b90a2b7a92d690fd8cdfa1dc7dd2398f\",\"address_label\":\"\",\"token_amount\":20000000.041837636,\"total_outflow\":0.0,\"total_inflow\":20000000.041837636,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.020000000041837638,\"value_usd\":715.6339399347796},{\"address\":\"0x12eb68274827cc1e1af9b7c10510d320345e066b\",\"address_label\":\"\",\"token_amount\":16717183.362355707,\"total_outflow\":3017868.7677806406,\"total_inflow\":19735052.13013635,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.016717183362355708,\"value_usd\":598.1691884594388},{\"address\":\"0x7fffc5613390943cd7667335b552284612213396\",\"address_label\":\"\",\"token_amount\":13299150.891759489,\"total_outflow\":369061100.22659844,\"total_inflow\":382360251.1183579,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.013299150891759488,\"value_usd\":475.8661865273932},{\"address\":\"0x836dfcce0ecff5bf3ff760f661d0e17f8aa5efa1\",\"address_label\":\"\",\"token_amount\":13278792.433299163,\"total_outflow\":0.0,\"total_inflow\":13278792.433299163,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.013278792433299163,\"value_usd\":475.13772633696897},{\"address\":\"0xe74959b8a4c4fcf7342b41ad6452ae132afc9c30\",\"address_label\":\"\",\"token_amount\":10039568.879712027,\"total_outflow\":0.0,\"total_inflow\":10039568.879712027,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.010039568879712026,\"value_usd\":359.23281088027335},{\"address\":\"0x1d2da06973c91622da91527f8e09e410806d7f4c\",\"address_label\":\"\",\"token_amount\":10000000.0,\"total_outflow\":10000000.0,\"total_inflow\":20000000.0,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.01,\"value_usd\":357.81696921887897},{\"address\":\"0xd13e38a3df1e959f7dfaed49b12b096a32c7c1a5\",\"address_label\":\"\",\"token_amount\":8541183.0,\"total_outflow\":5500000.0,\"total_inflow\":14041183.0,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.008541183,\"value_usd\":305.6180214603812},{\"address\":\"0xa98fa3edb288e1f101352890cce962a610fe2467\",\"address_label\":\"\",\"token_amount\":8158422.602407248,\"total_outflow\":23176192.992915433,\"total_inflow\":31334615.59532268,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.008158422602407248,\"value_usd\":291.92220492001604},{\"address\":\"0xe272c5068f548cc443c5355606846a4687d950b2\",\"address_label\":\"\",\"token_amount\":7530000.0,\"total_outflow\":5979304.882491369,\"total_inflow\":13509304.882491369,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.00753,\"value_usd\":269.4361778218159},{\"address\":\"0x31b4261078c0c660b2d27bd3edd23ecdcdb4fe31\",\"address_label\":\"\",\"token_amount\":7047184.832710438,\"total_outflow\":79290650.29786892,\"total_inflow\":86337835.13057937,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.0070471848327104385,\"value_usd\":252.16023183657018},{\"address\":\"0xad2c497daebbf0f5db0892a27e9a573cf84a7dae\",\"address_label\":\"\",\"token_amount\":7045675.513081314,\"total_outflow\":0.0,\"total_inflow\":7045675.513081314,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.007045675513081314,\"value_usd\":252.10622581904258},{\"address\":\"0x84bbfcddcf705322cdafc383fb83b4f0a9414c12\",\"address_label\":\"\",\"token_amount\":6652000.000000001,\"total_outflow\":5897655.909841575,\"total_inflow\":12549655.909841577,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.006652000000000001,\"value_usd\":238.01984792439833},{\"address\":\"0xb7f0a717b79222cfb90eff4d26668d1be241a987\",\"address_label\":\"\",\"token_amount\":6515300.976420597,\"total_outflow\":59475092.35103051,\"total_inflow\":65990393.3274511,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":6515300.976420597,\"ownership_percentage\":0.006515300976420597,\"value_usd\":233.12852489316208},{\"address\":\"0x6a06233d524b81831113cd1829c90b71017878bc\",\"address_label\":\"\",\"token_amount\":5988073.442594771,\"total_outflow\":0.0,\"total_inflow\":5988073.442594771,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.005988073442594772,\"value_usd\":214.263429068932},{\"address\":\"0x51060f433795756bfefd0f9781523c7618b44772\",\"address_label\":\"\",\"token_amount\":5971861.0,\"total_outflow\":99999.99999999999,\"total_inflow\":6071861.0,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.005971861,\"value_usd\":213.6833203616424}],\"pagination\":{\"page\":1,\"per_page\":20,\"is_last_page\":false},\"warnings\":null}"
+    }
+  },
+  "verdict": {
+    "query": "SHIB2",
+    "winner": {
+      "chain": "ethereum",
+      "address": "0x2de7b02ae3b1f11d51ca7b2495e9094874a064c0",
+      "name": "SHIB2",
+      "symbol": "SHIB2",
+      "marketCap": 39411.51399,
+      "volume24h": 0,
+      "searchRank": 13388,
+      "labelledWallets": 0,
+      "smartTraderWallets": 0,
+      "whaleWallets": 0,
+      "topPnlWallets": 0,
+      "publicFigureWallets": 0,
+      "smartTraderNetFlowUsd": 0,
+      "exchangeNetFlowUsd": 108.21113573853464,
+      "freshNetFlowUsd": 0,
+      "exchangeTouched": true,
+      "freshShare": 0,
+      "errors": [],
+      "deploymentDate": "2023-09-14 16:50:11",
+      "ageDays": 1097,
+      "marketCapUsd": 35781.696921887895,
+      "liquidityUsd": 10796.382119452952,
+      "totalHolders": 568,
+      "uniqueBuyers": 0,
+      "logo": "https://coin-images.coingecko.com/coins/images/31776/small/IMG_6344_2.jpg?1696530594",
+      "website": "https://shib2official.com/",
+      "score": 3.82,
+      "terms": {
+        "labelled": 0,
+        "exchange": 0,
+        "holders": 1.65,
+        "liquidity": 1.61,
+        "age": 0,
+        "fresh": 0,
+        "recognisedHolders": 0.55
+      },
+      "reasons": [
+        "0 labelled wallets in 7 days",
+        "no meaningful exchange flow",
+        "568 holders",
+        "3.0y old",
+        "1 of top 20 holders tagged by Nansen (UniswapV2)"
+      ],
+      "impostor": false,
+      "scorable": true,
+      "unchecked": false,
+      "recognisedHolders": 1,
+      "topLabels": [
+        "UniswapV2"
+      ],
+      "topHolderPct": 0.2940817258551246
+    },
+    "ranked": [
+      {
+        "chain": "ethereum",
+        "address": "0x2de7b02ae3b1f11d51ca7b2495e9094874a064c0",
+        "name": "SHIB2",
+        "symbol": "SHIB2",
+        "marketCap": 39411.51399,
+        "volume24h": 0,
+        "searchRank": 13388,
+        "labelledWallets": 0,
+        "smartTraderWallets": 0,
+        "whaleWallets": 0,
+        "topPnlWallets": 0,
+        "publicFigureWallets": 0,
+        "smartTraderNetFlowUsd": 0,
+        "exchangeNetFlowUsd": 108.21113573853464,
+        "freshNetFlowUsd": 0,
+        "exchangeTouched": true,
+        "freshShare": 0,
+        "errors": [],
+        "deploymentDate": "2023-09-14 16:50:11",
+        "ageDays": 1097,
+        "marketCapUsd": 35781.696921887895,
+        "liquidityUsd": 10796.382119452952,
+        "totalHolders": 568,
+        "uniqueBuyers": 0,
+        "logo": "https://coin-images.coingecko.com/coins/images/31776/small/IMG_6344_2.jpg?1696530594",
+        "website": "https://shib2official.com/",
+        "score": 3.82,
+        "terms": {
+          "labelled": 0,
+          "exchange": 0,
+          "holders": 1.65,
+          "liquidity": 1.61,
+          "age": 0,
+          "fresh": 0,
+          "recognisedHolders": 0.55
+        },
+        "reasons": [
+          "0 labelled wallets in 7 days",
+          "no meaningful exchange flow",
+          "568 holders",
+          "3.0y old",
+          "1 of top 20 holders tagged by Nansen (UniswapV2)"
+        ],
+        "impostor": false,
+        "scorable": true,
+        "unchecked": false,
+        "recognisedHolders": 1,
+        "topLabels": [
+          "UniswapV2"
+        ],
+        "topHolderPct": 0.2940817258551246
+      }
+    ],
+    "abstained": false,
+    "stablecoin": false,
+    "candidatesTotal": 1,
+    "warnings": [],
+    "credits": 7,
+    "provenance": [
+      {
+        "endpoint": "search/general",
+        "body": {
+          "search_query": "SHIB2",
+          "result_type": "token",
+          "limit": 50
+        },
+        "credits": 0,
+        "ms": 516,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "tokens[].name",
+          "tokens[].symbol",
+          "tokens[].chain",
+          "tokens[].address",
+          "tokens[].market_cap",
+          "tokens[].volume_24h",
+          "tokens[].rank"
+        ],
+        "responseHash": "1f30ae6976fb8d30aee05dc0671acdffc82709da856bf693dfb2d6e7a41e37cc",
+        "attempts": 1,
+        "totalMs": 516,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/token-information",
+        "body": {
+          "chain": "ethereum",
+          "token_address": "0x2de7b02ae3b1f11d51ca7b2495e9094874a064c0",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 294,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "token_details.token_deployment_date",
+          "token_details.market_cap_usd",
+          "spot_metrics.liquidity_usd",
+          "spot_metrics.total_holders",
+          "spot_metrics.unique_buyers"
+        ],
+        "responseHash": "aaf273133ceb8ee26b359073fc74ed31fce414608992eeda6a23262a73bd99da",
+        "attempts": 1,
+        "totalMs": 295,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/flow-intelligence",
+        "body": {
+          "chain": "ethereum",
+          "token_address": "0x2de7b02ae3b1f11d51ca7b2495e9094874a064c0",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 306,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "smart_trader_wallet_count",
+          "whale_wallet_count",
+          "top_pnl_wallet_count",
+          "public_figure_wallet_count",
+          "smart_trader_net_flow_usd",
+          "whale_net_flow_usd",
+          "top_pnl_net_flow_usd",
+          "public_figure_net_flow_usd",
+          "exchange_net_flow_usd",
+          "fresh_wallets_net_flow_usd"
+        ],
+        "responseHash": "651610eacc7465dcce9c7d610b78400c27b52e040c8d1d9f21bf639dd870013c",
+        "attempts": 1,
+        "totalMs": 306,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/holders",
+        "body": {
+          "chain": "ethereum",
+          "token_address": "0x2de7b02ae3b1f11d51ca7b2495e9094874a064c0",
+          "pagination": {
+            "page": 1,
+            "per_page": 20
+          }
+        },
+        "credits": 5,
+        "ms": 572,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "data[].address_label",
+          "data[].ownership_percentage"
+        ],
+        "responseHash": "cc29507b3fddeacc48ef6c9c32ca209457228b7d064a947e9aa0664e022b6d3f",
+        "attempts": 1,
+        "totalMs": 572,
+        "ok": true
+      }
+    ],
+    "ms": 1399,
+    "weights": {
+      "labelled": 3,
+      "exchange": 0.6,
+      "holders": 0.6,
+      "liquidity": 0.4,
+      "young7": 2,
+      "young30": 1,
+      "freshPenalty": 1.5,
+      "recognisedHolders": 0.8
+    },
+    "hash": "bd0d01cfd84ea8d1fd434b012ec1616559c58e10b977efd5bcaf15b4bbfa76f8"
+  }
+}

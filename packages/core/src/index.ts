@@ -10,3 +10,5 @@ export { whichOnesReal } from "./verdict.js";
 export type { Verdict, VerdictOptions } from "./verdict.js";
 export { CachedNansenClient, cachedClientFromEnv, DiskCache, MemoryCache, cacheKey, DEFAULT_TTL_MS } from "./cache.js";
 export type { CacheStore, CacheEntry, CachedClientOptions } from "./cache.js";
+export { writeFixture, readFixture, listFixtures, fixtureStore, fixtureName, FIXTURES_DIR } from "./fixtures.js";
+export type { Fixture } from "./fixtures.js";

@@ -45,3 +45,32 @@ export const searchTokens = (tokens: Array<{ chain: string; address: string; sym
   tokens: tokens.map((t, i) => ({ name: t.name ?? "Pepe", symbol: t.symbol ?? "PEPE", chain: t.chain, address: t.address, price: 1, volume_24h: 1, market_cap: t.market_cap ?? 1, rank: t.rank ?? i + 1 })),
   entities: [], total_results: tokens.length,
 });
+
+export const PEPE_REAL = "0x6982508145454ce325ddbe47a25d4ec3d2311933";
+export const PEPE_IMP = "0x" + "b".repeat(40);
+export const PEPE_OLD = "0x" + "c".repeat(40);
+
+/** Routes modelled on the live PEPE probe: one real, one 3-day-old impostor, one old dead token, one perp market. */
+export function pepeRoutes(endpoint: string, body: Record<string, unknown>) {
+  if (endpoint === "search/general") return searchTokens([
+    { chain: "hyperliquid", address: "PEPE", rank: 1 },
+    { chain: "ethereum", address: PEPE_REAL, rank: 2, market_cap: 1.4e9 },
+    { chain: "base", address: PEPE_IMP, rank: 3, market_cap: 2e9 },          // impostor with the bigger cap
+    { chain: "base", address: PEPE_OLD, rank: 4 },
+    { chain: "solana", address: "Fuzzy", rank: 5, symbol: "PEPEX", name: "Pepe X" }, // fuzzy hit, filtered
+  ]);
+  const a = String(body.token_address);
+  if (endpoint === "tgm/flow-intelligence") {
+    if (a === PEPE_REAL) return flowRow({ smart_trader_wallet_count: 38, top_pnl_wallet_count: 26, whale_wallet_count: 1, public_figure_wallet_count: 4, exchange_net_flow_usd: 1_895_861, fresh_wallets_net_flow_usd: 17_027_659, smart_trader_net_flow_usd: 29_948 });
+    if (a === PEPE_IMP) return flowRow({ fresh_wallets_net_flow_usd: 90_000, exchange_net_flow_usd: 300 });
+    return flowRow({ exchange_net_flow_usd: 4_310 });
+  }
+  if (endpoint === "tgm/token-information") {
+    if (a === PEPE_REAL) return infoRow({ deployed: "2023-04-14 14:51:35", holders: 400_392, liquidity: 13_803_928 });
+    if (a === PEPE_IMP) return infoRow({ deployed: "2026-09-13 09:00:00", holders: 900, liquidity: 500_000 });
+    return infoRow({ deployed: "2024-08-10 00:00:00", holders: 11_225, liquidity: 176_747 });
+  }
+  if (endpoint === "tgm/holders") return holdersRows(a === PEPE_REAL ? Array(18).fill("Binance").concat(["Token Contract", null]) : [null, null, null]);
+  throw new Error("unexpected " + endpoint);
+}
+

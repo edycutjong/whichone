@@ -1,0 +1,1160 @@
+{
+  "edge": "3 · stablecoin — canonical per chain, no impostor flags",
+  "query": "USDC",
+  "options": {},
+  "now": 1789562393883,
+  "recordedAt": "2026-09-16T12:39:53.883Z",
+  "live": {
+    "calls": 18,
+    "credits": 25,
+    "ms": 8255
+  },
+  "responses": {
+    "11f50a92e18e0ffa7423130a34ef3bf7": {
+      "storedAt": "2026-09-16T12:39:54.346Z",
+      "ttlMs": 1800000,
+      "endpoint": "search/general",
+      "body": {
+        "search_query": "USDC",
+        "result_type": "token",
+        "limit": 50
+      },
+      "text": "{\"tokens\":[{\"name\":\"USD Coin\",\"symbol\":\"USDC\",\"chain\":\"ethereum\",\"address\":\"0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48\",\"price\":1.00051822588124,\"volume_24h\":672707407.0370839,\"market_cap\":73665109466.6742,\"rank\":599},{\"name\":\"USD Coin\",\"symbol\":\"USDC\",\"chain\":\"solana\",\"address\":\"EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v\",\"price\":1.0000000000000038,\"volume_24h\":1419585489.770524,\"market_cap\":73783077182.5637,\"rank\":613},{\"name\":\"USD Coin\",\"symbol\":\"USDC\",\"chain\":\"base\",\"address\":\"0x833589fcd6edb6e08f4c7c32d4f71b54bda02913\",\"price\":0.9973985961643,\"volume_24h\":566386613.3494842,\"market_cap\":73467198246.5037,\"rank\":615},{\"name\":\"USD Coin\",\"symbol\":\"USDC\",\"chain\":\"arbitrum\",\"address\":\"0xaf88d065e77c8cc2239327c5edb3a432268e5831\",\"price\":0.9997061909622492,\"volume_24h\":185914502.65911046,\"market_cap\":73744470672.8817,\"rank\":617},{\"name\":\"USDC\",\"symbol\":\"USDC\",\"chain\":\"near\",\"address\":\"17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1\",\"price\":0.9997061909622492,\"volume_24h\":33069157.26015786,\"market_cap\":74059829844.7138,\"rank\":624},{\"name\":\"USDC\",\"symbol\":\"USDC\",\"chain\":\"hyperevm\",\"address\":\"0xb88339cb7199b77e23db6e890353e22632ba630f\",\"price\":0.9997061909622492,\"volume_24h\":75580698.70301792,\"market_cap\":73805127110.3704,\"rank\":628},{\"name\":\"USD Coin\",\"symbol\":\"USDC\",\"chain\":\"bnb\",\"address\":\"0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d\",\"price\":0.999908749278007,\"volume_24h\":55209221.091926776,\"market_cap\":1589387443.88501,\"rank\":635},{\"name\":\"USD Coin (PoS)\",\"symbol\":\"USDC\",\"chain\":\"polygon\",\"address\":\"0x2791bca1f2de4661ed88a30c99a7a9449aa84174\",\"price\":0.9997061909622492,\"volume_24h\":49029965.98204304,\"market_cap\":1032303985.85481,\"rank\":638},{\"name\":\"USDC\",\"symbol\":\"USDC\",\"chain\":\"monad\",\"address\":\"0x754704bc059f8c67012fed69bc8a327a5aafb603\",\"price\":0.9997061909622492,\"volume_24h\":23818820.08975341,\"market_cap\":73661988331.3116,\"rank\":641},{\"name\":\"USDC\",\"symbol\":\"USDC\",\"chain\":\"sui\",\"address\":\"0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::USDC\",\"price\":0.9997061909622492,\"volume_24h\":5810011.256058181,\"market_cap\":73623688941.3022,\"rank\":645},{\"name\":\"USD Coin\",\"symbol\":\"USDC\",\"chain\":\"polygon\",\"address\":\"0x3c499c542cef5e3811e1192ce70d8cc03d5c3359\",\"price\":0.9997061909622492,\"volume_24h\":54714674.06843676,\"market_cap\":73746796615.0377,\"rank\":668},{\"name\":\"NEAR Intents Bridged USDC\",\"symbol\":\"USDC\",\"chain\":\"near\",\"address\":\"eth-0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48.omft.near\",\"price\":0.9997061909622492,\"volume_24h\":0.0,\"market_cap\":7948641.25887375,\"rank\":720},{\"name\":\"USD Coin\",\"symbol\":\"USDC\",\"chain\":\"optimism\",\"address\":\"0x0b2c639c533813f4aa9d7837caf62653d097ff85\",\"price\":0.9997061909622492,\"volume_24h\":18879781.735290814,\"market_cap\":73362967790.4506,\"rank\":727},{\"name\":\"USDC\",\"symbol\":\"USDC\",\"chain\":\"avalanche\",\"address\":\"0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e\",\"price\":0.9997061909622492,\"volume_24h\":73765174.24895784,\"market_cap\":73708475925.9341,\"rank\":729},{\"name\":\"USDC\",\"symbol\":\"USDC\",\"chain\":\"sei\",\"address\":\"0xe15fc38f6d8c56af07bbcbe3baf5708a2bf42392\",\"price\":0.9997061909622492,\"volume_24h\":4621630.394103467,\"market_cap\":73586032297.5223,\"rank\":734},{\"name\":\"Bridged USDC (Sonic Labs)\",\"symbol\":\"USDC.E\",\"chain\":\"sonic\",\"address\":\"0x29219dd400f2bf60e5a23d13be72b486d4038894\",\"price\":0.9997061909622492,\"volume_24h\":591210.7027991784,\"market_cap\":73705484398.1392,\"rank\":769},{\"name\":\"USD Coin (Arb1)\",\"symbol\":\"USDC\",\"chain\":\"arbitrum\",\"address\":\"0xff970a61a04b1ca14834a43f5de4533ebddb5cc8\",\"price\":0.9997061909622492,\"volume_24h\":3706267.8044388536,\"market_cap\":47946173.2744686,\"rank\":778},{\"name\":\"Syrup USDC\",\"symbol\":\"SYRUPUSDC\",\"chain\":\"solana\",\"address\":\"AvZZF1YaZDziPY2RCK4oJrRVrbN3mTD9NL24hPeaZeUj\",\"price\":1.180590827728688,\"volume_24h\":3802169.738728104,\"market_cap\":954619516.927301,\"rank\":785},{\"name\":\"USDC\",\"symbol\":\"USDC\",\"chain\":\"linea\",\"address\":\"0x176211869ca2b568f2a7d4ee941e073a821ee1ff\",\"price\":0.9997061909622492,\"volume_24h\":332935.21596449695,\"market_cap\":22382915.1100262,\"rank\":919},{\"name\":\"USD Coin\",\"symbol\":\"USDC\",\"chain\":\"mantle\",\"address\":\"0x09bc4e0d864854c6afb6eb9a9cdf58ac190d0df9\",\"price\":0.9997061909622492,\"volume_24h\":190686.67295357998,\"market_cap\":19895595.8423555,\"rank\":956},{\"name\":\"Syrup USDC\",\"symbol\":\"SYRUPUSDC\",\"chain\":\"monad\",\"address\":\"0xab6e5a0c3799d020c790d34f7b2c02639e238af7\",\"price\":1.1826581860979493,\"volume_24h\":50276.02844696605,\"market_cap\":956296280.0,\"rank\":1026},{\"name\":\"Syrup USDC\",\"symbol\":\"SYRUPUSDC\",\"chain\":\"ethereum\",\"address\":\"0x80ac24aa929eaf5013f6436cda2a7ba190f5cc0b\",\"price\":1.18180691578438,\"volume_24h\":2188605.896988381,\"market_cap\":952179495.130209,\"rank\":1220},{\"name\":\"USDC\",\"symbol\":\"USDC\",\"chain\":\"tron\",\"address\":\"TEkxiTehnzSmSe2XqrBj4w32RUN966rdz8\",\"price\":0.9997061909622492,\"volume_24h\":24810.11372189866,\"market_cap\":73677915670.0,\"rank\":1302},{\"name\":\"usdc is cool\",\"symbol\":\"COOL\",\"chain\":\"arc\",\"address\":\"0xeb64987643db71c76b2a2be7e723decc995e5b37\",\"price\":0.00649854350225872,\"volume_24h\":201010.25005745166,\"market_cap\":6131663.22720944,\"rank\":1394},{\"name\":\"USD Coin\",\"symbol\":\"USDC\",\"chain\":\"optimism\",\"address\":\"0x7f5c764cbc14f9669b88837ca1490cca17c31607\",\"price\":0.9997061909622492,\"volume_24h\":124831.8975070296,\"market_cap\":19577010.58677,\"rank\":1558},{\"name\":\"Rainbow Bridged USDC (Near)\",\"symbol\":\"USDC.E\",\"chain\":\"near\",\"address\":\"a0b86991c6218b36c1d19d4a2e9eb0ce3606eb48.factory.bridge.near\",\"price\":0.9997061909622492,\"volume_24h\":55792.1655054334,\"market_cap\":18470961.507452,\"rank\":1742},{\"name\":\"Bridged USD Coin (Wormhole Ethereum)\",\"symbol\":\"USDCET\",\"chain\":\"sui\",\"address\":\"0x5d4b302506645c37ff133b98c4b50a5ae14841659738d6d733d59d0d217a93bf::coin::COIN\",\"price\":0.9997061909622492,\"volume_24h\":46436.62927263817,\"market_cap\":217028.337422811,\"rank\":1790},{\"name\":\"USD Coin\",\"symbol\":\"USDC.E\",\"chain\":\"avalanche\",\"address\":\"0xa7d7079b0fead91f3e65f86e8915cb59c1a4c664\",\"price\":0.9997061909622492,\"volume_24h\":29508.560744168746,\"market_cap\":32637436.7701664,\"rank\":1908},{\"name\":\"Axelar Wrapped USDC\",\"symbol\":\"AXLUSDC\",\"chain\":\"base\",\"address\":\"0xeb466342c4d449bc9f53a865d5cb90586f405215\",\"price\":1.0042563288199,\"volume_24h\":9555.402510635427,\"market_cap\":574010.177074728,\"rank\":2240},{\"name\":\"Axelar Wrapped USDC\",\"symbol\":\"AXLUSDC\",\"chain\":\"arbitrum\",\"address\":\"0xeb466342c4d449bc9f53a865d5cb90586f405215\",\"price\":0.9997061909622492,\"volume_24h\":10082.864879035931,\"market_cap\":59282803.0,\"rank\":2251},{\"name\":\"USD CoinVertible\",\"symbol\":\"USDCV\",\"chain\":\"ethereum\",\"address\":\"0x5422374b27757da72d5265cc745ea906e0446634\",\"price\":0.999851067754666,\"volume_24h\":338.8166146545611,\"market_cap\":12545829.033759,\"rank\":2796},{\"name\":\"Syrup USDC\",\"symbol\":\"SYRUPUSDC\",\"chain\":\"arbitrum\",\"address\":\"0x41ca7586cc1311807b4605fbb748a3b8862b42b5\",\"price\":1.1826581860979493,\"volume_24h\":0.012002725232636558,\"market_cap\":956296280.0,\"rank\":3092},{\"name\":\"Wrapped Aave Ethereum USDC\",\"symbol\":\"WAETHUSDC\",\"chain\":\"ethereum\",\"address\":\"0xd4fa2d31b7968e448877f69a96de69f5de8cd23e\",\"price\":1.18588301418543,\"volume_24h\":0.0,\"market_cap\":73175751.7871342,\"rank\":3110},{\"name\":\"Aave interest bearing USDC\",\"symbol\":\"AUSDC_V2\",\"chain\":\"ethereum\",\"address\":\"0xbcca60bb61934080951369a648fb03df4f96263c\",\"price\":0.988974464420466,\"volume_24h\":0.0,\"market_cap\":20274772.3441689,\"rank\":3121},{\"name\":\"Aave Matic Market USDC\",\"symbol\":\"AMUSDC\",\"chain\":\"polygon\",\"address\":\"0x1a13f4ca1d028320a707d99520abfefca3998b7f\",\"price\":0.9993757554910525,\"volume_24h\":0.0,\"market_cap\":2836074.0,\"rank\":3142},{\"name\":\"Wrapped Aave Arbitrum USDCn\",\"symbol\":\"WAARBUSDCN\",\"chain\":\"arbitrum\",\"address\":\"0x7f6501d3b98ee91f9b9535e4b0ac710fb0f9e0bc\",\"price\":1.1539245078383038,\"volume_24h\":0.0,\"market_cap\":293630.0,\"rank\":3210},{\"name\":\"Wrapped Neverland USDC\",\"symbol\":\"WNUSDC\",\"chain\":\"monad\",\"address\":\"0x8d5c2df3eef09088fcccf3376d8ecd0dd505f642\",\"price\":1.0160521578372264,\"volume_24h\":0.0,\"market_cap\":246517.0,\"rank\":3215},{\"name\":\"Wrapped Aave Base USDC\",\"symbol\":\"WABASUSDC\",\"chain\":\"base\",\"address\":\"0xc768c589647798a6ee01a91fde98ef2ed046dbd6\",\"price\":1.14396351804017,\"volume_24h\":0.0,\"market_cap\":115947.213328434,\"rank\":3236},{\"name\":\"Aave Ethereum USDC\",\"symbol\":\"AETHUSDC\",\"chain\":\"ethereum\",\"address\":\"0x98c23e9d8f34fefb1b7bd6a91b7ff122f4e16f5c\",\"price\":0.997480516761889,\"volume_24h\":2906546.8788952464,\"market_cap\":2377519759.32858,\"rank\":3265},{\"name\":\"Aave Arbitrum USDCn\",\"symbol\":\"AARBUSDCN\",\"chain\":\"arbitrum\",\"address\":\"0x724dc807b04555b71ed48a6896b6f41593b8c637\",\"price\":0.99987961,\"volume_24h\":303685.2632447339,\"market_cap\":180013885.207246,\"rank\":3352},{\"name\":\"PayFi Strategy Token - USDC\",\"symbol\":\"PST-USDC\",\"chain\":\"solana\",\"address\":\"59obFNBzyTBGowrkif5uK7ojS58vsuWz3ZCvg6tfZAGw\",\"price\":1.1352016835017813,\"volume_24h\":273951.39818677615,\"market_cap\":337208338.279817,\"rank\":3365},{\"name\":\"StarkGate Bridged USDC (Starknet)\",\"symbol\":\"USDC\",\"chain\":\"starknet\",\"address\":\"0x053c91253bc9682c04929ca02ed00b3e423f6710d2ee7e0d5ebb06f3ecf368a8\",\"price\":0.9997061909622492,\"volume_24h\":99507.70578778209,\"market_cap\":6187952.0,\"rank\":3517},{\"name\":\"Aave Avalanche USDC\",\"symbol\":\"AAVAUSDC\",\"chain\":\"avalanche\",\"address\":\"0x625e7708f30ca75bfd92586e17077590c60eb4cd\",\"price\":0.99987961,\"volume_24h\":75466.80924040743,\"market_cap\":60767345.6097524,\"rank\":3584},{\"name\":\"Bridged USDC (Stargate)\",\"symbol\":\"USDC.E\",\"chain\":\"iotaevm\",\"address\":\"0xfbda5f676cb37624f28265a144a48b0d6e87d3b6\",\"price\":0.9997061909622492,\"volume_24h\":71121.70852558385,\"market_cap\":21294051.0,\"rank\":3600},{\"name\":\"Upside Down Cat\",\"symbol\":\"USDC\",\"chain\":\"solana\",\"address\":\"C5nG72gUFJz6wewcgTPjcBmpSq4BwFLHy5j8heo9d7rZ\",\"price\":0.00014184457403689657,\"volume_24h\":47232.76658871063,\"market_cap\":141703.019175218,\"rank\":3648},{\"name\":\"USDC Bull\",\"symbol\":\"BULL\",\"chain\":\"arc\",\"address\":\"0x4cc878731ae13276c72455663a83dc985d953553\",\"price\":0.000214432601865262,\"volume_24h\":18406.56243398126,\"market_cap\":206154.599709917,\"rank\":3662},{\"name\":\"USDC\",\"symbol\":\"USDC\",\"chain\":\"starknet\",\"address\":\"0x033068f6539f8e6e6b131e6b2b814e6c34a5224bc66947c47dab9dfee93b35fb\",\"price\":0.9997061909622492,\"volume_24h\":3541483.4829883715,\"market_cap\":73677915670.0,\"rank\":3933},{\"name\":\"Axelar Wrapped USDC\",\"symbol\":\"AXLUSDC\",\"chain\":\"optimism\",\"address\":\"0xeb466342c4d449bc9f53a865d5cb90586f405215\",\"price\":0.9997061909622492,\"volume_24h\":3272.874870059308,\"market_cap\":59282803.0,\"rank\":4004},{\"name\":\"FatCatBatRatWifHat\",\"symbol\":\"USDC\",\"chain\":\"arc\",\"address\":\"0x0006ed5d37a9d6687d1ecc8b642ff9c4760d9a16\",\"price\":0.000115255729615663,\"volume_24h\":5647.805095043523,\"market_cap\":115255.729615663,\"rank\":4564},{\"name\":\"Axelar Wrapped USDC\",\"symbol\":\"AXLUSDC\",\"chain\":\"polygon\",\"address\":\"0x750e4c4984a9e0f12978ea6742bc1c5d248f40ed\",\"price\":0.9997061909622492,\"volume_24h\":22912.268526567143,\"market_cap\":255364.885989561,\"rank\":5029}],\"entities\":[],\"total_results\":50}"
+    },
+    "59bbc3564622927c6e85a394fa766880": {
+      "storedAt": "2026-09-16T12:39:55.422Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/token-information",
+      "body": {
+        "chain": "arbitrum",
+        "token_address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":{\"name\":\"USD Coin\",\"symbol\":\"USDC\",\"contract_address\":\"0xaf88d065e77c8cc2239327c5edb3a432268e5831\",\"logo\":\"https://coin-images.coingecko.com/coins/images/6319/small/USDC.png?1769615602\",\"token_details\":{\"token_deployment_date\":\"2022-10-31 20:42:12\",\"website\":\"\",\"x\":\"\",\"telegram\":\"\",\"market_cap_usd\":73682477091.58853,\"fdv_usd\":2689926925.68776,\"circulating_supply\":73699287894.67174,\"total_supply\":73709113319.66678},\"spot_metrics\":{\"volume_total_usd\":890105541.2976887,\"buy_volume_usd\":436802712.9848038,\"sell_volume_usd\":453302828.312885,\"total_buys\":476197,\"total_sells\":463363,\"unique_buyers\":23177,\"unique_sellers\":16155,\"liquidity_usd\":66258111.26405009,\"total_holders\":741088}}}"
+    },
+    "e1cac10ae4ab3f215d23029ce866728e": {
+      "storedAt": "2026-09-16T12:39:55.495Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/token-information",
+      "body": {
+        "chain": "ethereum",
+        "token_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":{\"name\":\"USD Coin\",\"symbol\":\"USDC\",\"contract_address\":\"0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48\",\"logo\":\"https://coin-images.coingecko.com/coins/images/6319/small/USDC.png?1769615602\",\"token_details\":{\"token_deployment_date\":\"2018-08-03 19:28:24\",\"website\":\"https://www.circle.com/en/usdc\",\"x\":\"\",\"telegram\":\"\",\"market_cap_usd\":73669993417.35423,\"fdv_usd\":49954093133.3701,\"circulating_supply\":73699287894.67174,\"total_supply\":73709113319.66678},\"spot_metrics\":{\"volume_total_usd\":3439006823.5133677,\"buy_volume_usd\":1818755973.9378693,\"sell_volume_usd\":1620250849.5754986,\"total_buys\":196300,\"total_sells\":219154,\"unique_buyers\":33174,\"unique_sellers\":27947,\"liquidity_usd\":470712174.09223104,\"total_holders\":3233700}}}"
+    },
+    "931a486007eb61bdb6c63716590c7eb6": {
+      "storedAt": "2026-09-16T12:39:55.647Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/token-information",
+      "body": {
+        "chain": "base",
+        "token_address": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":{\"name\":\"USD Coin\",\"symbol\":\"USDC\",\"contract_address\":\"0x833589fcd6edb6e08f4c7c32d4f71b54bda02913\",\"logo\":\"https://coin-images.coingecko.com/coins/images/6319/small/USDC.png?1769615602\",\"token_details\":{\"token_deployment_date\":\"2023-08-18 18:36:29\",\"website\":\"\",\"x\":\"\",\"telegram\":\"\",\"market_cap_usd\":73884207705.23923,\"fdv_usd\":4250393788.79035,\"circulating_supply\":73699287894.67174,\"total_supply\":73709113319.66678},\"spot_metrics\":{\"volume_total_usd\":3351374608.5394783,\"buy_volume_usd\":1467673198.971543,\"sell_volume_usd\":1883701409.5679352,\"total_buys\":2127550,\"total_sells\":2068798,\"unique_buyers\":80905,\"unique_sellers\":72735,\"liquidity_usd\":179309828.1004825,\"total_holders\":2388535}}}"
+    },
+    "2267d071e7e78a8348e19e70f981563e": {
+      "storedAt": "2026-09-16T12:39:55.686Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/token-information",
+      "body": {
+        "chain": "near",
+        "token_address": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":{\"name\":\"USDC\",\"symbol\":\"USDC\",\"contract_address\":\"17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1\",\"logo\":\"https://coin-images.coingecko.com/coins/images/6319/small/USDC.png?1769615602\",\"token_details\":{\"token_deployment_date\":\"\",\"website\":\"\",\"x\":\"\",\"telegram\":\"\",\"market_cap_usd\":73651635103.40509,\"fdv_usd\":72442465.7771627,\"circulating_supply\":73699287894.67174,\"total_supply\":73709113319.66678},\"spot_metrics\":{\"volume_total_usd\":149934588.2832927,\"buy_volume_usd\":104518085.76889138,\"sell_volume_usd\":45416502.51440134,\"total_buys\":49396,\"total_sells\":32194,\"unique_buyers\":33,\"unique_sellers\":31,\"liquidity_usd\":49528556.83612305,\"total_holders\":27151}}}"
+    },
+    "d67520825d18360c7666df379448a9c4": {
+      "storedAt": "2026-09-16T12:39:55.801Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/flow-intelligence",
+      "body": {
+        "chain": "near",
+        "token_address": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":[{\"public_figure_net_flow_usd\":0.0,\"public_figure_avg_flow_usd\":null,\"public_figure_wallet_count\":0,\"top_pnl_net_flow_usd\":0.0,\"top_pnl_avg_flow_usd\":null,\"top_pnl_wallet_count\":0,\"whale_net_flow_usd\":0.0,\"whale_avg_flow_usd\":null,\"whale_wallet_count\":0,\"smart_trader_net_flow_usd\":0.0,\"smart_trader_avg_flow_usd\":null,\"smart_trader_wallet_count\":0,\"exchange_net_flow_usd\":-59244574.18485233,\"exchange_avg_flow_usd\":51628406.22566037,\"exchange_wallet_count\":0,\"fresh_wallets_net_flow_usd\":1956447.5764411786,\"fresh_wallets_avg_flow_usd\":1964632.059653949,\"fresh_wallets_wallet_count\":0}],\"warnings\":[\"exchange_wallet_count is always 0 (not tracked), even when exchange net flow is non-zero.\",\"fresh_wallets_wallet_count is always 0 (not tracked), even when fresh-wallet net flow is non-zero.\"]}"
+    },
+    "1a82ba49d6959eeff019cb14896d77bf": {
+      "storedAt": "2026-09-16T12:39:56.255Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/flow-intelligence",
+      "body": {
+        "chain": "base",
+        "token_address": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":[{\"public_figure_net_flow_usd\":-7676851.451494651,\"public_figure_avg_flow_usd\":3003916.551851259,\"public_figure_wallet_count\":93,\"top_pnl_net_flow_usd\":3750386.8780926364,\"top_pnl_avg_flow_usd\":4955679.234046309,\"top_pnl_wallet_count\":285,\"whale_net_flow_usd\":0.0,\"whale_avg_flow_usd\":507846.57140089996,\"whale_wallet_count\":0,\"smart_trader_net_flow_usd\":-1248947.8327779416,\"smart_trader_avg_flow_usd\":953355.6109963162,\"smart_trader_wallet_count\":140,\"exchange_net_flow_usd\":26381944.688844994,\"exchange_avg_flow_usd\":64129788.19911772,\"exchange_wallet_count\":0,\"fresh_wallets_net_flow_usd\":159861327785.54956,\"fresh_wallets_avg_flow_usd\":119248757031.33177,\"fresh_wallets_wallet_count\":0}],\"warnings\":[\"exchange_wallet_count is always 0 (not tracked), even when exchange net flow is non-zero.\",\"fresh_wallets_wallet_count is always 0 (not tracked), even when fresh-wallet net flow is non-zero.\"]}"
+    },
+    "ae9db2d82a4befb23659256720cd0364": {
+      "storedAt": "2026-09-16T12:39:56.365Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/token-information",
+      "body": {
+        "chain": "hyperevm",
+        "token_address": "0xb88339cb7199b77e23db6e890353e22632ba630f",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":{\"name\":\"USDC\",\"symbol\":\"USDC\",\"contract_address\":\"0xb88339cb7199b77e23db6e890353e22632ba630f\",\"logo\":\"https://coin-images.coingecko.com/coins/images/6319/small/USDC.png?1769615602\",\"token_details\":{\"token_deployment_date\":\"2025-08-12 13:48:00\",\"website\":\"\",\"x\":\"\",\"telegram\":\"\",\"market_cap_usd\":73850315895.95094,\"fdv_usd\":6289353271.67163,\"circulating_supply\":73699287894.67174,\"total_supply\":73709113319.66678},\"spot_metrics\":{\"volume_total_usd\":464888998.0018985,\"buy_volume_usd\":234463270.36646807,\"sell_volume_usd\":230425727.63543043,\"total_buys\":148275,\"total_sells\":156316,\"unique_buyers\":3590,\"unique_sellers\":2924,\"liquidity_usd\":16707240.460578062,\"total_holders\":28936}}}"
+    },
+    "82d8e57292bd4199b8e2d117fad440e2": {
+      "storedAt": "2026-09-16T12:39:56.641Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/flow-intelligence",
+      "body": {
+        "chain": "ethereum",
+        "token_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":[{\"public_figure_net_flow_usd\":-34845253.459890544,\"public_figure_avg_flow_usd\":6457086.8109755935,\"public_figure_wallet_count\":116,\"top_pnl_net_flow_usd\":-33941920.17279434,\"top_pnl_avg_flow_usd\":23125099.46371568,\"top_pnl_wallet_count\":411,\"whale_net_flow_usd\":18327090.212898795,\"whale_avg_flow_usd\":14900735.872428466,\"whale_wallet_count\":4,\"smart_trader_net_flow_usd\":-640747.4791138289,\"smart_trader_avg_flow_usd\":1138156.483664468,\"smart_trader_wallet_count\":92,\"exchange_net_flow_usd\":108511550.17046377,\"exchange_avg_flow_usd\":152087202.39779505,\"exchange_wallet_count\":0,\"fresh_wallets_net_flow_usd\":4156567616.628116,\"fresh_wallets_avg_flow_usd\":9236257561.980415,\"fresh_wallets_wallet_count\":0}],\"warnings\":[\"exchange_wallet_count is always 0 (not tracked), even when exchange net flow is non-zero.\",\"fresh_wallets_wallet_count is always 0 (not tracked), even when fresh-wallet net flow is non-zero.\"]}"
+    },
+    "1f3971c61fcbb2088be4ec8055ff5b4b": {
+      "storedAt": "2026-09-16T12:39:56.844Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/flow-intelligence",
+      "body": {
+        "chain": "arbitrum",
+        "token_address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":[{\"public_figure_net_flow_usd\":2600054.637426664,\"public_figure_avg_flow_usd\":57487.64858976643,\"public_figure_wallet_count\":45,\"top_pnl_net_flow_usd\":-1824788.0791542535,\"top_pnl_avg_flow_usd\":937209.253157585,\"top_pnl_wallet_count\":86,\"whale_net_flow_usd\":-1549787.682193141,\"whale_avg_flow_usd\":1498323.1310100746,\"whale_wallet_count\":1,\"smart_trader_net_flow_usd\":45524.61375834497,\"smart_trader_avg_flow_usd\":106259.29501768734,\"smart_trader_wallet_count\":31,\"exchange_net_flow_usd\":133212368.09304698,\"exchange_avg_flow_usd\":54833992.61767213,\"exchange_wallet_count\":0,\"fresh_wallets_net_flow_usd\":573740323.4669896,\"fresh_wallets_avg_flow_usd\":613284332.0003833,\"fresh_wallets_wallet_count\":0}],\"warnings\":[\"exchange_wallet_count is always 0 (not tracked), even when exchange net flow is non-zero.\",\"fresh_wallets_wallet_count is always 0 (not tracked), even when fresh-wallet net flow is non-zero.\"]}"
+    },
+    "a676dd5907330e39ae1f787da8d5b5c5": {
+      "storedAt": "2026-09-16T12:39:56.940Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/token-information",
+      "body": {
+        "chain": "bnb",
+        "token_address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":{\"name\":\"\",\"symbol\":\"\",\"contract_address\":\"0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d\",\"logo\":\"\",\"token_details\":{\"token_deployment_date\":\"\",\"website\":\"https://bscscan.com/token/0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d\",\"x\":\"\",\"telegram\":\"\",\"market_cap_usd\":0.0,\"fdv_usd\":0.0,\"circulating_supply\":0.0,\"total_supply\":0.0},\"spot_metrics\":{\"volume_total_usd\":454190706.3580748,\"buy_volume_usd\":230359550.89583445,\"sell_volume_usd\":223831155.46224034,\"total_buys\":1014056,\"total_sells\":999983,\"unique_buyers\":28298,\"unique_sellers\":27856,\"liquidity_usd\":0.0,\"total_holders\":4656867}}}"
+    },
+    "2ec8184cc7d311018dc64d7566866aa9": {
+      "storedAt": "2026-09-16T12:39:57.632Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/flow-intelligence",
+      "body": {
+        "chain": "hyperevm",
+        "token_address": "0xb88339cb7199b77e23db6e890353e22632ba630f",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":[{\"public_figure_net_flow_usd\":3288135.99464438,\"public_figure_avg_flow_usd\":3289083.995705368,\"public_figure_wallet_count\":22,\"top_pnl_net_flow_usd\":-169979.49169875853,\"top_pnl_avg_flow_usd\":559567.9522985688,\"top_pnl_wallet_count\":16,\"whale_net_flow_usd\":100725.2260436072,\"whale_avg_flow_usd\":174270.879284907,\"whale_wallet_count\":1,\"smart_trader_net_flow_usd\":-82923.61245559993,\"smart_trader_avg_flow_usd\":117917.39854538809,\"smart_trader_wallet_count\":12,\"exchange_net_flow_usd\":-152128245.90557057,\"exchange_avg_flow_usd\":103261070.81362247,\"exchange_wallet_count\":0,\"fresh_wallets_net_flow_usd\":126258711.38781576,\"fresh_wallets_avg_flow_usd\":134102113.66254744,\"fresh_wallets_wallet_count\":0}],\"warnings\":[\"exchange_wallet_count is always 0 (not tracked), even when exchange net flow is non-zero.\",\"fresh_wallets_wallet_count is always 0 (not tracked), even when fresh-wallet net flow is non-zero.\"]}"
+    },
+    "1013f949cde90eb1a4574a9ac2d87b15": {
+      "storedAt": "2026-09-16T12:39:57.731Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/token-information",
+      "body": {
+        "chain": "polygon",
+        "token_address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":{\"name\":\"USD Coin (PoS)\",\"symbol\":\"USDC\",\"contract_address\":\"0x2791bca1f2de4661ed88a30c99a7a9449aa84174\",\"logo\":\"https://coin-images.coingecko.com/coins/images/33000/small/usdc_normal.png?1758615648\",\"token_details\":{\"token_deployment_date\":\"2020-09-27 09:40:11\",\"website\":\"https://www.circle.com/en/usdc\",\"x\":\"circle\",\"telegram\":\"\",\"market_cap_usd\":1023072529.1421868,\"fdv_usd\":1024650165.42756,\"circulating_supply\":1023582727.630254,\"total_supply\":1023582727.630254},\"spot_metrics\":{\"volume_total_usd\":373671297.8972831,\"buy_volume_usd\":176683341.78921914,\"sell_volume_usd\":196987956.10806394,\"total_buys\":47595,\"total_sells\":46066,\"unique_buyers\":2162,\"unique_sellers\":2341,\"liquidity_usd\":12780618.244873999,\"total_holders\":792584}}}"
+    },
+    "3fb9ead230626615f1dd6d3e32092b84": {
+      "storedAt": "2026-09-16T12:39:58.161Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/flow-intelligence",
+      "body": {
+        "chain": "polygon",
+        "token_address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":[{\"public_figure_net_flow_usd\":26971.44073783444,\"public_figure_avg_flow_usd\":8267.568830178952,\"public_figure_wallet_count\":1,\"top_pnl_net_flow_usd\":-15174838.539079452,\"top_pnl_avg_flow_usd\":6378842.0147116,\"top_pnl_wallet_count\":7,\"whale_net_flow_usd\":0.0,\"whale_avg_flow_usd\":null,\"whale_wallet_count\":0,\"smart_trader_net_flow_usd\":5265.734170486779,\"smart_trader_avg_flow_usd\":978.4228267337664,\"smart_trader_wallet_count\":2,\"exchange_net_flow_usd\":17312752.673425544,\"exchange_avg_flow_usd\":6479836.148939619,\"exchange_wallet_count\":0,\"fresh_wallets_net_flow_usd\":411991958.5505448,\"fresh_wallets_avg_flow_usd\":200564960.9767419,\"fresh_wallets_wallet_count\":0}],\"warnings\":[\"exchange_wallet_count is always 0 (not tracked), even when exchange net flow is non-zero.\",\"fresh_wallets_wallet_count is always 0 (not tracked), even when fresh-wallet net flow is non-zero.\"]}"
+    },
+    "26f52f1c1b4a103880b24dc4bb2caf68": {
+      "storedAt": "2026-09-16T12:39:59.156Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/flow-intelligence",
+      "body": {
+        "chain": "bnb",
+        "token_address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":[{\"public_figure_net_flow_usd\":1942.8242973545866,\"public_figure_avg_flow_usd\":53530.71604247457,\"public_figure_wallet_count\":16,\"top_pnl_net_flow_usd\":5398645.582073588,\"top_pnl_avg_flow_usd\":7246553.255693022,\"top_pnl_wallet_count\":98,\"whale_net_flow_usd\":-0.0013616283159563203,\"whale_avg_flow_usd\":null,\"whale_wallet_count\":2,\"smart_trader_net_flow_usd\":58242.059689478076,\"smart_trader_avg_flow_usd\":45194.3326442798,\"smart_trader_wallet_count\":50,\"exchange_net_flow_usd\":-8153216.400465224,\"exchange_avg_flow_usd\":14852174.333313089,\"exchange_wallet_count\":0,\"fresh_wallets_net_flow_usd\":550708143.7629194,\"fresh_wallets_avg_flow_usd\":445916986.12780476,\"fresh_wallets_wallet_count\":0}],\"warnings\":[\"exchange_wallet_count is always 0 (not tracked), even when exchange net flow is non-zero.\",\"fresh_wallets_wallet_count is always 0 (not tracked), even when fresh-wallet net flow is non-zero.\"]}"
+    },
+    "63526b6600c596d430bd460001d075a1": {
+      "storedAt": "2026-09-16T12:39:59.426Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/flow-intelligence",
+      "body": {
+        "chain": "solana",
+        "token_address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":[{\"public_figure_net_flow_usd\":-4381791.708248258,\"public_figure_avg_flow_usd\":4261030.794201445,\"public_figure_wallet_count\":583,\"top_pnl_net_flow_usd\":-2427997.9442584985,\"top_pnl_avg_flow_usd\":5200154.381924328,\"top_pnl_wallet_count\":453,\"whale_net_flow_usd\":-64088166.72270816,\"whale_avg_flow_usd\":82279802.46743424,\"whale_wallet_count\":47,\"smart_trader_net_flow_usd\":4367853.207651063,\"smart_trader_avg_flow_usd\":3900840.3942885795,\"smart_trader_wallet_count\":377,\"exchange_net_flow_usd\":-236241689.83091277,\"exchange_avg_flow_usd\":325557122.5857649,\"exchange_wallet_count\":0,\"fresh_wallets_net_flow_usd\":2758540477.9789042,\"fresh_wallets_avg_flow_usd\":2899862555.0268574,\"fresh_wallets_wallet_count\":0}],\"warnings\":[\"exchange_wallet_count is always 0 (not tracked), even when exchange net flow is non-zero.\",\"fresh_wallets_wallet_count is always 0 (not tracked), even when fresh-wallet net flow is non-zero.\"]}"
+    },
+    "7b87d48b554f3afc815ddd2c44d054a6": {
+      "storedAt": "2026-09-16T12:40:00.802Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/holders",
+      "body": {
+        "chain": "ethereum",
+        "token_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "pagination": {
+          "page": 1,
+          "per_page": 20
+        }
+      },
+      "text": "{\"data\":[{\"address\":\"0x37305b1cd40574e4c5ce33f8e8306be057fd7341\",\"address_label\":\"Token Billionaire\",\"token_amount\":3541476112.181221,\"total_outflow\":266613687449.68027,\"total_inflow\":270155163561.86148,\"balance_change_24h\":-318982222.166068,\"balance_change_7d\":-167176859.16533,\"balance_change_30d\":-319772569.159401,\"ownership_percentage\":0.0,\"value_usd\":3541505499.5263653},{\"address\":\"0xe1940f578743367f38d3f25c2d2d32d6636929b6\",\"address_label\":\"Token Billionaire\",\"token_amount\":1699999999.039577,\"total_outflow\":1.0,\"total_inflow\":1700000000.039577,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.0,\"value_usd\":1700014105.7242289},{\"address\":\"0xffa69c0080582098af595156240214b742735a5e\",\"address_label\":\"Token Billionaire\",\"token_amount\":1582999999.8601,\"total_outflow\":0.129099,\"total_inflow\":1582999999.989199,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.0,\"value_usd\":1583013135.6729321},{\"address\":\"0x38aaef3782910bdd9ea3566c839788af6ff9b200\",\"address_label\":\"Token Billionaire\",\"token_amount\":1557274198.53902,\"total_outflow\":18871312572.702114,\"total_inflow\":20428586771.241135,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":1045056079.393,\"ownership_percentage\":0.0,\"value_usd\":1557287120.8778718},{\"address\":\"0xad354cfbaa4a8572dd6df021514a3931a8329ef5\",\"address_label\":\"Token Billionaire\",\"token_amount\":1400000000.5201,\"total_outflow\":1.5,\"total_inflow\":1400000002.0201,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.0,\"value_usd\":1400011617.7898245},{\"address\":\"0x40ec5b33f54e0e8a33a975908c5ba1c14e5bbbdf\",\"address_label\":\"Token Contract\",\"token_amount\":1040373741.997038,\"total_outflow\":19341959336.17773,\"total_inflow\":20382333078.174767,\"balance_change_24h\":1391247.897828,\"balance_change_7d\":12557949.049417,\"balance_change_30d\":31417601.451134,\"ownership_percentage\":0.0,\"value_usd\":1040382375.0701597},{\"address\":\"0xee7ae85f2fe2239e27d9c1e23fffe168d63b4055\",\"address_label\":\"Token Millionaire\",\"token_amount\":815707382.628785,\"total_outflow\":242807408304.72833,\"total_inflow\":243623115687.35712,\"balance_change_24h\":151473509.223143,\"balance_change_7d\":234308914.408757,\"balance_change_30d\":71664521.113986,\"ownership_percentage\":0.0,\"value_usd\":815714151.4092683},{\"address\":\"0x3d09d2354530466d32ed37c6ad19ea58504a0c37\",\"address_label\":\"Token Millionaire\",\"token_amount\":726532678.841833,\"total_outflow\":1123000010.0,\"total_inflow\":1849532688.841833,\"balance_change_24h\":44000000.0001,\"balance_change_7d\":44000000.0001,\"balance_change_30d\":108543969.786093,\"ownership_percentage\":0.0,\"value_usd\":726538707.6461834},{\"address\":\"0x01b8697695eab322a339c4bf75740db75dc9375e\",\"address_label\":\"Token Millionaire\",\"token_amount\":721170670.469622,\"total_outflow\":228829340.0,\"total_inflow\":950000010.469622,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":-13923286.989561,\"ownership_percentage\":0.0,\"value_usd\":721176654.7797599},{\"address\":\"0x36db199f0a1cd131ad0b5cf4fe94286faab9fda5\",\"address_label\":\"Token Millionaire\",\"token_amount\":639469223.62806,\"total_outflow\":592932560.372146,\"total_inflow\":1232401784.000206,\"balance_change_24h\":0.0,\"balance_change_7d\":2837381.943672,\"balance_change_30d\":41296985.302673,\"ownership_percentage\":0.0,\"value_usd\":639474529.9755232},{\"address\":\"0x3b4d794a66304f130a4db8f2551b0070dfcf5ca7\",\"address_label\":\"lighter.eth\",\"token_amount\":597363089.831596,\"total_outflow\":9051030852.157495,\"total_inflow\":9648393941.989092,\"balance_change_24h\":-2299304.446662,\"balance_change_7d\":-1003416.47137,\"balance_change_30d\":95907841.498344,\"ownership_percentage\":0.0,\"value_usd\":597368046.7802641},{\"address\":\"0x08f619716db7c6245401b543e59acac1d25cb483\",\"address_label\":\"Token Millionaire\",\"token_amount\":503264156.546638,\"total_outflow\":632984142.33,\"total_inflow\":1136248298.876638,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.0,\"value_usd\":503268332.6576716},{\"address\":\"0xa073345811e360e9b66f24bc11f3a4bfa924f236\",\"address_label\":\"Token Millionaire\",\"token_amount\":475925031.799327,\"total_outflow\":734571910.873413,\"total_inflow\":1210496942.67274,\"balance_change_24h\":3861172.72,\"balance_change_7d\":10583349.99,\"balance_change_30d\":25384195.42,\"ownership_percentage\":0.0,\"value_usd\":475928981.0489419},{\"address\":\"0xa5e4939f7cdd01a22d34dc9a29e45e9925b6cd62\",\"address_label\":\"Token Millionaire\",\"token_amount\":403470859.667055,\"total_outflow\":40.0,\"total_inflow\":403470899.667055,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":1161198.799059,\"ownership_percentage\":0.0,\"value_usd\":403474207.6883414},{\"address\":\"0x6abc301915d33ce024a27d357d0b7679c9ae74c0\",\"address_label\":\"Token Millionaire\",\"token_amount\":348000000.3332,\"total_outflow\":0.0,\"total_inflow\":348000000.3332,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.0,\"value_usd\":348002888.0545331},{\"address\":\"0xe0356742a0441e64e5247dd4f4d56f9e4549e764\",\"address_label\":\"Token Millionaire\",\"token_amount\":348000000.3332,\"total_outflow\":0.0,\"total_inflow\":348000000.3332,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.0,\"value_usd\":348002888.0545331},{\"address\":\"0x0efba7fadab2b7c95a601be6fe9dcb93f4a7b5d1\",\"address_label\":\"Token Millionaire\",\"token_amount\":348000000.3332,\"total_outflow\":0.0,\"total_inflow\":348000000.3332,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.0,\"value_usd\":348002888.0545331},{\"address\":\"0x54999886b6153975d839220df767475d59d7c907\",\"address_label\":\"Token Millionaire\",\"token_amount\":348000000.3332,\"total_outflow\":0.0,\"total_inflow\":348000000.3332,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.0,\"value_usd\":348002888.0545331},{\"address\":\"0x1d7ceccee9d055ce790e463204ec8148d4952908\",\"address_label\":\"Token Millionaire\",\"token_amount\":348000000.3332,\"total_outflow\":0.0,\"total_inflow\":348000000.3332,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.0,\"value_usd\":348002888.0545331},{\"address\":\"0xd29dc81e3db90ca4f6c51d5b2ced61c1a8e19502\",\"address_label\":\"Token Millionaire\",\"token_amount\":348000000.3232,\"total_outflow\":0.0,\"total_inflow\":348000000.3232,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.0,\"value_usd\":348002888.0445331}],\"pagination\":{\"page\":1,\"per_page\":20,\"is_last_page\":false},\"warnings\":null}"
+    },
+    "c5e4a5c8e83fda2b006218b22b85f062": {
+      "storedAt": "2026-09-16T12:40:02.135Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/holders",
+      "body": {
+        "chain": "base",
+        "token_address": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "pagination": {
+          "page": 1,
+          "per_page": 20
+        }
+      },
+      "text": "{\"data\":[{\"address\":\"0xbbbbbbbbbb9cc5e90e3b3af64bdaf62c37eeffcb\",\"address_label\":\"Token Billionaire\",\"token_amount\":209719459.80535,\"total_outflow\":4553505602488.778,\"total_inflow\":4553715321948.584,\"balance_change_24h\":-1852330.021817,\"balance_change_7d\":-25950576.728588,\"balance_change_30d\":-32859851.422699,\"ownership_percentage\":0.0,\"value_usd\":210245669.54071334},{\"address\":\"0xb026ba5501c9fcdb5b4b746c37e349cd61b81b22\",\"address_label\":\"Token Millionaire\",\"token_amount\":158707811.660177,\"total_outflow\":0.0,\"total_inflow\":158707811.660177,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.0,\"value_usd\":159106027.42733237},{\"address\":\"0x8da91a6298ea5d1a8bc985e99798fd0a0f05701a\",\"address_label\":\"Token Millionaire\",\"token_amount\":158304777.434021,\"total_outflow\":1695222.776709,\"total_inflow\":160000000.21073,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":-1695222.776677,\"ownership_percentage\":0.0,\"value_usd\":158701981.9429284},{\"address\":\"0xee7ae85f2fe2239e27d9c1e23fffe168d63b4055\",\"address_label\":\"Token Millionaire\",\"token_amount\":94133274.328126,\"total_outflow\":13443983531.252077,\"total_inflow\":13538116805.580204,\"balance_change_24h\":-8463012.299512,\"balance_change_7d\":-11224046.70248,\"balance_change_30d\":17003337.548764,\"ownership_percentage\":0.0,\"value_usd\":94369465.31116144},{\"address\":\"0xf76f5123c6b1c49c21adc8903cc571bd875eea4b\",\"address_label\":\"Token Millionaire\",\"token_amount\":80000202.002,\"total_outflow\":0.0,\"total_inflow\":80000202.002,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":201.93,\"ownership_percentage\":0.0,\"value_usd\":80200931.51543456},{\"address\":\"0x9ca12796619c24eeeee9d701e87b2c3a956ba15f\",\"address_label\":\"Token Millionaire\",\"token_amount\":80000000.072,\"total_outflow\":0.0,\"total_inflow\":80000000.072,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.0,\"value_usd\":80200729.07876945},{\"address\":\"0xe7a12de9afbcb35ec2b7223795702f2b44a80ed9\",\"address_label\":\"Token Millionaire\",\"token_amount\":80000000.072,\"total_outflow\":0.0,\"total_inflow\":80000000.072,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.0,\"value_usd\":80200729.07876945},{\"address\":\"0xba4c04812275b74241ef15b4a212dbcafd29a1ee\",\"address_label\":\"Token Millionaire\",\"token_amount\":80000000.072,\"total_outflow\":0.0,\"total_inflow\":80000000.072,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.0,\"value_usd\":80200729.07876945},{\"address\":\"0x273c766d992a335b5a7c56ba41acf9ad85434877\",\"address_label\":\"Token Millionaire\",\"token_amount\":80000000.072,\"total_outflow\":0.0,\"total_inflow\":80000000.072,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.0,\"value_usd\":80200729.07876945},{\"address\":\"0xcea96b6ad107915cc1ff2af723940e23d1d29527\",\"address_label\":\"Token Millionaire\",\"token_amount\":80000000.072,\"total_outflow\":0.0,\"total_inflow\":80000000.072,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.0,\"value_usd\":80200729.07876945},{\"address\":\"0x97c8af121d33045af0b6baa7248fda19be01e3c1\",\"address_label\":\"Token Millionaire\",\"token_amount\":80000000.072,\"total_outflow\":0.0,\"total_inflow\":80000000.072,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.0,\"value_usd\":80200729.07876945},{\"address\":\"0x2c0ecf1935b150d1cc63ced67aca7113322f2f9a\",\"address_label\":\"Token Millionaire\",\"token_amount\":80000000.072,\"total_outflow\":0.0,\"total_inflow\":80000000.072,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.0,\"value_usd\":80200729.07876945},{\"address\":\"0xe0126d34da4b8af7c1b99923171df011b7c79a4c\",\"address_label\":\"Token Millionaire\",\"token_amount\":80000000.072,\"total_outflow\":0.0,\"total_inflow\":80000000.072,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.0,\"value_usd\":80200729.07876945},{\"address\":\"0x0bdca6aa876d9e5c5c6c27c0ecfa9a78ca6ca0a3\",\"address_label\":\"Token Millionaire\",\"token_amount\":80000000.072,\"total_outflow\":0.0,\"total_inflow\":80000000.072,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.0,\"value_usd\":80200729.07876945},{\"address\":\"0x7d72f952824c9634229aceb9c0c328e1dd4e66fc\",\"address_label\":\"Token Millionaire\",\"token_amount\":80000000.072,\"total_outflow\":0.0,\"total_inflow\":80000000.072,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.0,\"value_usd\":80200729.07876945},{\"address\":\"0x2d54471f9c2d82c7c767acc2eee8b82f0d2e2467\",\"address_label\":\"Token Millionaire\",\"token_amount\":80000000.072,\"total_outflow\":0.0,\"total_inflow\":80000000.072,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.0,\"value_usd\":80200729.07876945},{\"address\":\"0xcadacc42a1eba32adf69332b55a4ae1979396de1\",\"address_label\":\"Token Millionaire\",\"token_amount\":80000000.072,\"total_outflow\":0.0,\"total_inflow\":80000000.072,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.0,\"value_usd\":80200729.07876945},{\"address\":\"0x02c79843b9548fc0cb4b35bf6840538a73fc3422\",\"address_label\":\"Token Millionaire\",\"token_amount\":80000000.072,\"total_outflow\":0.0,\"total_inflow\":80000000.072,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.0,\"value_usd\":80200729.07876945},{\"address\":\"0x7ad7abbbdf1db119bdb47c97cf6f8c6541c8e79d\",\"address_label\":\"Token Millionaire\",\"token_amount\":80000000.072,\"total_outflow\":5.0,\"total_inflow\":80000005.072,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.0,\"value_usd\":80200729.07876945},{\"address\":\"0x255fbf4351683902ccb4d32f76987b886cc927bd\",\"address_label\":\"Token Millionaire\",\"token_amount\":80000000.072,\"total_outflow\":0.0,\"total_inflow\":80000000.072,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.0,\"value_usd\":80200729.07876945}],\"pagination\":{\"page\":1,\"per_page\":20,\"is_last_page\":false},\"warnings\":null}"
+    }
+  },
+  "verdict": {
+    "query": "USDC",
+    "winner": {
+      "chain": "ethereum",
+      "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "name": "USD Coin",
+      "symbol": "USDC",
+      "marketCap": 73665109466.6742,
+      "volume24h": 672707407.0370839,
+      "searchRank": 599,
+      "labelledWallets": 623,
+      "smartTraderWallets": 92,
+      "whaleWallets": 4,
+      "topPnlWallets": 411,
+      "publicFigureWallets": 116,
+      "smartTraderNetFlowUsd": -640747.4791138289,
+      "exchangeNetFlowUsd": 108511550.17046377,
+      "freshNetFlowUsd": 4156567616.628116,
+      "exchangeTouched": true,
+      "freshShare": 0.9549106275443321,
+      "errors": [],
+      "deploymentDate": "2018-08-03 19:28:24",
+      "ageDays": 2965,
+      "marketCapUsd": 73669993417.35423,
+      "liquidityUsd": 470712174.09223104,
+      "totalHolders": 3233700,
+      "uniqueBuyers": 33174,
+      "logo": "https://coin-images.coingecko.com/coins/images/6319/small/USDC.png?1769615602",
+      "website": "https://www.circle.com/en/usdc",
+      "score": 32.1,
+      "terms": {
+        "labelled": 19.31,
+        "exchange": 3.02,
+        "holders": 3.91,
+        "liquidity": 3.47,
+        "age": 0,
+        "fresh": 0,
+        "recognisedHolders": 2.4
+      },
+      "reasons": [
+        "623 labelled wallets (92 smart traders, 411 top PnL, 4 whales, 116 public figures)",
+        "exchange flow $108.5M",
+        "3.2M holders",
+        "8.1y old",
+        "19 of top 20 holders tagged by Nansen (Token Millionaire ×13, Token Billionaire ×5, lighter.eth)"
+      ],
+      "impostor": false,
+      "scorable": true,
+      "unchecked": false,
+      "recognisedHolders": 19,
+      "topLabels": [
+        "Token Millionaire ×13",
+        "Token Billionaire ×5",
+        "lighter.eth"
+      ],
+      "topHolderPct": 0
+    },
+    "ranked": [
+      {
+        "chain": "ethereum",
+        "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "name": "USD Coin",
+        "symbol": "USDC",
+        "marketCap": 73665109466.6742,
+        "volume24h": 672707407.0370839,
+        "searchRank": 599,
+        "labelledWallets": 623,
+        "smartTraderWallets": 92,
+        "whaleWallets": 4,
+        "topPnlWallets": 411,
+        "publicFigureWallets": 116,
+        "smartTraderNetFlowUsd": -640747.4791138289,
+        "exchangeNetFlowUsd": 108511550.17046377,
+        "freshNetFlowUsd": 4156567616.628116,
+        "exchangeTouched": true,
+        "freshShare": 0.9549106275443321,
+        "errors": [],
+        "deploymentDate": "2018-08-03 19:28:24",
+        "ageDays": 2965,
+        "marketCapUsd": 73669993417.35423,
+        "liquidityUsd": 470712174.09223104,
+        "totalHolders": 3233700,
+        "uniqueBuyers": 33174,
+        "logo": "https://coin-images.coingecko.com/coins/images/6319/small/USDC.png?1769615602",
+        "website": "https://www.circle.com/en/usdc",
+        "score": 32.1,
+        "terms": {
+          "labelled": 19.31,
+          "exchange": 3.02,
+          "holders": 3.91,
+          "liquidity": 3.47,
+          "age": 0,
+          "fresh": 0,
+          "recognisedHolders": 2.4
+        },
+        "reasons": [
+          "623 labelled wallets (92 smart traders, 411 top PnL, 4 whales, 116 public figures)",
+          "exchange flow $108.5M",
+          "3.2M holders",
+          "8.1y old",
+          "19 of top 20 holders tagged by Nansen (Token Millionaire ×13, Token Billionaire ×5, lighter.eth)"
+        ],
+        "impostor": false,
+        "scorable": true,
+        "unchecked": false,
+        "recognisedHolders": 19,
+        "topLabels": [
+          "Token Millionaire ×13",
+          "Token Billionaire ×5",
+          "lighter.eth"
+        ],
+        "topHolderPct": 0
+      },
+      {
+        "chain": "base",
+        "address": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "name": "USD Coin",
+        "symbol": "USDC",
+        "marketCap": 73467198246.5037,
+        "volume24h": 566386613.3494842,
+        "searchRank": 615,
+        "labelledWallets": 518,
+        "smartTraderWallets": 140,
+        "whaleWallets": 0,
+        "topPnlWallets": 285,
+        "publicFigureWallets": 93,
+        "smartTraderNetFlowUsd": -1248947.8327779416,
+        "exchangeNetFlowUsd": 26381944.688844994,
+        "freshNetFlowUsd": 159861327785.54956,
+        "exchangeTouched": true,
+        "freshShare": 0.9997557346054711,
+        "errors": [],
+        "deploymentDate": "2023-08-18 18:36:29",
+        "ageDays": 1124,
+        "marketCapUsd": 73884207705.23923,
+        "liquidityUsd": 179309828.1004825,
+        "totalHolders": 2388535,
+        "uniqueBuyers": 80905,
+        "logo": "https://coin-images.coingecko.com/coins/images/6319/small/USDC.png?1769615602",
+        "website": "",
+        "score": 30.97,
+        "terms": {
+          "labelled": 18.76,
+          "exchange": 2.65,
+          "holders": 3.83,
+          "liquidity": 3.3,
+          "age": 0,
+          "fresh": 0,
+          "recognisedHolders": 2.44
+        },
+        "reasons": [
+          "518 labelled wallets (140 smart traders, 285 top PnL, 0 whales, 93 public figures)",
+          "exchange flow $26.4M",
+          "2.4M holders",
+          "3.1y old",
+          "20 of top 20 holders tagged by Nansen (Token Millionaire ×19, Token Billionaire)"
+        ],
+        "impostor": false,
+        "scorable": true,
+        "unchecked": false,
+        "recognisedHolders": 20,
+        "topLabels": [
+          "Token Millionaire ×19",
+          "Token Billionaire"
+        ],
+        "topHolderPct": 0
+      },
+      {
+        "chain": "solana",
+        "address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+        "name": "USD Coin",
+        "symbol": "USDC",
+        "marketCap": 73783077182.5637,
+        "volume24h": 1419585489.770524,
+        "searchRank": 613,
+        "labelledWallets": 1460,
+        "smartTraderWallets": 377,
+        "whaleWallets": 47,
+        "topPnlWallets": 453,
+        "publicFigureWallets": 583,
+        "smartTraderNetFlowUsd": 4367853.207651063,
+        "exchangeNetFlowUsd": -236241689.83091277,
+        "freshNetFlowUsd": 2758540477.9789042,
+        "exchangeTouched": true,
+        "freshShare": 0.8985333448507425,
+        "errors": [
+          "token-information failed: This operation was aborted"
+        ],
+        "score": 25.08,
+        "terms": {
+          "labelled": 21.86,
+          "exchange": 3.22,
+          "holders": 0,
+          "liquidity": 0,
+          "age": 0,
+          "fresh": 0,
+          "recognisedHolders": 0
+        },
+        "reasons": [
+          "1460 labelled wallets (377 smart traders, 453 top PnL, 47 whales, 583 public figures)",
+          "exchange flow $236.2M",
+          "age unknown",
+          "partial: token-information lookup failed"
+        ],
+        "impostor": false,
+        "scorable": true,
+        "unchecked": false
+      },
+      {
+        "chain": "arbitrum",
+        "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
+        "name": "USD Coin",
+        "symbol": "USDC",
+        "marketCap": 73744470672.8817,
+        "volume24h": 185914502.65911046,
+        "searchRank": 617,
+        "labelledWallets": 163,
+        "smartTraderWallets": 31,
+        "whaleWallets": 1,
+        "topPnlWallets": 86,
+        "publicFigureWallets": 45,
+        "smartTraderNetFlowUsd": 45524.61375834497,
+        "exchangeNetFlowUsd": 133212368.09304698,
+        "freshNetFlowUsd": 573740323.4669896,
+        "exchangeTouched": true,
+        "freshShare": 0.804715531909941,
+        "errors": [],
+        "deploymentDate": "2022-10-31 20:42:12",
+        "ageDays": 1415,
+        "marketCapUsd": 73682477091.58853,
+        "liquidityUsd": 66258111.26405009,
+        "totalHolders": 741088,
+        "uniqueBuyers": 23177,
+        "logo": "https://coin-images.coingecko.com/coins/images/6319/small/USDC.png?1769615602",
+        "website": "",
+        "score": 25.02,
+        "terms": {
+          "labelled": 15.3,
+          "exchange": 3.07,
+          "holders": 3.52,
+          "liquidity": 3.13,
+          "age": 0,
+          "fresh": 0,
+          "recognisedHolders": 0
+        },
+        "reasons": [
+          "163 labelled wallets (31 smart traders, 86 top PnL, 1 whales, 45 public figures)",
+          "exchange flow $133.2M",
+          "741K holders",
+          "3.9y old"
+        ],
+        "impostor": false,
+        "scorable": true,
+        "unchecked": false
+      },
+      {
+        "chain": "bnb",
+        "address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+        "name": "USD Coin",
+        "symbol": "USDC",
+        "marketCap": 1589387443.88501,
+        "volume24h": 55209221.091926776,
+        "searchRank": 635,
+        "labelledWallets": 166,
+        "smartTraderWallets": 50,
+        "whaleWallets": 2,
+        "topPnlWallets": 98,
+        "publicFigureWallets": 16,
+        "smartTraderNetFlowUsd": 58242.059689478076,
+        "exchangeNetFlowUsd": -8153216.400465224,
+        "freshNetFlowUsd": 550708143.7629194,
+        "exchangeTouched": true,
+        "freshShare": 0.9758788590344933,
+        "errors": [],
+        "marketCapUsd": 0,
+        "liquidityUsd": 0,
+        "totalHolders": 4656867,
+        "uniqueBuyers": 28298,
+        "logo": "",
+        "website": "https://bscscan.com/token/0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+        "score": 21.7,
+        "terms": {
+          "labelled": 15.35,
+          "exchange": 2.35,
+          "holders": 4,
+          "liquidity": 0,
+          "age": 0,
+          "fresh": 0,
+          "recognisedHolders": 0
+        },
+        "reasons": [
+          "166 labelled wallets (50 smart traders, 98 top PnL, 2 whales, 16 public figures)",
+          "exchange flow $8.2M",
+          "4.7M holders",
+          "age unknown"
+        ],
+        "impostor": false,
+        "scorable": true,
+        "unchecked": false
+      },
+      {
+        "chain": "hyperevm",
+        "address": "0xb88339cb7199b77e23db6e890353e22632ba630f",
+        "name": "USDC",
+        "symbol": "USDC",
+        "marketCap": 73805127110.3704,
+        "volume24h": 75580698.70301792,
+        "searchRank": 628,
+        "labelledWallets": 51,
+        "smartTraderWallets": 12,
+        "whaleWallets": 1,
+        "topPnlWallets": 16,
+        "publicFigureWallets": 22,
+        "smartTraderNetFlowUsd": -82923.61245559993,
+        "exchangeNetFlowUsd": -152128245.90557057,
+        "freshNetFlowUsd": 126258711.38781576,
+        "exchangeTouched": true,
+        "freshShare": 0.4476803307952701,
+        "errors": [],
+        "deploymentDate": "2025-08-12 13:48:00",
+        "ageDays": 399,
+        "marketCapUsd": 73850315895.95094,
+        "liquidityUsd": 16707240.460578062,
+        "totalHolders": 28936,
+        "uniqueBuyers": 3590,
+        "logo": "https://coin-images.coingecko.com/coins/images/6319/small/USDC.png?1769615602",
+        "website": "",
+        "score": 20.53,
+        "terms": {
+          "labelled": 11.85,
+          "exchange": 3.11,
+          "holders": 2.68,
+          "liquidity": 2.89,
+          "age": 0,
+          "fresh": 0,
+          "recognisedHolders": 0
+        },
+        "reasons": [
+          "51 labelled wallets (12 smart traders, 16 top PnL, 1 whales, 22 public figures)",
+          "exchange flow $152.1M",
+          "29K holders",
+          "1.1y old"
+        ],
+        "impostor": false,
+        "scorable": true,
+        "unchecked": false
+      },
+      {
+        "chain": "polygon",
+        "address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
+        "name": "USD Coin (PoS)",
+        "symbol": "USDC",
+        "marketCap": 1032303985.85481,
+        "volume24h": 49029965.98204304,
+        "searchRank": 638,
+        "labelledWallets": 10,
+        "smartTraderWallets": 2,
+        "whaleWallets": 0,
+        "topPnlWallets": 7,
+        "publicFigureWallets": 1,
+        "smartTraderNetFlowUsd": 5265.734170486779,
+        "exchangeNetFlowUsd": 17312752.673425544,
+        "freshNetFlowUsd": 411991958.5505448,
+        "exchangeTouched": true,
+        "freshShare": 0.9268414711532673,
+        "errors": [],
+        "deploymentDate": "2020-09-27 09:40:11",
+        "ageDays": 2180,
+        "marketCapUsd": 1023072529.1421868,
+        "liquidityUsd": 12780618.244873999,
+        "totalHolders": 792584,
+        "uniqueBuyers": 2162,
+        "logo": "https://coin-images.coingecko.com/coins/images/33000/small/usdc_normal.png?1758615648",
+        "website": "https://www.circle.com/en/usdc",
+        "score": 16.12,
+        "terms": {
+          "labelled": 7.19,
+          "exchange": 2.54,
+          "holders": 3.54,
+          "liquidity": 2.84,
+          "age": 0,
+          "fresh": 0,
+          "recognisedHolders": 0
+        },
+        "reasons": [
+          "10 labelled wallets (2 smart traders, 7 top PnL, 0 whales, 1 public figures)",
+          "exchange flow $17.3M",
+          "793K holders",
+          "6.0y old"
+        ],
+        "impostor": false,
+        "scorable": true,
+        "unchecked": false
+      },
+      {
+        "chain": "near",
+        "address": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+        "name": "USDC",
+        "symbol": "USDC",
+        "marketCap": 74059829844.7138,
+        "volume24h": 33069157.26015786,
+        "searchRank": 624,
+        "labelledWallets": 0,
+        "smartTraderWallets": 0,
+        "whaleWallets": 0,
+        "topPnlWallets": 0,
+        "publicFigureWallets": 0,
+        "smartTraderNetFlowUsd": 0,
+        "exchangeNetFlowUsd": -59244574.18485233,
+        "freshNetFlowUsd": 1956447.5764411786,
+        "exchangeTouched": true,
+        "freshShare": 0.03196756394153097,
+        "errors": [],
+        "marketCapUsd": 73651635103.40509,
+        "liquidityUsd": 49528556.83612305,
+        "totalHolders": 27151,
+        "uniqueBuyers": 33,
+        "logo": "https://coin-images.coingecko.com/coins/images/6319/small/USDC.png?1769615602",
+        "website": "",
+        "score": 8.55,
+        "terms": {
+          "labelled": 0,
+          "exchange": 2.86,
+          "holders": 2.66,
+          "liquidity": 3.08,
+          "age": 0,
+          "fresh": -0.05,
+          "recognisedHolders": 0
+        },
+        "reasons": [
+          "0 labelled wallets in 7 days",
+          "exchange flow $59.2M",
+          "27K holders",
+          "age unknown"
+        ],
+        "impostor": false,
+        "scorable": true,
+        "unchecked": false
+      }
+    ],
+    "abstained": false,
+    "stablecoin": true,
+    "candidatesTotal": 24,
+    "warnings": [
+      "24 same-name tokens found; the 8 highest-ranked by Nansen search were checked"
+    ],
+    "credits": 25,
+    "provenance": [
+      {
+        "endpoint": "search/general",
+        "body": {
+          "search_query": "USDC",
+          "result_type": "token",
+          "limit": 50
+        },
+        "credits": 0,
+        "ms": 463,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "tokens[].name",
+          "tokens[].symbol",
+          "tokens[].chain",
+          "tokens[].address",
+          "tokens[].market_cap",
+          "tokens[].volume_24h",
+          "tokens[].rank"
+        ],
+        "responseHash": "e55bb6e11dadb1194be34133eac00d9da9f42986f2a28b39b197d88881c26a50",
+        "attempts": 1,
+        "totalMs": 463,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/token-information",
+        "body": {
+          "chain": "arbitrum",
+          "token_address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 1071,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "token_details.token_deployment_date",
+          "token_details.market_cap_usd",
+          "spot_metrics.liquidity_usd",
+          "spot_metrics.total_holders",
+          "spot_metrics.unique_buyers"
+        ],
+        "responseHash": "9a37f2bb85ed828f67b74fb119bb13c2237620e4377ca6facbdc3dbad58a46e7",
+        "attempts": 1,
+        "totalMs": 1073,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/token-information",
+        "body": {
+          "chain": "ethereum",
+          "token_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 1146,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "token_details.token_deployment_date",
+          "token_details.market_cap_usd",
+          "spot_metrics.liquidity_usd",
+          "spot_metrics.total_holders",
+          "spot_metrics.unique_buyers"
+        ],
+        "responseHash": "f16ffe6b1dba9299a37bab57aca3639962b916b07dce0115ba7288168b0e1876",
+        "attempts": 1,
+        "totalMs": 1147,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/token-information",
+        "body": {
+          "chain": "base",
+          "token_address": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 1296,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "token_details.token_deployment_date",
+          "token_details.market_cap_usd",
+          "spot_metrics.liquidity_usd",
+          "spot_metrics.total_holders",
+          "spot_metrics.unique_buyers"
+        ],
+        "responseHash": "076fb86976d325dce5bbaf48776a0ed7c00e5728cfa92c59387db81c2818d18d",
+        "attempts": 1,
+        "totalMs": 1297,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/token-information",
+        "body": {
+          "chain": "near",
+          "token_address": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 797,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "token_details.token_deployment_date",
+          "token_details.market_cap_usd",
+          "spot_metrics.liquidity_usd",
+          "spot_metrics.total_holders",
+          "spot_metrics.unique_buyers"
+        ],
+        "responseHash": "82bbd54a4e9ee6c24bc976b5e49ca24a6fa53605d7bd2f28ad003e9f8b0fe88b",
+        "attempts": 1,
+        "totalMs": 1337,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/flow-intelligence",
+        "body": {
+          "chain": "near",
+          "token_address": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 1450,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "smart_trader_wallet_count",
+          "whale_wallet_count",
+          "top_pnl_wallet_count",
+          "public_figure_wallet_count",
+          "smart_trader_net_flow_usd",
+          "whale_net_flow_usd",
+          "top_pnl_net_flow_usd",
+          "public_figure_net_flow_usd",
+          "exchange_net_flow_usd",
+          "fresh_wallets_net_flow_usd"
+        ],
+        "responseHash": "3e7f2aa999470f2fdadf3620c52728a994d0536ec8b95fa8a3392306ac2cc85d",
+        "attempts": 1,
+        "totalMs": 1452,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/flow-intelligence",
+        "body": {
+          "chain": "base",
+          "token_address": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 1905,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "smart_trader_wallet_count",
+          "whale_wallet_count",
+          "top_pnl_wallet_count",
+          "public_figure_wallet_count",
+          "smart_trader_net_flow_usd",
+          "whale_net_flow_usd",
+          "top_pnl_net_flow_usd",
+          "public_figure_net_flow_usd",
+          "exchange_net_flow_usd",
+          "fresh_wallets_net_flow_usd"
+        ],
+        "responseHash": "31df02d965f3e3b1cb2bdfd74d92d7aead112207d8ad46289c51ce5b060e8d56",
+        "attempts": 1,
+        "totalMs": 1906,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/token-information",
+        "body": {
+          "chain": "hyperevm",
+          "token_address": "0xb88339cb7199b77e23db6e890353e22632ba630f",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 1005,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "token_details.token_deployment_date",
+          "token_details.market_cap_usd",
+          "spot_metrics.liquidity_usd",
+          "spot_metrics.total_holders",
+          "spot_metrics.unique_buyers"
+        ],
+        "responseHash": "0d017eb7cbc238cffd178b7968e8eaefc242ae56a5f8d72032a7f14886a4a5cf",
+        "attempts": 1,
+        "totalMs": 2016,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/flow-intelligence",
+        "body": {
+          "chain": "ethereum",
+          "token_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 2292,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "smart_trader_wallet_count",
+          "whale_wallet_count",
+          "top_pnl_wallet_count",
+          "public_figure_wallet_count",
+          "smart_trader_net_flow_usd",
+          "whale_net_flow_usd",
+          "top_pnl_net_flow_usd",
+          "public_figure_net_flow_usd",
+          "exchange_net_flow_usd",
+          "fresh_wallets_net_flow_usd"
+        ],
+        "responseHash": "6ef2145d0b6345838bb60bb9a581cb336cf29cfddb289431b0cbdb68a5e90948",
+        "attempts": 1,
+        "totalMs": 2293,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/flow-intelligence",
+        "body": {
+          "chain": "arbitrum",
+          "token_address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 2493,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "smart_trader_wallet_count",
+          "whale_wallet_count",
+          "top_pnl_wallet_count",
+          "public_figure_wallet_count",
+          "smart_trader_net_flow_usd",
+          "whale_net_flow_usd",
+          "top_pnl_net_flow_usd",
+          "public_figure_net_flow_usd",
+          "exchange_net_flow_usd",
+          "fresh_wallets_net_flow_usd"
+        ],
+        "responseHash": "188dbb33ed39c554084d5207398486147b22f444a3bf177e968a6683aad7c495",
+        "attempts": 1,
+        "totalMs": 2495,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/token-information",
+        "body": {
+          "chain": "bnb",
+          "token_address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 1576,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "token_details.token_deployment_date",
+          "token_details.market_cap_usd",
+          "spot_metrics.liquidity_usd",
+          "spot_metrics.total_holders",
+          "spot_metrics.unique_buyers"
+        ],
+        "responseHash": "a9490ef23cc5e9a7fcffec67888fa4c81cd35c2a481a1f5423b34c77b0b0fb6f",
+        "attempts": 1,
+        "totalMs": 2591,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/flow-intelligence",
+        "body": {
+          "chain": "hyperevm",
+          "token_address": "0xb88339cb7199b77e23db6e890353e22632ba630f",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 2279,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "smart_trader_wallet_count",
+          "whale_wallet_count",
+          "top_pnl_wallet_count",
+          "public_figure_wallet_count",
+          "smart_trader_net_flow_usd",
+          "whale_net_flow_usd",
+          "top_pnl_net_flow_usd",
+          "public_figure_net_flow_usd",
+          "exchange_net_flow_usd",
+          "fresh_wallets_net_flow_usd"
+        ],
+        "responseHash": "05c02a334c60d48296c15914a46195e0edbb47f4951e45a63a5b70db7dbb60a0",
+        "attempts": 1,
+        "totalMs": 3283,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/token-information",
+        "body": {
+          "chain": "polygon",
+          "token_address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 2364,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "token_details.token_deployment_date",
+          "token_details.market_cap_usd",
+          "spot_metrics.liquidity_usd",
+          "spot_metrics.total_holders",
+          "spot_metrics.unique_buyers"
+        ],
+        "responseHash": "1adc54a4e0f81809c2fabf0dd9ff08d81d1f28c4aec90d12c0683fd336cfb20f",
+        "attempts": 1,
+        "totalMs": 3382,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/flow-intelligence",
+        "body": {
+          "chain": "polygon",
+          "token_address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 2795,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "smart_trader_wallet_count",
+          "whale_wallet_count",
+          "top_pnl_wallet_count",
+          "public_figure_wallet_count",
+          "smart_trader_net_flow_usd",
+          "whale_net_flow_usd",
+          "top_pnl_net_flow_usd",
+          "public_figure_net_flow_usd",
+          "exchange_net_flow_usd",
+          "fresh_wallets_net_flow_usd"
+        ],
+        "responseHash": "a7a92dd8aaeef49ae6f75c1e2ed9ce76eef6252293d79e26acf3fd817d4d3b14",
+        "attempts": 1,
+        "totalMs": 3812,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/token-information",
+        "body": {
+          "chain": "solana",
+          "token_address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "timeframe": "7d"
+        },
+        "credits": 0,
+        "ms": 0,
+        "cached": false,
+        "status": 0,
+        "fieldsUsed": [
+          "token_details.token_deployment_date",
+          "token_details.market_cap_usd",
+          "spot_metrics.liquidity_usd",
+          "spot_metrics.total_holders",
+          "spot_metrics.unique_buyers"
+        ],
+        "responseHash": "",
+        "attempts": 1,
+        "totalMs": 4025,
+        "ok": false,
+        "error": "timeout"
+      },
+      {
+        "endpoint": "tgm/flow-intelligence",
+        "body": {
+          "chain": "bnb",
+          "token_address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 3794,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "smart_trader_wallet_count",
+          "whale_wallet_count",
+          "top_pnl_wallet_count",
+          "public_figure_wallet_count",
+          "smart_trader_net_flow_usd",
+          "whale_net_flow_usd",
+          "top_pnl_net_flow_usd",
+          "public_figure_net_flow_usd",
+          "exchange_net_flow_usd",
+          "fresh_wallets_net_flow_usd"
+        ],
+        "responseHash": "a5c1eedb9bc91de240cc8c2f732fcf1e3792aef74acb8e0dc3fdfd0369e7ab07",
+        "attempts": 1,
+        "totalMs": 4807,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/flow-intelligence",
+        "body": {
+          "chain": "solana",
+          "token_address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 5076,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "smart_trader_wallet_count",
+          "whale_wallet_count",
+          "top_pnl_wallet_count",
+          "public_figure_wallet_count",
+          "smart_trader_net_flow_usd",
+          "whale_net_flow_usd",
+          "top_pnl_net_flow_usd",
+          "public_figure_net_flow_usd",
+          "exchange_net_flow_usd",
+          "fresh_wallets_net_flow_usd"
+        ],
+        "responseHash": "d3db8e4bcd015c6b57050c8552766ddd393424fc2fe4e37bb623db071758b58c",
+        "attempts": 1,
+        "totalMs": 5078,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/holders",
+        "body": {
+          "chain": "ethereum",
+          "token_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "pagination": {
+            "page": 1,
+            "per_page": 20
+          }
+        },
+        "credits": 5,
+        "ms": 1375,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "data[].address_label",
+          "data[].ownership_percentage"
+        ],
+        "responseHash": "f9627708a3800245d5fe03b3ea922efd6470ed9d174f1dadec53c0649e24c478",
+        "attempts": 1,
+        "totalMs": 1375,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/holders",
+        "body": {
+          "chain": "base",
+          "token_address": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+          "pagination": {
+            "page": 1,
+            "per_page": 20
+          }
+        },
+        "credits": 5,
+        "ms": 2708,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "data[].address_label",
+          "data[].ownership_percentage"
+        ],
+        "responseHash": "51dd2df55d3438c353c461590f6eb0fbe2f5441de6d7bebe8564230c230576e0",
+        "attempts": 1,
+        "totalMs": 2709,
+        "ok": true
+      }
+    ],
+    "ms": 8255,
+    "weights": {
+      "labelled": 3,
+      "exchange": 0.6,
+      "holders": 0.6,
+      "liquidity": 0.4,
+      "young7": 2,
+      "young30": 1,
+      "freshPenalty": 1.5,
+      "recognisedHolders": 0.8
+    },
+    "hash": "8e65e726e8536fa69ec893b8581239e593d13084357a9506708a21e2df0ed7fa"
+  }
+}

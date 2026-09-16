@@ -1,0 +1,485 @@
+{
+  "edge": "2 · recent, contested; the sort visibly reorders",
+  "query": "WLFI",
+  "options": {},
+  "now": 1789562391376,
+  "recordedAt": "2026-09-16T12:39:51.376Z",
+  "live": {
+    "calls": 7,
+    "credits": 14,
+    "ms": 2502
+  },
+  "responses": {
+    "d4be3c7bd339cba9e882da00c3b08d9a": {
+      "storedAt": "2026-09-16T12:39:51.858Z",
+      "ttlMs": 1800000,
+      "endpoint": "search/general",
+      "body": {
+        "search_query": "WLFI",
+        "result_type": "token",
+        "limit": 50
+      },
+      "text": "{\"tokens\":[{\"name\":\"WLFI\",\"symbol\":\"WLFI\",\"chain\":\"hyperliquid\",\"address\":\"WLFI\",\"price\":0.057007,\"volume_24h\":655960.0535740003,\"market_cap\":1824284190.79769,\"rank\":174},{\"name\":\"World Liberty Financial\",\"symbol\":\"WLFI\",\"chain\":\"ethereum\",\"address\":\"0xda5e1988097297dcdc1f90d4dfe7909e847cbef6\",\"price\":0.0574082806018769,\"volume_24h\":263805.076353656,\"market_cap\":1824284190.79769,\"rank\":477},{\"name\":\"World Liberty Financial\",\"symbol\":\"WLFI\",\"chain\":\"bnb\",\"address\":\"0x47474747477b199288bf72a1d702f7fe0fb1deea\",\"price\":0.0572030165781333,\"volume_24h\":12270.938567386067,\"market_cap\":1817761440.02529,\"rank\":478}],\"entities\":[],\"total_results\":3}"
+    },
+    "50cb67224d03857ac4ed1529162b6f0d": {
+      "storedAt": "2026-09-16T12:39:52.372Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/token-information",
+      "body": {
+        "chain": "ethereum",
+        "token_address": "0xda5e1988097297dcdc1f90d4dfe7909e847cbef6",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":{\"name\":\"World Liberty Financial\",\"symbol\":\"WLFI\",\"contract_address\":\"0xda5e1988097297dcdc1f90d4dfe7909e847cbef6\",\"logo\":\"https://coin-images.coingecko.com/coins/images/50767/small/wlfi.png?1756438915\",\"token_details\":{\"token_deployment_date\":\"2024-09-29 15:48:59\",\"website\":\"https://www.worldlibertyfinancial.com/\",\"x\":\"worldlibertyfi\",\"telegram\":\"defiant1s\",\"market_cap_usd\":1824284190.8573327,\"fdv_usd\":5552686385.08101,\"circulating_supply\":31777370298.0,\"total_supply\":100000000000.0},\"spot_metrics\":{\"volume_total_usd\":1597518.9025262604,\"buy_volume_usd\":815983.6887469926,\"sell_volume_usd\":781535.2137792676,\"total_buys\":1175,\"total_sells\":961,\"unique_buyers\":103,\"unique_sellers\":286,\"liquidity_usd\":4080096.0597127615,\"total_holders\":72682}}}"
+    },
+    "ed2e8c14a4a28711508148c00133508c": {
+      "storedAt": "2026-09-16T12:39:52.379Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/token-information",
+      "body": {
+        "chain": "bnb",
+        "token_address": "0x47474747477b199288bf72a1d702f7fe0fb1deea",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":{\"name\":\"\",\"symbol\":\"\",\"contract_address\":\"0x47474747477b199288bf72a1d702f7fe0fb1deea\",\"logo\":\"\",\"token_details\":{\"token_deployment_date\":\"\",\"website\":\"\",\"x\":\"\",\"telegram\":\"\",\"market_cap_usd\":0.0,\"fdv_usd\":0.0,\"circulating_supply\":0.0,\"total_supply\":0.0},\"spot_metrics\":{\"volume_total_usd\":504989.93670766824,\"buy_volume_usd\":233801.837550282,\"sell_volume_usd\":271188.0991573862,\"total_buys\":4020,\"total_sells\":4320,\"unique_buyers\":146,\"unique_sellers\":970,\"liquidity_usd\":0.0,\"total_holders\":23874}}}"
+    },
+    "0f057b33b01070f35d069d7b3630fe4a": {
+      "storedAt": "2026-09-16T12:39:52.845Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/flow-intelligence",
+      "body": {
+        "chain": "ethereum",
+        "token_address": "0xda5e1988097297dcdc1f90d4dfe7909e847cbef6",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":[{\"public_figure_net_flow_usd\":-15145.735505431205,\"public_figure_avg_flow_usd\":2113.1942895589737,\"public_figure_wallet_count\":1,\"top_pnl_net_flow_usd\":23832.508463067214,\"top_pnl_avg_flow_usd\":1546.753725627825,\"top_pnl_wallet_count\":4,\"whale_net_flow_usd\":0.0,\"whale_avg_flow_usd\":294.84141608721217,\"whale_wallet_count\":0,\"smart_trader_net_flow_usd\":0.0,\"smart_trader_avg_flow_usd\":null,\"smart_trader_wallet_count\":0,\"exchange_net_flow_usd\":5926389.780781331,\"exchange_avg_flow_usd\":7735796.813903948,\"exchange_wallet_count\":0,\"fresh_wallets_net_flow_usd\":3210710.9398716246,\"fresh_wallets_avg_flow_usd\":5447319.724553011,\"fresh_wallets_wallet_count\":0}],\"warnings\":[\"exchange_wallet_count is always 0 (not tracked), even when exchange net flow is non-zero.\",\"fresh_wallets_wallet_count is always 0 (not tracked), even when fresh-wallet net flow is non-zero.\"]}"
+    },
+    "e23bfa448cb1c94ededd6639608a963b": {
+      "storedAt": "2026-09-16T12:39:52.961Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/flow-intelligence",
+      "body": {
+        "chain": "bnb",
+        "token_address": "0x47474747477b199288bf72a1d702f7fe0fb1deea",
+        "timeframe": "7d"
+      },
+      "text": "{\"data\":[{\"public_figure_net_flow_usd\":-388.43638126192303,\"public_figure_avg_flow_usd\":388.43638169071255,\"public_figure_wallet_count\":2,\"top_pnl_net_flow_usd\":-289.8572107184995,\"top_pnl_avg_flow_usd\":496.13384012185605,\"top_pnl_wallet_count\":4,\"whale_net_flow_usd\":0.0,\"whale_avg_flow_usd\":null,\"whale_wallet_count\":0,\"smart_trader_net_flow_usd\":-38.1736885389336,\"smart_trader_avg_flow_usd\":310.1433808817725,\"smart_trader_wallet_count\":3,\"exchange_net_flow_usd\":876048.7493250712,\"exchange_avg_flow_usd\":295083.55834413745,\"exchange_wallet_count\":0,\"fresh_wallets_net_flow_usd\":0.0,\"fresh_wallets_avg_flow_usd\":0.0,\"fresh_wallets_wallet_count\":0}],\"warnings\":[\"exchange_wallet_count is always 0 (not tracked), even when exchange net flow is non-zero.\"]}"
+    },
+    "68fa8787791de7a12b32657dde0ee30c": {
+      "storedAt": "2026-09-16T12:39:53.733Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/holders",
+      "body": {
+        "chain": "bnb",
+        "token_address": "0x47474747477b199288bf72a1d702f7fe0fb1deea",
+        "pagination": {
+          "page": 1,
+          "per_page": 20
+        }
+      },
+      "text": "{\"data\":[{\"address\":\"0x128463a60784c4d3f46c23af3f65ed859ba87974\",\"address_label\":\"Token Billionaire\",\"token_amount\":237963435.69598183,\"total_outflow\":18185467.5166171,\"total_inflow\":256148903.21259895,\"balance_change_24h\":-1349195.0231092998,\"balance_change_7d\":-13430256.01785316,\"balance_change_30d\":236519717.36100566,\"ownership_percentage\":0.3732377106447521,\"value_usd\":13621917.654901467},{\"address\":\"0xf977814e90da44bfa03b6295a0616a897441acec\",\"address_label\":\"Token Millionaire\",\"token_amount\":231408706.0,\"total_outflow\":70343028.0,\"total_inflow\":301751734.0,\"balance_change_24h\":2482320.0,\"balance_change_7d\":15253035.0,\"balance_change_30d\":134408706.0,\"ownership_percentage\":0.36295683577644244,\"value_usd\":13246700.395545393},{\"address\":\"0x9ef561cde38ee39bc582d934e190c0d31fc2b825\",\"address_label\":\"Token Millionaire\",\"token_amount\":50075480.3206628,\"total_outflow\":351479003.61181015,\"total_inflow\":401554483.93247294,\"balance_change_24h\":-112.76234355461307,\"balance_change_7d\":-575.3912897989046,\"balance_change_30d\":1564.6330693911398,\"ownership_percentage\":0.07854172041035173,\"value_usd\":2866507.9047235562},{\"address\":\"0xf584f8728b874a6a5c7a8d4d387c9aae9172d621\",\"address_label\":\"Token Millionaire\",\"token_amount\":27437644.290000003,\"total_outflow\":0.0,\"total_inflow\":27437644.290000003,\"balance_change_24h\":0.0,\"balance_change_7d\":807545.12,\"balance_change_30d\":3427438.4600000004,\"ownership_percentage\":0.04303502977393588,\"value_usd\":1570633.446561759},{\"address\":\"0x0d0707963952f2fba59dd06f2b425ace40b492fe\",\"address_label\":\"Token Millionaire\",\"token_amount\":18334554.61246453,\"total_outflow\":182207982.78970686,\"total_inflow\":200542537.40217137,\"balance_change_24h\":-40906.233869489995,\"balance_change_7d\":-667258.51880054,\"balance_change_30d\":2770359.1712461524,\"ownership_percentage\":0.028757137285537145,\"value_usd\":1049538.524436857},{\"address\":\"0x2337ddd13f606dd6bf64e1071011b634733a326c\",\"address_label\":\"High Balance\",\"token_amount\":8386715.54005,\"total_outflow\":5400001.000186314,\"total_inflow\":13786716.540236313,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":-2999999.9999700002,\"ownership_percentage\":0.013154283551344285,\"value_usd\":480086.9854123251},{\"address\":\"0x993ba01786664a3eaacb209a37eb90ca1483f3a9\",\"address_label\":\"High Balance\",\"token_amount\":7344108.710201314,\"total_outflow\":3198945.0901099998,\"total_inflow\":10543053.800311314,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":7344108.710181314,\"ownership_percentage\":0.01151898951914488,\"value_usd\":420404.268439028},{\"address\":\"0x8dac80ce96f69f9762bc450faa4d7fbd5891ae18\",\"address_label\":\"Token Millionaire\",\"token_amount\":7080550.38,\"total_outflow\":5000000.0,\"total_inflow\":12080550.38,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.011105607070290981,\"value_usd\":405317.20323186583},{\"address\":\"0x8894e0a0c962cb723c1976a4421c95949be2d4e3\",\"address_label\":\"Token Billionaire\",\"token_amount\":4381946.818091619,\"total_outflow\":725068322.6,\"total_inflow\":729450269.4180917,\"balance_change_24h\":410709.50782495347,\"balance_change_7d\":-32727.175712835593,\"balance_change_30d\":-11519184.338542331,\"ownership_percentage\":0.006872937406405031,\"value_usd\":250839.03562588146},{\"address\":\"0x69be413d648ae00f0fbd9856f1355e22b36ee5e0\",\"address_label\":\"Token Millionaire\",\"token_amount\":3377052.000918567,\"total_outflow\":0.0,\"total_inflow\":3377052.000918567,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.005296793408048817,\"value_usd\":193315.09539811933},{\"address\":\"0xd34eb13012d263213066f06a454b1fd4aaea3930\",\"address_label\":\"Token Millionaire\",\"token_amount\":2993291.5900000003,\"total_outflow\":5000.0,\"total_inflow\":2998291.59,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.0046948780054223045,\"value_usd\":171347.213225572},{\"address\":\"0x17a30350771d02409046a683b18fe1c13ccfc4a8\",\"address_label\":\"Token Millionaire\",\"token_amount\":2124165.0900000003,\"total_outflow\":16935700.0,\"total_inflow\":19059865.09,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.0033316820834440957,\"value_usd\":121595.15959570993},{\"address\":\"0xb8e6d31e7b212b2b7250ee9c26c56cebbfbe6b23\",\"address_label\":\"Token Millionaire\",\"token_amount\":1770137.5499999998,\"total_outflow\":81616800.0,\"total_inflow\":83386937.55000001,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.0027764016969917464,\"value_usd\":101329.29823199802},{\"address\":\"0x4982085c9e2f89f2ecb8131eca71afad896e89cb\",\"address_label\":\"High Activity\",\"token_amount\":1574757.7855570135,\"total_outflow\":79235755.04272294,\"total_inflow\":80810512.82827996,\"balance_change_24h\":-592899.2385305878,\"balance_change_7d\":706661.2307084482,\"balance_change_30d\":828652.0536485318,\"ownership_percentage\":0.002469955054154666,\"value_usd\":90145.02929214027},{\"address\":\"0x53f78a071d04224b8e254e243fffc6d9f2f3fa23\",\"address_label\":\"Token Millionaire\",\"token_amount\":1191263.5704323263,\"total_outflow\":165992219.132954,\"total_inflow\":167183482.70338634,\"balance_change_24h\":-3093.2999999999997,\"balance_change_7d\":-21261.69999998,\"balance_change_30d\":-1147734.37666098,\"ownership_percentage\":0.0018684571707508028,\"value_usd\":68192.38516309198},{\"address\":\"0xc7bf86871ebaae906e8e8c3dddf2e396e9502d1e\",\"address_label\":\"Liquidity Pool\",\"token_amount\":1092969.9139724674,\"total_outflow\":45118117.129901424,\"total_inflow\":46211087.04387389,\"balance_change_24h\":-5984.556273019556,\"balance_change_7d\":-4271.962268638362,\"balance_change_30d\":45571.11287820625,\"ownership_percentage\":0.0017142868495807469,\"value_usd\":62565.68839608955},{\"address\":\"0x28e2ea090877bf75740558f6bfb36a5ffee9e9df\",\"address_label\":\"High Activity\",\"token_amount\":961147.6209847665,\"total_outflow\":39048109.83591246,\"total_inflow\":40009257.45689722,\"balance_change_24h\":14628.462878697848,\"balance_change_7d\":-28989.73387615062,\"balance_change_30d\":13569.455011495258,\"ownership_percentage\":0.0015075279805016769,\"value_usd\":55019.68699084476},{\"address\":\"0x9239df3e9996c776d539eb9f01a8ae8e7957b3c3\",\"address_label\":\"Token Millionaire\",\"token_amount\":818370.4292456345,\"total_outflow\":311743.76999999996,\"total_inflow\":1130114.1992456345,\"balance_change_24h\":0.0,\"balance_change_7d\":1019.88,\"balance_change_30d\":-20032.280000000002,\"ownership_percentage\":0.0012835867181764738,\"value_usd\":46846.5861815536},{\"address\":\"0x76801132a22801640284cd67f7dd41fed2926b6a\",\"address_label\":\"Token Millionaire\",\"token_amount\":756350.4602895947,\"total_outflow\":58572219.770442754,\"total_inflow\":59328570.230732344,\"balance_change_24h\":26065.4502069947,\"balance_change_7d\":-204493.39137277415,\"balance_change_30d\":172080.910856878,\"ownership_percentage\":0.0011863104657988412,\"value_usd\":43296.33104421367},{\"address\":\"0xb3c6429d373495b3011e74f0526d7a9c8d5714f8\",\"address_label\":\"High Balance\",\"token_amount\":720451.58,\"total_outflow\":0.0,\"total_inflow\":720451.58,\"balance_change_24h\":0.0,\"balance_change_7d\":720441.9600000001,\"balance_change_30d\":720451.58,\"ownership_percentage\":0.0011300042696187,\"value_usd\":41241.34478223694}],\"pagination\":{\"page\":1,\"per_page\":20,\"is_last_page\":false},\"warnings\":null}"
+    },
+    "f1287975a504750491e31ce4aa9b3d24": {
+      "storedAt": "2026-09-16T12:39:53.877Z",
+      "ttlMs": 1800000,
+      "endpoint": "tgm/holders",
+      "body": {
+        "chain": "ethereum",
+        "token_address": "0xda5e1988097297dcdc1f90d4dfe7909e847cbef6",
+        "pagination": {
+          "page": 1,
+          "per_page": 20
+        }
+      },
+      "text": "{\"data\":[{\"address\":\"0x74b4f6a2e579d730aacb9dd23cfbbaeb95029583\",\"address_label\":\"Token Billionaire\",\"token_amount\":46103116514.708115,\"total_outflow\":7482563504.96612,\"total_inflow\":53585680019.674225,\"balance_change_24h\":56362.68235286775,\"balance_change_7d\":1033574.6511881528,\"balance_change_30d\":183645031.32106516,\"ownership_percentage\":0.47665217468874066,\"value_usd\":2646700649.4973884},{\"address\":\"0x5be9a4959308a0d0c7bc0870e319314d8d957dbb\",\"address_label\":\"zach.wlfi.eth\",\"token_amount\":12620954712.407986,\"total_outflow\":95203908012.53342,\"total_inflow\":107824862724.9414,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.13048587525310082,\"value_usd\":724547309.5934982},{\"address\":\"0xfef30c262676de9af5e5e9ba999cf774000b14b4\",\"address_label\":\"Token Millionaire\",\"token_amount\":7576097353.6,\"total_outflow\":10108902646.419998,\"total_inflow\":17685000000.02,\"balance_change_24h\":0.0,\"balance_change_7d\":-46200000.0,\"balance_change_30d\":-251945392.09,\"ownership_percentage\":0.07832796462024419,\"value_usd\":434930722.7426058},{\"address\":\"0x003ca23fd5f0ca87d01f6ec6cd14a8ae60c2b97d\",\"address_label\":\"Token Millionaire\",\"token_amount\":5041253350.256675,\"total_outflow\":242598496.2359254,\"total_inflow\":5283851846.4926,\"balance_change_24h\":3376.9168478194524,\"balance_change_7d\":-58746175.8328266,\"balance_change_30d\":42787434.04165805,\"ownership_percentage\":0.0521206494096803,\"value_usd\":289409686.9166872},{\"address\":\"0x4af8911204909f6b234da8deb3680738ef967bf9\",\"address_label\":\"Token Millionaire\",\"token_amount\":3583585650.0,\"total_outflow\":0.0,\"total_inflow\":3583585650.0,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.037050074320050086,\"value_usd\":205727490.55605942},{\"address\":\"0x0db3ec152c67e2436562c2b0c3eef7e7eab674db\",\"address_label\":\"Token Millionaire\",\"token_amount\":1815211652.8283858,\"total_outflow\":0.0,\"total_inflow\":1815211652.8283858,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.01876716038415676,\"value_usd\":104208179.91736872},{\"address\":\"0xc785d05961b3c537cac11f1d496876a255f6d650\",\"address_label\":\"Token Millionaire\",\"token_amount\":1422533117.6356173,\"total_outflow\":388762153.9836808,\"total_inflow\":1811295271.6192977,\"balance_change_24h\":0.0,\"balance_change_7d\":-248558.02064230817,\"balance_change_30d\":-194157615.2147391,\"ownership_percentage\":0.014707324696183046,\"value_usd\":81665180.38268828},{\"address\":\"0xf977814e90da44bfa03b6295a0616a897441acec\",\"address_label\":\"Token Millionaire\",\"token_amount\":1331064808.888,\"total_outflow\":3488790467.228,\"total_inflow\":4819855276.116,\"balance_change_24h\":0.0,\"balance_change_7d\":152023770.051,\"balance_change_30d\":-1232499743.756,\"ownership_percentage\":0.013761649618756472,\"value_usd\":76414142.04792595},{\"address\":\"0xcd52e35f7784efc78e835ef6e00be914f48beee6\",\"address_label\":\"treasury.alt5.eth*\",\"token_amount\":1323536753.5326455,\"total_outflow\":6354843774.689696,\"total_inflow\":7678380528.222342,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.01368381835207492,\"value_usd\":75981969.3336993},{\"address\":\"0x5a52e96bacdabb82fd05763e25335261b270efcb\",\"address_label\":\"Token Billionaire\",\"token_amount\":1311293058.154,\"total_outflow\":150000000.0,\"total_inflow\":1461293058.154,\"balance_change_24h\":0.0,\"balance_change_7d\":-150000000.0,\"balance_change_30d\":1311293058.154,\"ownership_percentage\":0.013557232896044068,\"value_usd\":75279079.83379813},{\"address\":\"0xd250b4888433cc080f510f243b24aea2413e89ef\",\"address_label\":\"Token Millionaire\",\"token_amount\":1000000000.0,\"total_outflow\":0.0,\"total_inflow\":1000000000.0,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.010338827626472409,\"value_usd\":57408280.6018769},{\"address\":\"0x0249d14d15531065b927f4930562c3814e654b54\",\"address_label\":\"auqa1.eth*\",\"token_amount\":800000000.0,\"total_outflow\":0.0,\"total_inflow\":800000000.0,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.008271062101177928,\"value_usd\":45926624.48150152},{\"address\":\"0xcc261ab4be137eacf57c19ed97c186b4d88004ca\",\"address_label\":\"Token Millionaire\",\"token_amount\":749999950.0,\"total_outflow\":200000753.0,\"total_inflow\":950000703.0,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.007754120202912926,\"value_usd\":43056207.580993645},{\"address\":\"0xf0cc01b37086bc122a3d63c615dab379478d2745\",\"address_label\":\"Token Millionaire\",\"token_amount\":666666666.6666666,\"total_outflow\":0.0,\"total_inflow\":666666666.6666666,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.006892551750981606,\"value_usd\":38272187.067917936},{\"address\":\"0x5ab26169051d0d96217949adb91e86e51a5fda74\",\"address_label\":\"Token Millionaire\",\"token_amount\":544718605.9803209,\"total_outflow\":3055332483.9016047,\"total_inflow\":3600051089.8819256,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.005631751772162881,\"value_usd\":31271358.581181485},{\"address\":\"0xbd02c51150a4ab6ce97b9de2025644594f3e75b8\",\"address_label\":\"MultiSig\",\"token_amount\":501275132.8017808,\"total_outflow\":85465293.88776438,\"total_inflow\":586740426.6895452,\"balance_change_24h\":0.0,\"balance_change_7d\":-291.77189104,\"balance_change_30d\":500000621.2227548,\"ownership_percentage\":0.005182597191474677,\"value_usd\":28777343.482627742},{\"address\":\"0x9e8f9a6ea64cbba627749de83c32d2096ba0c787\",\"address_label\":\"Token Millionaire\",\"token_amount\":500000000.0,\"total_outflow\":6333999999.999999,\"total_inflow\":6834000000.0,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":-500000000.0,\"ownership_percentage\":0.005169413813236204,\"value_usd\":28704140.30093845},{\"address\":\"0x29de882559194e2be08c182c1860193f8137cbf8\",\"address_label\":\"Token Millionaire\",\"token_amount\":433333333.3333333,\"total_outflow\":0.0,\"total_inflow\":433333333.3333333,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.004480158638138044,\"value_usd\":24876921.594146658},{\"address\":\"0x284cf133aa570f29da0961be897dbbb2a37962f8\",\"address_label\":\"Token Millionaire\",\"token_amount\":401963354.26995933,\"total_outflow\":34000000.0,\"total_inflow\":435963354.26995933,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.004155829831955771,\"value_usd\":23076025.033601478},{\"address\":\"0x35d9a0dd75b9fb82e68f91ae4528138926e7b025\",\"address_label\":\"Token Millionaire\",\"token_amount\":400000000.0,\"total_outflow\":0.0,\"total_inflow\":400000000.0,\"balance_change_24h\":0.0,\"balance_change_7d\":0.0,\"balance_change_30d\":0.0,\"ownership_percentage\":0.004135531050588964,\"value_usd\":22963312.24075076}],\"pagination\":{\"page\":1,\"per_page\":20,\"is_last_page\":false},\"warnings\":null}"
+    }
+  },
+  "verdict": {
+    "query": "WLFI",
+    "winner": {
+      "chain": "ethereum",
+      "address": "0xda5e1988097297dcdc1f90d4dfe7909e847cbef6",
+      "name": "World Liberty Financial",
+      "symbol": "WLFI",
+      "marketCap": 1824284190.79769,
+      "volume24h": 263805.076353656,
+      "searchRank": 477,
+      "labelledWallets": 5,
+      "smartTraderWallets": 0,
+      "whaleWallets": 0,
+      "topPnlWallets": 4,
+      "publicFigureWallets": 1,
+      "smartTraderNetFlowUsd": 0,
+      "exchangeNetFlowUsd": 5926389.780781331,
+      "freshNetFlowUsd": 3210710.9398716246,
+      "exchangeTouched": true,
+      "freshShare": 0.34990009918730886,
+      "errors": [],
+      "deploymentDate": "2024-09-29 15:48:59",
+      "ageDays": 716,
+      "marketCapUsd": 1824284190.8573327,
+      "liquidityUsd": 4080096.0597127615,
+      "totalHolders": 72682,
+      "uniqueBuyers": 103,
+      "logo": "https://coin-images.coingecko.com/coins/images/50767/small/wlfi.png?1756438915",
+      "website": "https://www.worldlibertyfinancial.com/",
+      "score": 15.64,
+      "terms": {
+        "labelled": 5.38,
+        "exchange": 2.26,
+        "holders": 2.92,
+        "liquidity": 2.64,
+        "age": 0,
+        "fresh": 0,
+        "recognisedHolders": 2.44
+      },
+      "reasons": [
+        "5 labelled wallets (0 smart traders, 4 top PnL, 0 whales, 1 public figures)",
+        "exchange flow $5.9M",
+        "73K holders",
+        "2.0y old",
+        "20 of top 20 holders tagged by Nansen (Token Millionaire ×14, Token Billionaire ×2, zach.wlfi.eth)"
+      ],
+      "impostor": false,
+      "scorable": true,
+      "unchecked": false,
+      "recognisedHolders": 20,
+      "topLabels": [
+        "Token Millionaire ×14",
+        "Token Billionaire ×2",
+        "zach.wlfi.eth"
+      ],
+      "topHolderPct": 0.47665217468874066
+    },
+    "ranked": [
+      {
+        "chain": "ethereum",
+        "address": "0xda5e1988097297dcdc1f90d4dfe7909e847cbef6",
+        "name": "World Liberty Financial",
+        "symbol": "WLFI",
+        "marketCap": 1824284190.79769,
+        "volume24h": 263805.076353656,
+        "searchRank": 477,
+        "labelledWallets": 5,
+        "smartTraderWallets": 0,
+        "whaleWallets": 0,
+        "topPnlWallets": 4,
+        "publicFigureWallets": 1,
+        "smartTraderNetFlowUsd": 0,
+        "exchangeNetFlowUsd": 5926389.780781331,
+        "freshNetFlowUsd": 3210710.9398716246,
+        "exchangeTouched": true,
+        "freshShare": 0.34990009918730886,
+        "errors": [],
+        "deploymentDate": "2024-09-29 15:48:59",
+        "ageDays": 716,
+        "marketCapUsd": 1824284190.8573327,
+        "liquidityUsd": 4080096.0597127615,
+        "totalHolders": 72682,
+        "uniqueBuyers": 103,
+        "logo": "https://coin-images.coingecko.com/coins/images/50767/small/wlfi.png?1756438915",
+        "website": "https://www.worldlibertyfinancial.com/",
+        "score": 15.64,
+        "terms": {
+          "labelled": 5.38,
+          "exchange": 2.26,
+          "holders": 2.92,
+          "liquidity": 2.64,
+          "age": 0,
+          "fresh": 0,
+          "recognisedHolders": 2.44
+        },
+        "reasons": [
+          "5 labelled wallets (0 smart traders, 4 top PnL, 0 whales, 1 public figures)",
+          "exchange flow $5.9M",
+          "73K holders",
+          "2.0y old",
+          "20 of top 20 holders tagged by Nansen (Token Millionaire ×14, Token Billionaire ×2, zach.wlfi.eth)"
+        ],
+        "impostor": false,
+        "scorable": true,
+        "unchecked": false,
+        "recognisedHolders": 20,
+        "topLabels": [
+          "Token Millionaire ×14",
+          "Token Billionaire ×2",
+          "zach.wlfi.eth"
+        ],
+        "topHolderPct": 0.47665217468874066
+      },
+      {
+        "chain": "bnb",
+        "address": "0x47474747477b199288bf72a1d702f7fe0fb1deea",
+        "name": "World Liberty Financial",
+        "symbol": "WLFI",
+        "marketCap": 1817761440.02529,
+        "volume24h": 12270.938567386067,
+        "searchRank": 478,
+        "labelledWallets": 9,
+        "smartTraderWallets": 3,
+        "whaleWallets": 0,
+        "topPnlWallets": 4,
+        "publicFigureWallets": 2,
+        "smartTraderNetFlowUsd": -38.1736885389336,
+        "exchangeNetFlowUsd": 876048.7493250712,
+        "freshNetFlowUsd": 0,
+        "exchangeTouched": true,
+        "freshShare": 0,
+        "errors": [],
+        "marketCapUsd": 0,
+        "liquidityUsd": 0,
+        "totalHolders": 23874,
+        "uniqueBuyers": 146,
+        "logo": "",
+        "website": "",
+        "score": 13.74,
+        "terms": {
+          "labelled": 6.91,
+          "exchange": 1.77,
+          "holders": 2.63,
+          "liquidity": 0,
+          "age": 0,
+          "fresh": 0,
+          "recognisedHolders": 2.44
+        },
+        "reasons": [
+          "9 labelled wallets (3 smart traders, 4 top PnL, 0 whales, 2 public figures)",
+          "exchange flow $876K",
+          "24K holders",
+          "age unknown",
+          "20 of top 20 holders tagged by Nansen (Token Millionaire ×12, High Balance ×3, Token Billionaire ×2)"
+        ],
+        "impostor": false,
+        "scorable": true,
+        "unchecked": false,
+        "recognisedHolders": 20,
+        "topLabels": [
+          "Token Millionaire ×12",
+          "High Balance ×3",
+          "Token Billionaire ×2"
+        ],
+        "topHolderPct": 0.3732377106447521
+      },
+      {
+        "chain": "hyperliquid",
+        "address": "WLFI",
+        "name": "WLFI",
+        "symbol": "WLFI",
+        "marketCap": 1824284190.79769,
+        "volume24h": 655960.0535740003,
+        "searchRank": 174,
+        "labelledWallets": 0,
+        "smartTraderWallets": 0,
+        "whaleWallets": 0,
+        "topPnlWallets": 0,
+        "publicFigureWallets": 0,
+        "smartTraderNetFlowUsd": 0,
+        "exchangeNetFlowUsd": 0,
+        "freshNetFlowUsd": 0,
+        "exchangeTouched": false,
+        "freshShare": null,
+        "errors": [],
+        "score": null,
+        "terms": {},
+        "reasons": [
+          "hyperliquid: perp market, not a token contract — not ranked"
+        ],
+        "impostor": false,
+        "scorable": false,
+        "unchecked": false
+      }
+    ],
+    "abstained": false,
+    "stablecoin": false,
+    "candidatesTotal": 3,
+    "warnings": [],
+    "credits": 14,
+    "provenance": [
+      {
+        "endpoint": "search/general",
+        "body": {
+          "search_query": "WLFI",
+          "result_type": "token",
+          "limit": 50
+        },
+        "credits": 0,
+        "ms": 482,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "tokens[].name",
+          "tokens[].symbol",
+          "tokens[].chain",
+          "tokens[].address",
+          "tokens[].market_cap",
+          "tokens[].volume_24h",
+          "tokens[].rank"
+        ],
+        "responseHash": "7bf0cf14abbee0ab4d33fb3eeddc866a9568a9e2e1d33ce2138a14a1475bd45a",
+        "attempts": 1,
+        "totalMs": 482,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/token-information",
+        "body": {
+          "chain": "ethereum",
+          "token_address": "0xda5e1988097297dcdc1f90d4dfe7909e847cbef6",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 512,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "token_details.token_deployment_date",
+          "token_details.market_cap_usd",
+          "spot_metrics.liquidity_usd",
+          "spot_metrics.total_holders",
+          "spot_metrics.unique_buyers"
+        ],
+        "responseHash": "3c3a3f6829100c42ff4abf84bec974e4c77054477e3f027c9c1a861c5086010c",
+        "attempts": 1,
+        "totalMs": 513,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/token-information",
+        "body": {
+          "chain": "bnb",
+          "token_address": "0x47474747477b199288bf72a1d702f7fe0fb1deea",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 518,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "token_details.token_deployment_date",
+          "token_details.market_cap_usd",
+          "spot_metrics.liquidity_usd",
+          "spot_metrics.total_holders",
+          "spot_metrics.unique_buyers"
+        ],
+        "responseHash": "3de629529d9c4068fcc0d3afd275064ddf6dafe9233403eb80079e2cc0a65d2d",
+        "attempts": 1,
+        "totalMs": 520,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/flow-intelligence",
+        "body": {
+          "chain": "ethereum",
+          "token_address": "0xda5e1988097297dcdc1f90d4dfe7909e847cbef6",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 986,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "smart_trader_wallet_count",
+          "whale_wallet_count",
+          "top_pnl_wallet_count",
+          "public_figure_wallet_count",
+          "smart_trader_net_flow_usd",
+          "whale_net_flow_usd",
+          "top_pnl_net_flow_usd",
+          "public_figure_net_flow_usd",
+          "exchange_net_flow_usd",
+          "fresh_wallets_net_flow_usd"
+        ],
+        "responseHash": "9c823808b631722e00586995c55dfa7bd753d12df66ee85bf9952280739d2ade",
+        "attempts": 1,
+        "totalMs": 986,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/flow-intelligence",
+        "body": {
+          "chain": "bnb",
+          "token_address": "0x47474747477b199288bf72a1d702f7fe0fb1deea",
+          "timeframe": "7d"
+        },
+        "credits": 1,
+        "ms": 1101,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "smart_trader_wallet_count",
+          "whale_wallet_count",
+          "top_pnl_wallet_count",
+          "public_figure_wallet_count",
+          "smart_trader_net_flow_usd",
+          "whale_net_flow_usd",
+          "top_pnl_net_flow_usd",
+          "public_figure_net_flow_usd",
+          "exchange_net_flow_usd",
+          "fresh_wallets_net_flow_usd"
+        ],
+        "responseHash": "3843cead963b048389ae4c6d9fb9b817d94df7ad684b3ed9c3dc22ed76a1b276",
+        "attempts": 1,
+        "totalMs": 1102,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/holders",
+        "body": {
+          "chain": "bnb",
+          "token_address": "0x47474747477b199288bf72a1d702f7fe0fb1deea",
+          "pagination": {
+            "page": 1,
+            "per_page": 20
+          }
+        },
+        "credits": 5,
+        "ms": 769,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "data[].address_label",
+          "data[].ownership_percentage"
+        ],
+        "responseHash": "f79eec276ec2b8d7e77946b2af1e738e133a1e312fbadb2a1852ce3738dc778e",
+        "attempts": 1,
+        "totalMs": 770,
+        "ok": true
+      },
+      {
+        "endpoint": "tgm/holders",
+        "body": {
+          "chain": "ethereum",
+          "token_address": "0xda5e1988097297dcdc1f90d4dfe7909e847cbef6",
+          "pagination": {
+            "page": 1,
+            "per_page": 20
+          }
+        },
+        "credits": 5,
+        "ms": 914,
+        "cached": false,
+        "status": 200,
+        "fieldsUsed": [
+          "data[].address_label",
+          "data[].ownership_percentage"
+        ],
+        "responseHash": "ffc33c3b370388022c9b36c04e3887c80690485444802cbf6a3aa22553840fd7",
+        "attempts": 1,
+        "totalMs": 914,
+        "ok": true
+      }
+    ],
+    "ms": 2502,
+    "weights": {
+      "labelled": 3,
+      "exchange": 0.6,
+      "holders": 0.6,
+      "liquidity": 0.4,
+      "young7": 2,
+      "young30": 1,
+      "freshPenalty": 1.5,
+      "recognisedHolders": 0.8
+    },
+    "hash": "d9dfe8b0fec0335ee4dbe518e1b3d80b888b2148e1dc2a725f6cdea170568e09"
+  }
+}

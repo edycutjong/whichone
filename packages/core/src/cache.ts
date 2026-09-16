@@ -27,6 +27,8 @@ export class MemoryCache implements CacheStore {
   private m = new Map<string, CacheEntry>();
   get(key: string) { return this.m.get(key); }
   set(key: string, entry: CacheEntry) { this.m.set(key, entry); }
+  /** Everything stored, insertion order — `scripts/seed.ts` writes this to a fixture file. */
+  entries(): Record<string, CacheEntry> { return Object.fromEntries(this.m); }
 }
 
 export const DEFAULT_TTL_MS = 30 * 60 * 1000;
