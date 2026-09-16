@@ -15,7 +15,12 @@
     "probe": "tsx scripts/probe.ts",
     "whichone": "tsx packages/cli/src/cli.ts",
     "seed": "tsx scripts/seed.ts",
-    "verify": "tsx scripts/verify.ts"
+    "verify": "tsx scripts/verify.ts",
+    "bench": "tsx scripts/bench.ts",
+    "check": "tsx scripts/check_submission_readiness.ts",
+    "dev": "npm run dev -w apps/web",
+    "build": "npm run build -w apps/web",
+    "start": "npm run start -w apps/web"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",

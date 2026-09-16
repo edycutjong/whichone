@@ -228,3 +228,15 @@ describe("crown rule: 0 labelled wallets needs ≥ MIN_RECOGNISED_TO_CROWN tagge
     expect(three.winner?.address).toBe(A);
   });
 });
+
+describe("onProgress (streams the web page's pending → scored → verdict beats)", () => {
+  it("emits candidates once, one scored event per chosen candidate, then the verdict — same hash as the return value", async () => {
+    const events: string[] = [];
+    let last: unknown;
+    const v = await whichOnesReal(fakeClient(pepeRoutes), "PEPE", { now: NOW, onProgress: (e) => { events.push(e.type); last = e; } });
+    expect(events[0]).toBe("candidates");
+    expect(events.filter((t) => t === "scored")).toHaveLength(4);
+    expect(events.at(-1)).toBe("verdict");
+    expect((last as { verdict: { hash: string } }).verdict.hash).toBe(v.hash);
+  });
+});

@@ -1,6 +1,6 @@
 import type { NansenClient, Call } from "./client.js";
 import { sha256 } from "./client.js";
-import { searchCandidates, sameName, scorable } from "./search.js";
+import { searchCandidates, sameName, scorable, type Candidate } from "./search.js";
 import { fetchFacts, fetchHolderFacts, STABLECOINS } from "./facts.js";
 import { score, unscorable, rank, ABSTAIN_THRESHOLD, MIN_RECOGNISED_TO_CROWN, WEIGHTS, type Scored } from "./score.js";
 
@@ -26,8 +26,15 @@ export type Verdict = {
   hash: string;
 };
 
+/** Progress events for a streaming view: the candidate list, then each candidate as its facts land, then the verdict. */
+export type VerdictEvent =
+  | { type: "candidates"; query: string; candidates: Candidate[]; total: number }
+  | { type: "scored"; candidate: Scored; done: number; of: number }
+  | { type: "verdict"; verdict: Verdict };
+
 export type VerdictOptions = {
   chain?: string;
+  onProgress?: (e: VerdictEvent) => void;
   /** max candidates scored (after the same-name filter). Default 8. */
   cap?: number;
   /** finalists that get the holders tiebreak call. Default 2. */
@@ -46,9 +53,16 @@ export async function whichOnesReal(client: NansenClient, query: string, opts: V
   const all = await searchCandidates(client, q, { chain: opts.chain });
   const same = all.filter((c) => sameName(q, c));
   const chosen = same.slice(0, cap);
+  const emit = opts.onProgress ?? (() => {});
+  emit({ type: "candidates", query: q, candidates: chosen, total: same.length });
 
-  const facts = await Promise.all(chosen.map(async (c) =>
-    scorable(c) ? fetchFacts(client, c, opts.now) : { ...c, ...emptyFacts(), errors: [] }));
+  let done = 0;
+  const facts = await Promise.all(chosen.map(async (c) => {
+    const f = scorable(c) ? await fetchFacts(client, c, opts.now) : { ...c, ...emptyFacts(), errors: [] };
+    // provisional score (before the holders tiebreak) so a live view can reorder as facts arrive
+    emit({ type: "scored", candidate: scorable(c) ? score(f) : unscorable(f, `${f.chain}: perp market, not a token contract — not ranked`), done: ++done, of: chosen.length });
+    return f;
+  }));
   let scored: Scored[] = facts.map((f, i) =>
     scorable(chosen[i]) ? score(f) : unscorable(f, `${f.chain}: perp market, not a token contract — not ranked`));
 
@@ -85,7 +99,9 @@ export async function whichOnesReal(client: NansenClient, query: string, opts: V
     winner: winner ? `${winner.chain}:${winner.address}` : null,
     ranked: ranked.map((s) => ({ id: `${s.chain}:${s.address}`, score: s.scorable && !s.unchecked ? s.score : null, impostor: s.impostor, unchecked: s.unchecked })),
   };
-  return { query: q, chainFilter: opts.chain, winner, ranked, abstained: winner === null, abstainReason, stablecoin, candidatesTotal: same.length, warnings, credits, provenance, ms: Date.now() - started, weights: WEIGHTS, hash: sha256(JSON.stringify(decision)) };
+  const verdict: Verdict = { query: q, chainFilter: opts.chain, winner, ranked, abstained: winner === null, abstainReason, stablecoin, candidatesTotal: same.length, warnings, credits, provenance, ms: Date.now() - started, weights: WEIGHTS, hash: sha256(JSON.stringify(decision)) };
+  emit({ type: "verdict", verdict });
+  return verdict;
 }
 
 function emptyFacts() {
