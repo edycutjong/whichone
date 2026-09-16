@@ -82,7 +82,7 @@ export async function whichOnesReal(client: NansenClient, query: string, opts: V
   const best = ranked[0];
   let winner: Scored | null = null;
   let abstainReason: string | undefined;
-  if (same.length === 0) abstainReason = `no token named ${q} on Nansen`;
+  if (same.length === 0) abstainReason = looksLikeAddress(q) ? `${q.slice(0, 6)}…${q.slice(-4)} is a contract address — type the ticker or name instead; this tool finds the address for you` : `no token named ${q} on Nansen`;
   else if (!best || !best.scorable) abstainReason = "no candidate on a chain Nansen can score";
   else if (best.unchecked) abstainReason = "Nansen lookups failed for every candidate — retry";
   else if (best.labelledWallets === 0 && best.recognisedHolders == null && best.errors.some((e) => e.startsWith("holders failed"))) abstainReason = "the deciding holders lookup failed for the top candidate — retry";
@@ -102,6 +102,11 @@ export async function whichOnesReal(client: NansenClient, query: string, opts: V
   const verdict: Verdict = { query: q, chainFilter: opts.chain, winner, ranked, abstained: winner === null, abstainReason, stablecoin, candidatesTotal: same.length, warnings, credits, provenance, ms: Date.now() - started, weights: WEIGHTS, hash: sha256(JSON.stringify(decision)) };
   emit({ type: "verdict", verdict });
   return verdict;
+}
+
+/** EVM (0x + 40 hex) or base58 (Solana-style, 32–44 chars) — the input the tool exists to *produce*, not consume. */
+export function looksLikeAddress(q: string): boolean {
+  return /^0x[0-9a-fA-F]{40}$/.test(q) || /^[1-9A-HJ-NP-Za-km-z]{32,44}$/.test(q);
 }
 
 function emptyFacts() {

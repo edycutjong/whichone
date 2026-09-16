@@ -8,7 +8,7 @@
 
 [Live demo](https://whichone-edycutjong.vercel.app) · [How the score works](docs/SCORING.md) · [Reproduce it](DEMO.md) · [Architecture](ARCHITECTURE.md) · [Nansen DX report](docs/DX-REPORT.md)
 
-![tests](https://img.shields.io/badge/tests-57%20passing-22c55e) ![fixtures](https://img.shields.io/badge/fixtures-12%2F12%20replay%20offline-22c55e) ![credits](https://img.shields.io/badge/credits%20per%20verdict-%E2%89%A4%2026-38bdf8) ![nansen](https://img.shields.io/badge/built%20on-Nansen%20API-8b5cf6) ![license](https://img.shields.io/badge/license-MIT-lightgrey)
+![tests](https://img.shields.io/badge/tests-58%20passing-22c55e) ![fixtures](https://img.shields.io/badge/fixtures-12%2F12%20replay%20offline-22c55e) ![credits](https://img.shields.io/badge/credits%20per%20verdict-%E2%89%A4%2026-38bdf8) ![nansen](https://img.shields.io/badge/built%20on-Nansen%20API-8b5cf6) ![license](https://img.shields.io/badge/license-MIT-lightgrey)
 
 </div>
 
@@ -77,7 +77,7 @@ Worked with real numbers in [docs/SCORING.md](docs/SCORING.md). Weights live in 
 
 - **Fixtures are replays, the default path is live.** `fixtures/*.json` hold 12 real verdicts recorded on 2026-09-16 with every raw Nansen response byte-for-byte. `npm run verify` replays them with `NANSEN_OFFLINE=1` and requires the same decision hash, the same ranking and zero network calls. The CLI and the web app never read them.
 - **Numbers come from scripts.** [docs/BENCH.md](docs/BENCH.md) is the output of `npm run bench` (12 queries × 2 cold runs, live): cold p50 **3.6 s** / p95 **7.2 s**, warm p50 **3 ms**, mean **18.6 credits** per verdict. `USDC` (24 canonical issues) is the slow outlier at 15 s cold; Nansen times out on a few of its solana lookups, which the drawer shows.
-- **57 tests** (`npm test`): the ranking function table-driven, the abstain/impostor/unchecked paths, hash stability, cache bypass, client retry and timeout accounting, fixture round-trip, the structural-tag rule, the holders tiebreak flip.
+- **58 tests** (`npm test`): the ranking function table-driven, the abstain/impostor/unchecked paths, hash stability, cache bypass, client retry and timeout accounting, fixture round-trip, the structural-tag rule, the holders tiebreak flip.
 - **Known limits.** Label coverage is uneven across chains — a real token on a thinly-labelled chain can lose to a bridged copy on a busy one (the chain filter exists for that). Flow-intelligence is a 7-day window. `search/general` decides the candidate set: an impostor Nansen has not indexed cannot be warned about. `DOGE` crowns a Solana meme DOGE because native DOGE has no contract to compare against.
 
 ## Repo map

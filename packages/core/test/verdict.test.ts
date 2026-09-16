@@ -240,3 +240,16 @@ describe("onProgress (streams the web page's pending → scored → verdict beat
     expect((last as { verdict: { hash: string } }).verdict.hash).toBe(v.hash);
   });
 });
+
+describe("address pasted instead of a ticker (live QA 2026-09-16)", () => {
+  it("abstains with a hint that says what to type instead", async () => {
+    const c = fakeClient((ep) => { if (ep === "search/general") return searchTokens([]); throw new Error("unexpected " + ep); });
+    const v = await whichOnesReal(c, "0x6982508145454ce325ddbe47a25d4ec3d2311933", { now: NOW });
+    expect(v.abstained).toBe(true);
+    expect(v.abstainReason).toMatch(/contract address — type the ticker/);
+    const sol = await whichOnesReal(c, "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263", { now: NOW });
+    expect(sol.abstainReason).toMatch(/contract address/);
+    const plain = await whichOnesReal(c, "XQZPLM", { now: NOW });
+    expect(plain.abstainReason).toBe("no token named XQZPLM on Nansen");
+  });
+});
