@@ -43,7 +43,7 @@ npm run verify                                # replays 12 recorded verdicts off
 npm run dev                                   # http://localhost:3000
 ```
 
-Measured on a clean clone (macOS, Node 22): install 38 s · first verdict 4.4 s · `verify` 1.2 s · `next build` 14 s — about 1 minute of machine time plus the API key.
+Measured on a clean clone from GitHub (macOS, Node 22, warm npm cache, 2026-09-16): clone 2 s · install 4 s · first live verdict 4 s · `verify` < 1 s · `next build` 8 s · tests 4 s — **22 s of machine time** plus pasting the API key.
 
 ## The score, in one screen
 
