@@ -91,3 +91,20 @@ button { font: inherit; cursor: pointer; }
 @keyframes toast { 0% { opacity: 0; transform: translate(-50%, 8px);} 10%, 80% { opacity: 1; transform: translate(-50%, 0);} 100% { opacity: 0; } }
 .explain { font-family: var(--mono); font-size: 12px; color: var(--muted); margin-top: 6px; }
 @media (prefers-reduced-motion: reduce) { .card, .drawer, .bar > i, .progress > i { transition: none !important; animation: none !important; } }
+
+/* /judge — a static page for one reader */
+.judge { max-width: 820px; }
+.judge-kicker { color: var(--muted); font-size: 14px; margin: 0 0 24px; }
+.judge h1 { font-size: clamp(24px, 4vw, 34px); line-height: 1.25; letter-spacing: -0.02em; margin: 0 0 12px; }
+.judge h2 { font-size: 20px; margin: 36px 0 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+.judge-lede { color: var(--muted); font-size: 17px; margin: 0; }
+.judge ol, .judge ul { padding-left: 22px; }
+.judge li { margin: 8px 0; }
+.judge code { font-family: var(--mono); font-size: 0.92em; background: rgba(255,255,255,0.05); padding: 1px 5px; border-radius: 4px; }
+.judge pre { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; overflow-x: auto; }
+.judge pre code { background: transparent; padding: 0; font-size: 13.5px; line-height: 1.6; }
+.judge-table { width: 100%; border-collapse: collapse; font-size: 15px; }
+.judge-table th { text-align: left; vertical-align: top; padding: 10px 12px 10px 0; color: var(--muted); font-weight: 600; white-space: nowrap; width: 1%; }
+.judge-table td { padding: 10px 0; border-top: 1px solid var(--border); vertical-align: top; }
+.judge-table tr:first-child td { border-top: 0; }
+@media (max-width: 640px) { .judge-table th { display: block; padding: 10px 0 0; } .judge-table td { display: block; padding-top: 4px; border-top: 0; } .judge-table tr { display: block; border-top: 1px solid var(--border); } }
