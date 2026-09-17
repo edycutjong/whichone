@@ -2,7 +2,7 @@
   "name": "whichone",
   "version": "1.1.1",
   "private": true,
-  "description": "Type a ticker. Fourteen tokens share the name — Nansen labels decide which one is real.",
+  "description": "Type a ticker. Fourteen tokens share the name \u2014 Nansen labels decide which one is real.",
   "license": "MIT",
   "workspaces": [
     "packages/*",
@@ -40,7 +40,7 @@
     "@next/eslint-plugin-next": "^15.5.25",
     "@playwright/test": "^1.63.0",
     "@types/node": "^22.10.0",
-    "@vitest/coverage-v8": "^3.2.7",
+    "@vitest/coverage-v8": "^3.0.0",
     "eslint": "^10.10.0",
     "eslint-plugin-react-hooks": "^7.1.1",
     "fast-check": "^4.10.1",
@@ -56,6 +56,9 @@
   },
   "type": "module",
   "overrides": {
-    "postcss": "^8.5.28"
+    "postcss": "^8.5.28",
+    "tmp": "^0.2.6",
+    "uuid": "^11.1.1",
+    "sharp": "^0.35.4"
   }
 }
