@@ -1,6 +1,6 @@
 {
   "name": "whichone",
-  "version": "1.6.3",
+  "version": "1.6.4",
   "description": "Type a ticker. Fourteen tokens share the name — Nansen labels decide which one is real.",
   "license": "MIT",
   "type": "module",
@@ -8,6 +8,6 @@
     "whichone": "./src/cli.ts"
   },
   "dependencies": {
-    "@whichone/core": "1.6.3"
+    "@whichone/core": "1.6.4"
   }
 }

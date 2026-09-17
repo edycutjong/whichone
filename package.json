@@ -1,6 +1,6 @@
 {
   "name": "whichone",
-  "version": "1.6.3",
+  "version": "1.6.4",
   "private": true,
   "description": "Type a ticker. Fourteen tokens share the name — Nansen labels decide which one is real.",
   "license": "MIT",
