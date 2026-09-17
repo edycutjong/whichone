@@ -156,3 +156,36 @@ describe("route behaviour under the guard", () => {
     expect(fetchSpy).not.toHaveBeenCalled();
   });
 });
+
+describe("GET /api/og under the guard — an image never 4xxs", () => {
+  let savedKey: string | undefined;
+  beforeEach(() => {
+    resetGuard();
+    savedKey = process.env.NANSEN_API_KEY;
+    process.env.NANSEN_API_KEY = KEY;
+    vi.stubGlobal("fetch", vi.fn<typeof fetch>());
+  });
+  afterEach(() => {
+    vi.unstubAllGlobals();
+    if (savedKey === undefined) delete process.env.NANSEN_API_KEY;
+    else process.env.NANSEN_API_KEY = savedKey;
+  });
+
+  it("past the daily ceiling the PEPE card renders from the fixture: 200 image/png, zero fetches", async () => {
+    const { GET: og } = await import("@/app/api/og/route");
+    recordSpend(DAILY_CREDITS);
+    const res = await og(new NextRequest("http://localhost:3000/api/og?q=PEPE", { headers: { "x-forwarded-for": "203.0.113.7" } }));
+    expect(res.status).toBe(200);
+    expect(res.headers.get("content-type")).toContain("image/png");
+    expect(fetch).not.toHaveBeenCalled();
+  });
+
+  it("past the per-IP rate with no fixture the card still renders (data-free layout): 200, zero fetches", async () => {
+    const { GET: og } = await import("@/app/api/og/route");
+    for (let i = 0; i < IP_PER_MIN; i++) ipAllowed("203.0.113.7");
+    const res = await og(new NextRequest("http://localhost:3000/api/og?q=ZZQXNOFIX", { headers: { "x-forwarded-for": "203.0.113.7" } }));
+    expect(res.status).toBe(200);
+    expect(res.headers.get("content-type")).toContain("image/png");
+    expect(fetch).not.toHaveBeenCalled();
+  });
+});

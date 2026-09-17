@@ -1,6 +1,7 @@
 import { ImageResponse } from "next/og";
 import { NextRequest } from "next/server";
 import { verdictFor, SAFE_QUERY, CHAINS } from "@/lib/engine";
+import { clientIp, ipAllowed, budgetExhausted, recordSpend, replayFixture } from "@/lib/guard";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -19,7 +20,13 @@ export async function GET(req: NextRequest) {
   let sub: string;
   let hash = "";
   try {
-    const { verdict: v } = await verdictFor(q, chain);
+    // same spend guard as /api/verdict — but an image never 4xxs (a scraper would drop the card): past the per-IP rate
+    // or the daily ceiling the card comes from a recorded fixture, or falls through to the data-free layout below
+    const live = ipAllowed(clientIp(req.headers)).ok && !budgetExhausted();
+    const r = live ? await verdictFor(q, chain) : await replayFixture(q, chain);
+    if (!r) throw new Error("no live budget and no recorded run");
+    if (live) recordSpend(r.verdict.credits);
+    const v = r.verdict;
     hash = v.hash.slice(0, 12);
     if (v.abstained) {
       headline = `No ${q} looks real`;

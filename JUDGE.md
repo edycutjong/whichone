@@ -20,7 +20,7 @@ One input → one green card. The score is deterministic arithmetic over Nansen 
 | **Hero query, live** | `PEPE`: 14 same-name tokens · **24 credits · 16 calls · 4.4 s cold** · 2026-09-16 23:40 UTC · verdict `6ac53e5e811e` — output verbatim in [DEMO.md](DEMO.md) |
 | **Benchmark, live** | 12 queries × 2 cold runs: **cold p50 3.6 s · p95 7.2 s · warm p50 3 ms · mean 18.6 credits, max 26** per verdict; 447 credits over 306 live calls — [docs/BENCH.md](docs/BENCH.md) is the script's output |
 | **Nansen endpoints** | `search/general` · `tgm/flow-intelligence` · `tgm/token-information` · `tgm/holders` — every term in the score is one of their response fields |
-| **Tests** | **126 tests** (vitest), each regression test named for the defect it pins · **50,000 generated cases** on the decision function (fast-check: crown rule, ranking total order, score reads no buyable field) · **10,000 generated malformed queries** rejected before any network call · the server key never reaches a client (unit + E2E) |
+| **Tests** | **128 tests** (vitest), each regression test named for the defect it pins · **50,000 generated cases** on the decision function (fast-check: crown rule, ranking total order, score reads no buyable field) · **10,000 generated malformed queries** rejected before any network call · the server key never reaches a client (unit + E2E) |
 | **Determinism** | 12 recorded verdicts replay offline with the same decision hash, zero network, zero credits |
 | **Clean clone → first verdict** | 22 s of machine time (clone 2 s · install 4 s · verdict 4 s · verify < 1 s · build 8 s · tests 4 s) |
 | **E2E** | 4 Playwright suites, desktop + Pixel 7, run without a key |
