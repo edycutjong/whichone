@@ -10,6 +10,7 @@
 <br/>
 
 [![Live Demo](https://img.shields.io/badge/🚀_Live-Demo-06b6d4?style=for-the-badge)](https://whichone-edycutjong.vercel.app)
+[![For Judges](https://img.shields.io/badge/⚖️_For-Judges-22c55e?style=for-the-badge)](https://whichone-edycutjong.vercel.app/judge)
 [![Built for Nansen Meridian](https://img.shields.io/badge/Nansen-Meridian_Buildathon-8b5cf6?style=for-the-badge)](https://nansen.ai/campaigns/meridian-buildathon)
 
 <br/>
@@ -17,10 +18,13 @@
 ![Next.js](https://img.shields.io/badge/Next.js_15-black?style=flat&logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
 ![Nansen API](https://img.shields.io/badge/Nansen_API-4_endpoints-8b5cf6?style=flat)
-![tests](https://img.shields.io/badge/tests-58%20passing-22c55e?style=flat)
+![tests](https://img.shields.io/badge/tests-78%20passing-22c55e?style=flat)
+![property cases](https://img.shields.io/badge/property_cases-50%2C000-22c55e?style=flat)
 ![fixtures](https://img.shields.io/badge/fixtures-12%2F12%20replay%20offline-22c55e?style=flat)
 [![License](https://img.shields.io/badge/License-MIT-yellow?style=flat)](LICENSE)
 [![CI](https://github.com/edycutjong/whichone/actions/workflows/ci.yml/badge.svg)](https://github.com/edycutjong/whichone/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/edycutjong/whichone/actions/workflows/codeql.yml/badge.svg)](https://github.com/edycutjong/whichone/actions/workflows/codeql.yml)
+[![Release](https://img.shields.io/github/v/release/edycutjong/whichone?sort=semver&style=flat)](https://github.com/edycutjong/whichone/releases)
 
 </div>
 
@@ -93,7 +97,7 @@ flowchart TB
 | Web | Next.js 15 App Router, React 19, plain CSS | streaming `/api/verdict`, `/q/[query]` permalink, `/api/og` share card via `next/og` |
 | CLI | `npm run whichone -- <ticker>` | same engine, `--explain` prints the arithmetic |
 | Cache | disk, TTL 30 min (`.cache/` locally, `/tmp` on Vercel); `NANSEN_OFFLINE=1` replays fixtures | 0 credits on a hit, labelled as cached |
-| Tests / CI | vitest, GitHub Actions (typecheck · test · verify · build · check) | no key needed in CI |
+| Tests / CI | vitest + fast-check + Playwright; 6-stage GitHub Actions pipeline | no key needed anywhere in CI |
 
 Full detail: [ARCHITECTURE.md](ARCHITECTURE.md).
 
@@ -120,7 +124,10 @@ An RPC or explorer shows *transfers*; the decision needs *who*. Take Nansen out 
 
 | Metric | Value | Source |
 |---|---|---|
-| Tests | **58 tests** (`npm test`) | `packages/core/test/` |
+| Tests | **78 tests** (`npm test`) — regression tests named for the defect they pin | `packages/core/test/` |
+| Property-based verification | **50,000 generated cases** (fast-check, 5 properties × 10,000) on the decision function: the crown rule, `rank()` as a total order, `score()` blind to every buyable field | `packages/core/test/property.test.ts` |
+| Permission boundary | the server key never reaches a client; **10,000 generated malformed queries** rejected with zero network calls | `packages/core/test/boundary.test.ts`, [SECURITY.md](.github/SECURITY.md) |
+| E2E | 4 Playwright suites, desktop + Pixel 7, built app run **without** a key | `e2e/` |
 | Fixtures | 12/12 verdicts reproduced offline, zero network, zero credits | `npm run verify`, `fixtures/*.json` |
 | Cold latency | p50 **3.6 s** · p95 **7.2 s** (12 queries × 2 runs, live) | [docs/BENCH.md](docs/BENCH.md) |
 | Warm latency | p50 **3 ms** | [docs/BENCH.md](docs/BENCH.md) |
@@ -131,7 +138,7 @@ An RPC or explorer shows *transfers*; the decision needs *who*. Take Nansen out 
 
 - **Fixtures are replays, the default path is live.** `fixtures/*.json` hold 12 real verdicts recorded on 2026-09-16 with every raw Nansen response byte-for-byte. `npm run verify` replays them with `NANSEN_OFFLINE=1` and requires the same decision hash, the same ranking and zero network calls. The CLI and the web app never read them.
 - **Numbers come from scripts.** [docs/BENCH.md](docs/BENCH.md) is the output of `npm run bench`. `USDC` (24 canonical issues) is the slow outlier at 15 s cold; Nansen times out on a few of its solana lookups, which the drawer shows.
-- **What the tests cover:** the ranking function table-driven, the abstain/impostor/unchecked paths, hash stability, cache bypass, client retry and timeout accounting, fixture round-trip, the structural-tag rule, the holders tiebreak flip, the address-pasted hint.
+- **What the tests cover:** the ranking function table-driven, the abstain/impostor/unchecked paths, hash stability, cache bypass, client retry and timeout accounting, fixture round-trip, the structural-tag rule, the holders tiebreak flip, the address-pasted hint — plus three high-signal categories: **defect-named regression tests** (the test list reads as the changelog of real bugs found in live QA and code review), **property-based verification** of the crown rule / ranking / scorer over 50,000 generated cases, and a **permission-boundary suite** proving the key stays server-side and validation runs before any fetch.
 
 ### Honest limits (8)
 
@@ -173,15 +180,40 @@ Measured on a clean clone from GitHub (macOS, Node 22, warm npm cache, 2026-09-1
 
 ## 🧪 Testing & CI
 
+**6-stage pipeline:** Quality → Security → Build → E2E → Performance → Deploy Gate — no API key anywhere in CI.
+
 ```bash
+# ── Code Quality ────────────────────────────
+npm run lint           # ESLint (flat config: TypeScript, React hooks, Next)
+npm run format:check   # Prettier
 npm run typecheck      # tsc, strict
-npm test               # 58 vitest tests
+npm test               # 78 vitest tests (unit + property + boundary)
+npm run test:coverage  # + v8 coverage report
 npm run verify         # 12 fixtures, offline, exit 1 on any hash/ranking drift
-npm run bench -- --runs 2 > docs/BENCH.md   # live, ~450 credits
+npm run ci             # audit · format · lint · typecheck · coverage · verify · check
+
+# ── Advanced Testing ────────────────────────
+npm run e2e            # Playwright: home, verdict flow, responsive, /judge — built app, no key
+npm run e2e:ui         # Playwright interactive mode
+npm run lighthouse     # Lighthouse CI (a11y ≥ 0.9 hard gate; perf/SEO/best-practices advisory)
+
+# ── Live (spends credits) ───────────────────
+npm run bench -- --runs 2 > docs/BENCH.md   # ~450 credits
 npm run check          # submission readiness: README claims vs tree, kitchen/secret scan, links
 ```
 
-CI runs typecheck · test · verify · web build · check on every push, with no API key.
+| Layer | Tool | Status |
+|---|---|---|
+| Code Quality | ESLint + Prettier + TypeScript strict | ✅ |
+| Unit Testing | vitest, 78 tests, v8 coverage | ✅ |
+| High-signal tests | defect-named regressions · 50,000 property cases (fast-check) · permission boundary | ✅ |
+| E2E Testing | Playwright, 4 suites × 2 devices, no key | ✅ |
+| Security (SAST) | CodeQL (javascript-typescript) | ✅ |
+| Security (SCA) | Dependabot (4 manifests + actions, grouped, no majors) + npm audit + license-checker | ✅ |
+| Secret Scanning | gitleaks (full history) + TruffleHog (verified only) + `npm run check` history grep | ✅ |
+| Performance | Lighthouse CI + bundle budget (2 MB) | ✅ |
+| Releases | `release.yml` — semantic tags from conventional commits | ✅ |
+| Judge surface | [/judge](https://whichone-edycutjong.vercel.app/judge) · [JUDGE.md](JUDGE.md) — no auth, static | ✅ |
 
 ## 📁 Project Structure
 
@@ -189,14 +221,17 @@ CI runs typecheck · test · verify · web build · check on every push, with no
 packages/core/   whichOnesReal() — search → facts → score → tiebreak → verdict (+ cache, fixtures)
 packages/cli/    npm run whichone -- <ticker>
 apps/web/        Next.js 15: streaming /api/verdict, /q/[query] permalink, /api/og share card
+e2e/             Playwright: demo-mode · verdict-flow · responsive · judge-route
 scripts/         spike · seed · verify · bench · check_submission_readiness
 fixtures/        12 recorded verdicts (raw responses + verdict + clock)
 docs/            SCORING.md · BENCH.md · DX-REPORT.md · screenshots/
+JUDGE.md         the /judge page: claim · 30-second path · receipts · reproduce · limitations
 ```
 
 ## 📽️ Demo Materials
 
 - Live: [whichone-edycutjong.vercel.app](https://whichone-edycutjong.vercel.app)
+- For judges: [whichone-edycutjong.vercel.app/judge](https://whichone-edycutjong.vercel.app/judge) (mirrored in [JUDGE.md](JUDGE.md))
 - Reproduce the recording step by step: [DEMO.md](DEMO.md)
 
 ## 📄 License
