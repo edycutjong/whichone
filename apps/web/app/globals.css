@@ -91,7 +91,7 @@ code { font-family: var(--mono); font-size: 0.92em; background: rgba(255, 255, 2
 .search button:active { transform: scale(0.97); }
 .search button:disabled { opacity: 0.6; cursor: wait; }
 .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
-.chip { border: 1px solid var(--border-2); background: transparent; color: var(--text-2); border-radius: 999px; padding: 6px 12px; font-size: 13px; font-weight: 500; transition: border-color 120ms, color 120ms, background 120ms; }
+.chip { border: 1px solid var(--border-2); background: transparent; color: var(--text-2); border-radius: 999px; padding: 6px 12px; min-height: 36px; font-size: 13px; font-weight: 500; transition: border-color 120ms, color 120ms, background 120ms; }
 .chip:hover, .chip:focus-visible { border-color: var(--accent); color: var(--text); outline: none; }
 .chip.on { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); font-weight: 700; }
 .chip.on:hover { filter: brightness(1.12); color: var(--accent-ink); }
@@ -154,10 +154,10 @@ code { font-family: var(--mono); font-size: 0.92em; background: rgba(255, 255, 2
 .how-grid { list-style: none; padding: 0; margin: 16px 0 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
 @media (max-width: 900px) { .how-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 480px) { .how-grid { grid-template-columns: 1fr; } }
-.how-step { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-md); padding: 14px; display: grid; grid-template-columns: auto 1fr auto; grid-template-areas: "n ep cr" "what what what" "dec dec dec"; gap: 6px 10px; align-items: center; }
+.how-step { min-width: 0; background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-md); padding: 14px; display: grid; grid-template-columns: auto 1fr auto; grid-template-areas: "n ep cr" "what what what" "dec dec dec"; gap: 6px 10px; align-items: center; }
 .how-n { grid-area: n; width: 24px; height: 24px; border-radius: 50%; background: rgba(56, 189, 248, 0.14); color: var(--accent); font-weight: 800; font-size: 12px; display: inline-flex; align-items: center; justify-content: center; }
-.how-ep { grid-area: ep; font-size: 12.5px; background: transparent; padding: 0; color: var(--text); }
-.how-cr { grid-area: cr; font-size: 12px; color: var(--muted); white-space: nowrap; }
+.how-ep { grid-area: ep; min-width: 0; overflow-wrap: anywhere; font-size: 12.5px; background: transparent; padding: 0; color: var(--text); }
+.how-cr { grid-area: cr; font-size: 12px; color: var(--muted); white-space: normal; }
 .how-step p { margin: 0; grid-area: what; color: var(--text-2); font-size: 14px; }
 .how-step .how-decides { grid-area: dec; color: var(--muted); font-size: 13px; }
 .proof-row { list-style: none; padding: 0; margin: 18px 0 0; display: flex; flex-wrap: wrap; gap: 8px 22px; justify-content: center; color: var(--muted); font-size: 14px; }

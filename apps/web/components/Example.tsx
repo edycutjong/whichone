@@ -20,7 +20,8 @@ export function Example({ verdict, onRun }: { verdict: Verdict; onRun: (q: strin
             <span className="kicker">example</span> {verdict.query} — {verdict.candidatesTotal} tokens share the name
           </h2>
           <p className="example-sub">
-            recorded 2026-09-16 · replayed from <code>fixtures/{verdict.query}.json</code> · 0 credits · <code>{verdict.hash.slice(0, 12)}</code>
+            {verdict.provenance.length} Nansen calls · recorded 2026-09-16 · replayed from <code>fixtures/{verdict.query}.json</code> · 0 credits ·{" "}
+            <code>{verdict.hash.slice(0, 12)}</code>
           </p>
         </div>
         <button className="btn primary" onClick={() => onRun(verdict.query)}>
