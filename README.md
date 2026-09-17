@@ -75,6 +75,11 @@ Worked with real numbers in [docs/SCORING.md](docs/SCORING.md). Weights live in 
 
 One verdict function, three views. No database, no accounts, no LLM.
 
+<p align="center"><img src="docs/assets/architecture.png" alt="Which One's Real architecture — views → /api/verdict (spend guard) → packages/core whichOnesReal → four Nansen endpoints; verdict with provenance; cache and fixtures" width="100%"></p>
+
+<details>
+<summary><b>Mermaid source</b> — expand to see the diagram as text (renders on GitHub)</summary>
+
 ```mermaid
 flowchart TB
   subgraph views
@@ -93,6 +98,8 @@ flowchart TB
   K -. read-through, TTL 30 min .-> CA[(cache · .cache/ or /tmp on Vercel)]
   CA -. NANSEN_OFFLINE=1 .-> FX[(fixtures/*.json)]
 ```
+
+</details>
 
 | Layer | Choice | Why |
 |---|---|---|
