@@ -67,7 +67,8 @@ export function resetGuard(): void {
 }
 
 export const BUDGET_MESSAGE = "Today's live Nansen budget is used up — this is a replay of a recorded run.";
-export const NO_FIXTURE_MESSAGE = "Today's live Nansen budget is used up and this ticker has no recorded run. Try PEPE, BONK, TRUMP or DOGE, or come back tomorrow.";
+export const NO_FIXTURE_MESSAGE =
+  "Today's live Nansen budget is used up and this ticker has no recorded run. Try PEPE, BONK, TRUMP or DOGE, or come back tomorrow.";
 
 function fixturesDir(): string | undefined {
   for (const c of [join(process.cwd(), "fixtures"), join(process.cwd(), "..", "..", "fixtures")]) if (existsSync(c)) return c;

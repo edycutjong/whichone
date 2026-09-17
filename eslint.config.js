@@ -6,7 +6,18 @@ import next from "@next/eslint-plugin-next";
 
 export default tseslint.config(
   {
-    ignores: ["node_modules/", "**/node_modules/", "**/.next/", "coverage/", "fixtures/", "playwright-report/", "test-results/", ".lighthouseci/", ".vercel/", "apps/web/next-env.d.ts"],
+    ignores: [
+      "node_modules/",
+      "**/node_modules/",
+      "**/.next/",
+      "coverage/",
+      "fixtures/",
+      "playwright-report/",
+      "test-results/",
+      ".lighthouseci/",
+      ".vercel/",
+      "apps/web/next-env.d.ts",
+    ],
   },
   js.configs.recommended,
   ...tseslint.configs.recommended,

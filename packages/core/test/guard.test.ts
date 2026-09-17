@@ -7,10 +7,24 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 import { NextRequest } from "next/server";
 import { GET as verdictRoute } from "@/app/api/verdict/route";
-import { ipAllowed, creditsLeft, recordSpend, budgetExhausted, resetGuard, replayFixture, clientIp, IP_PER_MIN, DAILY_CREDITS, MAX_VERDICT_CREDITS, BUDGET_MESSAGE, NO_FIXTURE_MESSAGE } from "@/lib/guard";
+import {
+  ipAllowed,
+  creditsLeft,
+  recordSpend,
+  budgetExhausted,
+  resetGuard,
+  replayFixture,
+  clientIp,
+  IP_PER_MIN,
+  DAILY_CREDITS,
+  MAX_VERDICT_CREDITS,
+  BUDGET_MESSAGE,
+  NO_FIXTURE_MESSAGE,
+} from "@/lib/guard";
 
 const KEY = "nsn_test_key_0000000000000000000000";
-const req = (q: string, extra = "", ip = "203.0.113.7") => new NextRequest(`http://localhost:3000/api/verdict?q=${encodeURIComponent(q)}${extra}`, { headers: { "x-forwarded-for": ip } });
+const req = (q: string, extra = "", ip = "203.0.113.7") =>
+  new NextRequest(`http://localhost:3000/api/verdict?q=${encodeURIComponent(q)}${extra}`, { headers: { "x-forwarded-for": ip } });
 
 describe("guard counters", () => {
   beforeEach(resetGuard);
@@ -124,13 +138,20 @@ describe("route behaviour under the guard", () => {
     recordSpend(DAILY_CREDITS);
     const ok = await verdictRoute(req("BONK", "&stream=1"));
     expect(ok.status).toBe(200);
-    const lines = (await ok.text()).trim().split("\n").map((l) => JSON.parse(l));
+    const lines = (await ok.text())
+      .trim()
+      .split("\n")
+      .map((l) => JSON.parse(l));
     const verdict = lines.find((e) => e.type === "verdict");
     expect(verdict.verdict.warnings).toContain(BUDGET_MESSAGE);
     expect(lines.at(-1).type).toBe("asOf");
 
     const none = await verdictRoute(req("ZZQXNOFIX", "&stream=1", "203.0.113.8"));
-    const last = (await none.text()).trim().split("\n").map((l) => JSON.parse(l)).at(-1);
+    const last = (await none.text())
+      .trim()
+      .split("\n")
+      .map((l) => JSON.parse(l))
+      .at(-1);
     expect(last).toEqual({ type: "error", message: NO_FIXTURE_MESSAGE });
     expect(fetchSpy).not.toHaveBeenCalled();
   });

@@ -31,8 +31,6 @@ test.describe("/judge", () => {
     const hrefs = await page.locator("a[href^='http']").evaluateAll((as) => as.map((a) => (a as HTMLAnchorElement).href));
     expect(hrefs.length).toBeGreaterThan(5);
     for (const h of hrefs)
-      expect(h).toMatch(
-        /^https:\/\/(whichone\.edycu\.dev|github\.com\/edycutjong\/whichone|x\.com\/edycutjong|nansen\.ai\/campaigns|app\.nansen\.ai)/,
-      );
+      expect(h).toMatch(/^https:\/\/(whichone\.edycu\.dev|github\.com\/edycutjong\/whichone|x\.com\/edycutjong|nansen\.ai\/campaigns|app\.nansen\.ai)/);
   });
 });

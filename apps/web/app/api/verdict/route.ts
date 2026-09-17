@@ -24,7 +24,10 @@ export async function GET(req: NextRequest) {
   if (!process.env.NANSEN_API_KEY) return Response.json({ error: "server has no NANSEN_API_KEY" }, { status: 500 });
   const gate = ipAllowed(clientIp(req.headers));
   if (!gate.ok) {
-    return Response.json({ error: `Too many verdicts from this address — try again in ${gate.retryAfter} s` }, { status: 429, headers: { "retry-after": String(gate.retryAfter), "cache-control": "no-store" } });
+    return Response.json(
+      { error: `Too many verdicts from this address — try again in ${gate.retryAfter} s` },
+      { status: 429, headers: { "retry-after": String(gate.retryAfter), "cache-control": "no-store" } },
+    );
   }
   const degraded = budgetExhausted();
 
