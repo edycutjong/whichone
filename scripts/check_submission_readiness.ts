@@ -59,7 +59,7 @@ ok(readme.includes(`${fixtures}%2F${fixtures}`), `README badge says ${fixtures}/
 // kitchen and secrets never in the tree that is committed
 const tracked = execSync("git ls-files", { encoding: "utf8" }).split("\n");
 for (const bad of ["CLAUDE.md", "AGENTS.md", ".claude/", "specs/", "PROGRESS.md", "project.json", ".env", ".cache/"])
-  ok(!tracked.some((f) => f === bad || f.startsWith(bad) || f.includes(`/${bad}`)), `not tracked: ${bad}`);
+  ok(!tracked.filter((f) => f !== ".env.example").some((f) => f === bad || f.startsWith(bad) || f.includes(`/${bad}`)), `not tracked: ${bad}`);
 const leaks = execSync("git log -p --all | grep -c 'nsn_[A-Za-z0-9]\\{20,\\}' || true", { encoding: "utf8" }).trim();
 ok(leaks === "0", `no API key in git history (${leaks} hits)`);
 for (const f of readdirSync("fixtures")) ok(!/nsn_[A-Za-z0-9]{20,}/.test(read(`fixtures/${f}`)), `fixture clean: ${f}`);
