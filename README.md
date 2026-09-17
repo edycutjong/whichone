@@ -1,9 +1,11 @@
 <div align="center">
 
+<img src="docs/assets/icon-animated.svg" width="96" alt="">
+
 <h1>Which One's Real 🟢</h1>
 <p><em>Type a ticker. Fourteen tokens share the name — Nansen labels decide which one is real.</em></p>
 
-<img src="docs/screenshots/03-verdict-pepe.png" alt="Which One's Real — PEPE: one green card, the rest greyed, one red impostor" width="100%">
+<img src="docs/assets/readme-hero-animated.svg" alt="Which One's Real — identical grey PEPE cards; Nansen labels land, exactly one turns green and the impostor turns red" width="100%">
 
 <p>Every verdict is deterministic arithmetic over Nansen fields — no market cap, no volume, no search rank. <code>npm run verify</code> replays 12 recorded verdicts offline and reproduces every decision hash.</p>
 
@@ -32,19 +34,21 @@
 
 ## 📸 See it in Action
 
+<img src="docs/screenshots/03-verdict-pepe.png" alt="Which One's Real — PEPE, live: 1 of 14 looks real; the ethereum card is green with its full address and a Copy button, the solana and bnb cards below are greyed" width="100%">
+
 | Ticker in | Cards appear pending, reorder as Nansen facts land | One turns green, impostors go red |
 |---|---|---|
-| `PEPE` | 14 same-name tokens across 7 chains; the 8 best-ranked by Nansen search are checked | `ethereum 0x6982…1933` — 91 labelled wallets, $2.1M exchange flow, 18/20 top holders tagged |
+| `PEPE` | 14 same-name tokens across 7 chains; the 8 best-ranked by Nansen search are checked | `ethereum 0x6982…1933` — 92 labelled wallets, $1.2M exchange flow, 18/20 top holders tagged (live, 2026-09-17) |
 | `SHIB2` | 1 candidate, 3 years old, $36K market cap | **abstains**: "none of these looks real — nothing labelled has touched any of them" |
 | `XQZPLM` | 0 results | abstains: "no token named XQZPLM on Nansen" |
 
 Every verdict ships with a **provenance drawer**: every Nansen call, its credits, latency, whether it was cached, and the exact response fields that entered the score. The CLI prints the same table with `--explain`. The verdict hash on the share card covers the decision only, so a cached replay and a live run that reach the same answer hash identically.
 
-<div align="center"><img src="docs/screenshots/05-drawer.png" alt="provenance drawer" width="720" /></div>
+<div align="center"><img src="docs/screenshots/05-drawer.png" alt="Provenance drawer over the PEPE verdict: every Nansen call with its endpoint, chain, credits, latency and cached flag — the red IMPOSTOR card and the greyed cards visible behind it" width="720" /></div>
 
-| Loading — cards pending, progress strip filling | Abstain | Mobile |
+| Loading — `DEGEN`: 8 cards pending, progress strip filling | Abstain — `SHIB2`: no winner, the card says why | Mobile — `PEPE` verdict at 390 px |
 |---|---|---|
-| ![loading](docs/screenshots/02-loading.png) | ![abstain](docs/screenshots/04-abstain.png) | ![mobile](docs/screenshots/06-mobile.png) |
+| ![DEGEN mid-stream: 8 candidates, checking labels 0/8, every card pending](docs/screenshots/02-loading.png) | ![SHIB2: amber No winner banner, one greyed card with 0 labelled wallets](docs/screenshots/04-abstain.png) | ![PEPE verdict on a phone: green banner and the green ethereum card](docs/screenshots/06-mobile.png) |
 
 ## 💡 The Problem & Solution
 
