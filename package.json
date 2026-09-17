@@ -2,7 +2,7 @@
   "name": "whichone",
   "version": "1.1.1",
   "private": true,
-  "description": "Type a ticker. Fourteen tokens share the name \u2014 Nansen labels decide which one is real.",
+  "description": "Type a ticker. Fourteen tokens share the name — Nansen labels decide which one is real.",
   "license": "MIT",
   "workspaces": [
     "packages/*",
