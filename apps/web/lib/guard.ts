@@ -1,5 +1,5 @@
 import { existsSync } from "node:fs";
-import { join } from "node:path";
+import { join, resolve, sep } from "node:path";
 import { CachedNansenClient, fixtureName, fixtureStore, readFixture, whichOnesReal, type VerdictOptions } from "@whichone/core";
 
 /**
@@ -82,8 +82,11 @@ function fixturesDir(): string | undefined {
 export async function replayFixture(q: string, chain?: string, opts: Omit<VerdictOptions, "chain" | "now"> = {}) {
   const dir = fixturesDir();
   if (!dir) return undefined;
-  const path = join(dir, `${fixtureName(q, chain)}.json`);
-  if (!existsSync(path)) return undefined;
+  // `q` is user input: fixtureName() already reduces it to [A-Z0-9_-], and the resolved path is still checked to sit
+  // inside the fixtures directory before anything is read (no `..`, no absolute paths, no traversal by construction)
+  const root = resolve(dir);
+  const path = resolve(root, `${fixtureName(q, chain)}.json`);
+  if (!path.startsWith(root + sep) || !existsSync(path)) return undefined;
   const f = readFixture(path);
   const c = new CachedNansenClient("nsn_offline_replay_no_network", { store: fixtureStore(f), offline: true });
   // label the verdict before the stream's final event carries it, so the page shows the replay notice too

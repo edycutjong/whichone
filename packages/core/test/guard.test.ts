@@ -82,6 +82,10 @@ describe("fixture replay", () => {
     expect(last.verdict?.warnings).toContain(BUDGET_MESSAGE);
   });
 
+  it("a traversal-shaped query can never escape the fixtures directory (CodeQL js/path-injection)", async () => {
+    for (const q of ["../../package", "..\\..\\package", "/etc/passwd", "PEPE/../../package"]) expect(await replayFixture(q)).toBeUndefined();
+  });
+
   it("a chain-filtered fixture resolves by the same name rule; an unknown ticker has no replay", async () => {
     expect(await replayFixture("PEPE", "base")).toBeDefined();
     expect(await replayFixture("ZZQXNOFIX")).toBeUndefined();
