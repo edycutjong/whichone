@@ -13,13 +13,13 @@
 
 [![Live Demo](https://img.shields.io/badge/🚀_Live-Demo-06b6d4?style=for-the-badge)](https://whichone.edycu.dev)
 [![For Judges](https://img.shields.io/badge/⚖️_For-Judges-22c55e?style=for-the-badge)](https://whichone.edycu.dev/judge)
-[![Built for Nansen Meridian](https://img.shields.io/badge/Nansen-Meridian_Buildathon-8b5cf6?style=for-the-badge)](https://nansen.ai/campaigns/meridian-buildathon)
+[![Built for Nansen Meridian](https://img.shields.io/badge/Nansen-Meridian_Buildathon-00FFA8?style=for-the-badge&labelColor=0a0e13&logoColor=0a0e13)](https://nansen.ai/campaigns/meridian-buildathon)
 
 <br/>
 
 ![Next.js](https://img.shields.io/badge/Next.js_15-black?style=flat&logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
-![Nansen API](https://img.shields.io/badge/Nansen_API-4_endpoints-8b5cf6?style=flat)
+![Nansen API](https://img.shields.io/badge/Nansen_API-4_endpoints-00FFA8?style=flat&labelColor=0a0e13)
 ![tests](https://img.shields.io/badge/tests-128%20passing-22c55e?style=flat)
 ![property cases](https://img.shields.io/badge/property_cases-50%2C000-22c55e?style=flat)
 ![fixtures](https://img.shields.io/badge/fixtures-12%2F12%20replay%20offline-22c55e?style=flat)
