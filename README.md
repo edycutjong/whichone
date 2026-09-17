@@ -97,7 +97,7 @@ flowchart TB
 | Web | Next.js 15 App Router, React 19, plain CSS | streaming `/api/verdict`, `/q/[query]` permalink, `/api/og` share card via `next/og` |
 | CLI | `npm run whichone -- <ticker>` | same engine, `--explain` prints the arithmetic |
 | Cache | disk, TTL 30 min (`.cache/` locally, `/tmp` on Vercel); `NANSEN_OFFLINE=1` replays fixtures | 0 credits on a hit, labelled as cached |
-| Tests / CI | vitest + fast-check + Playwright; 6-stage GitHub Actions pipeline | no key needed anywhere in CI |
+| Tests / CI | vitest + fast-check + Playwright; 7-stage GitHub Actions pipeline (gates → Vercel production deploy) | no Nansen key anywhere in CI |
 
 Full detail: [ARCHITECTURE.md](ARCHITECTURE.md).
 
@@ -181,7 +181,7 @@ Measured on a clean clone from GitHub (macOS, Node 22, warm npm cache, 2026-09-1
 
 ## 🧪 Testing & CI
 
-**6-stage pipeline:** Quality → Security → Build → E2E → Performance → Deploy Gate — no API key anywhere in CI.
+**7-stage pipeline:** Quality → Security → Build → E2E → Performance → Deploy Gate → Production Deploy (prebuilt `vercel deploy` to whichone.edycu.dev, `main` only, after every gate) — no API key anywhere in CI; the one secret is `VERCEL_TOKEN`.
 
 ```bash
 # ── Code Quality ────────────────────────────
