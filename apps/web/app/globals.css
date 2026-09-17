@@ -187,6 +187,7 @@ code { font-family: var(--mono); font-size: 0.92em; background: rgba(255, 255, 2
 .judge-lede { color: var(--muted); font-size: 17px; margin: 0; }
 .judge ol, .judge ul { padding-left: 22px; }
 .judge li { margin: 8px 0; }
+.judge a, .judge code:not(pre code) { overflow-wrap: anywhere; }
 .judge code { font-family: var(--mono); font-size: 0.92em; background: rgba(255,255,255,0.05); padding: 1px 5px; border-radius: 4px; }
 .judge pre { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; overflow-x: auto; }
 .judge pre code { background: transparent; padding: 0; font-size: 13.5px; line-height: 1.6; }
