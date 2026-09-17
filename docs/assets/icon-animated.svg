@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Which One's Real — identical grey PEPE cards; Nansen labels land, exactly one turns green and the impostor turns red">
+<!-- STORYBOARD (dur 6s — must equal this file's single master dur)
+  0-10%   steady state: the static icon — plate, grey / green / grey bars (poster; geometry = build/apps/web/app/icon.svg × 8)
+  10-32%  trigger:      the middle bar drops to grey (three identical cards); a ring draws itself around the plate; the scan sweeps down   data-story="beat-2"
+  32-56%  mechanism:    Identical grey PEPE cards; Nansen labels land, exactly one turns green and the impostor turns red.                data-story="beat-3"
+  56-84%  resolution:   green middle bar and red bottom bar persist; glow breath on the green bar                                          data-story="beat-4"
+  84-100% breathe + seam: overlays fade 94-99% back to the poster (rules 5-7)
+-->
+<defs>
+  <linearGradient id="scan" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#38bdf8" stop-opacity="0"/><stop offset=".5" stop-color="#38bdf8" stop-opacity=".45"/><stop offset="1" stop-color="#38bdf8" stop-opacity="0"/></linearGradient>
+  <filter id="glow" x="-20%" y="-80%" width="140%" height="260%"><feGaussianBlur stdDeviation="14"/></filter>
+  <clipPath id="plate"><rect width="512" height="512" rx="112"/></clipPath>
+</defs>
+<style>
+  @keyframes breath { 0%,58% { opacity: 0 } 66% { opacity: .7 } 76% { opacity: .25 } 86% { opacity: .7 } 94%,100% { opacity: 0 } }
+  .breath { animation: breath 6s ease-in-out infinite }
+  [data-story] { will-change: opacity }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+</style>
+
+<!-- poster: the static icon, fully visible at t=0 -->
+<rect width="512" height="512" rx="112" fill="#0f141b"/>
+<rect x="96" y="80"  width="320" height="96" rx="24" fill="#334155"/>
+<rect x="96" y="208" width="320" height="96" rx="24" fill="#22c55e"/>
+<rect x="96" y="336" width="320" height="96" rx="24" fill="#334155"/>
+
+<!-- beat 2: the decided state is withdrawn — the middle bar goes grey so all three cards are identical -->
+<rect x="96" y="208" width="320" height="96" rx="24" fill="#334155" opacity="0" data-story="beat-2">
+  <animate attributeName="opacity" values="0;0;1;1;0;0;0" keyTimes="0;.10;.14;.40;.46;.94;1" dur="6s" repeatCount="indefinite"/>
+</rect>
+<!-- beat 2: the ring draws itself in while Nansen is checking -->
+<rect x="14" y="14" width="484" height="484" rx="100" fill="none" stroke="#38bdf8" stroke-width="6" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" opacity="0" data-story="beat-2">
+  <animate attributeName="stroke-dashoffset" values="100;100;0;0" keyTimes="0;.12;.34;1" dur="6s" repeatCount="indefinite"/>
+  <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;.12;.14;.94;.99;1" dur="6s" repeatCount="indefinite"/>
+  <animate attributeName="stroke" values="#38bdf8;#38bdf8;#38bdf8;#22c55e;#22c55e" keyTimes="0;.40;.44;.48;1" dur="6s" repeatCount="indefinite"/>
+</rect>
+<!-- beat 2: the scan sweeps down the three cards -->
+<g clip-path="url(#plate)">
+  <rect x="0" y="-60" width="512" height="120" fill="url(#scan)" opacity="0" data-story="beat-2">
+    <animate attributeName="y" values="-60;-60;460;460" keyTimes="0;.16;.36;1" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;.16;.18;.34;.37;1" dur="6s" repeatCount="indefinite"/>
+  </rect>
+</g>
+
+<!-- beat 3: labels land — exactly one card turns green, the impostor turns red; both persist to the seam -->
+<rect x="96" y="208" width="320" height="96" rx="24" fill="#22c55e" opacity="0" data-story="beat-3">
+  <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;.40;.46;.94;.99;1" dur="6s" repeatCount="indefinite"/>
+</rect>
+<rect x="96" y="336" width="320" height="96" rx="24" fill="#dc2626" opacity="0" data-story="beat-3">
+  <animate attributeName="opacity" values="0;0;.85;.85;0;0" keyTimes="0;.43;.49;.94;.99;1" dur="6s" repeatCount="indefinite"/>
+</rect>
+<!-- beat 3: the top card is greyed further — it lost -->
+<rect x="96" y="80" width="320" height="96" rx="24" fill="#0f141b" opacity="0" data-story="beat-3">
+  <animate attributeName="opacity" values="0;0;.45;.45;0;0" keyTimes="0;.43;.49;.94;.99;1" dur="6s" repeatCount="indefinite"/>
+</rect>
+<!-- beat 4: glow breath on the crowned card -->
+<rect class="breath" x="96" y="208" width="320" height="96" rx="24" fill="#22c55e" filter="url(#glow)" opacity="0" data-story="beat-4"/>
+</svg>
