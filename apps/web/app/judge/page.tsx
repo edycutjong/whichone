@@ -8,7 +8,6 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Which One's Real — for judges",
   description: "The claim, the 30-second path, the receipts, the real reproduce command, and the honest limitations.",
-  robots: { index: false },
 };
 
 const SITE = "https://whichone-edycutjong.vercel.app";
