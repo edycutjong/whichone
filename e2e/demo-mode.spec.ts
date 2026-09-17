@@ -10,7 +10,7 @@ test.describe("demo mode (no API key)", () => {
     const res = await page.goto("/");
     expect(res?.status()).toBe(200);
     await expect(page.getByRole("heading", { level: 1 })).toContainText("real");
-    await expect(page.getByPlaceholder(/type a ticker/i)).toBeVisible();
+    await expect(page.getByLabel("ticker")).toBeVisible();
     await expect(page.getByRole("button", { name: "PEPE" })).toBeVisible();
     await expect(page.locator("nextjs-portal")).toHaveCount(0);
     expect(errors).toEqual([]);

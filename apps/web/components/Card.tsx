@@ -32,6 +32,7 @@ export function Card({
   maxScore,
   onCopy,
   explain,
+  compact,
 }: {
   c: Candidate;
   s?: Scored;
@@ -39,6 +40,8 @@ export function Card({
   maxScore: number;
   onCopy: (s: Candidate) => void;
   explain?: boolean;
+  /** example mode: the facts chips carry the reason — no reason line, no copy button */
+  compact?: boolean;
 }) {
   const pct = s && s.scorable && !s.unchecked && maxScore > 0 ? Math.max(4, Math.round((Math.max(0, s.score) / maxScore) * 100)) : 0;
   return (
@@ -67,7 +70,7 @@ export function Card({
           {s.recognisedHolders != null && <span className="fact">{s.recognisedHolders}/20 top holders tagged</span>}
         </div>
       )}
-      {s && (
+      {s && !compact && (
         <p className="reason">
           {s.reasons
             .filter((r) => !r.startsWith("IMPOSTOR"))
@@ -88,7 +91,7 @@ export function Card({
             .join("  ")}
         </div>
       )}
-      {state === "winner" && (
+      {state === "winner" && !compact && (
         <div className="actions">
           <button className="btn primary" onClick={() => onCopy(c)}>
             Copy address

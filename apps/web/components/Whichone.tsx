@@ -4,6 +4,7 @@ import type { Candidate, Scored, Verdict, VerdictEvent, Call } from "@whichone/c
 import { Card, stateOf } from "./Card";
 import { Drawer } from "./Drawer";
 import { useFlip } from "./useFlip";
+import { Example, HowItDecides } from "./Example";
 
 const EXAMPLES = ["PEPE", "WLFI", "TRUMP", "BONK", "USDC", "DEGEN"];
 const CHAINS = ["all", "ethereum", "base", "solana", "bnb"];
@@ -11,7 +12,17 @@ const CHAINS = ["all", "ethereum", "base", "solana", "bnb"];
 type Phase = "idle" | "searching" | "checking" | "done" | "error";
 type StreamEvent = VerdictEvent | { type: "error"; message: string } | { type: "asOf"; asOf: string | null };
 
-export function Whichone({ initialQuery, initialChain, initialVerdict }: { initialQuery?: string; initialChain?: string; initialVerdict?: Verdict | null }) {
+export function Whichone({
+  initialQuery,
+  initialChain,
+  initialVerdict,
+  example,
+}: {
+  initialQuery?: string;
+  initialChain?: string;
+  initialVerdict?: Verdict | null;
+  example?: Verdict;
+}) {
   const [q, setQ] = useState(initialQuery ?? "");
   const [chain, setChain] = useState(initialChain ?? "all");
   // a query arriving without a verdict (/?q=PEPE, or /q/PEPE when the server-side verdict failed) starts in "searching":
@@ -149,64 +160,63 @@ export function Whichone({ initialQuery, initialChain, initialVerdict }: { initi
         <h1>
           Which one&rsquo;s <span className="real">real</span>?
         </h1>
-        <p>Fourteen tokens called PEPE. One is real. Nansen labels decide which.</p>
+        <p>Type a ticker. Every token with that name, ranked by who holds and trades it. One turns green.</p>
       </header>
 
-      <form
-        className="search"
-        onSubmit={(e) => {
-          e.preventDefault();
-          void run(q, chain);
-        }}
-      >
-        <input
-          value={q}
-          onChange={(e) => setQ(e.target.value)}
-          placeholder="type a ticker — PEPE, WLFI, TRUMP"
-          aria-label="ticker"
-          autoFocus
-          maxLength={44}
-          spellCheck={false}
-          autoCapitalize="characters"
-        />
-        <button type="submit" disabled={phase === "searching" || phase === "checking"}>
-          Check
-        </button>
-      </form>
-      <div className="chips" role="group" aria-label="chain filter">
-        {CHAINS.map((c) => (
-          <button
-            key={c}
-            type="button"
-            className={`chip ${chain === c ? "on" : ""}`}
-            onClick={() => {
-              setChain(c);
-              if (verdict || phase === "error") void run(q, c);
-            }}
-          >
-            {c}
+      <div className="panel">
+        <form
+          className="search"
+          onSubmit={(e) => {
+            e.preventDefault();
+            void run(q, chain);
+          }}
+        >
+          <input
+            value={q}
+            onChange={(e) => setQ(e.target.value)}
+            placeholder="PEPE, WLFI, TRUMP — a ticker, not an address"
+            aria-label="ticker"
+            autoFocus
+            maxLength={44}
+            spellCheck={false}
+            autoCapitalize="characters"
+          />
+          <button type="submit" disabled={phase === "searching" || phase === "checking"}>
+            Check
           </button>
-        ))}
-      </div>
-      {phase === "idle" && (
-        <div className="chips">
-          {EXAMPLES.map((e) => (
-            <button
-              key={e}
-              type="button"
-              className="chip"
-              onClick={() => {
-                setQ(e);
-                void run(e, chain);
-              }}
-            >
-              {e}
-            </button>
-          ))}
+        </form>
+        <div className="chips" role="group" aria-label={phase === "idle" ? "examples" : "chain filter"}>
+          {phase === "idle"
+            ? EXAMPLES.map((e) => (
+                <button
+                  key={e}
+                  type="button"
+                  className="chip"
+                  onClick={() => {
+                    setQ(e);
+                    void run(e, chain);
+                  }}
+                >
+                  {e}
+                </button>
+              ))
+            : CHAINS.map((c) => (
+                <button
+                  key={c}
+                  type="button"
+                  className={`chip ${chain === c ? "on" : ""}`}
+                  onClick={() => {
+                    setChain(c);
+                    if (verdict || phase === "error") void run(q, c);
+                  }}
+                >
+                  {c}
+                </button>
+              ))}
         </div>
-      )}
+      </div>
 
-      <div className="progress">
+      <div className={`progress ${phase === "idle" ? "hidden" : ""}`}>
         <i
           style={{
             width:
@@ -220,7 +230,7 @@ export function Whichone({ initialQuery, initialChain, initialVerdict }: { initi
           }}
         />
       </div>
-      <p className="status" aria-live="polite">
+      <p className={`status ${phase === "idle" ? "hidden" : ""}`} aria-live="polite">
         {status}
       </p>
 
@@ -272,20 +282,16 @@ export function Whichone({ initialQuery, initialChain, initialVerdict }: { initi
         </div>
       )}
 
-      <footer className="footer">
-        Built on the{" "}
-        <a href="https://docs.nansen.ai" target="_blank" rel="noreferrer">
-          Nansen API
-        </a>{" "}
-        for the Meridian Buildathon · no market cap, volume or search rank in the score — only who holds and trades it ·{" "}
-        <a href="https://github.com/edycutjong/whichone" target="_blank" rel="noreferrer">
-          GitHub
-        </a>{" "}
-        ·{" "}
-        <a href="https://github.com/edycutjong/whichone/blob/main/docs/SCORING.md" target="_blank" rel="noreferrer">
-          how the score works
-        </a>
-      </footer>
+      {phase === "idle" && example && (
+        <Example
+          verdict={example}
+          onRun={(query) => {
+            setQ(query);
+            void run(query, chain);
+          }}
+        />
+      )}
+      {phase === "idle" && <HowItDecides />}
 
       <Drawer
         calls={calls}

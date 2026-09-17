@@ -7,7 +7,7 @@ import { test, expect } from "@playwright/test";
 test.describe("verdict flow without a key", () => {
   test("typing a ticker and submitting shows the honest 'no key' banner, not a stuck spinner", async ({ page }) => {
     await page.goto("/");
-    const input = page.getByPlaceholder(/type a ticker/i);
+    const input = page.getByLabel("ticker");
     await input.fill("PEPE");
     await page.getByRole("button", { name: "Check" }).click();
     const banner = page.locator(".banner.err");
@@ -20,7 +20,7 @@ test.describe("verdict flow without a key", () => {
   test("an example chip fills the input and runs", async ({ page }) => {
     await page.goto("/");
     await page.getByRole("button", { name: "WLFI" }).click();
-    await expect(page.getByPlaceholder(/type a ticker/i)).toHaveValue("WLFI");
+    await expect(page.getByLabel("ticker")).toHaveValue("WLFI");
     await expect(page.locator(".banner.err")).toBeVisible({ timeout: 15_000 });
   });
 
@@ -43,7 +43,7 @@ test.describe("verdict flow without a key", () => {
   test("the /q permalink renders the shell with the query filled in when the server-side verdict is unavailable", async ({ page }) => {
     const res = await page.goto("/q/PEPE");
     expect(res?.status()).toBe(200);
-    await expect(page.getByPlaceholder(/type a ticker/i)).toHaveValue("PEPE");
+    await expect(page.getByLabel("ticker")).toHaveValue("PEPE");
     await expect(page).toHaveTitle(/Which PEPE is real/);
   });
 

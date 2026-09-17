@@ -15,7 +15,7 @@ for (const vp of widths) {
       await page.goto("/");
       const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
       expect(overflow).toBeLessThanOrEqual(0);
-      const input = page.getByPlaceholder(/type a ticker/i);
+      const input = page.getByLabel("ticker");
       const btn = page.getByRole("button", { name: "Check" });
       for (const el of [input, btn]) {
         const box = await el.boundingBox();

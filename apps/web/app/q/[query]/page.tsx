@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { Verdict } from "@whichone/core";
 import { Whichone } from "@/components/Whichone";
+import { SiteHeader, SiteFooter } from "@/components/Shell";
 import { verdictFor, SAFE_QUERY, CHAINS } from "@/lib/engine";
 
 export const dynamic = "force-dynamic";
@@ -25,7 +26,14 @@ export default async function Page({ params, searchParams }: Props) {
   const q = (await params).query; // Next 15 already decodes dynamic params
   const chainParam = (await searchParams).chain;
   const chain = chainParam && (CHAINS as readonly string[]).includes(chainParam) ? chainParam : undefined;
-  if (!SAFE_QUERY.test(q)) return <Whichone initialQuery="" />;
+  if (!SAFE_QUERY.test(q))
+    return (
+      <>
+        <SiteHeader current="home" />
+        <Whichone initialQuery="" />
+        <SiteFooter />
+      </>
+    );
   // a failed server-side verdict (no key, Nansen down) hands the query to the client, which streams it and shows the error banner
   let verdict: Verdict | undefined;
   try {
@@ -33,5 +41,11 @@ export default async function Page({ params, searchParams }: Props) {
   } catch {
     verdict = undefined;
   }
-  return <Whichone initialQuery={q} initialChain={chain ?? "all"} initialVerdict={verdict} />;
+  return (
+    <>
+      <SiteHeader current="home" />
+      <Whichone initialQuery={q} initialChain={chain ?? "all"} initialVerdict={verdict} />
+      <SiteFooter />
+    </>
+  );
 }
