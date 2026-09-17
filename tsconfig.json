@@ -8,7 +8,10 @@
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "types": ["node"],
-    "paths": { "@whichone/core": ["./packages/core/src/index.ts"] }
+    "paths": {
+      "@whichone/core": ["./packages/core/src/index.ts"],
+      "@/*": ["./apps/web/*"]
+    }
   },
   "include": ["packages/**/*.ts", "scripts/**/*.ts"]
 }
