@@ -45,8 +45,13 @@ describe("score()", () => {
     expect(score(facts({ ageDays: 3 })).reasons.at(-1)).toMatch(/^IMPOSTOR/);
   });
   it("recognised-holders tiebreak adds only when present, and says what the tags are", () => {
-    expect(score(facts({ recognisedHolders: 18, topLabels: ["Token Millionaire ×17", "Liquidity Pool"] })).terms.recognisedHolders).toBeCloseTo(WEIGHTS.recognisedHolders * Math.log1p(18), 2);
-    expect(score(facts({ recognisedHolders: 18, topLabels: ["Token Millionaire ×17", "Liquidity Pool"] })).reasons).toContain("18 of top 20 holders tagged by Nansen (Token Millionaire ×17, Liquidity Pool)");
+    expect(score(facts({ recognisedHolders: 18, topLabels: ["Token Millionaire ×17", "Liquidity Pool"] })).terms.recognisedHolders).toBeCloseTo(
+      WEIGHTS.recognisedHolders * Math.log1p(18),
+      2,
+    );
+    expect(score(facts({ recognisedHolders: 18, topLabels: ["Token Millionaire ×17", "Liquidity Pool"] })).reasons).toContain(
+      "18 of top 20 holders tagged by Nansen (Token Millionaire ×17, Liquidity Pool)",
+    );
     expect(score(facts()).terms.recognisedHolders).toBe(0);
   });
   it("terms sum to score (rounded)", () => {
@@ -57,7 +62,7 @@ describe("score()", () => {
     const a = score(facts({ labelledWallets: 1 }));
     const b = score(facts({ labelledWallets: 9 }));
     const u = unscorable(facts({ chain: "hyperliquid" }), "perp");
-    expect(rank([u, a, b]).map((s) => s.chain === "hyperliquid" ? "u" : s.labelledWallets)).toEqual([9, 1, "u"]);
+    expect(rank([u, a, b]).map((s) => (s.chain === "hyperliquid" ? "u" : s.labelledWallets))).toEqual([9, 1, "u"]);
   });
   it("ABSTAIN_THRESHOLD is above a bare small-holder score", () => {
     expect(score(facts({ totalHolders: 50 })).score).toBeLessThan(ABSTAIN_THRESHOLD);
@@ -67,7 +72,20 @@ describe("score()", () => {
 describe("structural tags are not evidence (live finding 2026-09-16: dead $36K tokens were crowned on a UniswapV2 pool + deployer tag)", () => {
   it("STRUCTURAL_TAG matches pools, deployers, name-service names, the token contract and burn addresses; not wealth/activity tags", async () => {
     const { STRUCTURAL_TAG } = await import("../src/facts.js");
-    for (const t of ["UniswapV2", "Uniswap V3: PEPE-WETH", "PEPE Token Deployer", "usedsaga.sol", "vitalik.eth", "Token Contract", "Liquidity Pool", "Raydium Pool", "Null Address", "Burn"]) expect(STRUCTURAL_TAG.test(t), t).toBe(true);
-    for (const t of ["Token Millionaire", "High Activity", "High Balance", "PEPE Whale", "Smart Trader", "Binance", "Fund"]) expect(STRUCTURAL_TAG.test(t), t).toBe(false);
+    for (const t of [
+      "UniswapV2",
+      "Uniswap V3: PEPE-WETH",
+      "PEPE Token Deployer",
+      "usedsaga.sol",
+      "vitalik.eth",
+      "Token Contract",
+      "Liquidity Pool",
+      "Raydium Pool",
+      "Null Address",
+      "Burn",
+    ])
+      expect(STRUCTURAL_TAG.test(t), t).toBe(true);
+    for (const t of ["Token Millionaire", "High Activity", "High Balance", "PEPE Whale", "Smart Trader", "Binance", "Fund"])
+      expect(STRUCTURAL_TAG.test(t), t).toBe(false);
   });
 });

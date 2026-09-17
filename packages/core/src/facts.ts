@@ -66,7 +66,8 @@ const HoldersResponse = z.object({ data: z.array(HolderRow).default([]) });
  * "<X> Token Deployer" too (live check 2026-09-16). Wealth/activity tags (Token Millionaire, High Activity,
  * <TOKEN> Whale, Smart Trader…) stay in.
  */
-export const STRUCTURAL_TAG = /token contract|deployer|liquidity pool|\bpool\b|uniswap|pancake|sushi|raydium|orca|meteora|curve|balancer|aerodrome|velodrome|\.eth$|\.sol$|\.bnb$|\.base$|burn|null address|dead/i;
+export const STRUCTURAL_TAG =
+  /token contract|deployer|liquidity pool|\bpool\b|uniswap|pancake|sushi|raydium|orca|meteora|curve|balancer|aerodrome|velodrome|\.eth$|\.sol$|\.bnb$|\.base$|burn|null address|dead/i;
 
 /** Symbols where many same-name results are canonical per-chain issues, not impostors. */
 export const STABLECOINS = new Set(["USDC", "USDT", "DAI", "USDE", "USDS", "PYUSD", "FDUSD", "TUSD", "USD1", "USDG", "EURC", "GHO", "FRAX", "LUSD", "CRVUSD"]);
@@ -108,11 +109,24 @@ export type CandidateFacts = Candidate & {
 };
 
 const FLOW_FIELDS = [
-  "smart_trader_wallet_count", "whale_wallet_count", "top_pnl_wallet_count", "public_figure_wallet_count",
-  "smart_trader_net_flow_usd", "whale_net_flow_usd", "top_pnl_net_flow_usd", "public_figure_net_flow_usd",
-  "exchange_net_flow_usd", "fresh_wallets_net_flow_usd",
+  "smart_trader_wallet_count",
+  "whale_wallet_count",
+  "top_pnl_wallet_count",
+  "public_figure_wallet_count",
+  "smart_trader_net_flow_usd",
+  "whale_net_flow_usd",
+  "top_pnl_net_flow_usd",
+  "public_figure_net_flow_usd",
+  "exchange_net_flow_usd",
+  "fresh_wallets_net_flow_usd",
 ];
-const INFO_FIELDS = ["token_details.token_deployment_date", "token_details.market_cap_usd", "spot_metrics.liquidity_usd", "spot_metrics.total_holders", "spot_metrics.unique_buyers"];
+const INFO_FIELDS = [
+  "token_details.token_deployment_date",
+  "token_details.market_cap_usd",
+  "spot_metrics.liquidity_usd",
+  "spot_metrics.total_holders",
+  "spot_metrics.unique_buyers",
+];
 const HOLDER_FIELDS = ["data[].address_label", "data[].ownership_percentage"];
 
 const n = (v: number | null | undefined) => (typeof v === "number" && Number.isFinite(v) ? v : 0);
@@ -121,9 +135,17 @@ const n = (v: number | null | undefined) => (typeof v === "number" && Number.isF
 export async function fetchFacts(client: NansenClient, c: Candidate, now = Date.now()): Promise<CandidateFacts> {
   const base: CandidateFacts = {
     ...c,
-    labelledWallets: 0, smartTraderWallets: 0, whaleWallets: 0, topPnlWallets: 0, publicFigureWallets: 0,
-    smartTraderNetFlowUsd: 0, exchangeNetFlowUsd: 0, freshNetFlowUsd: 0, exchangeTouched: false,
-    freshShare: NaN, errors: [],
+    labelledWallets: 0,
+    smartTraderWallets: 0,
+    whaleWallets: 0,
+    topPnlWallets: 0,
+    publicFigureWallets: 0,
+    smartTraderNetFlowUsd: 0,
+    exchangeNetFlowUsd: 0,
+    freshNetFlowUsd: 0,
+    exchangeTouched: false,
+    freshShare: NaN,
+    errors: [],
   };
   const [flow, info] = await Promise.allSettled([
     client.post("tgm/flow-intelligence", { chain: c.chain, token_address: c.address, timeframe: "7d" }, FLOW_FIELDS),
@@ -146,7 +168,14 @@ export async function fetchFacts(client: NansenClient, c: Candidate, now = Date.
       base.exchangeNetFlowUsd = n(r.exchange_net_flow_usd);
       base.freshNetFlowUsd = n(r.fresh_wallets_net_flow_usd);
       base.exchangeTouched = Math.abs(base.exchangeNetFlowUsd) > 0;
-      const flows = [r.smart_trader_net_flow_usd, r.whale_net_flow_usd, r.top_pnl_net_flow_usd, r.public_figure_net_flow_usd, r.exchange_net_flow_usd, r.fresh_wallets_net_flow_usd].map(n);
+      const flows = [
+        r.smart_trader_net_flow_usd,
+        r.whale_net_flow_usd,
+        r.top_pnl_net_flow_usd,
+        r.public_figure_net_flow_usd,
+        r.exchange_net_flow_usd,
+        r.fresh_wallets_net_flow_usd,
+      ].map(n);
       const total = flows.reduce((a, b) => a + Math.abs(b), 0);
       base.freshShare = total > 0 ? Math.abs(base.freshNetFlowUsd) / total : NaN;
     }
@@ -160,7 +189,10 @@ export async function fetchFacts(client: NansenClient, c: Candidate, now = Date.
       const dep = d.token_details?.token_deployment_date ?? undefined;
       if (dep) {
         const t = Date.parse(/\d{4}-\d{2}-\d{2} \d/.test(dep) ? dep.replace(" ", "T") + "Z" : dep);
-        if (Number.isFinite(t)) { base.deploymentDate = dep; base.ageDays = Math.max(0, Math.floor((now - t) / 86_400_000)); }
+        if (Number.isFinite(t)) {
+          base.deploymentDate = dep;
+          base.ageDays = Math.max(0, Math.floor((now - t) / 86_400_000));
+        }
       }
       base.marketCapUsd = d.token_details?.market_cap_usd ?? base.marketCap;
       base.liquidityUsd = d.spot_metrics?.liquidity_usd ?? undefined;
@@ -177,16 +209,25 @@ export async function fetchFacts(client: NansenClient, c: Candidate, now = Date.
 /** Tiebreak facts for a finalist: how many of the top holders Nansen recognises (any non-premium tag). 5 credits. */
 export async function fetchHolderFacts(client: NansenClient, f: CandidateFacts, perPage = 20): Promise<CandidateFacts> {
   try {
-    const raw = await client.post("tgm/holders", { chain: f.chain, token_address: f.address, pagination: { page: 1, per_page: perPage } }, HOLDER_FIELDS, { timeoutMs: 5000, retries: 0 });
+    const raw = await client.post("tgm/holders", { chain: f.chain, token_address: f.address, pagination: { page: 1, per_page: perPage } }, HOLDER_FIELDS, {
+      timeoutMs: 5000,
+      retries: 0,
+    });
     const parsed = HoldersResponse.safeParse(raw);
-    if (!parsed.success) { f.errors.push("holders failed: schema"); return f; }
+    if (!parsed.success) {
+      f.errors.push("holders failed: schema");
+      return f;
+    }
     const rows = parsed.data.data;
     const tagged = rows.filter((r) => r.address_label && r.address_label.trim().length > 0 && !STRUCTURAL_TAG.test(r.address_label));
     f.recognisedHolders = tagged.length;
     // most frequent tags first, so the reason line reads "Token Millionaire ×17, Liquidity Pool"
     const freq = new Map<string, number>();
     for (const r of tagged) freq.set(r.address_label as string, (freq.get(r.address_label as string) ?? 0) + 1);
-    f.topLabels = [...freq.entries()].sort((a, b) => b[1] - a[1]).slice(0, 3).map(([l, n]) => (n > 1 ? `${l} ×${n}` : l));
+    f.topLabels = [...freq.entries()]
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 3)
+      .map(([l, n]) => (n > 1 ? `${l} ×${n}` : l));
     f.topHolderPct = rows.reduce((m, r) => Math.max(m, n(r.ownership_percentage)), 0);
   } catch (e) {
     f.errors.push(`holders failed: ${String((e as Error).message).slice(0, 80)}`);

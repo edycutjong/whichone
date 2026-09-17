@@ -53,13 +53,23 @@ export function score(f: CandidateFacts, w = WEIGHTS): Scored {
 
   // No flow facts → no verdict on this candidate. Zeroed defaults are not evidence of anything.
   if (f.errors.some((e) => e.startsWith("flow-intelligence failed"))) {
-    return { ...f, score: Number.NEGATIVE_INFINITY, terms: {}, reasons: ["could not be checked (flow lookup failed) — retry"], impostor: false, scorable: true, unchecked: true };
+    return {
+      ...f,
+      score: Number.NEGATIVE_INFINITY,
+      terms: {},
+      reasons: ["could not be checked (flow lookup failed) — retry"],
+      impostor: false,
+      scorable: true,
+      unchecked: true,
+    };
   }
 
   terms.labelled = w.labelled * log1p(f.labelledWallets);
-  reasons.push(f.labelledWallets > 0
-    ? `${f.labelledWallets} labelled wallets (${f.smartTraderWallets} smart traders, ${f.topPnlWallets} top PnL, ${f.whaleWallets} whales, ${f.publicFigureWallets} public figures)`
-    : "0 labelled wallets in 7 days");
+  reasons.push(
+    f.labelledWallets > 0
+      ? `${f.labelledWallets} labelled wallets (${f.smartTraderWallets} smart traders, ${f.topPnlWallets} top PnL, ${f.whaleWallets} whales, ${f.publicFigureWallets} public figures)`
+      : "0 labelled wallets in 7 days",
+  );
 
   const exchMag = Math.abs(f.exchangeNetFlowUsd);
   terms.exchange = exchMag > 0 ? w.exchange * Math.max(0, Math.log10(exchMag) - 3) : 0;
@@ -69,17 +79,27 @@ export function score(f: CandidateFacts, w = WEIGHTS): Scored {
   terms.liquidity = f.liquidityUsd != null ? w.liquidity * log10p(f.liquidityUsd) : 0;
   if (f.totalHolders != null) reasons.push(`${fmtInt(f.totalHolders)} holders`);
 
-  if (f.ageDays == null) { terms.age = 0; reasons.push("age unknown"); }
-  else if (f.ageDays < 7) { terms.age = -w.young7; reasons.push(`deployed ${Math.max(1, Math.round(f.ageDays))}d ago`); }
-  else if (f.ageDays < 30) { terms.age = -w.young30; reasons.push(`deployed ${Math.round(f.ageDays)}d ago`); }
-  else { terms.age = 0; reasons.push(fmtAge(f.ageDays)); }
+  if (f.ageDays == null) {
+    terms.age = 0;
+    reasons.push("age unknown");
+  } else if (f.ageDays < 7) {
+    terms.age = -w.young7;
+    reasons.push(`deployed ${Math.max(1, Math.round(f.ageDays))}d ago`);
+  } else if (f.ageDays < 30) {
+    terms.age = -w.young30;
+    reasons.push(`deployed ${Math.round(f.ageDays)}d ago`);
+  } else {
+    terms.age = 0;
+    reasons.push(fmtAge(f.ageDays));
+  }
 
   const freshApplies = f.labelledWallets < 3 && !Number.isNaN(f.freshShare);
   terms.fresh = freshApplies ? -w.freshPenalty * f.freshShare : 0;
   if (freshApplies && f.freshShare > 0.5) reasons.push(`${Math.round(f.freshShare * 100)}% of flow is fresh wallets`);
 
   terms.recognisedHolders = f.recognisedHolders != null ? w.recognisedHolders * log1p(f.recognisedHolders) : 0;
-  if (f.recognisedHolders != null) reasons.push(`${f.recognisedHolders} of top 20 holders tagged by Nansen${f.topLabels?.length ? ` (${f.topLabels.join(", ")})` : ""}`);
+  if (f.recognisedHolders != null)
+    reasons.push(`${f.recognisedHolders} of top 20 holders tagged by Nansen${f.topLabels?.length ? ` (${f.topLabels.join(", ")})` : ""}`);
 
   const total = Object.values(terms).reduce((a, b) => a + b, 0);
   const impostor = f.labelledWallets === 0 && exchMag < 10_000 && ((f.ageDays != null && f.ageDays < 14) || (f.totalHolders != null && f.totalHolders < 500));
@@ -98,15 +118,23 @@ export function unscorable(f: CandidateFacts, why: string): Scored {
 /** Sort: checked+scorable first by score desc, then labelled wallets, then holders; unchecked next; unscorable last. */
 export function rank(list: Scored[]): Scored[] {
   const tier = (s: Scored) => (!s.scorable ? 0 : s.unchecked ? 1 : 2);
-  return [...list].sort((a, b) =>
-    tier(b) - tier(a) ||
-    b.score - a.score ||
-    b.labelledWallets - a.labelledWallets ||
-    (b.totalHolders ?? 0) - (a.totalHolders ?? 0));
+  return [...list].sort(
+    (a, b) => tier(b) - tier(a) || b.score - a.score || b.labelledWallets - a.labelledWallets || (b.totalHolders ?? 0) - (a.totalHolders ?? 0),
+  );
 }
 
-function round(x: number) { return Math.round(x * 100) / 100; }
-function mapValues<T extends Record<string, number>>(o: T, fn: (v: number) => number): T { return Object.fromEntries(Object.entries(o).map(([k, v]) => [k, fn(v)])) as T; }
-function fmtUsd(n: number) { return n >= 1e6 ? `$${(n / 1e6).toFixed(1)}M` : n >= 1e3 ? `$${Math.round(n / 1e3)}K` : `$${Math.round(n)}`; }
-function fmtInt(n: number) { return n >= 1e6 ? (n / 1e6).toFixed(1) + "M" : n >= 1e3 ? Math.round(n / 1e3) + "K" : String(Math.round(n)); }
-function fmtAge(d: number) { return d >= 365 ? `${(d / 365).toFixed(1)}y old` : `${Math.round(d)}d old`; }
+function round(x: number) {
+  return Math.round(x * 100) / 100;
+}
+function mapValues<T extends Record<string, number>>(o: T, fn: (v: number) => number): T {
+  return Object.fromEntries(Object.entries(o).map(([k, v]) => [k, fn(v)])) as T;
+}
+function fmtUsd(n: number) {
+  return n >= 1e6 ? `$${(n / 1e6).toFixed(1)}M` : n >= 1e3 ? `$${Math.round(n / 1e3)}K` : `$${Math.round(n)}`;
+}
+function fmtInt(n: number) {
+  return n >= 1e6 ? (n / 1e6).toFixed(1) + "M" : n >= 1e3 ? Math.round(n / 1e3) + "K" : String(Math.round(n));
+}
+function fmtAge(d: number) {
+  return d >= 365 ? `${(d / 365).toFixed(1)}y old` : `${Math.round(d)}d old`;
+}

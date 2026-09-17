@@ -13,4 +13,3 @@ export const FIXTURE_SET: Array<{ query: string; edge: string; chain?: string }>
   { query: "SHIB2", edge: "11 · one dead 3-year-old token, 0 labelled wallets, only a pool + deployer tag among holders → abstain, not green" },
   { query: "DOGE", edge: "12 · large, boring, fast — cache-warm timing baseline" },
 ];
-

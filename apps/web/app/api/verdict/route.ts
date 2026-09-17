@@ -37,7 +37,11 @@ export async function GET(req: NextRequest) {
       let closed = false;
       const send = (e: VerdictEvent | { type: "error"; message: string } | { type: "asOf"; asOf: string | null }) => {
         if (closed) return;
-        try { controller.enqueue(enc.encode(JSON.stringify(e) + "\n")); } catch { closed = true; }
+        try {
+          controller.enqueue(enc.encode(JSON.stringify(e) + "\n"));
+        } catch {
+          closed = true;
+        }
       };
       try {
         const { oldestHit } = await verdictFor(q, chain, { onProgress: send });
@@ -45,7 +49,14 @@ export async function GET(req: NextRequest) {
       } catch (e) {
         send({ type: "error", message: (e as Error).message });
       } finally {
-        if (!closed) { closed = true; try { controller.close(); } catch { /* already closed by the client */ } }
+        if (!closed) {
+          closed = true;
+          try {
+            controller.close();
+          } catch {
+            /* already closed by the client */
+          }
+        }
       }
     },
   });

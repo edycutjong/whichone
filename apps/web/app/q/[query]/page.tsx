@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { Verdict } from "@whichone/core";
 import { Whichone } from "@/components/Whichone";
 import { verdictFor, SAFE_QUERY, CHAINS } from "@/lib/engine";
 
@@ -25,10 +26,12 @@ export default async function Page({ params, searchParams }: Props) {
   const chainParam = (await searchParams).chain;
   const chain = chainParam && (CHAINS as readonly string[]).includes(chainParam) ? chainParam : undefined;
   if (!SAFE_QUERY.test(q)) return <Whichone initialQuery="" />;
+  // a failed server-side verdict (no key, Nansen down) hands the query to the client, which streams it and shows the error banner
+  let verdict: Verdict | undefined;
   try {
-    const { verdict } = await verdictFor(q, chain);
-    return <Whichone initialQuery={q} initialChain={chain ?? "all"} initialVerdict={verdict} />;
+    verdict = (await verdictFor(q, chain)).verdict;
   } catch {
-    return <Whichone initialQuery={q} initialChain={chain ?? "all"} />;
+    verdict = undefined;
   }
+  return <Whichone initialQuery={q} initialChain={chain ?? "all"} initialVerdict={verdict} />;
 }

@@ -16,8 +16,13 @@ export function useFlip(ref: React.RefObject<HTMLElement | null>, dep: unknown) 
       next.set(id, rect);
       const prev = last.current.get(id);
       if (prev && !reduce) {
-        const dx = prev.left - rect.left, dy = prev.top - rect.top;
-        if (dx || dy) child.animate([{ transform: `translate(${dx}px, ${dy}px)` }, { transform: "translate(0, 0)" }], { duration: 300, easing: "cubic-bezier(.2,.8,.2,1)" });
+        const dx = prev.left - rect.left,
+          dy = prev.top - rect.top;
+        if (dx || dy)
+          child.animate([{ transform: `translate(${dx}px, ${dy}px)` }, { transform: "translate(0, 0)" }], {
+            duration: 300,
+            easing: "cubic-bezier(.2,.8,.2,1)",
+          });
       }
     }
     last.current = next;

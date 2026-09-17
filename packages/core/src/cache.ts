@@ -14,21 +14,35 @@ export class DiskCache implements CacheStore {
   constructor(private dir = join(process.cwd(), ".cache")) {
     mkdirSync(dir, { recursive: true });
   }
-  private path(key: string) { return join(this.dir, `${key}.json`); }
+  private path(key: string) {
+    return join(this.dir, `${key}.json`);
+  }
   get(key: string): CacheEntry | undefined {
     const p = this.path(key);
     if (!existsSync(p)) return undefined;
-    try { return JSON.parse(readFileSync(p, "utf8")) as CacheEntry; } catch { return undefined; }
+    try {
+      return JSON.parse(readFileSync(p, "utf8")) as CacheEntry;
+    } catch {
+      return undefined;
+    }
   }
-  set(key: string, entry: CacheEntry) { writeFileSync(this.path(key), JSON.stringify(entry)); }
+  set(key: string, entry: CacheEntry) {
+    writeFileSync(this.path(key), JSON.stringify(entry));
+  }
 }
 
 export class MemoryCache implements CacheStore {
   private m = new Map<string, CacheEntry>();
-  get(key: string) { return this.m.get(key); }
-  set(key: string, entry: CacheEntry) { this.m.set(key, entry); }
+  get(key: string) {
+    return this.m.get(key);
+  }
+  set(key: string, entry: CacheEntry) {
+    this.m.set(key, entry);
+  }
   /** Everything stored, insertion order — `scripts/seed.ts` writes this to a fixture file. */
-  entries(): Record<string, CacheEntry> { return Object.fromEntries(this.m); }
+  entries(): Record<string, CacheEntry> {
+    return Object.fromEntries(this.m);
+  }
 }
 
 export const DEFAULT_TTL_MS = 30 * 60 * 1000;
@@ -36,7 +50,12 @@ export const DEFAULT_TTL_MS = 30 * 60 * 1000;
 /** Recursively sort object keys so `{a:{y,x}}` and `{a:{x,y}}` serialize identically (arrays keep order). */
 export function canonicalize(v: unknown): unknown {
   if (Array.isArray(v)) return v.map(canonicalize);
-  if (v && typeof v === "object") return Object.fromEntries(Object.keys(v as object).sort().map((k) => [k, canonicalize((v as Record<string, unknown>)[k])]));
+  if (v && typeof v === "object")
+    return Object.fromEntries(
+      Object.keys(v as object)
+        .sort()
+        .map((k) => [k, canonicalize((v as Record<string, unknown>)[k])]),
+    );
   return v;
 }
 
@@ -77,17 +96,45 @@ export class CachedNansenClient extends NansenClient {
     const hit = this.ttlMs > 0 || this.offline ? this.store.get(key) : undefined;
     const fresh = hit && Date.now() - Date.parse(hit.storedAt) < this.ttlMs;
     if (hit && (fresh || this.offline)) {
-      this.calls.push({ endpoint, body, credits: 0, ms: 0, cached: true, status: 200, fieldsUsed, responseHash: sha256(hit.text), attempts: 0, totalMs: 0, ok: true });
+      this.calls.push({
+        endpoint,
+        body,
+        credits: 0,
+        ms: 0,
+        cached: true,
+        status: 200,
+        fieldsUsed,
+        responseHash: sha256(hit.text),
+        attempts: 0,
+        totalMs: 0,
+        ok: true,
+      });
       if (!this.oldestHit || hit.storedAt < this.oldestHit) this.oldestHit = hit.storedAt;
       return JSON.parse(hit.text) as T;
     }
     if (this.offline) throw new Error(`NANSEN_OFFLINE=1 and no cached response for ${endpoint} ${JSON.stringify(body)}`);
     const t0 = Date.now();
     let raw: Awaited<ReturnType<NansenClient["postRaw"]>>;
-    try { raw = await this.postRaw(endpoint, body, opts); }
-    catch (e) { this.recordFailure(endpoint, body, fieldsUsed, e, Date.now() - t0); throw e; }
+    try {
+      raw = await this.postRaw(endpoint, body, opts);
+    } catch (e) {
+      this.recordFailure(endpoint, body, fieldsUsed, e, Date.now() - t0);
+      throw e;
+    }
     const { text, ms, status, attempts, totalMs } = raw;
-    this.calls.push({ endpoint, body, credits: CREDITS[endpoint] ?? 1, ms, cached: false, status, fieldsUsed, responseHash: sha256(text), attempts, totalMs, ok: true });
+    this.calls.push({
+      endpoint,
+      body,
+      credits: CREDITS[endpoint] ?? 1,
+      ms,
+      cached: false,
+      status,
+      fieldsUsed,
+      responseHash: sha256(text),
+      attempts,
+      totalMs,
+      ok: true,
+    });
     this.store.set(key, { storedAt: new Date().toISOString(), ttlMs: this.ttlMs, endpoint, body, text });
     return JSON.parse(text) as T;
   }

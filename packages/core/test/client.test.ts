@@ -9,7 +9,10 @@ describe("NansenClient", () => {
   });
   it("sends the apikey header and records credits, status and a sha256 of the raw body", async () => {
     let headers: Record<string, string> = {};
-    const fetchImpl: typeof fetch = async (_u, init) => { headers = init!.headers as Record<string, string>; return new Response('{"data":[]}', { status: 200 }); };
+    const fetchImpl: typeof fetch = async (_u, init) => {
+      headers = init!.headers as Record<string, string>;
+      return new Response('{"data":[]}', { status: 200 });
+    };
     const c = new NansenClient("nsn_test_key_0000000000000000000000", { fetchImpl });
     await c.post("tgm/holders", { chain: "ethereum", token_address: "0x1" }, ["data[].address_label"]);
     expect(headers.apikey).toMatch(/^nsn_/);
@@ -27,7 +30,10 @@ describe("NansenClient", () => {
   });
   it("throws NansenError with status on 4xx without retry", async () => {
     let n = 0;
-    const c = fakeClient(() => { n++; return new Response('{"error":"Missing field"}', { status: 422 }); });
+    const c = fakeClient(() => {
+      n++;
+      return new Response('{"error":"Missing field"}', { status: 422 });
+    });
     await expect(c.post("tgm/token-information", {})).rejects.toThrow(/HTTP 422/);
     expect(n).toBe(1);
     // the failure is recorded in provenance at 0 credits, with the real attempt count
@@ -55,7 +61,8 @@ describe("review fix F5: retried attempts are visible", () => {
   it("a first-attempt timeout is retried and counted", async () => {
     let n = 0;
     const fetchImpl: typeof fetch = async (_u, init) => {
-      if (n++ === 0) await new Promise((_, rej) => init!.signal!.addEventListener("abort", () => rej(Object.assign(new Error("aborted"), { name: "AbortError" }))));
+      if (n++ === 0)
+        await new Promise((_, rej) => init!.signal!.addEventListener("abort", () => rej(Object.assign(new Error("aborted"), { name: "AbortError" }))));
       return new Response('{"ok":1}', { status: 200 });
     };
     const c = new NansenClient("nsn_test_key_0000000000000000000000", { fetchImpl, timeoutMs: 30, rps: 1000 });
@@ -67,13 +74,17 @@ describe("review fix F5: retried attempts are visible", () => {
 describe("per-call options", () => {
   it("retries: 0 fails fast on a 5xx with attempts=1", async () => {
     let n = 0;
-    const c = fakeClient(() => { n++; return new Response("x", { status: 503 }); });
+    const c = fakeClient(() => {
+      n++;
+      return new Response("x", { status: 503 });
+    });
     await expect(c.post("tgm/token-information", {}, [], { retries: 0 })).rejects.toThrow(/503/);
     expect(n).toBe(1);
     expect(c.calls[0].attempts).toBe(1);
   });
   it("a per-call timeoutMs overrides the client default", async () => {
-    const fetchImpl: typeof fetch = async (_u, init) => new Promise((_, rej) => init!.signal!.addEventListener("abort", () => rej(Object.assign(new Error("aborted"), { name: "AbortError" }))));
+    const fetchImpl: typeof fetch = async (_u, init) =>
+      new Promise((_, rej) => init!.signal!.addEventListener("abort", () => rej(Object.assign(new Error("aborted"), { name: "AbortError" }))));
     const c = new NansenClient("nsn_test_key_0000000000000000000000", { fetchImpl, timeoutMs: 60_000, rps: 1000 });
     const t0 = Date.now();
     await expect(c.post("tgm/token-information", {}, [], { timeoutMs: 20, retries: 0 })).rejects.toThrow();

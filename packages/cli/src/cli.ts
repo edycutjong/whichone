@@ -18,20 +18,36 @@ if (!query || flags.has("--help")) {
 const client = cachedClientFromEnv({ ttlMs: flags.has("--no-cache") ? 0 : undefined });
 const v: Verdict = await whichOnesReal(client, query, { chain });
 
-if (flags.has("--json")) { console.log(JSON.stringify(v, null, 2)); process.exit(0); }
+if (flags.has("--json")) {
+  console.log(JSON.stringify(v, null, 2));
+  process.exit(0);
+}
 
-const G = "\x1b[32m", R = "\x1b[31m", D = "\x1b[2m", B = "\x1b[1m", X = "\x1b[0m";
+const G = "\x1b[32m",
+  R = "\x1b[31m",
+  D = "\x1b[2m",
+  B = "\x1b[1m",
+  X = "\x1b[0m";
 const short = (a: string) => (a.length > 14 ? `${a.slice(0, 6)}…${a.slice(-4)}` : a);
 const pad = (s: string, n: number) => s.padEnd(n);
 
-console.log(`\n${B}${v.query}${X} — ${v.candidatesTotal} same-name token${v.candidatesTotal === 1 ? "" : "s"} on Nansen${v.stablecoin ? " (stablecoin: canonical per chain)" : ""}\n`);
+console.log(
+  `\n${B}${v.query}${X} — ${v.candidatesTotal} same-name token${v.candidatesTotal === 1 ? "" : "s"} on Nansen${v.stablecoin ? " (stablecoin: canonical per chain)" : ""}\n`,
+);
 for (const s of v.ranked) {
   const isWin = v.winner && s.chain === v.winner.chain && s.address === v.winner.address;
   const mark = isWin ? `${G}✔` : s.impostor ? `${R}✖` : s.unchecked ? `${D}?` : `${D}·`;
   const tag = isWin ? `${G}${B}← REAL${X}` : s.impostor ? `${R}IMPOSTOR${X}` : "";
   const scoreStr = s.scorable ? s.score.toFixed(2) : "  —  ";
-  console.log(`${mark} ${pad(s.chain, 10)} ${pad(short(s.address), 14)} ${pad(s.symbol, 8)} ${pad(scoreStr, 6)} ${s.reasons.slice(0, 3).join(" · ")} ${tag}${X}`);
-  if (flags.has("--explain") && s.scorable) console.log(`${D}    terms: ${Object.entries(s.terms).map(([k, t]) => `${k}=${t}`).join("  ")}${X}`);
+  console.log(
+    `${mark} ${pad(s.chain, 10)} ${pad(short(s.address), 14)} ${pad(s.symbol, 8)} ${pad(scoreStr, 6)} ${s.reasons.slice(0, 3).join(" · ")} ${tag}${X}`,
+  );
+  if (flags.has("--explain") && s.scorable)
+    console.log(
+      `${D}    terms: ${Object.entries(s.terms)
+        .map(([k, t]) => `${k}=${t}`)
+        .join("  ")}${X}`,
+    );
 }
 for (const w of v.warnings) console.log(`${D}⚠ ${w}${X}`);
 if (v.abstained) console.log(`\n${R}${B}no winner${X} — ${v.abstainReason}`);
@@ -40,5 +56,7 @@ const hits = v.provenance.filter((c) => c.cached).length;
 const retried = v.provenance.filter((c) => c.ok && c.attempts > 1).length;
 const failed = v.provenance.filter((c) => !c.ok);
 for (const f of failed) console.log(`${R}✗ ${f.endpoint} ${f.body.chain ?? ""} — ${f.error} (${(f.totalMs / 1000).toFixed(1)}s)${X}`);
-console.log(`${D}${v.credits} credits · ${v.provenance.length} calls (${hits} cached${client.oldestHit ? `, as of ${client.oldestHit.slice(11, 16)} UTC` : ""}) ${retried ? ` · ${retried} retried` : ""} · ${(v.ms / 1000).toFixed(1)}s · verdict ${v.hash.slice(0, 12)}${X}`);
+console.log(
+  `${D}${v.credits} credits · ${v.provenance.length} calls (${hits} cached${client.oldestHit ? `, as of ${client.oldestHit.slice(11, 16)} UTC` : ""}) ${retried ? ` · ${retried} retried` : ""} · ${(v.ms / 1000).toFixed(1)}s · verdict ${v.hash.slice(0, 12)}${X}`,
+);
 if (flags.has("--explain")) console.log(`${D}weights: ${JSON.stringify(v.weights)}${X}`);

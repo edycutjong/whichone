@@ -7,11 +7,35 @@
  */
 import { clientFromEnv, searchCandidates, sameName } from "../packages/core/src/index.js";
 
-const TICKERS = (process.argv[2] ? process.argv.slice(2) : [
-  "PEPE", "WLFI", "TRUMP", "DOGE", "SHIB", "BONK", "WIF", "PENGU", "VIRTUAL", "USDC",
-  "FLOKI", "BRETT", "MOG", "POPCAT", "SPX", "AI16Z", "FARTCOIN", "PNUT", "GOAT", "TURBO",
-  "NEIRO", "MEW", "TOSHI", "DEGEN", "PUMP",
-]);
+const TICKERS = process.argv[2]
+  ? process.argv.slice(2)
+  : [
+      "PEPE",
+      "WLFI",
+      "TRUMP",
+      "DOGE",
+      "SHIB",
+      "BONK",
+      "WIF",
+      "PENGU",
+      "VIRTUAL",
+      "USDC",
+      "FLOKI",
+      "BRETT",
+      "MOG",
+      "POPCAT",
+      "SPX",
+      "AI16Z",
+      "FARTCOIN",
+      "PNUT",
+      "GOAT",
+      "TURBO",
+      "NEIRO",
+      "MEW",
+      "TOSHI",
+      "DEGEN",
+      "PUMP",
+    ];
 
 const client = clientFromEnv();
 const rows: { q: string; total: number; same: number; chains: string; top: string; youngestFlag: string }[] = [];
@@ -29,12 +53,27 @@ for (const q of TICKERS) {
   }
 }
 
-function fmt(n?: number) { return n == null ? "?" : n >= 1e9 ? (n / 1e9).toFixed(1) + "B" : n >= 1e6 ? (n / 1e6).toFixed(1) + "M" : n >= 1e3 ? (n / 1e3).toFixed(0) + "K" : String(Math.round(n)); }
-const sameCounts = rows.filter((r) => r.same >= 0).map((r) => r.same).sort((a, b) => a - b);
+function fmt(n?: number) {
+  return n == null
+    ? "?"
+    : n >= 1e9
+      ? (n / 1e9).toFixed(1) + "B"
+      : n >= 1e6
+        ? (n / 1e6).toFixed(1) + "M"
+        : n >= 1e3
+          ? (n / 1e3).toFixed(0) + "K"
+          : String(Math.round(n));
+}
+const sameCounts = rows
+  .filter((r) => r.same >= 0)
+  .map((r) => r.same)
+  .sort((a, b) => a - b);
 const median = sameCounts.length ? sameCounts[Math.floor(sameCounts.length / 2)] : 0;
 
 console.log(`| ticker | results | same-name | chains | top by rank | ms |`);
 console.log(`|---|---|---|---|---|---|`);
 for (const r of rows) console.log(`| ${r.q} | ${r.total} | ${r.same} | ${r.chains} | ${r.top} | ${r.youngestFlag} |`);
-console.log(`\nmedian same-name candidates: **${median}** · tickers with ≥3 same-name: ${sameCounts.filter((n) => n >= 3).length}/${sameCounts.length} · with 0: ${sameCounts.filter((n) => n === 0).length}`);
+console.log(
+  `\nmedian same-name candidates: **${median}** · tickers with ≥3 same-name: ${sameCounts.filter((n) => n >= 3).length}/${sameCounts.length} · with 0: ${sameCounts.filter((n) => n === 0).length}`,
+);
 console.log(`calls: ${client.calls.length} · credits: ${client.creditsSpent}`);

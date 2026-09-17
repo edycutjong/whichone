@@ -36,11 +36,7 @@ const SEARCH_FIELDS = ["tokens[].name", "tokens[].symbol", "tokens[].chain", "to
  * Candidate set for a ticker: every token Nansen knows by that name/symbol across chains,
  * deduped by chain+address, ordered by Nansen's search rank. 0 credits.
  */
-export async function searchCandidates(
-  client: NansenClient,
-  query: string,
-  opts: { chain?: string; limit?: number; cap?: number } = {},
-): Promise<Candidate[]> {
+export async function searchCandidates(client: NansenClient, query: string, opts: { chain?: string; limit?: number; cap?: number } = {}): Promise<Candidate[]> {
   const body: Record<string, unknown> = {
     search_query: query.trim(),
     result_type: "token",
@@ -71,8 +67,29 @@ export async function searchCandidates(
 
 /** Chains `tgm/flow-intelligence` accepts (openapi.json TGMFlowIntelligenceChain, 2026-09-16). `hyperliquid` (perps) is not scorable. */
 export const SCORABLE_CHAINS = new Set([
-  "arbitrum", "avalanche", "base", "bnb", "ethereum", "hyperevm", "injective", "linea", "mantle", "mantra", "monad",
-  "near", "optimism", "plasma", "polygon", "robinhood", "sei", "solana", "sonic", "starknet", "sui", "ton", "tron",
+  "arbitrum",
+  "avalanche",
+  "base",
+  "bnb",
+  "ethereum",
+  "hyperevm",
+  "injective",
+  "linea",
+  "mantle",
+  "mantra",
+  "monad",
+  "near",
+  "optimism",
+  "plasma",
+  "polygon",
+  "robinhood",
+  "sei",
+  "solana",
+  "sonic",
+  "starknet",
+  "sui",
+  "ton",
+  "tron",
 ]);
 
 export function scorable(c: Candidate): boolean {

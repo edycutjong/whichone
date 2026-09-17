@@ -8,15 +8,31 @@ import { CachedNansenClient, whichOnesReal, listFixtures, readFixture, fixtureSt
 
 process.env.NANSEN_OFFLINE = "1";
 const files = listFixtures();
-if (files.length === 0) { console.error("no fixtures/ — run `npm run seed` first"); process.exit(1); }
+if (files.length === 0) {
+  console.error("no fixtures/ — run `npm run seed` first");
+  process.exit(1);
+}
 
 /** The parts of a verdict a replay must reproduce exactly. Cost, timing and cache metadata are excluded by design. */
 function projection(v: Verdict) {
   return {
-    hash: v.hash, query: v.query, chainFilter: v.chainFilter ?? null, abstained: v.abstained, abstainReason: v.abstainReason ?? null,
-    stablecoin: v.stablecoin, candidatesTotal: v.candidatesTotal, warnings: v.warnings,
+    hash: v.hash,
+    query: v.query,
+    chainFilter: v.chainFilter ?? null,
+    abstained: v.abstained,
+    abstainReason: v.abstainReason ?? null,
+    stablecoin: v.stablecoin,
+    candidatesTotal: v.candidatesTotal,
+    warnings: v.warnings,
     winner: v.winner ? `${v.winner.chain}:${v.winner.address}` : null,
-    ranked: v.ranked.map((s) => ({ id: `${s.chain}:${s.address}`, score: s.scorable && !s.unchecked ? s.score : null, impostor: s.impostor, unchecked: s.unchecked, reasons: s.reasons, terms: s.terms })),
+    ranked: v.ranked.map((s) => ({
+      id: `${s.chain}:${s.address}`,
+      score: s.scorable && !s.unchecked ? s.score : null,
+      impostor: s.impostor,
+      unchecked: s.unchecked,
+      reasons: s.reasons,
+      terms: s.terms,
+    })),
   };
 }
 
@@ -27,11 +43,15 @@ for (const path of files) {
   const client = new CachedNansenClient("nsn_offline_replay_000000000000000", { store: fixtureStore(f), offline: true });
   const problems: string[] = [];
   let replay: Verdict | undefined;
-  try { replay = await whichOnesReal(client, f.query, { ...f.options, now: f.now }); }
-  catch (e) { problems.push(`threw: ${(e as Error).message.slice(0, 120)}`); }
+  try {
+    replay = await whichOnesReal(client, f.query, { ...f.options, now: f.now });
+  } catch (e) {
+    problems.push(`threw: ${(e as Error).message.slice(0, 120)}`);
+  }
 
   if (replay) {
-    const want = JSON.stringify(projection(f.verdict)), got = JSON.stringify(projection(replay));
+    const want = JSON.stringify(projection(f.verdict)),
+      got = JSON.stringify(projection(replay));
     if (replay.hash !== f.verdict.hash) problems.push(`hash ${replay.hash.slice(0, 12)} ≠ recorded ${f.verdict.hash.slice(0, 12)}`);
     if (want !== got) problems.push("ranking/reasons differ from the recorded verdict");
     const network = replay.provenance.filter((c) => !c.cached);
@@ -46,7 +66,9 @@ for (const path of files) {
   if (problems.length === 0) {
     ok++;
     const out = replay!.winner ? `${replay!.winner.chain} ✔` : `abstain (${replay!.abstainReason})`;
-    console.log(`✔ ${label} ${replay!.hash.slice(0, 12)}  ${replay!.provenance.length} calls replayed · ${out} · recorded ${f.recordedAt.slice(0, 16)}Z · ${f.edge}`);
+    console.log(
+      `✔ ${label} ${replay!.hash.slice(0, 12)}  ${replay!.provenance.length} calls replayed · ${out} · recorded ${f.recordedAt.slice(0, 16)}Z · ${f.edge}`,
+    );
   } else {
     failures.push(path);
     console.log(`✖ ${label} ${problems.join("; ")}`);

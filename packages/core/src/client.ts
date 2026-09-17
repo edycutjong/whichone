@@ -102,7 +102,19 @@ export class NansenClient {
     const t0 = Date.now();
     try {
       const { text, ms, status, attempts, totalMs } = await this.postRaw(endpoint, body, opts);
-      this.calls.push({ endpoint, body, credits: CREDITS[endpoint] ?? 1, ms, cached: false, status, fieldsUsed, responseHash: sha256(text), attempts, totalMs, ok: true });
+      this.calls.push({
+        endpoint,
+        body,
+        credits: CREDITS[endpoint] ?? 1,
+        ms,
+        cached: false,
+        status,
+        fieldsUsed,
+        responseHash: sha256(text),
+        attempts,
+        totalMs,
+        ok: true,
+      });
       return JSON.parse(text) as T;
     } catch (e) {
       this.recordFailure(endpoint, body, fieldsUsed, e, Date.now() - t0);
@@ -119,7 +131,11 @@ export class NansenClient {
   }
 
   /** The network call itself, returning the raw body so callers (and the cache) hash exactly what Nansen sent. */
-  protected async postRaw(endpoint: string, body: Record<string, unknown>, opts: CallOptions = {}): Promise<{ text: string; ms: number; status: number; attempts: number; totalMs: number }> {
+  protected async postRaw(
+    endpoint: string,
+    body: Record<string, unknown>,
+    opts: CallOptions = {},
+  ): Promise<{ text: string; ms: number; status: number; attempts: number; totalMs: number }> {
     const url = `${this.baseUrl}/${endpoint}`;
     const t0 = Date.now();
     const maxAttempts = 1 + (opts.retries ?? 1);
@@ -143,7 +159,10 @@ export class NansenClient {
         const ms = Date.now() - started;
         if (res.status === 429 || res.status >= 500) {
           lastErr = new NansenError(endpoint, res.status, text);
-          if (attempt < maxAttempts - 1) { await new Promise((r) => setTimeout(r, 750)); continue; }
+          if (attempt < maxAttempts - 1) {
+            await new Promise((r) => setTimeout(r, 750));
+            continue;
+          }
           throw lastErr;
         }
         if (!res.ok) throw new NansenError(endpoint, res.status, text);

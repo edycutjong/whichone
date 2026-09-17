@@ -4,7 +4,10 @@ import { CachedNansenClient, MemoryCache, cacheKey } from "../src/cache.js";
 const KEY = "nsn_test_key_0000000000000000000000";
 function cached(routes: () => unknown, opts: Partial<ConstructorParameters<typeof CachedNansenClient>[1]> = {}) {
   let hits = 0;
-  const fetchImpl: typeof fetch = async () => { hits++; return new Response(JSON.stringify(routes()), { status: 200 }); };
+  const fetchImpl: typeof fetch = async () => {
+    hits++;
+    return new Response(JSON.stringify(routes()), { status: 200 });
+  };
   const store = new MemoryCache();
   const c = new CachedNansenClient(KEY, { fetchImpl, rps: 1000, store, ...opts });
   return { c, store, network: () => hits };
@@ -38,7 +41,13 @@ describe("CachedNansenClient", () => {
     await c.post("tgm/holders", { a: 1 });
     const key = cacheKey("tgm/holders", { a: 1 });
     store.set(key, { ...store.get(key)!, storedAt: "2000-01-01T00:00:00.000Z" });
-    const off = new CachedNansenClient(KEY, { fetchImpl: async () => { throw new Error("network!"); }, store, offline: true });
+    const off = new CachedNansenClient(KEY, {
+      fetchImpl: async () => {
+        throw new Error("network!");
+      },
+      store,
+      offline: true,
+    });
     expect(await off.post("tgm/holders", { a: 1 })).toEqual({ v: 1 });
     await expect(off.post("tgm/holders", { a: 2 })).rejects.toThrow(/NANSEN_OFFLINE/);
     expect(network()).toBe(1);
@@ -56,7 +65,10 @@ describe("review fixes (2026-09-16)", () => {
   it("F2: ttlMs 0 (--no-cache) bypasses reads even when a fresh entry exists", async () => {
     const store = new MemoryCache();
     let hits = 0;
-    const fetchImpl: typeof fetch = async () => { hits++; return new Response('{"v":1}', { status: 200 }); };
+    const fetchImpl: typeof fetch = async () => {
+      hits++;
+      return new Response('{"v":1}', { status: 200 });
+    };
     const normal = new CachedNansenClient(KEY, { fetchImpl, rps: 1000, store });
     await normal.post("tgm/holders", { a: 1 });
     const bypass = new CachedNansenClient(KEY, { fetchImpl, rps: 1000, store, ttlMs: 0 });

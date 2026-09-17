@@ -28,13 +28,29 @@ describe("fixtures: record live, replay offline", () => {
       const hits = { n: 0 };
       const verdict = await whichOnesReal(liveClient(store, hits), "PEPE", { now: NOW });
       expect(hits.n).toBeGreaterThan(0);
-      const fx: Fixture = { edge: "test", query: "PEPE", options: {}, now: NOW, recordedAt: new Date(NOW).toISOString(), live: { calls: hits.n, credits: verdict.credits, ms: 0 }, responses: store.entries(), verdict };
+      const fx: Fixture = {
+        edge: "test",
+        query: "PEPE",
+        options: {},
+        now: NOW,
+        recordedAt: new Date(NOW).toISOString(),
+        live: { calls: hits.n, credits: verdict.credits, ms: 0 },
+        responses: store.entries(),
+        verdict,
+      };
       const path = writeFixture(fx, dir);
       expect(listFixtures(dir)).toEqual([path]);
 
       const back = readFixture(path);
       const offlineHits = { n: 0 };
-      const replayClient = new CachedNansenClient(KEY, { fetchImpl: async () => { offlineHits.n++; throw new Error("network!"); }, store: fixtureStore(back), offline: true });
+      const replayClient = new CachedNansenClient(KEY, {
+        fetchImpl: async () => {
+          offlineHits.n++;
+          throw new Error("network!");
+        },
+        store: fixtureStore(back),
+        offline: true,
+      });
       // a week later, same recorded clock → same ageDays → same hash
       const replay = await whichOnesReal(replayClient, back.query, { ...back.options, now: back.now });
       expect(offlineHits.n).toBe(0);
@@ -43,7 +59,9 @@ describe("fixtures: record live, replay offline", () => {
       expect(replay.provenance.every((c) => c.cached)).toBe(true);
       expect(replay.ranked.map((s) => [s.address, s.score, s.impostor])).toEqual(verdict.ranked.map((s) => [s.address, s.score, s.impostor]));
       expect(replay.winner?.reasons).toEqual(verdict.winner?.reasons);
-    } finally { rmSync(dir, { recursive: true, force: true }); }
+    } finally {
+      rmSync(dir, { recursive: true, force: true });
+    }
   });
   it("replaying under a different clock changes age-dependent output — which is why the fixture records `now`", async () => {
     const store = new MemoryCache();

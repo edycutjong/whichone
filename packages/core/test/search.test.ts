@@ -5,9 +5,14 @@ import { fakeClient, searchTokens } from "./helpers.js";
 describe("searchCandidates()", () => {
   it("sends result_type=token, dedupes chain+address (case-insensitive), sorts by rank", async () => {
     let sent: Record<string, unknown> = {};
-    const c = fakeClient((ep, body) => { sent = body; return searchTokens([
-      { chain: "base", address: "0xABC", rank: 5 }, { chain: "ethereum", address: "0x1", rank: 2 }, { chain: "base", address: "0xabc", rank: 9 },
-    ]); });
+    const c = fakeClient((ep, body) => {
+      sent = body;
+      return searchTokens([
+        { chain: "base", address: "0xABC", rank: 5 },
+        { chain: "ethereum", address: "0x1", rank: 2 },
+        { chain: "base", address: "0xabc", rank: 9 },
+      ]);
+    });
     const out = await searchCandidates(c, " PEPE ");
     expect(sent).toMatchObject({ search_query: "PEPE", result_type: "token", limit: 50 });
     expect(out.map((x) => x.chain)).toEqual(["ethereum", "base"]);
@@ -15,7 +20,13 @@ describe("searchCandidates()", () => {
   });
   it("passes an optional chain filter and cap", async () => {
     let sent: Record<string, unknown> = {};
-    const c = fakeClient((_e, body) => { sent = body; return searchTokens([{ chain: "base", address: "0x1" }, { chain: "base", address: "0x2" }]); });
+    const c = fakeClient((_e, body) => {
+      sent = body;
+      return searchTokens([
+        { chain: "base", address: "0x1" },
+        { chain: "base", address: "0x2" },
+      ]);
+    });
     const out = await searchCandidates(c, "PEPE", { chain: "base", cap: 1 });
     expect(sent.chain).toBe("base");
     expect(out).toHaveLength(1);
