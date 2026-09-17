@@ -16,7 +16,7 @@ for (const f of MUST) ok(existsSync(f), `exists: ${f}`);
 
 const readme = read("README.md");
 for (const bad of ["TODO", "TBD", "lorem", "xxx", "PLACEHOLDER", "<your", "coming soon"]) ok(!new RegExp(bad, "i").test(readme), `README has no "${bad}"`);
-for (const section of ["Run it in under 10 minutes", "Nansen integration", "Honesty", "Why only Nansen"]) ok(readme.includes(section), `README section: ${section}`);
+for (const section of ["Run it in under 10 minutes", "Nansen Integration", "Honesty", "Why only Nansen", "Honest limits"]) ok(readme.includes(section), `README section: ${section}`);
 
 // test count claimed in README = tests on disk
 const claimed = Number((readme.match(/tests-(\d+)%20passing/) ?? [])[1] ?? 0);
