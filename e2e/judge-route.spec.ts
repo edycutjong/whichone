@@ -32,7 +32,7 @@ test.describe("/judge", () => {
     expect(hrefs.length).toBeGreaterThan(5);
     for (const h of hrefs)
       expect(h).toMatch(
-        /^https:\/\/(whichone-edycutjong\.vercel\.app|github\.com\/edycutjong\/whichone|x\.com\/edycutjong|nansen\.ai\/campaigns|app\.nansen\.ai)/,
+        /^https:\/\/(whichone\.edycu\.dev|github\.com\/edycutjong\/whichone|x\.com\/edycutjong|nansen\.ai\/campaigns|app\.nansen\.ai)/,
       );
   });
 });
