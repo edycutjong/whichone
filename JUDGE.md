@@ -1,6 +1,6 @@
 # For judges — Which One's Real
 
-> Live copy of this page: **https://whichone-edycutjong.vercel.app/judge** — no login, no key, no setup.
+> Live copy of this page: **https://whichone.edycu.dev/judge** — no login, no key, no setup.
 
 **Type a ticker. Fourteen tokens share the name — Nansen labels decide which one is real.**
 
@@ -8,10 +8,10 @@ One input → one green card. The score is deterministic arithmetic over Nansen 
 
 ## The 30-second path
 
-1. Open **https://whichone-edycutjong.vercel.app/?q=PEPE**. Eight cards appear pending, reorder as each `tgm/flow-intelligence` call lands; **ethereum 0x6982…1933** turns green, **robinhood 0x9b09…4eb9** gets a red IMPOSTOR badge. Cold ≈ 4 s, cached ≈ 0 s.
+1. Open **https://whichone.edycu.dev/?q=PEPE**. Eight cards appear pending, reorder as each `tgm/flow-intelligence` call lands; **ethereum 0x6982…1933** turns green, **robinhood 0x9b09…4eb9** gets a red IMPOSTOR badge. Cold ≈ 4 s, cached ≈ 0 s.
 2. Click **Every Nansen call (16)** — the provenance drawer: endpoint, credits, latency, cached or live, the response fields that entered the score, and the verdict hash.
-3. Open **https://whichone-edycutjong.vercel.app/q/SHIB2**. The tool abstains: a 3-year-old token with a Uniswap pool and a deployer tag does not get crowned on those alone.
-4. Open **https://whichone-edycutjong.vercel.app/api/verdict?q=PEPE** — the same verdict as JSON, same hash as the CLI prints.
+3. Open **https://whichone.edycu.dev/q/SHIB2**. The tool abstains: a 3-year-old token with a Uniswap pool and a deployer tag does not get crowned on those alone.
+4. Open **https://whichone.edycu.dev/api/verdict?q=PEPE** — the same verdict as JSON, same hash as the CLI prints.
 
 ## Receipts
 
@@ -49,6 +49,6 @@ npm run verify                       # 12/12 recorded verdicts reproduced offlin
 
 ## Links
 
-- Live: https://whichone-edycutjong.vercel.app
+- Live: https://whichone.edycu.dev
 - Repo: https://github.com/edycutjong/whichone — [README](README.md), [DEMO.md](DEMO.md), [docs/SCORING.md](docs/SCORING.md), [docs/BENCH.md](docs/BENCH.md), [docs/DX-REPORT.md](docs/DX-REPORT.md)
 - Built by [@edycutjong](https://x.com/edycutjong) for the [Nansen Meridian Buildathon](https://nansen.ai/campaigns/meridian-buildathon)

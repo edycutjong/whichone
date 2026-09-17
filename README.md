@@ -9,8 +9,8 @@
 
 <br/>
 
-[![Live Demo](https://img.shields.io/badge/🚀_Live-Demo-06b6d4?style=for-the-badge)](https://whichone-edycutjong.vercel.app)
-[![For Judges](https://img.shields.io/badge/⚖️_For-Judges-22c55e?style=for-the-badge)](https://whichone-edycutjong.vercel.app/judge)
+[![Live Demo](https://img.shields.io/badge/🚀_Live-Demo-06b6d4?style=for-the-badge)](https://whichone.edycu.dev)
+[![For Judges](https://img.shields.io/badge/⚖️_For-Judges-22c55e?style=for-the-badge)](https://whichone.edycu.dev/judge)
 [![Built for Nansen Meridian](https://img.shields.io/badge/Nansen-Meridian_Buildathon-8b5cf6?style=for-the-badge)](https://nansen.ai/campaigns/meridian-buildathon)
 
 <br/>
@@ -213,7 +213,7 @@ npm run check          # submission readiness: README claims vs tree, kitchen/se
 | Secret Scanning | gitleaks (full history) + TruffleHog (verified only) + `npm run check` history grep | ✅ |
 | Performance | Lighthouse CI + bundle budget (2 MB) | ✅ |
 | Releases | `release.yml` — semantic tags from conventional commits | ✅ |
-| Judge surface | [/judge](https://whichone-edycutjong.vercel.app/judge) · [JUDGE.md](JUDGE.md) — no auth, static | ✅ |
+| Judge surface | [/judge](https://whichone.edycu.dev/judge) · [JUDGE.md](JUDGE.md) — no auth, static | ✅ |
 
 ## 📁 Project Structure
 
@@ -230,8 +230,8 @@ JUDGE.md         the /judge page: claim · 30-second path · receipts · reprodu
 
 ## 📽️ Demo Materials
 
-- Live: [whichone-edycutjong.vercel.app](https://whichone-edycutjong.vercel.app)
-- For judges: [whichone-edycutjong.vercel.app/judge](https://whichone-edycutjong.vercel.app/judge) (mirrored in [JUDGE.md](JUDGE.md))
+- Live: [whichone.edycu.dev](https://whichone.edycu.dev)
+- For judges: [whichone.edycu.dev/judge](https://whichone.edycu.dev/judge) (mirrored in [JUDGE.md](JUDGE.md))
 - Reproduce the recording step by step: [DEMO.md](DEMO.md)
 
 ## 📄 License

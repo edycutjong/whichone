@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: "The claim, the 30-second path, the receipts, the real reproduce command, and the honest limitations.",
 };
 
-const SITE = "https://whichone-edycutjong.vercel.app";
+const SITE = "https://whichone.edycu.dev";
 const REPO = "https://github.com/edycutjong/whichone";
 
 const TEST_COUNT = 116;
