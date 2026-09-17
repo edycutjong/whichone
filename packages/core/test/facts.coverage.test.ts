@@ -82,9 +82,7 @@ describe("fetchFacts() — token-information branches", () => {
 
   it("null token_details and null spot_metrics fall back through every optional chain: marketCapUsd uses the search-time marketCap, the rest stay undefined", async () => {
     const c = fakeClient((ep) =>
-      ep === "tgm/token-information"
-        ? { data: { name: "Tok", symbol: "TOK", logo: null, token_details: null, spot_metrics: null } }
-        : flowRow(),
+      ep === "tgm/token-information" ? { data: { name: "Tok", symbol: "TOK", logo: null, token_details: null, spot_metrics: null } } : flowRow(),
     );
     const f = await fetchFacts(c, candidate({ marketCap: 4321 }), NOW);
     expect(f.deploymentDate).toBeUndefined();
