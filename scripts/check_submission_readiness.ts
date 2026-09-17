@@ -33,6 +33,28 @@ const MUST = [
   "apps/web/app/page.tsx",
   "apps/web/app/api/verdict/route.ts",
   "apps/web/app/api/og/route.tsx",
+  // the judge surface and the engineering harness (/enhance-project, 2026-09-17)
+  "JUDGE.md",
+  "apps/web/app/judge/page.tsx",
+  "playwright.config.ts",
+  "e2e/judge-route.spec.ts",
+  "e2e/demo-mode.spec.ts",
+  "e2e/verdict-flow.spec.ts",
+  "e2e/responsive.spec.ts",
+  "lighthouserc.json",
+  "packages/core/test/property.test.ts",
+  "packages/core/test/boundary.test.ts",
+  ".github/workflows/codeql.yml",
+  ".github/workflows/gitleaks.yml",
+  ".github/workflows/release.yml",
+  ".github/dependabot.yml",
+  ".github/SECURITY.md",
+  ".github/CONTRIBUTING.md",
+  ".github/CODE_OF_CONDUCT.md",
+  ".github/PULL_REQUEST_TEMPLATE.md",
+  ".github/ISSUE_TEMPLATE/bug_report.md",
+  ".github/ISSUE_TEMPLATE/feature_request.md",
+  ".env.example",
 ];
 for (const f of MUST) ok(existsSync(f), `exists: ${f}`);
 
