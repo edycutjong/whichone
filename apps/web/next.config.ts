@@ -1,6 +1,11 @@
 import type { NextConfig } from "next";
 
 const config: NextConfig = {
+  // Next 15 streams <meta> into <body> for non-bot user agents; Lighthouse/PSI only read <head>. The pages are tiny, so
+  // give every UA blocking metadata — description/OG land in <head> for everyone, not just the bot allowlist.
+  htmlLimitedBots: /./,
+  // ~5 KB of CSS: inline it so first paint does not wait on a render-blocking stylesheet request (Lighthouse mobile)
+  experimental: { inlineCss: true },
   // the engine is imported straight from packages/core/src (TypeScript) — one verdict function for CLI and web
   transpilePackages: ["@whichone/core"],
   // `npm run lint` (flat config at the repo root, Stage 1 of CI) owns linting; next build only type-checks
