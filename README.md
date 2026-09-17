@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="docs/assets/icon-animated.svg" width="96" alt="">
+<img src="docs/assets/icon-animated.svg" width="144" alt="Which One's Real mark — three stacked token cards, the middle one turns green as Nansen labels land">
 
 <h1>Which One's Real 🟢</h1>
 <p><em>Type a ticker. Fourteen tokens share the name — Nansen labels decide which one is real.</em></p>
