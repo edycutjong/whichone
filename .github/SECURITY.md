@@ -21,6 +21,12 @@ This is asserted, not described, in `packages/core/test/boundary.test.ts` and re
 - the page HTML, the JSON API, the NDJSON stream and the OG image route are fetched from the built app in CI with no key
   and asserted to contain no `nsn_` string.
 
+**The key cannot be drained through the public route** (`apps/web/lib/guard.ts`, `packages/core/test/guard.test.ts`):
+6 verdicts per minute per address (**429** + `Retry-After`), 3,000 live credits per UTC day counted from each verdict's
+own provenance, and past that ceiling a query with a recorded fixture replays offline at 0 credits — labelled in
+`warnings` and `degraded: true` — while one without gets a **503** that says why. Counters are per instance: a
+ceiling, not accounting. Both limits are tunable with `GUARD_IP_PER_MIN` / `GUARD_DAILY_CREDITS`.
+
 Secrets live in the environment only (`.env` is git-ignored; `.env.example` holds the names). `gitleaks` scans the
 full history on every push; TruffleHog runs in Stage 2 of CI; `npm run check` greps the entire git history for
 `nsn_` keys and fails on any hit.

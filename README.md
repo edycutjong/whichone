@@ -18,7 +18,7 @@
 ![Next.js](https://img.shields.io/badge/Next.js_15-black?style=flat&logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
 ![Nansen API](https://img.shields.io/badge/Nansen_API-4_endpoints-8b5cf6?style=flat)
-![tests](https://img.shields.io/badge/tests-116%20passing-22c55e?style=flat)
+![tests](https://img.shields.io/badge/tests-126%20passing-22c55e?style=flat)
 ![property cases](https://img.shields.io/badge/property_cases-50%2C000-22c55e?style=flat)
 ![fixtures](https://img.shields.io/badge/fixtures-12%2F12%20replay%20offline-22c55e?style=flat)
 [![License](https://img.shields.io/badge/License-MIT-yellow?style=flat)](LICENSE)
@@ -124,9 +124,10 @@ An RPC or explorer shows *transfers*; the decision needs *who*. Take Nansen out 
 
 | Metric | Value | Source |
 |---|---|---|
-| Tests | **116 tests** (`npm test`) — regression tests named for the defect they pin | `packages/core/test/` |
+| Tests | **126 tests** (`npm test`) — regression tests named for the defect they pin | `packages/core/test/` |
 | Property-based verification | **50,000 generated cases** (fast-check, 5 properties × 10,000) on the decision function: the crown rule, `rank()` as a total order, `score()` blind to every buyable field | `packages/core/test/property.test.ts` |
 | Permission boundary | the server key never reaches a client; **10,000 generated malformed queries** rejected with zero network calls | `packages/core/test/boundary.test.ts`, [SECURITY.md](.github/SECURITY.md) |
+| Spend guard | public route capped at 6 verdicts/min per address and 3,000 live credits/day; past the ceiling a recorded fixture replays at 0 credits, labelled, or the request gets an honest 503 | `apps/web/lib/guard.ts`, `packages/core/test/guard.test.ts` |
 | E2E | 4 Playwright suites, desktop + Pixel 7, built app run **without** a key | `e2e/` |
 | Fixtures | 12/12 verdicts reproduced offline, zero network, zero credits | `npm run verify`, `fixtures/*.json` |
 | Cold latency | p50 **3.6 s** · p95 **7.2 s** (12 queries × 2 runs, live) | [docs/BENCH.md](docs/BENCH.md) |
@@ -136,7 +137,7 @@ An RPC or explorer shows *transfers*; the decision needs *who*. Take Nansen out 
 
 ### Honesty
 
-- **Fixtures are replays, the default path is live.** `fixtures/*.json` hold 12 real verdicts recorded on 2026-09-16 with every raw Nansen response byte-for-byte. `npm run verify` replays them with `NANSEN_OFFLINE=1` and requires the same decision hash, the same ranking and zero network calls. The CLI and the web app never read them.
+- **Fixtures are replays, the default path is live.** `fixtures/*.json` hold 12 real verdicts recorded on 2026-09-16 with every raw Nansen response byte-for-byte. `npm run verify` replays them with `NANSEN_OFFLINE=1` and requires the same decision hash, the same ranking and zero network calls. The CLI never reads them; the web app reads one only after the day's live credit ceiling is spent, and says so in the verdict (`degraded: true`, a warning line on the card).
 - **Numbers come from scripts.** [docs/BENCH.md](docs/BENCH.md) is the output of `npm run bench`. `USDC` (24 canonical issues) is the slow outlier at 15 s cold; Nansen times out on a few of its solana lookups, which the drawer shows.
 - **What the tests cover:** the ranking function table-driven, the abstain/impostor/unchecked paths, hash stability, cache bypass, client retry and timeout accounting, fixture round-trip, the structural-tag rule, the holders tiebreak flip, the address-pasted hint — plus three high-signal categories: **defect-named regression tests** (the test list reads as the changelog of real bugs found in live QA and code review), **property-based verification** of the crown rule / ranking / scorer over 50,000 generated cases, and a **permission-boundary suite** proving the key stays server-side and validation runs before any fetch.
 
@@ -187,7 +188,7 @@ Measured on a clean clone from GitHub (macOS, Node 22, warm npm cache, 2026-09-1
 npm run lint           # ESLint (flat config: TypeScript, React hooks, Next)
 npm run format:check   # Prettier
 npm run typecheck      # tsc, strict
-npm test               # 116 vitest tests (unit + property + boundary)
+npm test               # 126 vitest tests (unit + property + boundary)
 npm run test:coverage  # + v8 coverage report
 npm run verify         # 12 fixtures, offline, exit 1 on any hash/ranking drift
 npm run ci             # audit · format · lint · typecheck · coverage · verify · check
@@ -205,7 +206,7 @@ npm run check          # submission readiness: README claims vs tree, kitchen/se
 | Layer | Tool | Status |
 |---|---|---|
 | Code Quality | ESLint + Prettier + TypeScript strict | ✅ |
-| Unit Testing | vitest, 116 tests, v8 coverage | ✅ |
+| Unit Testing | vitest, 126 tests, v8 coverage | ✅ |
 | High-signal tests | defect-named regressions · 50,000 property cases (fast-check) · permission boundary | ✅ |
 | E2E Testing | Playwright, 4 suites × 2 devices, no key | ✅ |
 | Security (SAST) | CodeQL (javascript-typescript) | ✅ |
