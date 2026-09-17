@@ -102,8 +102,8 @@ export async function GET(req: NextRequest) {
           <div style={{ width: 30, height: 7, borderRadius: 2, background: "#22C55E" }} />
           <div style={{ width: 30, height: 7, borderRadius: 2, background: "#334155" }} />
         </div>
-        <span style={{ color: "#E6EDF3", fontWeight: 700, marginRight: 10 }}>whichone</span>
-        <span>ranked by Nansen labels, not market cap{hash ? ` · verdict ${hash}` : ""}</span>
+        <span style={{ color: "#E6EDF3", fontWeight: 700, marginRight: 10, whiteSpace: "nowrap" }}>whichone</span>
+        <span style={{ whiteSpace: "nowrap" }}>ranked by Nansen labels, not market cap{hash ? ` · verdict ${hash}` : ""}</span>
         <div style={{ display: "flex", alignItems: "center", gap: 14, marginLeft: "auto" }}>
           <div style={{ fontSize: 22, color: "#8B9BAB" }}>whichone.edycu.dev</div>
           <div
