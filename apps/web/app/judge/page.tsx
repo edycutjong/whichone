@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const SITE = "https://whichone-edycutjong.vercel.app";
 const REPO = "https://github.com/edycutjong/whichone";
 
-const TEST_COUNT = 78;
+const TEST_COUNT = 116;
 const PROPERTY_CASES = "50,000";
 const BOUNDARY_CASES = "10,000";
 const E2E_SUITES = 4;

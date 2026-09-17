@@ -130,6 +130,8 @@ function mapValues<T extends Record<string, number>>(o: T, fn: (v: number) => nu
   return Object.fromEntries(Object.entries(o).map(([k, v]) => [k, fn(v)])) as T;
 }
 function fmtUsd(n: number) {
+  // The sub-$1K branch is unreachable: fmtUsd's only call site (line 76) guards with `exchMag >= 1000` first.
+  /* v8 ignore next */
   return n >= 1e6 ? `$${(n / 1e6).toFixed(1)}M` : n >= 1e3 ? `$${Math.round(n / 1e3)}K` : `$${Math.round(n)}`;
 }
 function fmtInt(n: number) {

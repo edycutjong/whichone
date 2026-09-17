@@ -18,7 +18,7 @@
 ![Next.js](https://img.shields.io/badge/Next.js_15-black?style=flat&logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
 ![Nansen API](https://img.shields.io/badge/Nansen_API-4_endpoints-8b5cf6?style=flat)
-![tests](https://img.shields.io/badge/tests-78%20passing-22c55e?style=flat)
+![tests](https://img.shields.io/badge/tests-116%20passing-22c55e?style=flat)
 ![property cases](https://img.shields.io/badge/property_cases-50%2C000-22c55e?style=flat)
 ![fixtures](https://img.shields.io/badge/fixtures-12%2F12%20replay%20offline-22c55e?style=flat)
 [![License](https://img.shields.io/badge/License-MIT-yellow?style=flat)](LICENSE)
@@ -124,7 +124,7 @@ An RPC or explorer shows *transfers*; the decision needs *who*. Take Nansen out 
 
 | Metric | Value | Source |
 |---|---|---|
-| Tests | **78 tests** (`npm test`) — regression tests named for the defect they pin | `packages/core/test/` |
+| Tests | **116 tests** (`npm test`) — regression tests named for the defect they pin | `packages/core/test/` |
 | Property-based verification | **50,000 generated cases** (fast-check, 5 properties × 10,000) on the decision function: the crown rule, `rank()` as a total order, `score()` blind to every buyable field | `packages/core/test/property.test.ts` |
 | Permission boundary | the server key never reaches a client; **10,000 generated malformed queries** rejected with zero network calls | `packages/core/test/boundary.test.ts`, [SECURITY.md](.github/SECURITY.md) |
 | E2E | 4 Playwright suites, desktop + Pixel 7, built app run **without** a key | `e2e/` |
@@ -187,7 +187,7 @@ Measured on a clean clone from GitHub (macOS, Node 22, warm npm cache, 2026-09-1
 npm run lint           # ESLint (flat config: TypeScript, React hooks, Next)
 npm run format:check   # Prettier
 npm run typecheck      # tsc, strict
-npm test               # 78 vitest tests (unit + property + boundary)
+npm test               # 116 vitest tests (unit + property + boundary)
 npm run test:coverage  # + v8 coverage report
 npm run verify         # 12 fixtures, offline, exit 1 on any hash/ranking drift
 npm run ci             # audit · format · lint · typecheck · coverage · verify · check
@@ -205,7 +205,7 @@ npm run check          # submission readiness: README claims vs tree, kitchen/se
 | Layer | Tool | Status |
 |---|---|---|
 | Code Quality | ESLint + Prettier + TypeScript strict | ✅ |
-| Unit Testing | vitest, 78 tests, v8 coverage | ✅ |
+| Unit Testing | vitest, 116 tests, v8 coverage | ✅ |
 | High-signal tests | defect-named regressions · 50,000 property cases (fast-check) · permission boundary | ✅ |
 | E2E Testing | Playwright, 4 suites × 2 devices, no key | ✅ |
 | Security (SAST) | CodeQL (javascript-typescript) | ✅ |
