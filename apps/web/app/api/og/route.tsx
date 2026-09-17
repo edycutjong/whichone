@@ -94,9 +94,34 @@ export async function GET(req: NextRequest) {
           </div>
         ))}
       </div>
-      <div style={{ marginTop: "auto", display: "flex", justifyContent: "space-between", fontSize: 20, color: "#8B9BAB" }}>
-        <span>whichone · ranked by Nansen labels, not market cap</span>
-        <span style={{ fontFamily: "monospace" }}>{hash ? `verdict ${hash}` : ""}</span>
+      {/* footer: brand + provenance left, a button-shaped call to action + the bare domain right (the two things that still
+          read at feed-thumbnail size) — everything stays inside a 48 px inset so a 2:1 centre crop keeps it */}
+      <div style={{ marginTop: "auto", display: "flex", alignItems: "center", fontSize: 20, color: "#8B9BAB" }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: 5, marginRight: 14 }}>
+          <div style={{ width: 30, height: 7, borderRadius: 2, background: "#334155" }} />
+          <div style={{ width: 30, height: 7, borderRadius: 2, background: "#22C55E" }} />
+          <div style={{ width: 30, height: 7, borderRadius: 2, background: "#334155" }} />
+        </div>
+        <span style={{ color: "#E6EDF3", fontWeight: 700, marginRight: 10 }}>whichone</span>
+        <span>ranked by Nansen labels, not market cap{hash ? ` · verdict ${hash}` : ""}</span>
+        <div style={{ display: "flex", alignItems: "center", gap: 14, marginLeft: "auto" }}>
+          <div style={{ fontSize: 22, color: "#8B9BAB" }}>whichone.edycu.dev</div>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              padding: "12px 22px",
+              borderRadius: 999,
+              background: "#22C55E",
+              color: "#04150A",
+              fontSize: 24,
+              fontWeight: 700,
+              boxShadow: "0 8px 24px rgba(0,0,0,0.45)",
+            }}
+          >
+            Type a ticker →
+          </div>
+        </div>
       </div>
     </div>,
     // crawlers fetch a shared link 3–5× from different cold instances; let Vercel's edge serve repeats for the cache window

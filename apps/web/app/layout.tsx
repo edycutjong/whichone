@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.SITE_URL ?? "https://whichone.edycu.dev"),
-  title: "Which One's Real — fourteen tokens share the name, Nansen labels decide which",
+  title: "Which One's Real — the real token among same-name ones",
   description: "Type a ticker. Every same-name token across chains, ranked by who actually holds and trades it. One turns green.",
   openGraph: {
     type: "website",
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     description: "Type a ticker. One card turns green.",
     images: [
       {
-        url: "/api/og?q=PEPE",
+        url: "/api/og?q=PEPE&v=2",
         width: 1200,
         height: 630,
         alt: "Which One's Real share card: 1 of 15 PEPE is real — the green winner and two greyed same-name tokens, ranked by Nansen labels",

@@ -4,13 +4,13 @@ import pkg from "../package.json";
 export const VERSION = `v${pkg.version}`;
 export const REPO = "https://github.com/edycutjong/whichone";
 
-/** The mark: one green card among grey ones — the product in 24px. */
+/** The mark — the favicon's glyph at 24px: three stacked cards, the middle one green (one of many is real). */
 export function Mark({ size = 24 }: { size?: number }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" aria-hidden>
-      <rect x="2" y="3" width="20" height="5" rx="1.5" fill="var(--real)" />
-      <rect x="2" y="10" width="20" height="4" rx="1.5" fill="var(--border-2)" />
-      <rect x="2" y="16" width="20" height="4" rx="1.5" fill="var(--border-2)" />
+    <svg width={size} height={size} viewBox="0 0 64 64" fill="none" aria-hidden>
+      <rect x="4" y="8" width="56" height="14" rx="4" fill="var(--border-2)" />
+      <rect x="4" y="25" width="56" height="14" rx="4" fill="var(--real)" />
+      <rect x="4" y="42" width="56" height="14" rx="4" fill="var(--border-2)" />
     </svg>
   );
 }
