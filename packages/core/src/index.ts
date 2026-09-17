@@ -6,7 +6,7 @@ export { fetchFacts, fetchHolderFacts, STABLECOINS, STRUCTURAL_TAG } from "./fac
 export type { CandidateFacts } from "./facts.js";
 export { score, unscorable, rank, WEIGHTS, ABSTAIN_THRESHOLD, MIN_RECOGNISED_TO_CROWN } from "./score.js";
 export type { Scored } from "./score.js";
-export { whichOnesReal } from "./verdict.js";
+export { whichOnesReal, crown, looksLikeAddress } from "./verdict.js";
 export type { Verdict, VerdictOptions, VerdictEvent } from "./verdict.js";
 export { CachedNansenClient, cachedClientFromEnv, DiskCache, MemoryCache, cacheKey, DEFAULT_TTL_MS } from "./cache.js";
 export type { CacheStore, CacheEntry, CachedClientOptions } from "./cache.js";
