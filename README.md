@@ -34,7 +34,7 @@
 
 ## 📸 See it in Action
 
-<img src="docs/screenshots/03-verdict-pepe.png" alt="Which One's Real — PEPE, live: 1 of 14 looks real; the ethereum card is green with its full address and a Copy button, the solana and bnb cards below are greyed" width="100%">
+<img src="docs/demo.gif" alt="Which One's Real — 13 s demo: type PEPE, 14 same-name cards appear, Nansen facts land, one turns green with its address, impostors go red, copy the address" width="100%">
 
 | Ticker in | Cards appear pending, reorder as Nansen facts land | One turns green, impostors go red |
 |---|---|---|
