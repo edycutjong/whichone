@@ -43,9 +43,10 @@ body {
   min-height: 100vh;
 }
 a { color: var(--accent); text-decoration: none; }
-a:hover, a:focus-visible { text-decoration: underline; outline: none; }
+a:hover, a:focus-visible { text-decoration: underline; }
 button { font: inherit; cursor: pointer; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+/* the one ring, on everything. Hover rules below may recolour but never set outline: none — the only exceptions swap it for a same-width box-shadow ring */
 code { font-family: var(--mono); font-size: 0.92em; background: rgba(255, 255, 255, 0.05); padding: 1px 5px; border-radius: 5px; }
 .kicker { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); background: rgba(56, 189, 248, 0.12); padding: 3px 8px; border-radius: 999px; vertical-align: middle; margin-right: 6px; }
 
@@ -66,6 +67,7 @@ code { font-family: var(--mono); font-size: 0.92em; background: rgba(255, 255, 2
 .site-nav { display: flex; gap: 4px; }
 .site-nav a { color: var(--text-2); padding: 8px 12px; border-radius: 999px; font-weight: 500; font-size: 14px; white-space: nowrap; transition: background 120ms, color 120ms; }
 .site-nav a:hover, .site-nav a:focus-visible { background: rgba(255, 255, 255, 0.06); color: var(--text); text-decoration: none; }
+.site-nav a:focus-visible { outline-offset: 0; }
 .site-nav a[aria-current="page"] { background: rgba(56, 189, 248, 0.12); color: var(--accent); }
 .site-footer { max-width: var(--wrap); margin: 56px auto 0; padding: 24px 20px 48px; border-top: 1px solid var(--border); color: var(--muted); font-size: 14px; }
 .foot-row { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; align-items: center; }
@@ -78,13 +80,13 @@ code { font-family: var(--mono); font-size: 0.92em; background: rgba(255, 255, 2
 .wrap { max-width: var(--wrap); margin: 0 auto; padding: 40px 20px 0; }
 .hero { text-align: center; margin: 12px 0 22px; }
 .hero h1 { font-size: clamp(34px, 6vw, 56px); margin: 0 0 10px; font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; }
-.hero h1 .real { color: var(--real); }
+.hero h1 .real, .judge h1 .real { color: var(--real); }
 .hero p { color: var(--text-2); margin: 0 auto; font-size: 17px; max-width: 560px; }
 
 /* the input is the hero object */
 .panel { max-width: 720px; margin: 0 auto; background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-lg); padding: 14px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.03); }
 .search { display: flex; gap: 10px; }
-.search input { flex: 1; min-width: 0; font: 500 20px var(--sans); padding: 14px 16px; border-radius: var(--r-md); border: 1px solid var(--border-2); background: var(--bg-2); color: var(--text); outline: none; transition: border-color 120ms, box-shadow 120ms; }
+.search input { flex: 1; min-width: 0; font: 500 20px var(--sans); padding: 14px 16px; border-radius: var(--r-md); border: 1px solid var(--border-2); background: var(--bg-2); color: var(--text); outline: none; transition: border-color 120ms, box-shadow 120ms; } /* outline off: the :focus box-shadow ring below is the visible focus state */
 .search input::placeholder { color: var(--muted); }
 .search input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.22); }
 .search button { padding: 14px 24px; border-radius: var(--r-md); border: 0; background: var(--real); color: var(--real-ink); font-weight: 800; font-size: 16px; transition: transform 120ms, filter 120ms; }
@@ -93,7 +95,7 @@ code { font-family: var(--mono); font-size: 0.92em; background: rgba(255, 255, 2
 .search button:disabled { opacity: 0.6; cursor: wait; }
 .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
 .chip { border: 1px solid var(--border-2); background: transparent; color: var(--text-2); border-radius: 999px; padding: 6px 12px; min-height: 36px; font-size: 13px; font-weight: 500; transition: border-color 120ms, color 120ms, background 120ms; }
-.chip:hover, .chip:focus-visible { border-color: var(--accent); color: var(--text); outline: none; }
+.chip:hover, .chip:focus-visible { border-color: var(--accent); color: var(--text); }
 .chip.on { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); font-weight: 700; }
 .chip.on:hover { filter: brightness(1.12); color: var(--accent-ink); }
 
@@ -138,8 +140,9 @@ code { font-family: var(--mono); font-size: 0.92em; background: rgba(255, 255, 2
 .bar > i { display: block; height: 100%; background: var(--muted); transition: width 400ms var(--ease); }
 .card.winner .bar > i { background: var(--real); }
 .actions { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
+.judge p.actions { margin-top: 24px; }
 .btn { padding: 10px 14px; border-radius: 10px; border: 1px solid var(--border-2); background: transparent; color: var(--text); font-weight: 600; transition: background 120ms, border-color 120ms, transform 120ms; }
-.btn:hover, .btn:focus-visible { border-color: var(--accent); background: rgba(56, 189, 248, 0.08); outline: none; }
+.btn:hover, .btn:focus-visible { border-color: var(--accent); background: rgba(56, 189, 248, 0.08); }
 .btn:active { transform: scale(0.97); }
 .btn.primary { background: var(--real); border-color: var(--real); color: var(--real-ink); }
 .btn.primary:hover { filter: brightness(1.08); }
@@ -206,8 +209,8 @@ code { font-family: var(--mono); font-size: 0.92em; background: rgba(255, 255, 2
 .rail { position: fixed; z-index: 5; display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--border); color: var(--text); font-size: 13px; }
 .rail-body { display: flex; flex-direction: column; min-height: 0; flex: 1; }
 .rail-bar { display: none; align-items: center; gap: 10px; width: 100%; min-height: 44px; padding: 0 16px; border: 0; background: transparent; color: var(--text); font-weight: 600; font-size: 14px; text-align: left; transition: background 120ms; }
-.rail-bar:hover, .rail-bar:focus-visible { background: rgba(255, 255, 255, 0.04); outline: none; }
-.rail-bar:focus-visible { box-shadow: inset 0 0 0 2px var(--accent); }
+.rail-bar:hover, .rail-bar:focus-visible { background: rgba(255, 255, 255, 0.04); }
+.rail-bar:focus-visible { outline: none; box-shadow: inset 0 0 0 2px var(--accent); } /* inset ring: the bar is edge-to-edge, an outline would clip */
 .rail-bar b { font-family: var(--mono); font-weight: 700; font-variant-numeric: tabular-nums; }
 .rail-bar-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--real); flex: none; }
 .rail-chevron { margin-left: auto; color: var(--muted); }
@@ -215,8 +218,8 @@ code { font-family: var(--mono); font-size: 0.92em; background: rgba(255, 255, 2
 .rail-title-row { display: flex; align-items: center; gap: 8px; }
 .rail-title { font-weight: 700; font-size: 14px; letter-spacing: -0.01em; }
 .rail-clear { margin-left: auto; border: 0; background: transparent; color: var(--muted); font-size: 12px; padding: 4px 8px; border-radius: 6px; transition: color 120ms, background 120ms; }
-.rail-clear:hover, .rail-clear:focus-visible { color: var(--text); background: rgba(255, 255, 255, 0.06); outline: none; }
-.rail-clear:focus-visible { box-shadow: 0 0 0 2px var(--accent); }
+.rail-clear:hover, .rail-clear:focus-visible { color: var(--text); background: rgba(255, 255, 255, 0.06); }
+.rail-clear:focus-visible { outline: none; box-shadow: 0 0 0 2px var(--accent); } /* box-shadow ring, same colour and width as the outline */
 .rail-counters { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 12px 0 0; }
 .rail-counters div { min-width: 0; text-align: right; }
 .rail-counters dt { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
