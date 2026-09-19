@@ -18,7 +18,7 @@ export function Mark({ size = 24 }: { size?: number }) {
 export function SiteHeader({ current }: { current: "home" | "judge" }) {
   return (
     <header className="site-header">
-      <Link href="/" className="brand" aria-label="Which One's Real — home">
+      <Link href="/" className="brand">
         <Mark />
         <span className="brand-name">whichone</span>
         <span className="brand-tag">which token is real · on Nansen</span>
