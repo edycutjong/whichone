@@ -75,7 +75,9 @@ describe("fixture replay", () => {
     expect(r!.verdict.credits).toBe(0);
     expect(r!.verdict.warnings).toContain(BUDGET_MESSAGE);
     expect(r!.verdict.warnings.filter((w) => w === BUDGET_MESSAGE)).toHaveLength(1);
-    expect(r!.verdict.provenance.every((c) => c.cached)).toBe(true);
+    // every call is a cache hit, except the one the live run lost to a timeout — it replays as the same failure, no network
+    expect(r!.verdict.provenance.every((c) => c.cached || !c.ok)).toBe(true);
+    expect(r!.verdict.provenance.filter((c) => !c.ok)).toHaveLength(1);
     expect(r!.oldestHit).toBeTruthy();
     const last = events.at(-1) as { type: string; verdict?: { warnings: string[] } };
     expect(last.type).toBe("verdict");

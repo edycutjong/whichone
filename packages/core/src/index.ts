@@ -1,5 +1,5 @@
 export { NansenClient, NansenError, clientFromEnv, sha256, CREDITS } from "./client.js";
-export type { Call, ClientOptions, CallOptions } from "./client.js";
+export type { Call, CallEvent, ClientOptions, CallOptions } from "./client.js";
 export { searchCandidates, sameName, scorable, SCORABLE_CHAINS, TokenSearchResult } from "./search.js";
 export type { Candidate } from "./search.js";
 export { fetchFacts, fetchHolderFacts, STABLECOINS, STRUCTURAL_TAG } from "./facts.js";

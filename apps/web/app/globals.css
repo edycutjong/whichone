@@ -170,8 +170,10 @@ code { font-family: var(--mono); font-size: 0.92em; background: rgba(255, 255, 2
 .drawer.open { visibility: visible; transform: translateY(0); }
 @media (min-width: 1024px) { .drawer { top: 0; left: auto; width: 520px; max-height: none; border-top: 0; border-left: 1px solid var(--border); transform: translateX(100%); } .drawer.open { transform: translateX(0); } }
 .drawer h3 { margin: 0 0 8px; display: flex; justify-content: space-between; align-items: center; }
-.drawer table { width: 100%; border-collapse: collapse; font-size: 13px; }
-.drawer th, .drawer td { text-align: left; padding: 6px 6px; border-bottom: 1px solid var(--border); vertical-align: top; }
+.drawer table { width: 100%; border-collapse: collapse; font-size: 13px; table-layout: fixed; }
+.drawer th, .drawer td { text-align: left; padding: 6px 5px; border-bottom: 1px solid var(--border); vertical-align: top; overflow-wrap: anywhere; }
+.drawer th:nth-child(1) { width: 24%; } .drawer th:nth-child(2) { width: 15%; } .drawer th:nth-child(3), .drawer th:nth-child(4), .drawer th:nth-child(5) { width: 10%; }
+.drawer td:first-child { padding-left: 0; } .drawer th:first-child { padding-left: 0; }
 .drawer th { color: var(--muted); font-weight: 500; }
 .drawer td.mono { font-family: var(--mono); font-size: 12px; }
 .drawer .fail { color: var(--impostor); }
@@ -197,3 +199,87 @@ code { font-family: var(--mono); font-size: 0.92em; background: rgba(255, 255, 2
 .judge-table td { padding: 10px 0; border-top: 1px solid var(--border); vertical-align: top; }
 .judge-table tr:first-child td { border-top: 0; }
 @media (max-width: 640px) { .judge-table th { display: block; padding: 10px 0 0; } .judge-table td { display: block; padding-top: 4px; border-top: 0; } .judge-table tr { display: block; border-top: 1px solid var(--border); } }
+
+/* ── The Nansen call rail (LANDING_DESIGN §13 A3) — the live meter; the drawer above is the receipt ─────────── */
+.rail { position: fixed; z-index: 5; display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--border); color: var(--text); font-size: 13px; }
+.rail-body { display: flex; flex-direction: column; min-height: 0; flex: 1; }
+.rail-bar { display: none; align-items: center; gap: 10px; width: 100%; min-height: 44px; padding: 0 16px; border: 0; background: transparent; color: var(--text); font-weight: 600; font-size: 14px; text-align: left; transition: background 120ms; }
+.rail-bar:hover, .rail-bar:focus-visible { background: rgba(255, 255, 255, 0.04); outline: none; }
+.rail-bar:focus-visible { box-shadow: inset 0 0 0 2px var(--accent); }
+.rail-bar b { font-family: var(--mono); font-weight: 700; font-variant-numeric: tabular-nums; }
+.rail-bar-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--real); flex: none; }
+.rail-chevron { margin-left: auto; color: var(--muted); }
+.rail-head { padding: 14px 16px 12px; border-bottom: 1px solid var(--border); }
+.rail-title-row { display: flex; align-items: center; gap: 8px; }
+.rail-title { font-weight: 700; font-size: 14px; letter-spacing: -0.01em; }
+.rail-clear { margin-left: auto; border: 0; background: transparent; color: var(--muted); font-size: 12px; padding: 4px 8px; border-radius: 6px; transition: color 120ms, background 120ms; }
+.rail-clear:hover, .rail-clear:focus-visible { color: var(--text); background: rgba(255, 255, 255, 0.06); outline: none; }
+.rail-clear:focus-visible { box-shadow: 0 0 0 2px var(--accent); }
+.rail-counters { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 12px 0 0; }
+.rail-counters div { min-width: 0; text-align: right; }
+.rail-counters dt { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+.rail-counters dd { margin: 2px 0 0; font-family: var(--mono); font-size: 20px; font-weight: 700; font-variant-numeric: tabular-nums; letter-spacing: -0.02em; color: var(--text); }
+.rail-counters dd.rail-dd-text { font-size: 14px; font-weight: 600; color: var(--text-2); line-height: 26px; }
+.rail-list { list-style: none; margin: 0; padding: 6px 0; overflow-y: auto; flex: 1; min-height: 0; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: var(--border-2) transparent; }
+.rail-empty { padding: 28px 16px; color: var(--muted); text-align: center; line-height: 1.6; }
+.rail-link { border: 0; background: transparent; color: var(--accent); font: inherit; padding: 0; text-decoration: underline; text-underline-offset: 2px; border-radius: 4px; }
+.rail-link:hover { color: var(--text); }
+.rail-batch { position: sticky; top: 0; z-index: 1; background: var(--surface); font-size: 11px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); padding: 8px 16px 4px; }
+.rail-row { position: relative; animation: rail-in 240ms var(--ease) both; }
+.rail-row.pending::after { content: ""; position: absolute; left: 16px; right: 16px; bottom: 0; height: 1px; background: var(--accent); opacity: 0.55; transform-origin: left; animation: rail-shimmer 1.2s var(--ease) infinite; }
+.rail-line { display: grid; grid-template-columns: 10px minmax(0, 1fr) auto; grid-template-areas: "dot main cr" "dot main ms"; column-gap: 10px; row-gap: 2px; align-items: start; padding: 7px 14px 7px 16px; transition: background 120ms; }
+.rail-line .rail-dot { grid-area: dot; } .rail-line .rail-main { grid-area: main; } .rail-line .rail-cr { grid-area: cr; justify-self: end; } .rail-line .rail-ms { grid-area: ms; justify-self: end; }
+.rail-row:hover .rail-line { background: rgba(255, 255, 255, 0.025); }
+.rail-dot { width: 8px; height: 8px; border-radius: 50%; margin-top: 6px; background: var(--border-2); box-sizing: border-box; transition: background 240ms var(--ease), border-color 240ms var(--ease); }
+.rail-dot.pending { background: transparent; border: 2px solid var(--accent); animation: rail-pulse 1s var(--ease) infinite; }
+.rail-dot.live { background: var(--real); box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.18); }
+.rail-dot.cached { background: transparent; border: 2px solid var(--muted); }
+.rail-dot.error { background: var(--impostor); box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.18); }
+.rail-main { min-width: 0; }
+.rail-ep { font-family: var(--mono); font-size: 12.5px; color: var(--text); overflow-wrap: anywhere; line-height: 1.35; }
+.rail-method { color: var(--muted); font-size: 10.5px; margin-right: 5px; letter-spacing: 0.04em; }
+.rail-params { color: var(--text-2); font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 1px; }
+.rail-ms { font-family: var(--mono); font-size: 11px; font-variant-numeric: tabular-nums; color: var(--muted); white-space: nowrap; }
+.rail-cr { display: inline-block; padding: 1px 7px; border-radius: 999px; border: 1px solid var(--border-2); color: var(--text-2); font-size: 11px; line-height: 16px; }
+.rail-cr.live { border-color: rgba(34, 197, 94, 0.45); color: var(--real); }
+.rail-cr.error { border-color: rgba(239, 68, 68, 0.45); color: var(--impostor); }
+.rail-cr.pending { color: var(--accent); border-color: rgba(56, 189, 248, 0.45); }
+.rail-row.error .rail-ms { color: var(--impostor); }
+.rail-hash { opacity: 0.8; }
+.rail-foot { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; padding: 10px 16px 12px; border-top: 1px solid var(--border); color: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums; }
+.rail-foot a { white-space: nowrap; }
+.rail-foot code { font-size: 11px; }
+/* transform only: an opacity keyframe on these rows renders them at ~50 % in headless Chrome's screencast (the recorder) */
+@keyframes rail-in { from { transform: translateY(6px); } to { transform: none; } }
+@keyframes rail-shimmer { 0% { transform: scaleX(0.05); opacity: 0; } 30% { opacity: 0.6; } 100% { transform: scaleX(1); opacity: 0; } }
+@keyframes rail-pulse { 0% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.55); } 100% { box-shadow: 0 0 0 7px rgba(56, 189, 248, 0); } }
+
+/* ≥ 1280: a fixed right rail; the page keeps --wrap but leaves 408 px for it (24 + 360 + 24) */
+@media (min-width: 1280px) {
+  .rail { top: 84px; right: 24px; bottom: 24px; width: 360px; border-radius: var(--r-lg); }
+  .with-rail { padding-right: 408px; }
+  .with-rail .drawer { z-index: 12; }
+  body:has(.with-rail) { background-image: radial-gradient(900px 420px at calc(50% - 204px) -80px, var(--glow), transparent 70%), linear-gradient(var(--bg), var(--bg)); }
+}
+/* < 1280: a docked bottom sheet — a 44 px bar that expands on tap / Enter */
+@media (max-width: 1279px) {
+  .rail { left: 0; right: 0; bottom: 0; border-radius: var(--r-lg) var(--r-lg) 0 0; border-bottom: 0; box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.35); }
+  .rail-bar { display: flex; }
+  .rail-body { display: none; }
+  .rail.open .rail-body { display: flex; max-height: 50vh; border-top: 1px solid var(--border); }
+  .rail-head { padding-top: 10px; }
+  .rail-title-row .kicker, .rail-title-row .rail-title { display: none; }
+  .rail-title-row { min-height: 0; }
+  .rail-counters { margin-top: 0; }
+  .with-rail { padding-bottom: 60px; }
+  .with-rail .toast { bottom: 64px; }
+}
+@media (max-width: 899px) { .rail.open .rail-body { max-height: 60vh; } }
+
+/* ── Motion guard (§7): no transforms, no shimmer, no count-up under prefers-reduced-motion ───────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .card, .drawer, .bar > i, .progress > i, .toast, .rail-row, .rail-dot, .rail-dot.pending, .card.winner { transition: none !important; animation: none !important; }
+  .rail-row.pending::after { display: none; }
+  .btn, .chip, .search button, .site-nav a, .rail-bar, .rail-clear { transition: none; }
+  html { scroll-behavior: auto; }
+}

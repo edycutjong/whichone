@@ -91,12 +91,13 @@ export class CachedNansenClient extends NansenClient {
 
   override async post<T = unknown>(endpoint: string, body: Record<string, unknown>, fieldsUsed: string[] = [], opts: CallOptions = {}): Promise<T> {
     const key = cacheKey(endpoint, body);
+    const seq = this.begin(endpoint, body);
     // Freshness is judged by THIS client's TTL, not the TTL the entry was written with — so `ttlMs: 0` (--no-cache)
     // really bypasses reads. Offline mode serves any entry regardless of age (it is a replay, and says so).
     const hit = this.ttlMs > 0 || this.offline ? this.store.get(key) : undefined;
     const fresh = hit && Date.now() - Date.parse(hit.storedAt) < this.ttlMs;
     if (hit && (fresh || this.offline)) {
-      this.calls.push({
+      this.record(seq, {
         endpoint,
         body,
         credits: 0,
@@ -112,17 +113,21 @@ export class CachedNansenClient extends NansenClient {
       if (!this.oldestHit || hit.storedAt < this.oldestHit) this.oldestHit = hit.storedAt;
       return JSON.parse(hit.text) as T;
     }
-    if (this.offline) throw new Error(`NANSEN_OFFLINE=1 and no cached response for ${endpoint} ${JSON.stringify(body)}`);
+    if (this.offline) {
+      const e = new Error(`NANSEN_OFFLINE=1 and no cached response for ${endpoint} ${JSON.stringify(body)}`);
+      this.recordFailure(seq, endpoint, body, fieldsUsed, e, 0);
+      throw e;
+    }
     const t0 = Date.now();
     let raw: Awaited<ReturnType<NansenClient["postRaw"]>>;
     try {
       raw = await this.postRaw(endpoint, body, opts);
     } catch (e) {
-      this.recordFailure(endpoint, body, fieldsUsed, e, Date.now() - t0);
+      this.recordFailure(seq, endpoint, body, fieldsUsed, e, Date.now() - t0);
       throw e;
     }
     const { text, ms, status, attempts, totalMs } = raw;
-    this.calls.push({
+    this.record(seq, {
       endpoint,
       body,
       credits: CREDITS[endpoint] ?? 1,

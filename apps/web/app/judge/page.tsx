@@ -14,10 +14,10 @@ export const metadata: Metadata = {
 const SITE = "https://whichone.edycu.dev";
 const REPO = "https://github.com/edycutjong/whichone";
 
-const TEST_COUNT = 129;
+const TEST_COUNT = 137;
 const PROPERTY_CASES = "50,000";
 const BOUNDARY_CASES = "10,000";
-const E2E_SUITES = 4;
+const E2E_SUITES = 5;
 
 export default function Judge() {
   return (
@@ -41,7 +41,8 @@ export default function Judge() {
               <code>{SITE}/?q=PEPE</code>
             </a>
             . Eight cards appear pending, reorder as each <code>tgm/flow-intelligence</code> call lands; <b>ethereum 0x6982…1933</b> turns green,{" "}
-            <b>robinhood 0x9b09…4eb9</b> gets a red IMPOSTOR badge. Cold ≈ 4 s, cached ≈ 0 s.
+            <b>robinhood 0x9b09…4eb9</b> gets a red IMPOSTOR badge. Cold ≈ 4 s, cached ≈ 0 s. The <b>Nansen call rail</b> on the right lists every request as it
+            fires — endpoint, params, credits, ms, response hash — and its meter matches the drawer to the credit.
           </li>
           <li>
             Click <b>Every Nansen call (16)</b> — the provenance drawer: endpoint, credits, latency, cached or live, the response fields that entered the score,

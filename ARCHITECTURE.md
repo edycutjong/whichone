@@ -29,17 +29,19 @@ flowchart TB
 4. **tiebreak** — the top-2 checked candidates get `tgm/holders {pagination:{page:1,per_page:20}}`; `recognisedHolders` counts rows with a wealth/activity `address_label`, excluding structural tags (`STRUCTURAL_TAG`).
 5. **verdict** — rank (checked › unchecked › unscorable, then score), crown or abstain, warnings, provenance = the client's `Call[]` slice, `hash = sha256(decision)` where decision = query, filter, weights, ordered ids with scores, winner, impostor flags — never cost, timing, market cap or error text.
 6. **progress** — `onProgress` emits `candidates` → `scored`×N → `verdict`; the web route streams these as NDJSON so cards reorder as facts land.
+7. **call stream** — the client's `onCall` observer emits `call:start` (the moment a request is issued, before cache or network) and `call:end` (with the very `Call` pushed to `calls`); the route interleaves them into the same NDJSON stream and the page's **Nansen call rail** renders them live — pending ring → green / hollow grey / red, credits, ms, short response hash. Same objects as the provenance drawer, so the meter and the receipt agree to the credit.
 
 ## Client (`client.ts`, `cache.ts`)
 
 - `fetch` + `apikey` header, 10 rps token bucket, 6 s timeout, one retry on 429/5xx/timeout, per-call overrides.
 - Every call — including failures and cache hits — is a `Call` with endpoint, body, credits (static table), ms, attempts, `responseHash = sha256(raw body)`, fields used.
-- `CachedNansenClient` is read-through: hits are recorded at 0 credits with `cached: true`; `ttlMs: 0` bypasses reads (`--no-cache`); `NANSEN_OFFLINE=1` serves any age and throws on a miss.
+- `CachedNansenClient` is read-through: hits are recorded at 0 credits with `cached: true`; `ttlMs: 0` bypasses reads (`--no-cache`); `NANSEN_OFFLINE=1` serves any age and throws on a miss — the miss is recorded as a failed call (0 credits, no network), so a replay carries the same failure the live run had instead of hiding it.
+- `onCall` (optional) receives the live call stream described above; it never sees the key or a response body.
 - Fixtures (`fixtures.ts`) store the cache entries a verdict touched plus the verdict and the clock (`now`) it ran under, so `verify` replays a week later still computes the same `ageDays`.
 
 ## Web (`apps/web`)
 
-Next.js 15 App Router, plain CSS (no component library), one client component. `/api/verdict?stream=1` → NDJSON; `/q/[query]` renders the verdict server-side with OG tags; `/api/og` draws the 1200×630 card with `next/og`. The key is server-side only; queries are validated (`/^[A-Za-z0-9 ._$-]{1,32}$/`) and the chain filter is an allowlist. Cache lives in `/tmp` per Vercel instance.
+Next.js 15 App Router, plain CSS (no component library), one client component plus the call rail (`components/Rail.tsx`: a fixed 360 px right panel at ≥ 1280 px, a 44 px bottom bar that opens into a sheet below that; rows accumulate per session, cap 200, `clear` resets; reduced motion honoured). `/api/verdict?stream=1` → NDJSON; `/q/[query]` renders the verdict server-side with OG tags; `/api/og` draws the 1200×630 card with `next/og`. The key is server-side only; queries are validated (`/^[A-Za-z0-9 ._$-]{1,44}$/`) and the chain filter is an allowlist. Cache lives in `/tmp` per Vercel instance.
 
 ## Scripts
 

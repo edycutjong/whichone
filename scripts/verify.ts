@@ -54,8 +54,13 @@ for (const path of files) {
       got = JSON.stringify(projection(replay));
     if (replay.hash !== f.verdict.hash) problems.push(`hash ${replay.hash.slice(0, 12)} ≠ recorded ${f.verdict.hash.slice(0, 12)}`);
     if (want !== got) problems.push("ranking/reasons differ from the recorded verdict");
-    const network = replay.provenance.filter((c) => !c.cached);
-    if (network.length) problems.push(`${network.length} call(s) left the cache: ${network.map((c) => `${c.endpoint}${c.ok ? "" : " (failed)"}`).join(", ")}`);
+    // a call the live run lost (timeout) has no recorded response: offline it is recorded again as a failed call, at 0
+    // credits and with no network — the replay carries the same failure the live run did, so it is not "a call that left the cache"
+    const network = replay.provenance.filter((c) => !c.cached && c.ok);
+    if (network.length) problems.push(`${network.length} call(s) left the cache: ${network.map((c) => c.endpoint).join(", ")}`);
+    const misses = replay.provenance.filter((c) => !c.cached && !c.ok);
+    const recordedFailures = f.verdict.provenance.filter((c) => !c.ok).length;
+    if (misses.length > recordedFailures) problems.push(`${misses.length} offline misses but the live run only lost ${recordedFailures} call(s)`);
     if (replay.credits !== 0) problems.push(`${replay.credits} credits spent on a replay`);
     // every raw response the live run used is byte-identical in the file: the hashes the engine recorded must all be present
     const recordedHashes = new Set(f.verdict.provenance.filter((c) => c.ok).map((c) => c.responseHash));

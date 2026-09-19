@@ -1,6 +1,6 @@
 import { existsSync } from "node:fs";
 import { join, resolve, sep } from "node:path";
-import { CachedNansenClient, fixtureName, fixtureStore, readFixture, whichOnesReal, type VerdictOptions } from "@whichone/core";
+import { CachedNansenClient, fixtureName, fixtureStore, readFixture, whichOnesReal, type CallEvent, type VerdictOptions } from "@whichone/core";
 
 /**
  * Spend guard for the public /api/verdict route. The key is server-only and every verdict costs real Nansen credits
@@ -79,7 +79,11 @@ function fixturesDir(): string | undefined {
  * The offline fallback: the fixture's recorded responses under the same engine, same clock, so the verdict is the one
  * the live run produced. Returns undefined when no fixture matches the query + chain.
  */
-export async function replayFixture(q: string, chain?: string, opts: Omit<VerdictOptions, "chain" | "now"> = {}) {
+export async function replayFixture(
+  q: string,
+  chain?: string,
+  { onCall, ...opts }: Omit<VerdictOptions, "chain" | "now"> & { onCall?: (e: CallEvent) => void } = {},
+) {
   const dir = fixturesDir();
   if (!dir) return undefined;
   // `q` is user input: fixtureName() already reduces it to [A-Z0-9_-], and the resolved path is still checked to sit
@@ -88,7 +92,7 @@ export async function replayFixture(q: string, chain?: string, opts: Omit<Verdic
   const path = resolve(root, `${fixtureName(q, chain)}.json`);
   if (!path.startsWith(root + sep) || !existsSync(path)) return undefined;
   const f = readFixture(path);
-  const c = new CachedNansenClient("nsn_offline_replay_no_network", { store: fixtureStore(f), offline: true });
+  const c = new CachedNansenClient("nsn_offline_replay_no_network", { store: fixtureStore(f), offline: true, onCall });
   // label the verdict before the stream's final event carries it, so the page shows the replay notice too
   const onProgress: VerdictOptions["onProgress"] = (e) => {
     if (e.type === "verdict" && !e.verdict.warnings.includes(BUDGET_MESSAGE)) e.verdict.warnings.push(BUDGET_MESSAGE);

@@ -11,10 +11,10 @@ const EXAMPLE = (pepe as { verdict: Verdict }).verdict;
 export default async function Home({ searchParams }: { searchParams: Promise<{ q?: string; chain?: string }> }) {
   const sp = await searchParams;
   return (
-    <>
+    <div className="with-rail">
       <SiteHeader current="home" />
       <Whichone initialQuery={sp.q} initialChain={sp.chain} example={EXAMPLE} />
       <SiteFooter />
-    </>
+    </div>
   );
 }

@@ -28,11 +28,11 @@ export default async function Page({ params, searchParams }: Props) {
   const chain = chainParam && (CHAINS as readonly string[]).includes(chainParam) ? chainParam : undefined;
   if (!SAFE_QUERY.test(q))
     return (
-      <>
+      <div className="with-rail">
         <SiteHeader current="home" />
         <Whichone initialQuery="" />
         <SiteFooter />
-      </>
+      </div>
     );
   // a failed server-side verdict (no key, Nansen down) hands the query to the client, which streams it and shows the error banner
   let verdict: Verdict | undefined;
@@ -42,10 +42,10 @@ export default async function Page({ params, searchParams }: Props) {
     verdict = undefined;
   }
   return (
-    <>
+    <div className="with-rail">
       <SiteHeader current="home" />
       <Whichone initialQuery={q} initialChain={chain ?? "all"} initialVerdict={verdict} />
       <SiteFooter />
-    </>
+    </div>
   );
 }

@@ -1,7 +1,7 @@
 import { NextRequest } from "next/server";
 import { verdictFor, SAFE_QUERY, CHAINS } from "@/lib/engine";
 import { clientIp, ipAllowed, budgetExhausted, recordSpend, replayFixture, NO_FIXTURE_MESSAGE } from "@/lib/guard";
-import type { VerdictEvent } from "@whichone/core";
+import type { CallEvent, VerdictEvent } from "@whichone/core";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -10,8 +10,10 @@ export const maxDuration = 60;
 /**
  * GET /api/verdict?q=PEPE[&chain=base]            → Verdict JSON
  * GET /api/verdict?q=PEPE&stream=1                → NDJSON: {type:candidates} · {type:scored}×N · {type:verdict}
+ *                                                    interleaved with {type:call:start} / {type:call:end} per Nansen call
  * The stream is what the page renders: cards appear pending, reorder as each candidate's Nansen facts land, then one
- * turns green. Same engine, same hash as the CLI.
+ * turns green; the call rail on the right shows every Nansen request the moment it is issued and the moment it lands
+ * (the `call:end` payload is the same Call the verdict's provenance carries). Same engine, same hash as the CLI.
  * Spend guard (lib/guard.ts): 429 past the per-IP rate, and past the daily credit ceiling a recorded fixture replays
  * at 0 credits (labelled in `warnings`, `degraded: true`) or the request gets a 503 that says why.
  */
@@ -48,7 +50,7 @@ export async function GET(req: NextRequest) {
       // The browser aborts this fetch when the user submits a new ticker mid-stream; after that every enqueue throws,
       // so a closed stream turns `send` into a no-op and the verdict simply finishes unobserved.
       let closed = false;
-      const send = (e: VerdictEvent | { type: "error"; message: string } | { type: "asOf"; asOf: string | null }) => {
+      const send = (e: VerdictEvent | CallEvent | { type: "error"; message: string } | { type: "asOf"; asOf: string | null }) => {
         if (closed) return;
         try {
           controller.enqueue(enc.encode(JSON.stringify(e) + "\n"));
@@ -57,7 +59,7 @@ export async function GET(req: NextRequest) {
         }
       };
       try {
-        const r = degraded ? await replayFixture(q, chain, { onProgress: send }) : await verdictFor(q, chain, { onProgress: send });
+        const r = degraded ? await replayFixture(q, chain, { onProgress: send, onCall: send }) : await verdictFor(q, chain, { onProgress: send, onCall: send });
         if (!r) send({ type: "error", message: NO_FIXTURE_MESSAGE });
         else {
           if (!degraded) recordSpend(r.verdict.credits);

@@ -20,7 +20,7 @@
 ![Next.js](https://img.shields.io/badge/Next.js_15-black?style=flat&logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
 ![Nansen API](https://img.shields.io/badge/Nansen_API-4_endpoints-7c3aed?style=flat&labelColor=0a0e13)
-![tests](https://img.shields.io/badge/tests-129%20passing-22c55e?style=flat)
+![tests](https://img.shields.io/badge/tests-137%20passing-22c55e?style=flat)
 ![property cases](https://img.shields.io/badge/property_cases-50%2C000-22c55e?style=flat)
 ![fixtures](https://img.shields.io/badge/fixtures-12%2F12%20replay%20offline-22c55e?style=flat)
 [![License](https://img.shields.io/badge/License-MIT-yellow?style=flat)](LICENSE)
@@ -125,6 +125,8 @@ The engine, not decoration — every term in the score is a Nansen response fiel
 
 ≤ 26 credits per verdict, 0 on a cache hit. Cached calls are labelled and never counted. Failed calls are shown in the drawer, never hidden — a candidate whose lookups failed is marked "could not check" and is never crowned or called an impostor.
 
+**Watch the calls happen.** The **Nansen call rail** on the right of the page streams every request the moment it is issued and the moment it lands — `POST tgm/flow-intelligence · PEPE · base · 7d`, a pending ring that turns green (live), hollow grey (cached) or red (failed), the credit chip, the latency and a short sha256 of the response — with a call / credit / wall-time meter that ticks as rows land. The rows are the `call:start` / `call:end` events of `/api/verdict?stream=1`, and the `call:end` payloads are the very `Call` objects the provenance drawer prints afterwards, so the rail and the drawer agree to the credit (`packages/core/test/rail.test.ts` pins it). On load the rail already shows the recorded PEPE example's 17 calls, labelled *replayed · 0 cr*.
+
 ### Why only Nansen
 
 An RPC or explorer shows *transfers*; the decision needs *who*. Take Nansen out and you would need a multi-chain token index, a wallet-labelling graph and a holder indexer — and still could not answer "which one is real". There is deliberately no fallback ranking by market cap.
@@ -135,11 +137,11 @@ An RPC or explorer shows *transfers*; the decision needs *who*. Take Nansen out 
 
 | Metric | Value | Source |
 |---|---|---|
-| Tests | **129 tests** (`npm test`) — regression tests named for the defect they pin | `packages/core/test/` |
+| Tests | **137 tests** (`npm test`) — regression tests named for the defect they pin | `packages/core/test/` |
 | Property-based verification | **50,000 generated cases** (fast-check, 5 properties × 10,000) on the decision function: the crown rule, `rank()` as a total order, `score()` blind to every buyable field | `packages/core/test/property.test.ts` |
 | Permission boundary | the server key never reaches a client; **10,000 generated malformed queries** rejected with zero network calls | `packages/core/test/boundary.test.ts`, [SECURITY.md](.github/SECURITY.md) |
 | Spend guard | public route capped at 6 verdicts/min per address and 3,000 live credits/day; past the ceiling a recorded fixture replays at 0 credits, labelled, or the request gets an honest 503 | `apps/web/lib/guard.ts`, `packages/core/test/guard.test.ts` |
-| E2E | 4 Playwright suites, desktop + Pixel 7, built app run **without** a key | `e2e/` |
+| E2E | 5 Playwright suites (44 runs), desktop + Pixel 7, built app run **without** a key | `e2e/` |
 | Fixtures | 12/12 verdicts reproduced offline, zero network, zero credits | `npm run verify`, `fixtures/*.json` |
 | Cold latency | p50 **3.6 s** · p95 **7.2 s** (12 queries × 2 runs, live) | [docs/BENCH.md](docs/BENCH.md) |
 | Warm latency | p50 **3 ms** | [docs/BENCH.md](docs/BENCH.md) |
@@ -199,7 +201,7 @@ Measured on a clean clone from GitHub (macOS, Node 22, warm npm cache, 2026-09-1
 npm run lint           # ESLint (flat config: TypeScript, React hooks, Next)
 npm run format:check   # Prettier
 npm run typecheck      # tsc, strict
-npm test               # 129 vitest tests (unit + property + boundary)
+npm test               # 137 vitest tests (unit + property + boundary)
 npm run test:coverage  # + v8 coverage report
 npm run verify         # 12 fixtures, offline, exit 1 on any hash/ranking drift
 npm run ci             # audit · format · lint · typecheck · coverage · verify · check
@@ -217,9 +219,9 @@ npm run check          # submission readiness: README claims vs tree, kitchen/se
 | Layer | Tool | Status |
 |---|---|---|
 | Code Quality | ESLint + Prettier + TypeScript strict | ✅ |
-| Unit Testing | vitest, 129 tests, v8 coverage | ✅ |
+| Unit Testing | vitest, 137 tests, v8 coverage | ✅ |
 | High-signal tests | defect-named regressions · 50,000 property cases (fast-check) · permission boundary | ✅ |
-| E2E Testing | Playwright, 4 suites × 2 devices, no key | ✅ |
+| E2E Testing | Playwright, 5 suites × 2 devices, no key | ✅ |
 | Security (SAST) | CodeQL (javascript-typescript) | ✅ |
 | Security (SCA) | Dependabot (4 manifests + actions, grouped, no majors) + npm audit + license-checker | ✅ |
 | Secret Scanning | gitleaks (full history) + TruffleHog (verified only) + `npm run check` history grep | ✅ |
