@@ -142,6 +142,16 @@ export function Whichone({
     [stream],
   );
 
+  // Escape closes the provenance drawer (the recording and keyboard users both expect it)
+  useEffect(() => {
+    if (!drawer) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setDrawer(false);
+    };
+    addEventListener("keydown", onKey);
+    return () => removeEventListener("keydown", onKey);
+  }, [drawer]);
+
   useEffect(() => {
     // stream() sets state only from inside the response loop and its catch — every call is after `await fetch`; the
     // compiler lint cannot see across that async boundary, so it is silenced for this one line, not the file

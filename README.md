@@ -75,7 +75,7 @@ Worked with real numbers in [docs/SCORING.md](docs/SCORING.md). Weights live in 
 
 One verdict function, three views. No database, no accounts, no LLM.
 
-<p align="center"><img src="docs/assets/architecture.png" alt="Which One's Real architecture — views → /api/verdict (spend guard) → packages/core whichOnesReal → four Nansen endpoints; verdict with provenance; cache and fixtures" width="100%"></p>
+<p align="center"><img src="docs/assets/architecture.png" alt="Which One's Real architecture — views (web page, live Nansen call rail, permalink, OG card, CLI) → /api/verdict with spend guard → packages/core whichOnesReal → four Nansen endpoints with credits → verdict with provenance; read-through cache and offline fixtures" width="100%"></p>
 
 <details>
 <summary><b>Mermaid source</b> — expand to see the diagram as text (renders on GitHub)</summary>
@@ -84,6 +84,7 @@ One verdict function, three views. No database, no accounts, no LLM.
 flowchart TB
   subgraph views
     W[apps/web · page.tsx] -->|NDJSON stream| R[/api/verdict/]
+    RL[Nansen call rail · live meter] -.->|call:start · call:end| R
     Q[/q/:query permalink/] --> K
     OG[/api/og share card/] --> K
     C[packages/cli] --> K

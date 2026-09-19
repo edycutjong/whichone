@@ -6,6 +6,7 @@ One verdict function, three views. No database, no accounts, no LLM: determinist
 flowchart TB
   subgraph views
     W[apps/web · page.tsx] -->|NDJSON stream| R[/api/verdict/]
+    RL[Nansen call rail · live meter] -.->|call:start · call:end| R
     Q[/q/:query permalink/] --> K
     OG[/api/og share card/] --> K
     C[packages/cli] --> K

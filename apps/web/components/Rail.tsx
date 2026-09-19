@@ -179,6 +179,16 @@ export function Rail({
   }, [running]);
   const clock = running && now != null ? now : null;
 
+  // Escape closes the sheet (< 1280 px) and hands focus back to the bar
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    addEventListener("keydown", onKey);
+    return () => removeEventListener("keydown", onKey);
+  }, [open]);
+
   // oldest at top, auto-scroll to the newest row unless the reader has scrolled up to study earlier ones
   useEffect(() => {
     const el = listRef.current;
