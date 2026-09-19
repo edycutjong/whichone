@@ -69,7 +69,9 @@ test.describe("Nansen call rail", () => {
       await expect(bar).toBeHidden();
       const box = await rail.boundingBox();
       expect(box!.width).toBe(360);
-      expect(box!.x + box!.width).toBe(1920 - 24);
+      // measured from the layout viewport's inner edge: a classic (non-overlay) scrollbar on Linux CI eats ~15 px
+      const clientWidth = await page.evaluate(() => document.documentElement.clientWidth);
+      expect(box!.x + box!.width).toBe(clientWidth - 24);
       expect(box!.y).toBe(84);
       // the content column does not run under the rail
       const main = await page.locator("main.wrap").boundingBox();

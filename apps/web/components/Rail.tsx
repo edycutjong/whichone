@@ -102,7 +102,12 @@ export function useRail(seed?: Seed) {
     setState((s) => ({ ...s, batches: s.batches.map((b) => (b.id === batch ? { ...b, ms } : b)) }));
   }, []);
 
-  const clear = useCallback(() => setState({ rows: [], batches: [] }), []);
+  /** Reset the session — but a run that is still streaming keeps its batch, so rows landing after the click still have a meter. */
+  const clear = useCallback((keep?: number) => {
+    setState((s) =>
+      keep == null ? { rows: [], batches: [] } : { rows: s.rows.filter((r) => r.batch === keep), batches: s.batches.filter((b) => b.id === keep) },
+    );
+  }, []);
 
   return { rows: state.rows, batches: state.batches, begin, onEvent, finish, clear };
 }
@@ -125,6 +130,7 @@ const reduceMotion = () => typeof matchMedia === "function" && matchMedia("(pref
 /** Count-up over 240 ms (--ease-like cubic out); instant under prefers-reduced-motion. */
 function useCountUp(target: number, ms = 240): number {
   const [shown, setShown] = useState(target);
+  // the digit currently on screen — a retarget mid-animation continues from here, never from the previous origin
   const from = useRef(target);
   useEffect(() => {
     const start = from.current;
@@ -138,9 +144,10 @@ function useCountUp(target: number, ms = 240): number {
     const tick = (t: number) => {
       const p = Math.min(1, (t - t0) / ms);
       const e = 1 - Math.pow(1 - p, 3);
-      setShown(Math.round(start + (target - start) * e));
+      const v = Math.round(start + (target - start) * e);
+      from.current = v;
+      setShown(v);
       if (p < 1) raf = requestAnimationFrame(tick);
-      else from.current = target;
     };
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
@@ -162,6 +169,7 @@ export function Rail({
   /** a live stream is in flight — the wall clock ticks */
   running: boolean;
   symbolOf: (address: string) => string | undefined;
+  /** clear the session; while a run streams, the caller passes its batch id so that run keeps its meter */
   onClear: () => void;
   onRunExample?: () => void;
   exampleQuery?: string;
@@ -213,8 +221,14 @@ export function Rail({
   const nCredits = useCountUp(credits);
   const nSessionCredits = useCountUp(sessionCredits);
 
+  const summary =
+    current && (current.replayed || (!running && current.ms != null))
+      ? `${current.query}: ${calls} Nansen call${calls === 1 ? "" : "s"}, ${credits} credit${credits === 1 ? "" : "s"}${current.replayed ? ", replayed from the recorded example" : `, ${(elapsed ?? 0).toFixed(1)} seconds`}`
+      : running && current
+        ? `${current.query}: calling Nansen…`
+        : "";
   const counters = (
-    <dl className="rail-counters" aria-label="totals for the current run">
+    <dl className="rail-counters" aria-label="totals for the current run" aria-live="off">
       <div>
         <dt>calls</dt>
         <dd>{nCalls}</dd>
@@ -232,7 +246,9 @@ export function Rail({
 
   return (
     <aside className={`rail ${open ? "open" : ""}`} aria-label="Nansen API calls" aria-live="polite">
-      <button type="button" className="rail-bar" aria-expanded={open} aria-controls="rail-body" onClick={() => setOpen((o) => !o)}>
+      {/* the one thing the live region announces: a summary that changes once per run, not every tick */}
+      <p className="sr-only">{summary}</p>
+      <button type="button" className="rail-bar" aria-expanded={open} aria-controls="rail-body" aria-live="off" onClick={() => setOpen((o) => !o)}>
         <span className="rail-bar-dot" aria-hidden />
         <span>
           Nansen calls · <b>{nCalls}</b> · <b>{nCredits}</b> cr{running ? " · live" : current?.replayed ? " · replayed" : ""}
@@ -333,7 +349,7 @@ export function Rail({
             return items;
           })}
         </ol>
-        <footer className="rail-foot">
+        <footer className="rail-foot" aria-live="off">
           <span>
             session · {sessionCalls} call{sessionCalls === 1 ? "" : "s"} · {nSessionCredits} credit{sessionCredits === 1 ? "" : "s"}
           </span>

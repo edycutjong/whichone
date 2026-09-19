@@ -349,7 +349,7 @@ export function Whichone({
         batches={rail.batches}
         running={running}
         symbolOf={symbolOf}
-        onClear={rail.clear}
+        onClear={() => rail.clear(running ? batchRef.current : undefined)}
         onRunExample={running ? undefined : runExample}
         exampleQuery={example?.query}
       />
