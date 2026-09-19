@@ -6,7 +6,7 @@ import { test, expect } from "@playwright/test";
  * bottom bar that opens with a tap and with Enter. No key, no network, 0 credits.
  */
 test.describe("Nansen call rail", () => {
-  test("is a landmark that already lists the example's replayed calls with 0 credits", async ({ page }) => {
+  test("is a landmark that already lists the example's replayed calls with 0 credits", async ({ page, isMobile }) => {
     await page.goto("/");
     const rail = page.getByRole("complementary", { name: "Nansen API calls" });
     await expect(rail).toHaveAttribute("aria-live", "polite");
@@ -18,6 +18,13 @@ test.describe("Nansen call rail", () => {
     await expect(rail.locator(".rail-counters dd").nth(1)).toHaveText("0");
     await expect(rail.locator(".rail-counters dd").nth(2)).toHaveText("replayed");
     await expect(rail.locator(".rail-foot")).toContainText("session · 17 calls · 0 credits");
+    // newest at the bottom: the list follows on mount, and still after a relayout (the recorder scales the page)
+    const atBottom = () => rail.locator(".rail-list").evaluate((el) => el.scrollHeight - el.scrollTop - el.clientHeight < 2);
+    if (!isMobile) {
+      await expect.poll(atBottom).toBe(true);
+      await page.setViewportSize({ width: 1536, height: 700 });
+      await expect.poll(atBottom).toBe(true);
+    }
     // never a key-shaped string, never a full request body
     expect(await rail.innerText()).not.toMatch(/nsn_[A-Za-z0-9_]{8,}/);
     expect(await rail.innerText()).not.toContain("token_address");

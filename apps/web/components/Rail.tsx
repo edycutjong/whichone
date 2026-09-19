@@ -197,11 +197,25 @@ export function Rail({
     return () => removeEventListener("keydown", onKey);
   }, [open]);
 
-  // oldest at top, auto-scroll to the newest row unless the reader has scrolled up to study earlier ones
-  useEffect(() => {
+  // oldest at top, auto-scroll to the newest row unless the reader has scrolled up to study earlier ones.
+  // Only a wheel / touch / key gesture can unstick (a layout change — zoom, the sheet opening, a row growing — never
+  // does); scrolling back to the bottom re-sticks. Follows every rows change and every resize of the list.
+  const userGesture = useRef(false);
+  const follow = useCallback(() => {
     const el = listRef.current;
     if (el && stick.current) el.scrollTop = el.scrollHeight;
-  }, [rows.length, open]);
+  }, []);
+  useEffect(() => {
+    const id = requestAnimationFrame(follow);
+    return () => cancelAnimationFrame(id);
+  }, [rows, open, follow]);
+  useEffect(() => {
+    const el = listRef.current;
+    if (!el || typeof ResizeObserver === "undefined") return;
+    const ro = new ResizeObserver(follow);
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, [follow]);
 
   const current = batches[batches.length - 1];
   const inBatch = current ? rows.filter((r) => r.batch === current.id) : [];
@@ -274,7 +288,12 @@ export function Rail({
           className="rail-list"
           ref={listRef}
           aria-live="off"
+          onWheel={() => (userGesture.current = true)}
+          onTouchMove={() => (userGesture.current = true)}
+          onKeyDown={() => (userGesture.current = true)}
           onScroll={(e) => {
+            if (!userGesture.current) return; // programmatic follow or a relayout: never changes the reader's choice
+            userGesture.current = false;
             const el = e.currentTarget;
             stick.current = el.scrollHeight - el.scrollTop - el.clientHeight < 48;
           }}
