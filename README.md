@@ -20,7 +20,7 @@
 ![Next.js](https://img.shields.io/badge/Next.js_15-black?style=flat&logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
 ![Nansen API](https://img.shields.io/badge/Nansen_API-4_endpoints-7c3aed?style=flat&labelColor=0a0e13)
-![tests](https://img.shields.io/badge/tests-137%20passing-22c55e?style=flat)
+![tests](https://img.shields.io/badge/tests-138%20passing-22c55e?style=flat)
 ![property cases](https://img.shields.io/badge/property_cases-50%2C000-22c55e?style=flat)
 ![fixtures](https://img.shields.io/badge/fixtures-12%2F12%20replay%20offline-22c55e?style=flat)
 [![License](https://img.shields.io/badge/License-MIT-yellow?style=flat)](LICENSE)
@@ -39,16 +39,16 @@
 | Ticker in | Cards appear pending, reorder as Nansen facts land | One turns green, impostors go red |
 |---|---|---|
 | `PEPE` | 14 same-name tokens across 7 chains; the 8 best-ranked by Nansen search are checked | `ethereum 0x6982…1933` — 92 labelled wallets, $1.2M exchange flow, 18/20 top holders tagged (live, 2026-09-17) |
-| `SHIB2` | 1 candidate, 3 years old, $36K market cap | **abstains**: "none of these looks real — nothing labelled has touched any of them" |
+| `PEPEGA` | 1 candidate, 0 labelled wallets, no exchange flow, 283 holders → IMPOSTOR | **abstains**: "none of these looks real — the best candidate trips the impostor rule" (live, 2026-09-19) |
 | `XQZPLM` | 0 results | abstains: "no token named XQZPLM on Nansen" |
 
 Every verdict ships with a **provenance drawer**: every Nansen call, its credits, latency, whether it was cached, and the exact response fields that entered the score. The CLI prints the same table with `--explain`. The verdict hash on the share card covers the decision only, so a cached replay and a live run that reach the same answer hash identically.
 
 <div align="center"><img src="docs/screenshots/05-drawer.png" alt="Provenance drawer over the PEPE verdict: every Nansen call with its endpoint, chain, credits, latency and cached flag — the red IMPOSTOR card and the greyed cards visible behind it" width="720" /></div>
 
-| Loading — `DEGEN`: 8 cards pending, progress strip filling | Abstain — `SHIB2`: no winner, the card says why | Mobile — `PEPE` verdict at 390 px |
+| Loading — `TRUMP`: 7 cards pending, progress strip filling, the call rail streaming | Abstain — `PEPEGA`: no winner, the red card says why | Mobile — `PEPE` verdict at 390 px |
 |---|---|---|
-| ![DEGEN mid-stream: 8 candidates, checking labels 0/8, every card pending](docs/screenshots/02-loading.png) | ![SHIB2: amber No winner banner, one greyed card with 0 labelled wallets](docs/screenshots/04-abstain.png) | ![PEPE verdict on a phone: green banner and the green ethereum card](docs/screenshots/06-mobile.png) |
+| ![TRUMP mid-stream: 7 candidates, checking labels 1/7, every card pending, rail rows pending on the right](docs/screenshots/02-loading.png) | ![PEPEGA: amber No winner banner, one red IMPOSTOR card with 0 labelled wallets](docs/screenshots/04-abstain.png) | ![PEPE verdict on a phone: green banner and the green ethereum card](docs/screenshots/06-mobile.png) |
 
 ## 💡 The Problem & Solution
 
@@ -66,7 +66,7 @@ score = 3.0·ln(1+labelled_wallets)  + 0.6·max(0, log10|exchange_net_flow_usd|�
       − 2.0·[age<7d] − 1.0·[age<30d] − 1.5·fresh_share·[labelled<3]
       + 0.8·ln(1+recognised_holders)                       # finalists only; pools/deployers/ENS names don't count
 IMPOSTOR = 0 labelled ∧ exchange flow < $10K ∧ (age < 14d ∨ holders < 500)
-ABSTAIN  = best < 2.0 ∨ (0 labelled ∧ recognised_holders < 3)
+ABSTAIN  = best < 2.0 ∨ (0 labelled ∧ recognised_holders < 3) ∨ best is IMPOSTOR
 ```
 
 Worked with real numbers in [docs/SCORING.md](docs/SCORING.md). Weights live in one object (`packages/core/src/score.ts`) and are printed with every verdict.
@@ -138,7 +138,7 @@ An RPC or explorer shows *transfers*; the decision needs *who*. Take Nansen out 
 
 | Metric | Value | Source |
 |---|---|---|
-| Tests | **137 tests** (`npm test`) — regression tests named for the defect they pin | `packages/core/test/` |
+| Tests | **138 tests** (`npm test`) — regression tests named for the defect they pin | `packages/core/test/` |
 | Property-based verification | **50,000 generated cases** (fast-check, 5 properties × 10,000) on the decision function: the crown rule, `rank()` as a total order, `score()` blind to every buyable field | `packages/core/test/property.test.ts` |
 | Permission boundary | the server key never reaches a client; **10,000 generated malformed queries** rejected with zero network calls | `packages/core/test/boundary.test.ts`, [SECURITY.md](.github/SECURITY.md) |
 | Spend guard | public route capped at 6 verdicts/min per address and 3,000 live credits/day; past the ceiling a recorded fixture replays at 0 credits, labelled, or the request gets an honest 503 | `apps/web/lib/guard.ts`, `packages/core/test/guard.test.ts` |
@@ -164,6 +164,7 @@ An RPC or explorer shows *transfers*; the decision needs *who*. Take Nansen out 
 5. The holders tiebreak counts wealth/activity tags ("Token Millionaire", "High Activity"), not exchange/fund entities — those are the premium tier and are not used.
 6. A token with 0 labelled wallets can still be crowned when ≥ 3 top holders carry a wealth tag (`AI16Z`, `PEPE UNCHAINED` on 2026-09-16) — the card says "0 labelled wallets" so the weakness is visible.
 7. Dead tokens were being crowned on a Uniswap-pool + deployer tag alone (`SHIB2`, found in live QA 2026-09-16) — fixed by excluding structural tags; kept as a regression test.
+8. A lone impostor-flagged token could still be crowned on wealth-tagged holders (`PEPEGA`, found in live QA 2026-09-19: green card *and* IMPOSTOR badge at once) — the crown rule now abstains; regression test + property assertion.
 8. Independent code review (2026-09-16) found the web input truncated pasted addresses at 32 chars, a stream ending early left the spinner stuck, `/q/%25` threw on a double decode, and OG images were uncached (every link-preview crawler spent ≤ 26 credits) — all fixed the same day.
 
 ## 🚀 Getting Started
@@ -202,7 +203,7 @@ Measured on a clean clone from GitHub (macOS, Node 22, warm npm cache, 2026-09-1
 npm run lint           # ESLint (flat config: TypeScript, React hooks, Next)
 npm run format:check   # Prettier
 npm run typecheck      # tsc, strict
-npm test               # 137 vitest tests (unit + property + boundary)
+npm test               # 138 vitest tests (unit + property + boundary)
 npm run test:coverage  # + v8 coverage report
 npm run verify         # 12 fixtures, offline, exit 1 on any hash/ranking drift
 npm run ci             # audit · format · lint · typecheck · coverage · verify · check
@@ -220,7 +221,7 @@ npm run check          # submission readiness: README claims vs tree, kitchen/se
 | Layer | Tool | Status |
 |---|---|---|
 | Code Quality | ESLint + Prettier + TypeScript strict | ✅ |
-| Unit Testing | vitest, 137 tests, v8 coverage | ✅ |
+| Unit Testing | vitest, 138 tests, v8 coverage | ✅ |
 | High-signal tests | defect-named regressions · 50,000 property cases (fast-check) · permission boundary | ✅ |
 | E2E Testing | Playwright, 5 suites × 2 devices, no key | ✅ |
 | Security (SAST) | CodeQL (javascript-typescript) | ✅ |

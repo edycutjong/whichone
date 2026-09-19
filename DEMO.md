@@ -39,22 +39,22 @@ The point the recording makes: the impostor can have the higher 24h volume and s
 
 On the web (`npm run dev` → http://localhost:3000, type `PEPE`): 8 cards appear pending, the progress strip fills as each `tgm/flow-intelligence` call returns, cards reorder with a 300 ms FLIP as scores land, the ethereum card turns green with a Copy button, the robinhood card gets a red IMPOSTOR badge. Click **Every Nansen call (16)** for the drawer.
 
-## 2 · The abstain — `SHIB2` (0:25–0:40)
+## 2 · The abstain — `PEPEGA` (0:25–0:40)
 
 ```bash
-npm run whichone -- SHIB2
+npm run whichone -- PEPEGA
 ```
 
 ```
-SHIB2 — 1 same-name token on Nansen
+PEPEGA — 1 same-name token on Nansen
 
-· ethereum   0x2de7…64c0    SHIB2    3.27   0 labelled wallets in 7 days · no meaningful exchange flow · 568 holders
+✖ ethereum   0x9634…c879    PEPEGA   4.68   0 labelled wallets in 7 days · no meaningful exchange flow · 283 holders IMPOSTOR
 
-no winner — none of these looks real — nothing labelled has touched any of them
-7 credits · 4 calls (0 cached) · 2.3s · verdict 525078af17c0
+no winner — none of these looks real — the best candidate trips the impostor rule
+7 credits · 4 calls (0 cached) · 2.1s · verdict 47b4ac4fc907
 ```
 
-A 3-year-old token with a Uniswap pool and a deployer tag does not get crowned on those alone (see `docs/SCORING.md`, "structural tags").
+The only candidate trips the impostor rule (0 labelled wallets, no exchange flow, under 500 holders), so nothing is crowned — a card is never "this is the one" and IMPOSTOR at once (`docs/SCORING.md`). Until 2026-09-18 this beat used `SHIB2` (recorded in `fixtures/SHIB2.json`, still replayed by `npm run verify`); Nansen search no longer returns an exact `SHIB2`, so the live query now abstains with "no token named SHIB2 on Nansen" instead.
 
 ## 3 · Prove the verdicts are deterministic (0:40–0:45 — the terminal beat)
 

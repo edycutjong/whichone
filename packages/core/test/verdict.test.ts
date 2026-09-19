@@ -271,6 +271,27 @@ describe("crown rule: 0 labelled wallets needs ≥ MIN_RECOGNISED_TO_CROWN tagge
   });
 });
 
+describe("crown rule: an impostor-flagged candidate is never crowned (live finding 2026-09-19, PEPEGA)", () => {
+  // 1 candidate · 0 labelled wallets · no exchange flow · 283 holders (< 500 → IMPOSTOR) · 7 of 20 top holders wealth-tagged
+  const A = "0x" + "7".repeat(40);
+  const routes = (ep: string) => {
+    if (ep === "search/general") return searchTokens([{ chain: "ethereum", address: A, symbol: "PEPEGA" }]);
+    if (ep === "tgm/flow-intelligence") return flowRow({ exchange_net_flow_usd: 0 });
+    if (ep === "tgm/token-information") return infoRow({ deployed: "2024-05-01 00:00:00", holders: 283, liquidity: 9_000 });
+    if (ep === "tgm/holders")
+      return holdersRows(["Token Millionaire", "High Balance", "High Activity", "Token Millionaire", "High Balance", "High Activity", "Token Millionaire"]);
+    throw new Error("unexpected " + ep);
+  };
+  it("the tagged-holder bar alone would crown it; the impostor flag vetoes — a card is never green and IMPOSTOR at once", async () => {
+    const v = await whichOnesReal(fakeClient(routes), "PEPEGA", { now: NOW });
+    expect(v.ranked[0].impostor).toBe(true);
+    expect(v.ranked[0].recognisedHolders).toBeGreaterThanOrEqual(3);
+    expect(v.abstained).toBe(true);
+    expect(v.abstainReason).toMatch(/impostor rule/);
+    expect(v.winner).toBeNull();
+  });
+});
+
 describe("onProgress (streams the web page's pending → scored → verdict beats)", () => {
   it("emits candidates once, one scored event per chosen candidate, then the verdict — same hash as the return value", async () => {
     const events: string[] = [];

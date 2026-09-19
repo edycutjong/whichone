@@ -58,7 +58,7 @@ const ge = (a: number[], b: number[]) => {
 };
 
 describe(`property-based verification — ${RUNS.toLocaleString()} generated cases per property, ${PROPERTIES} properties`, () => {
-  it("crown rule: no candidate with 0 labelled wallets and fewer than MIN_RECOGNISED_TO_CROWN tagged holders is ever crowned; nor an unchecked or unscorable one; nor a score below ABSTAIN_THRESHOLD", () => {
+  it("crown rule: no candidate with 0 labelled wallets and fewer than MIN_RECOGNISED_TO_CROWN tagged holders is ever crowned; nor an unchecked or unscorable one; nor a score below ABSTAIN_THRESHOLD; nor an impostor-flagged one", () => {
     fc.assert(
       fc.property(fc.array(arbScored, { maxLength: 10 }), fc.nat(30), fc.string({ minLength: 1, maxLength: 44 }), (list, extra, q) => {
         const ranked = rank(list);
@@ -70,6 +70,7 @@ describe(`property-based verification — ${RUNS.toLocaleString()} generated cas
           !winner.unchecked &&
           winner.score >= ABSTAIN_THRESHOLD &&
           !(winner.labelledWallets === 0 && (winner.recognisedHolders ?? 0) < MIN_RECOGNISED_TO_CROWN) &&
+          !winner.impostor &&
           abstainReason === undefined
         );
       }),

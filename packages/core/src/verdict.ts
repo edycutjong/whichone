@@ -135,7 +135,8 @@ export async function whichOnesReal(client: NansenClient, query: string, opts: V
 /**
  * The crown rule — the one decision that must never be wrong, kept pure so it can be verified over generated inputs
  * (test/property.test.ts): the winner is always `ranked[0]`, is scorable and checked, scores ≥ ABSTAIN_THRESHOLD, and a
- * candidate with 0 labelled wallets needs ≥ MIN_RECOGNISED_TO_CROWN wealth-tagged top holders. Everything else abstains.
+ * candidate with 0 labelled wallets needs ≥ MIN_RECOGNISED_TO_CROWN wealth-tagged top holders, and is never impostor-flagged.
+ * Everything else abstains.
  */
 export function crown(ranked: Scored[], sameNameCount: number, q: string): { winner: Scored | null; abstainReason?: string } {
   const best = ranked[0];
@@ -152,6 +153,8 @@ export function crown(ranked: Scored[], sameNameCount: number, q: string): { win
     return { winner: null, abstainReason: "the deciding holders lookup failed for the top candidate — retry" };
   if (best.score < ABSTAIN_THRESHOLD || (best.labelledWallets === 0 && (best.recognisedHolders ?? 0) < MIN_RECOGNISED_TO_CROWN))
     return { winner: null, abstainReason: "none of these looks real — nothing labelled has touched any of them" };
+  // a card cannot be "this is the one" and IMPOSTOR at once: when the best candidate trips the impostor rule, abstain
+  if (best.impostor) return { winner: null, abstainReason: "none of these looks real — the best candidate trips the impostor rule" };
   return { winner: best };
 }
 

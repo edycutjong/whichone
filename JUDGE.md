@@ -10,7 +10,7 @@ One input → one green card. The score is deterministic arithmetic over Nansen 
 
 1. Open **https://whichone.edycu.dev/?q=PEPE**. Eight cards appear pending, reorder as each `tgm/flow-intelligence` call lands; **ethereum 0x6982…1933** turns green, **robinhood 0x9b09…4eb9** gets a red IMPOSTOR badge. Cold ≈ 4 s, cached ≈ 0 s. The **Nansen call rail** on the right lists every request as it fires — endpoint, params, credits, ms, response hash — and its meter matches the drawer to the credit.
 2. Click **Every Nansen call (16)** — the provenance drawer: endpoint, credits, latency, cached or live, the response fields that entered the score, and the verdict hash.
-3. Open **https://whichone.edycu.dev/q/SHIB2**. The tool abstains: a 3-year-old token with a Uniswap pool and a deployer tag does not get crowned on those alone.
+3. Open **https://whichone.edycu.dev/q/PEPEGA**. The tool abstains: the only candidate has 0 labelled wallets, no exchange flow and 283 holders — it trips the impostor rule, and an impostor is never crowned.
 4. Open **https://whichone.edycu.dev/api/verdict?q=PEPE** — the same verdict as JSON, same hash as the CLI prints.
 
 ## Receipts
@@ -20,7 +20,7 @@ One input → one green card. The score is deterministic arithmetic over Nansen 
 | **Hero query, live** | `PEPE`: 14 same-name tokens · **24 credits · 16 calls · 4.4 s cold** · 2026-09-16 23:40 UTC · verdict `6ac53e5e811e` — output verbatim in [DEMO.md](DEMO.md) |
 | **Benchmark, live** | 12 queries × 2 cold runs: **cold p50 3.6 s · p95 7.2 s · warm p50 3 ms · mean 18.6 credits, max 26** per verdict; 447 credits over 306 live calls — [docs/BENCH.md](docs/BENCH.md) is the script's output |
 | **Nansen endpoints** | `search/general` · `tgm/flow-intelligence` · `tgm/token-information` · `tgm/holders` — every term in the score is one of their response fields |
-| **Tests** | **137 tests** (vitest), each regression test named for the defect it pins · **50,000 generated cases** on the decision function (fast-check: crown rule, ranking total order, score reads no buyable field) · **10,000 generated malformed queries** rejected before any network call · the server key never reaches a client (unit + E2E) |
+| **Tests** | **138 tests** (vitest), each regression test named for the defect it pins · **50,000 generated cases** on the decision function (fast-check: crown rule, ranking total order, score reads no buyable field) · **10,000 generated malformed queries** rejected before any network call · the server key never reaches a client (unit + E2E) |
 | **Determinism** | 12 recorded verdicts replay offline with the same decision hash, zero network, zero credits |
 | **Clean clone → first verdict** | 22 s of machine time (clone 2 s · install 4 s · verdict 4 s · verify < 1 s · build 8 s · tests 4 s) |
 | **E2E** | 5 Playwright suites, desktop + Pixel 7, run without a key |

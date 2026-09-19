@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 const SITE = "https://whichone.edycu.dev";
 const REPO = "https://github.com/edycutjong/whichone";
 
-const TEST_COUNT = 137;
+const TEST_COUNT = 138;
 const PROPERTY_CASES = "50,000";
 const BOUNDARY_CASES = "10,000";
 const E2E_SUITES = 5;
@@ -50,10 +50,11 @@ export default function Judge() {
           </li>
           <li>
             Open{" "}
-            <a href={`${SITE}/q/SHIB2`}>
-              <code>{SITE}/q/SHIB2</code>
+            <a href={`${SITE}/q/PEPEGA`}>
+              <code>{SITE}/q/PEPEGA</code>
             </a>
-            . The tool abstains: a 3-year-old token with a Uniswap pool and a deployer tag does not get crowned on those alone.
+            . The tool abstains: the only candidate has 0 labelled wallets, no exchange flow and 283 holders — it trips the impostor rule, and an impostor is
+            never crowned.
           </li>
           <li>
             Open{" "}

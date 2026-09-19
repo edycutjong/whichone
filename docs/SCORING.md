@@ -16,7 +16,8 @@ score = 3.0 · ln(1 + labelled_wallets)                       # smart_trader + w
                                                                  #   ENS/SNS names, burn addresses — every token has those (STRUCTURAL_TAG in facts.ts)
 
 IMPOSTOR  = labelled_wallets == 0 ∧ |exchange flow| < $10K ∧ (age < 14d ∨ total_holders < 500)
-ABSTAIN   = best.score < 2.0 ∨ (best.labelled_wallets == 0 ∧ best.recognised_holders < 3)   → "none of these looks real"
+ABSTAIN   = best.score < 2.0 ∨ (best.labelled_wallets == 0 ∧ best.recognised_holders < 3) ∨ best.IMPOSTOR   → "none of these looks real"
+            (a card is never "this is the one" and IMPOSTOR at once — found live on PEPEGA, 2026-09-19: 1 candidate, 0 labelled, 283 holders, 7 tagged top holders)
 STABLECOIN (USDC, USDT, DAI, …) = many same-name results are canonical per chain → no impostor flags, header says so
 ```
 
