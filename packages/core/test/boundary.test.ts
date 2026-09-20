@@ -18,6 +18,18 @@ import { SAFE_QUERY } from "@/lib/engine";
 const KEY = "nsn_test_key_0000000000000000000000"; // what fakeClient signs requests with
 const KEY_SHAPE = /nsn_[A-Za-z0-9_]{8,}/;
 
+// A footgun fix: a real shell with NANSEN_OFFLINE=1 exported must not change what this suite asserts — every
+// test below builds its own CachedNansenClient with an explicit `offline` option where it matters, so the
+// ambient env is neutralized around each test here too.
+const REAL_NANSEN_OFFLINE = process.env.NANSEN_OFFLINE;
+beforeEach(() => {
+  delete process.env.NANSEN_OFFLINE;
+});
+afterEach(() => {
+  if (REAL_NANSEN_OFFLINE === undefined) delete process.env.NANSEN_OFFLINE;
+  else process.env.NANSEN_OFFLINE = REAL_NANSEN_OFFLINE;
+});
+
 describe("boundary 1: the API key never leaves the server", () => {
   it("a full verdict, every stream event, the provenance log and the cache keys contain no key and nothing key-shaped", async () => {
     const client = fakeClient(pepeRoutes);

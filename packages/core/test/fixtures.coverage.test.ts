@@ -1,4 +1,4 @@
-import { describe, it, expect } from "vitest";
+import { describe, it, expect, beforeEach, afterEach } from "vitest";
 import { existsSync, mkdtempSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
@@ -6,6 +6,18 @@ import { CachedNansenClient, MemoryCache } from "../src/cache.js";
 import { whichOnesReal } from "../src/verdict.js";
 import { writeFixture, listFixtures, fixtureName, FIXTURES_DIR, type Fixture } from "../src/fixtures.js";
 import { pepeRoutes } from "./helpers.js";
+
+// A footgun fix: a real shell with NANSEN_OFFLINE=1 exported must not change what this suite asserts — every
+// test below builds its own CachedNansenClient with an explicit `offline` option where it matters, so the
+// ambient env is neutralized around each test here too.
+const REAL_NANSEN_OFFLINE = process.env.NANSEN_OFFLINE;
+beforeEach(() => {
+  delete process.env.NANSEN_OFFLINE;
+});
+afterEach(() => {
+  if (REAL_NANSEN_OFFLINE === undefined) delete process.env.NANSEN_OFFLINE;
+  else process.env.NANSEN_OFFLINE = REAL_NANSEN_OFFLINE;
+});
 
 const KEY = "nsn_test_key_0000000000000000000000";
 const NOW = Date.parse("2026-09-16T12:00:00Z");
