@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     url: "/",
     siteName: "Which One's Real",
     title: "Which One's Real",
-    description: "Type a ticker. One card turns green.",
+    description: "Type a ticker. Every same-name token across chains lines up — Nansen labels decide, and one card turns green.",
     images: [
       {
         url: "/api/og?q=PEPE&v=2",
@@ -20,7 +20,12 @@ export const metadata: Metadata = {
       },
     ],
   },
-  twitter: { card: "summary_large_image", creator: "@edycutjong", title: "Which One's Real", description: "Type a ticker. One card turns green." },
+  twitter: {
+    card: "summary_large_image",
+    creator: "@edycutjong",
+    title: "Which One's Real",
+    description: "Type a ticker. Every same-name token across chains lines up — Nansen labels decide, and one card turns green.",
+  },
   authors: [{ name: "Edy Cu Tjong", url: "https://github.com/edycutjong" }],
   creator: "Edy Cu Tjong",
   alternates: { canonical: "/" },
