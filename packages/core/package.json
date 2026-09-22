@@ -1,6 +1,6 @@
 {
   "name": "@whichone/core",
-  "version": "1.6.4",
+  "version": "1.7.0",
   "description": "Ranks same-name tokens by who actually holds and trades them, using Nansen labels.",
   "license": "MIT",
   "type": "module",
