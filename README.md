@@ -34,7 +34,7 @@
 
 ## 📸 See it in Action
 
-<img src="docs/demo.gif" alt="Which One's Real — 13 s demo: type PEPE, 14 same-name cards appear, Nansen facts land, one turns green with its address, impostors go red, copy the address" width="100%">
+<img src="docs/demo.gif" alt="Which One's Real — 17 s demo: type PEPE, 14 same-name cards appear; on the right the Nansen call rail streams every call as it happens (endpoint, chain, credits, ms, response hash, pending ring → green dot, counters climbing to 19 calls · 26 credits · 4.3 s); one turns green with its address, impostors go red, then the drawer lists every Nansen call behind the verdict" width="100%">
 
 | Ticker in | Cards appear pending, reorder as Nansen facts land | One turns green, impostors go red |
 |---|---|---|
