@@ -1,6 +1,7 @@
 import { existsSync } from "node:fs";
 import { join, resolve, sep } from "node:path";
-import { CachedNansenClient, fixtureName, fixtureStore, readFixture, whichOnesReal, type CallEvent, type VerdictOptions } from "@whichone/core";
+import { CachedNansenClient, fixtureName, fixtureStore, readFixture, whichOnesReal, type CallEvent, type Verdict, type VerdictOptions } from "@whichone/core";
+import { verdictFor } from "./engine";
 
 /**
  * Spend guard for the public /api/verdict route. The key is server-only and every verdict costs real Nansen credits
@@ -22,7 +23,7 @@ const WINDOW_MS = 60_000;
 
 const hits = new Map<string, number[]>();
 
-export function clientIp(headers: Headers): string {
+export function clientIp(headers: Pick<Headers, "get">): string {
   return headers.get("x-forwarded-for")?.split(",")[0].trim() || headers.get("x-real-ip")?.trim() || "unknown";
 }
 
@@ -64,6 +65,19 @@ export function resetGuard(): void {
   hits.clear();
   day = "";
   spent = 0;
+}
+
+/**
+ * The /q/<ticker> permalink's server-side verdict, under the same ceilings as /api/verdict: it goes live only when the
+ * day's budget covers a verdict and this address is under its rate. Otherwise it returns undefined and the page hands
+ * the query to the client stream, whose route answers with the 429, the labelled replay or the 503 — so a loop over
+ * permalinks can no more drain the key than a loop over the API.
+ */
+export async function permalinkVerdict(q: string, chain: string | undefined, headers: Pick<Headers, "get">): Promise<Verdict | undefined> {
+  if (!process.env.NANSEN_API_KEY || budgetExhausted() || !ipAllowed(clientIp(headers)).ok) return undefined;
+  const r = await verdictFor(q, chain);
+  recordSpend(r.verdict.credits);
+  return r.verdict;
 }
 
 export const BUDGET_MESSAGE = "Today's live Nansen budget is used up — this is a replay of a recorded run.";

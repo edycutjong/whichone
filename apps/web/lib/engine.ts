@@ -1,12 +1,15 @@
 import { CachedNansenClient, DiskCache, whichOnesReal, type CallEvent, type VerdictOptions } from "@whichone/core";
+import { existsSync } from "node:fs";
 import { join } from "node:path";
 import { tmpdir } from "node:os";
 
 /**
- * One engine for every route. The cache is a disk cache: `.cache/` locally, `/tmp` on Vercel (the only writable path
- * there, per-instance — a warm instance answers a repeat query at 0 credits, a cold one goes live). Never a database.
+ * One engine for every route. The cache is a disk cache: the repo's `.cache/` locally, `/tmp` on Vercel (the only
+ * writable path there, per-instance — a warm instance answers a repeat query at 0 credits, a cold one goes live).
+ * Never a database. Locally the repo root is found from the cwd: `next dev` runs in apps/web, vitest at the root.
  */
-const dir = process.env.VERCEL ? join(tmpdir(), "whichone-cache") : join(process.cwd(), "../../.cache");
+const repoRoot = existsSync(join(process.cwd(), "apps", "web")) ? process.cwd() : join(process.cwd(), "..", "..");
+const dir = process.env.VERCEL ? join(tmpdir(), "whichone-cache") : join(repoRoot, ".cache");
 let store: DiskCache | undefined;
 
 export function client(onCall?: (e: CallEvent) => void): CachedNansenClient {
