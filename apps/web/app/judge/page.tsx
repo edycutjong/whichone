@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 const SITE = "https://whichone.edycu.dev";
 const REPO = "https://github.com/edycutjong/whichone";
 
-const TEST_COUNT = 138;
+const TEST_COUNT = 148;
 const PROPERTY_CASES = "50,000";
 const BOUNDARY_CASES = "10,000";
 const E2E_SUITES = 5;
@@ -45,7 +45,7 @@ export default function Judge() {
             fires — endpoint, params, credits, ms, response hash — and its meter matches the drawer to the credit.
           </li>
           <li>
-            Click <b>Every Nansen call (16)</b> — the provenance drawer: endpoint, credits, latency, cached or live, the response fields that entered the score,
+            Click <b>Every Nansen call (N)</b> — the provenance drawer: endpoint, credits, latency, cached or live, the response fields that entered the score,
             and the verdict hash.
           </li>
           <li>

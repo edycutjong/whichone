@@ -20,7 +20,7 @@
 ![Next.js](https://img.shields.io/badge/Next.js_15-black?style=flat&logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
 ![Nansen API](https://img.shields.io/badge/Nansen_API-4_endpoints-7c3aed?style=flat&labelColor=0a0e13)
-![tests](https://img.shields.io/badge/tests-138%20passing-22c55e?style=flat)
+![tests](https://img.shields.io/badge/tests-148%20passing-22c55e?style=flat)
 ![property cases](https://img.shields.io/badge/property_cases-50%2C000-22c55e?style=flat)
 ![fixtures](https://img.shields.io/badge/fixtures-12%2F12%20replay%20offline-22c55e?style=flat)
 [![License](https://img.shields.io/badge/License-MIT-yellow?style=flat)](LICENSE)
@@ -138,7 +138,7 @@ An RPC or explorer shows *transfers*; the decision needs *who*. Take Nansen out 
 
 | Metric | Value | Source |
 |---|---|---|
-| Tests | **138 tests** (`npm test`) — regression tests named for the defect they pin | `packages/core/test/` |
+| Tests | **148 tests** (`npm test`) — regression tests named for the defect they pin | `packages/core/test/` |
 | Property-based verification | **50,000 generated cases** (fast-check, 5 properties × 10,000) on the decision function: the crown rule, `rank()` as a total order, `score()` blind to every buyable field | `packages/core/test/property.test.ts` |
 | Permission boundary | the server key never reaches a client; **10,000 generated malformed queries** rejected with zero network calls | `packages/core/test/boundary.test.ts`, [SECURITY.md](.github/SECURITY.md) |
 | Spend guard | public route capped at 6 verdicts/min per address and 3,000 live credits/day; past the ceiling a recorded fixture replays at 0 credits, labelled, or the request gets an honest 503 | `apps/web/lib/guard.ts`, `packages/core/test/guard.test.ts` |
@@ -155,7 +155,7 @@ An RPC or explorer shows *transfers*; the decision needs *who*. Take Nansen out 
 - **Numbers come from scripts.** [docs/BENCH.md](docs/BENCH.md) is the output of `npm run bench`. `USDC` (24 canonical issues) is the slow outlier at 15 s cold; Nansen times out on a few of its solana lookups, which the drawer shows.
 - **What the tests cover:** the ranking function table-driven, the abstain/impostor/unchecked paths, hash stability, cache bypass, client retry and timeout accounting, fixture round-trip, the structural-tag rule, the holders tiebreak flip, the address-pasted hint — plus three high-signal categories: **defect-named regression tests** (the test list reads as the changelog of real bugs found in live QA and code review), **property-based verification** of the crown rule / ranking / scorer over 50,000 generated cases, and a **permission-boundary suite** proving the key stays server-side and validation runs before any fetch.
 
-### Honest limits (8)
+### Honest limits (9)
 
 1. Label coverage is uneven across chains — a real token on a thinly-labelled chain can lose to a bridged copy on a busy one; the chain filter exists for that.
 2. Flow-intelligence is a 7-day window; a real but dormant token can look quiet.
@@ -165,7 +165,7 @@ An RPC or explorer shows *transfers*; the decision needs *who*. Take Nansen out 
 6. A token with 0 labelled wallets can still be crowned when ≥ 3 top holders carry a wealth tag (`AI16Z`, `PEPE UNCHAINED` on 2026-09-16) — the card says "0 labelled wallets" so the weakness is visible.
 7. Dead tokens were being crowned on a Uniswap-pool + deployer tag alone (`SHIB2`, found in live QA 2026-09-16) — fixed by excluding structural tags; kept as a regression test.
 8. A lone impostor-flagged token could still be crowned on wealth-tagged holders (`PEPEGA`, found in live QA 2026-09-19: green card *and* IMPOSTOR badge at once) — the crown rule now abstains; regression test + property assertion.
-8. Independent code review (2026-09-16) found the web input truncated pasted addresses at 32 chars, a stream ending early left the spinner stuck, `/q/%25` threw on a double decode, and OG images were uncached (every link-preview crawler spent ≤ 26 credits) — all fixed the same day.
+9. Independent code review (2026-09-16) found the web input truncated pasted addresses at 32 chars, a stream ending early left the spinner stuck, `/q/%25` threw on a double decode, and OG images were uncached (every link-preview crawler spent ≤ 26 credits) — all fixed the same day.
 
 ## 🚀 Getting Started
 
@@ -203,7 +203,7 @@ Measured on a clean clone from GitHub (macOS, Node 22, warm npm cache, 2026-09-1
 npm run lint           # ESLint (flat config: TypeScript, React hooks, Next)
 npm run format:check   # Prettier
 npm run typecheck      # tsc, strict
-npm test               # 138 vitest tests (unit + property + boundary)
+npm test               # 148 vitest tests (unit + property + boundary)
 npm run test:coverage  # + v8 coverage report
 npm run verify         # 12 fixtures, offline, exit 1 on any hash/ranking drift
 npm run ci             # audit · format · lint · typecheck · coverage · verify · check
@@ -221,7 +221,7 @@ npm run check          # submission readiness: README claims vs tree, kitchen/se
 | Layer | Tool | Status |
 |---|---|---|
 | Code Quality | ESLint + Prettier + TypeScript strict | ✅ |
-| Unit Testing | vitest, 138 tests, v8 coverage | ✅ |
+| Unit Testing | vitest, 148 tests, v8 coverage | ✅ |
 | High-signal tests | defect-named regressions · 50,000 property cases (fast-check) · permission boundary | ✅ |
 | E2E Testing | Playwright, 5 suites × 2 devices, no key | ✅ |
 | Security (SAST) | CodeQL (javascript-typescript) | ✅ |
