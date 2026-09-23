@@ -15,8 +15,19 @@ if (!query || flags.has("--help")) {
   process.exit(query ? 0 : 1);
 }
 
-const client = cachedClientFromEnv({ ttlMs: flags.has("--no-cache") ? 0 : undefined });
-const v: Verdict = await whichOnesReal(client, query, { chain });
+let client: ReturnType<typeof cachedClientFromEnv>;
+let v: Verdict;
+try {
+  client = cachedClientFromEnv({ ttlMs: flags.has("--no-cache") ? 0 : undefined });
+  v = await whichOnesReal(client, query, { chain });
+} catch (e) {
+  // a missing key or a failed search is the first thing a new user can hit — one line and a next step, not a stack trace
+  const msg = (e as Error).message;
+  console.error(`whichone: ${msg}`);
+  if (/NANSEN_API_KEY/.test(msg))
+    console.error("  export NANSEN_API_KEY=nsn_...   (key from https://app.nansen.ai/api) — or run `npm run verify` offline, no key");
+  process.exit(1);
+}
 
 if (flags.has("--json")) {
   console.log(JSON.stringify(v, null, 2));
