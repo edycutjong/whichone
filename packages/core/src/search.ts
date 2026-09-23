@@ -15,11 +15,8 @@ export const TokenSearchResult = z.object({
 export type TokenSearchResult = z.infer<typeof TokenSearchResult>;
 
 // rows are validated one by one below: a single token with a null name must not sink every candidate for the ticker
-const GeneralSearchResponse = z.object({
-  tokens: z.array(z.unknown()).default([]),
-  entities: z.array(z.unknown()).default([]),
-  total_results: z.number().optional(),
-});
+// (`entities` and `total_results` are not read, so their shape cannot fail a query; a null tokens list is zero results)
+const GeneralSearchResponse = z.object({ tokens: z.array(z.unknown()).nullish() });
 
 export type Candidate = {
   chain: string;
@@ -49,7 +46,7 @@ export async function searchCandidates(client: NansenClient, query: string, opts
   if (!parsed.success) throw new Error("Nansen search/general returned an unexpected shape (no tokens list)");
   const seen = new Set<string>();
   const out: Candidate[] = [];
-  for (const row of parsed.data.tokens) {
+  for (const row of parsed.data.tokens ?? []) {
     const r = TokenSearchResult.safeParse(row);
     if (!r.success) continue;
     const t = r.data;

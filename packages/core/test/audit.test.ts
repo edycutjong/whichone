@@ -96,6 +96,10 @@ describe("A3: one malformed search row does not sink every candidate for the tic
     const out = await searchCandidates(c, "PEPE");
     expect(out.map((x) => x.chain)).toEqual(["ethereum", "base"]);
   });
+  it("null tokens / entities / total_results (zero results) are no candidates, not an error", async () => {
+    const c = fakeClient(() => ({ tokens: null, entities: null, total_results: null }));
+    expect(await searchCandidates(c, "PEPE")).toEqual([]);
+  });
   it("an envelope with no tokens list is a one-line error, not a schema dump", async () => {
     const c = fakeClient(() => ({ tokens: "nope" }));
     await expect(searchCandidates(c, "PEPE")).rejects.toThrow(/^Nansen search\/general returned an unexpected shape/);
