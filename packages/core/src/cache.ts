@@ -1,10 +1,10 @@
 import { mkdirSync, readFileSync, writeFileSync, existsSync } from "node:fs";
 import { join } from "node:path";
-import { NansenClient, sha256, CREDITS, type ClientOptions, type CallOptions } from "./client.js";
+import { NansenClient, sha256, parseBody, CREDITS, type ClientOptions, type CallOptions } from "./client.js";
 
 export type CacheEntry = { storedAt: string; ttlMs: number; endpoint: string; body: Record<string, unknown>; text: string };
 
-/** Storage for cached responses. Disk for CLI/dev; the web app can plug in KV with the same three methods. */
+/** Storage for cached responses. Disk for CLI/dev; the web app can plug in KV with the same two methods. */
 export interface CacheStore {
   get(key: string): CacheEntry | undefined;
   set(key: string, entry: CacheEntry): void;
@@ -96,7 +96,9 @@ export class CachedNansenClient extends NansenClient {
     // really bypasses reads. Offline mode serves any entry regardless of age (it is a replay, and says so).
     const hit = this.ttlMs > 0 || this.offline ? this.store.get(key) : undefined;
     const fresh = hit && Date.now() - Date.parse(hit.storedAt) < this.ttlMs;
-    if (hit && (fresh || this.offline)) {
+    // an entry whose body does not parse (written before non-JSON bodies were refused) is treated as a miss, not served
+    const cached = hit && (fresh || this.offline) ? tryParse<T>(hit.text) : undefined;
+    if (hit && cached) {
       this.record(seq, {
         endpoint,
         body,
@@ -111,7 +113,7 @@ export class CachedNansenClient extends NansenClient {
         ok: true,
       });
       if (!this.oldestHit || hit.storedAt < this.oldestHit) this.oldestHit = hit.storedAt;
-      return JSON.parse(hit.text) as T;
+      return cached.value;
     }
     if (this.offline) {
       const e = new Error(`NANSEN_OFFLINE=1 and no cached response for ${endpoint} ${JSON.stringify(body)}`);
@@ -120,8 +122,10 @@ export class CachedNansenClient extends NansenClient {
     }
     const t0 = Date.now();
     let raw: Awaited<ReturnType<NansenClient["postRaw"]>>;
+    let data: T;
     try {
       raw = await this.postRaw(endpoint, body, opts);
+      data = parseBody<T>(endpoint, raw.status, raw.text);
     } catch (e) {
       this.recordFailure(seq, endpoint, body, fieldsUsed, e, Date.now() - t0);
       throw e;
@@ -140,8 +144,13 @@ export class CachedNansenClient extends NansenClient {
       totalMs,
       ok: true,
     });
-    this.store.set(key, { storedAt: new Date().toISOString(), ttlMs: this.ttlMs, endpoint, body, text });
-    return JSON.parse(text) as T;
+    try {
+      this.store.set(key, { storedAt: new Date().toISOString(), ttlMs: this.ttlMs, endpoint, body, text });
+    } catch {
+      // a cache that cannot be written (read-only or full disk) costs the next identical call its credits — it must not
+      // throw away a response already paid for, or fail the verdict
+    }
+    return data;
   }
 
   /** Credits actually spent on the network: cached hits and failed calls are recorded at 0. */
@@ -152,4 +161,12 @@ export class CachedNansenClient extends NansenClient {
 
 export function cachedClientFromEnv(opts?: CachedClientOptions): CachedNansenClient {
   return new CachedNansenClient(process.env.NANSEN_API_KEY ?? "", opts);
+}
+
+function tryParse<T>(text: string): { value: T } | undefined {
+  try {
+    return { value: JSON.parse(text) as T };
+  } catch {
+    return undefined;
+  }
 }

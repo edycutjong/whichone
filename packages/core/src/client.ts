@@ -60,6 +60,18 @@ export class NansenError extends Error {
   }
 }
 
+/**
+ * Parse a response body. A 2xx that is not JSON (a gateway or challenge page) is a FAILED call: it throws a NansenError
+ * so it is recorded once as a failure, never as a success, and never reaches the cache.
+ */
+export function parseBody<T>(endpoint: string, status: number, text: string): T {
+  try {
+    return JSON.parse(text) as T;
+  } catch {
+    throw new NansenError(endpoint, status, `response is not JSON: ${text.slice(0, 80)}`);
+  }
+}
+
 function withAttempts(e: unknown, attempts: number): unknown {
   if (e && typeof e === "object") (e as { attempts?: number }).attempts = attempts;
   return e;
@@ -129,6 +141,7 @@ export class NansenClient {
     const t0 = Date.now();
     try {
       const { text, ms, status, attempts, totalMs } = await this.postRaw(endpoint, body, opts);
+      const data = parseBody<T>(endpoint, status, text);
       this.record(seq, {
         endpoint,
         body,
@@ -142,7 +155,7 @@ export class NansenClient {
         totalMs,
         ok: true,
       });
-      return JSON.parse(text) as T;
+      return data;
     } catch (e) {
       this.recordFailure(seq, endpoint, body, fieldsUsed, e, Date.now() - t0);
       throw e;
