@@ -286,7 +286,13 @@ export function Whichone({
         {verdict && verdict.abstained && (
           <div className="banner warn">
             No winner — {verdict.abstainReason}
-            <small>{verdict.candidatesTotal === 0 ? "try the full name, or check the spelling" : "the cards below show why each one fell short"}</small>
+            {/* warnings too: a budget-exhausted replay that abstains must still say it is a replay */}
+            <small>
+              {[
+                verdict.candidatesTotal === 0 ? "try the full name, or check the spelling" : "the cards below show why each one fell short",
+                ...verdict.warnings,
+              ].join(" · ")}
+            </small>
           </div>
         )}
         {verdict && !verdict.abstained && verdict.winner && (
