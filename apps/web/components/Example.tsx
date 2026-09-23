@@ -73,7 +73,7 @@ export function HowItDecides() {
           <b>12/12</b> verdicts replay offline
         </li>
         <li>
-          <b>148</b> tests · <b>50,000</b> property cases
+          <b>149</b> tests · <b>50,000</b> property cases
         </li>
       </ul>
     </section>
