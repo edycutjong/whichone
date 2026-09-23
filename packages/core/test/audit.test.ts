@@ -140,9 +140,10 @@ describe("A4: the /q permalink runs under the spend guard", () => {
   });
 
   it("under the ceilings it goes live and its credits count against the day's budget", async () => {
-    // a query unique to this run, so the local disk cache can never answer it
-    const q = `ZQ${Date.now().toString(36).toUpperCase()}`;
-    const address = "0x" + "9".repeat(40);
+    // a query AND an address unique to this run (facts are cached by address), so the local disk cache can never answer it
+    const run = `${Date.now().toString(16)}${Math.floor(Math.random() * 1e9).toString(16)}`;
+    const q = `ZQ${run.toUpperCase()}`.slice(0, 20);
+    const address = "0x" + run.padStart(40, "9");
     fetchSpy.mockImplementation(async (url) => {
       const ep = String(url).replace("https://api.nansen.ai/api/v1/", "");
       const body =
