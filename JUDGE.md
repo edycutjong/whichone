@@ -52,3 +52,4 @@ npm run verify                       # 12/12 recorded verdicts reproduced offlin
 - Live: https://whichone.edycu.dev
 - Repo: https://github.com/edycutjong/whichone — [README](README.md), [DEMO.md](DEMO.md), [docs/SCORING.md](docs/SCORING.md), [docs/BENCH.md](docs/BENCH.md), [docs/DX-REPORT.md](docs/DX-REPORT.md)
 - Built by [@edycutjong](https://x.com/edycutjong) for the [Nansen Meridian Buildathon](https://nansen.ai/campaigns/meridian-buildathon)
+- Submission post on X: https://x.com/edycutjong/status/2103572817958875366
